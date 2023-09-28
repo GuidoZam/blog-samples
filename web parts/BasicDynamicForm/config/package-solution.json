@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "basic-dynamic-form-client-side-solution",
+    "id": "9ae1f9da-968e-4a6d-8938-af82c928326b",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "basic-dynamic-form description"
+      },
+      "longDescription": {
+        "default": "basic-dynamic-form description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "basic-dynamic-form Feature",
+        "description": "The feature that activates elements of the basic-dynamic-form solution.",
+        "id": "fafc4b6a-a1d0-41f2-88c7-c68a937389d2",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/basic-dynamic-form.sppkg"
+  }
+}
