@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "masked-text-field-sample-client-side-solution",
+    "id": "30891fdc-4412-430b-8e47-547fd64915db",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "masked-text-field-sample description"
+      },
+      "longDescription": {
+        "default": "masked-text-field-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "masked-text-field-sample Feature",
+        "description": "The feature that activates elements of the masked-text-field-sample solution.",
+        "id": "586ef0ea-978e-432a-a5e1-fa633977d611",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/masked-text-field-sample.sppkg"
+  }
+}

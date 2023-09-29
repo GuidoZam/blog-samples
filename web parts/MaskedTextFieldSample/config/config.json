@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "masked-text-field-sample-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/maskedTextFieldSample/MaskedTextFieldSampleWebPart.js",
+          "manifest": "./src/webparts/maskedTextFieldSample/MaskedTextFieldSampleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MaskedTextFieldSampleWebPartStrings": "lib/webparts/maskedTextFieldSample/loc/{locale}.js"
+  }
+}
