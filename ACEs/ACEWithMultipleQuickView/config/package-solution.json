@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "ace-with-multiple-quick-view-client-side-solution",
+    "id": "6fdeb437-5255-45cd-9308-6305332fc53d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "ace-with-multiple-quick-view description"
+      },
+      "longDescription": {
+        "default": "ace-with-multiple-quick-view description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "ace-with-multiple-quick-view Feature",
+        "description": "The feature that activates elements of the ace-with-multiple-quick-view solution.",
+        "id": "951abc17-d81c-4868-b900-61ef30ccbd4e",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/ace-with-multiple-quick-view.sppkg"
+  }
+}

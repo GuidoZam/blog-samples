@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "ace-with-multiple-quick-view-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/aceWithMultipleQuickView/AceWithMultipleQuickViewAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/aceWithMultipleQuickView/AceWithMultipleQuickViewAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "AceWithMultipleQuickViewAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/aceWithMultipleQuickView/loc/{locale}.js"
+  }
+}
