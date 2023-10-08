@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "people-picker-sample-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/peoplePickerSample/PeoplePickerSampleWebPart.js",
+          "manifest": "./src/webparts/peoplePickerSample/PeoplePickerSampleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PeoplePickerSampleWebPartStrings": "lib/webparts/peoplePickerSample/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
