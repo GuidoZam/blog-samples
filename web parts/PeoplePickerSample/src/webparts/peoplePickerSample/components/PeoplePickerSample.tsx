@@ -15,7 +15,7 @@ export default class PeoplePickerSample extends React.Component<IPeoplePickerSam
           <PeoplePicker
             context={this.props.context as any}
             titleText="People Picker for users"
-            personSelectionLimit={5}
+            personSelectionLimit={1}
             ensureUser={true}
             principalTypes={[PrincipalType.User]}
             onChange={this._getPeoplePickerItems} />
@@ -24,7 +24,7 @@ export default class PeoplePickerSample extends React.Component<IPeoplePickerSam
           <PeoplePicker
             context={this.props.context as any}
             titleText="People Picker for groups"
-            personSelectionLimit={5}
+            personSelectionLimit={1}
             ensureUser={true}
             principalTypes={[PrincipalType.SharePointGroup, PrincipalType.SecurityGroup]}
             onChange={this._getPeoplePickerItems} />
