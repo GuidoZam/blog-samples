@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "quick-view-navigation-client-side-solution",
+    "id": "94b990f1-b6eb-47e3-9594-1cc9fa1a6a5f",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "quick-view-navigation description"
+      },
+      "longDescription": {
+        "default": "quick-view-navigation description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "quick-view-navigation Feature",
+        "description": "The feature that activates elements of the quick-view-navigation solution.",
+        "id": "1eda4b8d-bc9a-415a-85a2-899b2ebb2b44",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/quick-view-navigation.sppkg"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.20.2",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.0",
+    "libraryName": "quick-view-navigation",
+    "libraryId": "94b990f1-b6eb-47e3-9594-1cc9fa1a6a5f",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "quick-view-navigation",
+    "solutionShortDescription": "quick-view-navigation description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Generic"
+  }
+}

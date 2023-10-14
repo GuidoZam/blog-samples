@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "5a43e306-5d5e-4729-a17d-031c89e04ccc",
+  "alias": "QuickViewNavigationAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "QuickViewNavigation" },
+    "description": { "default": "QuickViewNavigation description" },
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACa0lEQVRYhd3XP0iVYRQG8J8lmJhFKYL9oRAJRLCmlpYSjJrCKdChwaVFyqkxGtqLlpbcIzDERRqywSGcSsGgIGrIQaTh2iIIt+E9n33+ufd+VwulB77lu+95nuc79z3nvG+DYmjEBVzHNVzEufjtOz5iBm/wGesFeWuiBXcwj3LBZz5iWvYi3IB+zAVpCa8xiDPoxHQ8nfFuMNaUImYuOBrqFW/CaBCV8AxdW4jacgbathjvipgsfjQ4C6EZD+MLPmAAh+r9gogZCI5ycDbXCmrEgwiYRe8uhLeiN7jKwd1YbXE/lvAePX9BPENPcC6Fxo7owGStRXtA9nGTobUNI1KaHtucpsMYsn0T1ovG4C6H1iacwAQW0bdDcJ9U2+N7NNIXGhOhuYErUrk8tXO55N2X9mCkKTRKoYlULpfRKjWOtR0C1/ESn/ALN6TyelGnkbXQaA3NDQPd+IKFKsGLUpf7iptSXffnjJwtaGIhtLpxJDPQgR9YqRKYZeEkruKJ9J9mRu6qUeOBldDqkPu7p/0ZJFtbax7ZXpjF+XjXgHsqb+AMWeveplNPm81n4VaIl6Xa/onbimVhG15Js/xUgbVZFr5hDMcUz4LQmAnN46QMLOM02gsYWMdzvMUjqT/cxzvFstAeWstyFTcmpXK4gIEM2dgdl+p6KZ5aWRgOrbHsxSGpNlel2iw6t8tSSY7gkrSpjkqDp1IWmkJjNTQ3UKsVF0E+I/MVeCq2YioPo90aGZIGWYaqw4gDMI7zi/blQMIBOJKxz4fSDPt6LM8T5S8mZUypfTGZyq3f9cUkj39+NSvqbt8up/8/fgO5Q859ZZ2gNgAAAABJRU5ErkJggg==",
+    "properties": {
+      "title": "QuickViewNavigation"
+    },
+    "cardSize": "Large"
+  }]
+}
