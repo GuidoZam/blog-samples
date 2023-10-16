@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.20.2",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.0",
+    "libraryName": "tenant-settings-sample",
+    "libraryId": "e4df3035-f2af-4425-a92a-81edd0e60c08",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "tenant-settings-sample",
+    "solutionShortDescription": "tenant-settings-sample description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

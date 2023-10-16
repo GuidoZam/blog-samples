@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "tenant-settings-sample-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/tenantSettingsSample/TenantSettingsSampleWebPart.js",
+          "manifest": "./src/webparts/tenantSettingsSample/TenantSettingsSampleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TenantSettingsSampleWebPartStrings": "lib/webparts/tenantSettingsSample/loc/{locale}.js"
+  }
+}

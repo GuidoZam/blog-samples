@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "tenant-settings-sample-client-side-solution",
+    "id": "e4df3035-f2af-4425-a92a-81edd0e60c08",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "tenant-settings-sample description"
+      },
+      "longDescription": {
+        "default": "tenant-settings-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "tenant-settings-sample Feature",
+        "description": "The feature that activates elements of the tenant-settings-sample solution.",
+        "id": "4d63e481-e6d5-4c62-8277-6c2bbe922ea1",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/tenant-settings-sample.sppkg"
+  }
+}
