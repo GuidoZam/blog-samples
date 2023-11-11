@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.20.2",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.1",
+    "libraryName": "dynamic-form-with-list-selection",
+    "libraryId": "3666bf3e-bc35-4f84-a846-83080b005d91",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "dynamic-form-with-list-selection",
+    "solutionShortDescription": "dynamic-form-with-list-selection description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

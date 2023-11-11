@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "dynamic-form-with-list-selection-client-side-solution",
+    "id": "3666bf3e-bc35-4f84-a846-83080b005d91",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "dynamic-form-with-list-selection description"
+      },
+      "longDescription": {
+        "default": "dynamic-form-with-list-selection description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "dynamic-form-with-list-selection Feature",
+        "description": "The feature that activates elements of the dynamic-form-with-list-selection solution.",
+        "id": "5e382457-cea7-435c-b733-3945692e0aae",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/dynamic-form-with-list-selection.sppkg"
+  }
+}
