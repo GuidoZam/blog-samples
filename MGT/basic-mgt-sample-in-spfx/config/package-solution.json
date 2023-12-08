@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "basic-mgt-sample-in-spfx-client-side-solution",
+    "id": "7ac11673-f307-49bb-8918-e99762e5b148",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "basic-mgt-sample-in-spfx description"
+      },
+      "longDescription": {
+        "default": "basic-mgt-sample-in-spfx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "basic-mgt-sample-in-spfx Feature",
+        "description": "The feature that activates elements of the basic-mgt-sample-in-spfx solution.",
+        "id": "d5129fc2-085b-4b86-a9c4-d8496b7009e8",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/basic-mgt-sample-in-spfx.sppkg"
+  }
+}
