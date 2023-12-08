@@ -10,6 +10,7 @@ import * as strings from 'BasicMgtSampleWebPartStrings';
 import BasicMgtSample from './components/BasicMgtSample';
 import { IBasicMgtSampleProps } from './components/IBasicMgtSampleProps';
 
+// Import the MGT providers
 import { Providers, SharePointProvider } from '@microsoft/mgt-spfx';
 
 export interface IBasicMgtSampleWebPartProps {
@@ -27,7 +28,6 @@ export default class BasicMgtSampleWebPart extends BaseClientSideWebPart<IBasicM
   }
 
   protected async onInit(): Promise<void> {
-  
     // Initialize the MGT Provider
     if (!Providers.globalProvider) {
       Providers.globalProvider = new SharePointProvider(this.context as any);
