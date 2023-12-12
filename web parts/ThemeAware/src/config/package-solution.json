@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "theme-aware-client-side-solution",
+    "id": "ba430769-92e5-498e-b975-12112c6545a7",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "ThemeAware description"
+      },
+      "longDescription": {
+        "default": "ThemeAware description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "theme-aware Feature",
+        "description": "The feature that activates elements of the theme-aware solution.",
+        "id": "382a6abc-da8f-4ff0-ad86-08abdfcd3e86",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/theme-aware.sppkg"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "theme-aware-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/themeAware/ThemeAwareWebPart.js",
+          "manifest": "./src/webparts/themeAware/ThemeAwareWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ThemeAwareWebPartStrings": "lib/webparts/themeAware/loc/{locale}.js"
+  }
+}
