@@ -30,6 +30,7 @@ export default class RichTextSample extends React.Component<IRichTextSampleProps
   }
 
   private onTextChange = (newText: string): string => {
+    console.log(newText);
     this.setState({ richValue: newText });
     return newText;
   }
