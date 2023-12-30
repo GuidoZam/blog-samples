@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "rich-text-sample-client-side-solution",
+    "id": "f705baa8-54b9-46f5-a215-b9d13d478188",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "rich-text-sample description"
+      },
+      "longDescription": {
+        "default": "rich-text-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "rich-text-sample Feature",
+        "description": "The feature that activates elements of the rich-text-sample solution.",
+        "id": "d767ec74-b719-4f64-8df8-19e8e5da3fb1",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/rich-text-sample.sppkg"
+  }
+}
