@@ -1,0 +1,61 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.16",
+  "packageName": "Teans Manifest Localization",
+  "id": "1b0af42c-545f-4c08-9878-c335044125d3",
+  "version": "1.0",
+  "developer": {
+		"name": "GuidoZam",
+		"websiteUrl": "https://iamguidozam.blog/",
+		"privacyUrl": "https://iamguidozam.blog/",
+		"termsOfUseUrl": "https://www.piasys.com/terms-of-use/"
+	},
+  "name": {
+    "short": "Teams Manifest Localization",
+    "full": "Teams Manifest Localization full name"
+  },
+  "description": {
+    "short": "Localization example",
+    "full": "Localization example full description"
+  },
+  "localizationInfo": {
+    "defaultLanguageTag": "en-us",
+    "additionalLanguages": [
+      {
+        "languageTag": "it",
+        "file": "it.json"
+      }
+    ]
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#07525b",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26componentId={{SPFX_COMPONENT_ID}}",
+      "canUpdateConfiguration": false,
+      "scopes": [
+        "team",
+        "groupchat"
+      ],
+      "context": [
+        "channelTab",
+        "privateChatTab",
+        "meetingSidePanel",
+        "meetingDetailsTab",
+        "meetingChatTab"
+      ]
+    }
+  ],
+  "validDomains": [
+    "*.login.microsoftonline.com",
+    "*.sharepoint.com",
+    "resourceseng.blob.core.windows.net"
+  ],
+  "webApplicationInfo": {
+    "resource": "https://{teamSiteDomain}",
+    "id": "00000003-0000-0ff1-ce00-000000000000"
+  }
+}

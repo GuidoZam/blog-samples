@@ -1,0 +1,8 @@
+{
+	"$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.Localization.schema.json",
+	"name.short": "Esempio di localizzazione",
+	"name.full": "Esempio di localizzazione nome completo",
+	"description.short": "Esempio di localizzazione",
+	"description.full": "Esempio di localizzazione descrizione completa",
+	"staticTabs[0].name": "Ciao Mondo"
+}
