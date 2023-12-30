@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "teams-manifest-localization-client-side-solution",
+    "id": "dea3c83d-ebb9-4f63-afae-09429666ea21",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "teams-manifest-localization description"
+      },
+      "longDescription": {
+        "default": "teams-manifest-localization description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "teams-manifest-localization Feature",
+        "description": "The feature that activates elements of the teams-manifest-localization solution.",
+        "id": "b5e5c73a-4350-4e9d-8993-936e395adc0c",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/teams-manifest-localization.sppkg"
+  }
+}
