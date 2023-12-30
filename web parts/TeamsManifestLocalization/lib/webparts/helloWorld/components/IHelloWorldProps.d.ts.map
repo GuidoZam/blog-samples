@@ -1,0 +1,1 @@
+{"version":3,"file":"IHelloWorldProps.d.ts","sourceRoot":"","sources":["../../../../src/webparts/helloWorld/components/IHelloWorldProps.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,gBAAgB;IAC/B,WAAW,EAAE,MAAM,CAAC;IACpB,WAAW,EAAE,OAAO,CAAC;IACrB,kBAAkB,EAAE,MAAM,CAAC;IAC3B,eAAe,EAAE,OAAO,CAAC;IACzB,eAAe,EAAE,MAAM,CAAC;CACzB"}
