@@ -2,7 +2,7 @@
   "id": "aa20efe1-f3f8-4d73-af74-711f555cef8f",
   "alias": "HelloWorldWebPart",
   "componentType": "WebPart",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "manifestVersion": 2,
   "requiresCustomScript": false,
   "supportedHosts": [
@@ -38,17 +38,7 @@
     "scriptResources": {
       "hello-world-web-part": {
         "type": "path",
-        "path": "hello-world-web-part_fe23f6df4514169532cd.js"
-      },
-      "@microsoft/sp-property-pane": {
-        "type": "component",
-        "id": "f9e737b7-f0df-4597-ba8c-3060f82380db",
-        "version": "1.18.2"
-      },
-      "@microsoft/sp-lodash-subset": {
-        "type": "component",
-        "id": "73e1dc6c-8441-42cc-ad47-4bd3659f8a3a",
-        "version": "1.18.2"
+        "path": "hello-world-web-part_c1268cf825767f400bbc.js"
       },
       "@microsoft/sp-core-library": {
         "type": "component",
@@ -71,8 +61,12 @@
         "version": "17.0.1"
       },
       "HelloWorldWebPartStrings": {
-        "type": "path",
-        "path": "HelloWorldWebPartStrings_en-us_3bd812ceda191f7235a1db0c41d7c3a7.js"
+        "type": "localizedPath",
+        "paths": {
+          "en-US": "HelloWorldWebPartStrings_en-us_71482b75e424c6c2f79a22bb83ad2187.js",
+          "it-IT": "HelloWorldWebPartStrings_it-it_75e9632fe15d70e69883d27aa88770db.js"
+        },
+        "defaultPath": "HelloWorldWebPartStrings_en-us_71482b75e424c6c2f79a22bb83ad2187.js"
       }
     }
   }

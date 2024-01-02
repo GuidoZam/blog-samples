@@ -3,7 +3,7 @@
   "solution": {
     "name": "teams-manifest-localization-client-side-solution",
     "id": "dea3c83d-ebb9-4f63-afae-09429666ea21",
-    "version": "1.0.0.0",
+    "version": "1.0.1.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

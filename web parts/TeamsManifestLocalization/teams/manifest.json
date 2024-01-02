@@ -1,9 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
   "manifestVersion": "1.16",
-  "packageName": "Teans Manifest Localization",
-  "id": "1b0af42c-545f-4c08-9878-c335044125d3",
-  "version": "1.0",
+  "packageName": "teams.manifest.localization",
+  "id": "a9ed3143-e7c7-4f3c-bc6e-5160b6415b94",
+  "version": "1.0.1",
   "developer": {
 		"name": "GuidoZam",
 		"websiteUrl": "https://iamguidozam.blog/",
@@ -34,7 +34,7 @@
   "accentColor": "#07525b",
   "configurableTabs": [
     {
-      "configurationUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26componentId={{SPFX_COMPONENT_ID}}",
+      "configurationUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26componentId=aa20efe1-f3f8-4d73-af74-711f555cef8f",
       "canUpdateConfiguration": false,
       "scopes": [
         "team",
@@ -52,7 +52,8 @@
   "validDomains": [
     "*.login.microsoftonline.com",
     "*.sharepoint.com",
-    "resourceseng.blob.core.windows.net"
+    "resourceseng.blob.core.windows.net",
+    "teams.microsoft.com"
   ],
   "webApplicationInfo": {
     "resource": "https://{teamSiteDomain}",
