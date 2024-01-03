@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "multiple-package-versions-client-side-solution",
+    "id": "14b649fd-45ff-444c-9e53-55d73655e5ca",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "multiple-package-versions description"
+      },
+      "longDescription": {
+        "default": "multiple-package-versions description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "multiple-package-versions Feature",
+        "description": "The feature that activates elements of the multiple-package-versions solution.",
+        "id": "5b4e1990-1a4a-45fa-892f-9da3d3ac3e19",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/multiple-package-versions.sppkg"
+  }
+}
