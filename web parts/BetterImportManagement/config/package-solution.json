@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "better-import-management-client-side-solution",
+    "id": "099510b0-70b7-44d9-ad4f-264dfdbd2364",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "better-import-management description"
+      },
+      "longDescription": {
+        "default": "better-import-management description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "better-import-management Feature",
+        "description": "The feature that activates elements of the better-import-management solution.",
+        "id": "042dab97-5610-4048-bffb-11961227e364",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/better-import-management.sppkg"
+  }
+}

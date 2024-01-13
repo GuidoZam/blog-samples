@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "better-import-management",
+    "libraryId": "099510b0-70b7-44d9-ad4f-264dfdbd2364",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "better-import-management",
+    "solutionShortDescription": "better-import-management description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
