@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "flow-status-ace-client-side-solution",
+    "id": "b1ef436f-51d1-4f1e-809b-4f81dc5745a2",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "flow-status-ace description"
+      },
+      "longDescription": {
+        "default": "flow-status-ace description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "flow-status-ace Feature",
+        "description": "The feature that activates elements of the flow-status-ace solution.",
+        "id": "ec5a3fbd-dcc8-4bde-a0c0-22d831d3f0f8",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/flow-status-ace.sppkg"
+  }
+}

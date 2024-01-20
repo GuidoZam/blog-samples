@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "flow-status-ace-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/flowStatusAce/FlowStatusAceAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/flowStatusAce/FlowStatusAceAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "FlowStatusAceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/flowStatusAce/loc/{locale}.js"
+  }
+}

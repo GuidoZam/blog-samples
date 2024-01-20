@@ -1,0 +1,22 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "flow-status-ace",
+    "libraryId": "b1ef436f-51d1-4f1e-809b-4f81dc5745a2",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "flow-status-ace",
+    "solutionShortDescription": "flow-status-ace description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Generic"
+  }
+}
