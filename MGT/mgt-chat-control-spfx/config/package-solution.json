@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mgt-chat-control-spfx-client-side-solution",
+    "id": "2a9a9210-9b48-42ed-a166-6fea9d7eeea0",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mgt-chat-control-spfx description"
+      },
+      "longDescription": {
+        "default": "mgt-chat-control-spfx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mgt-chat-control-spfx Feature",
+        "description": "The feature that activates elements of the mgt-chat-control-spfx solution.",
+        "id": "10524302-0e27-4a3e-8c16-51e39654dc0d",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mgt-chat-control-spfx.sppkg"
+  }
+}
