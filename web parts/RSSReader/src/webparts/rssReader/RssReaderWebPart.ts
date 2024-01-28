@@ -3,7 +3,8 @@ import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import {
   type IPropertyPaneConfiguration,
-  PropertyPaneTextField
+  PropertyPaneTextField,
+  PropertyPaneSlider
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
@@ -13,7 +14,8 @@ import RssReader from './components/RssReader';
 import { IRssReaderProps } from './components/IRssReaderProps';
 
 export interface IRssReaderWebPartProps {
-  rssUrl: string;
+	rssUrl: string;
+	maxItemCount: number;
 }
 
 export default class RssReaderWebPart extends BaseClientSideWebPart<IRssReaderWebPartProps> {
@@ -22,7 +24,8 @@ export default class RssReaderWebPart extends BaseClientSideWebPart<IRssReaderWe
     const element: React.ReactElement<IRssReaderProps> = React.createElement(
 			RssReader,
 			{
-				rssUrl: this.properties.rssUrl
+				rssUrl: this.properties.rssUrl,
+        maxItemCount: this.properties.maxItemCount,
 			}
 		);
 
@@ -68,6 +71,11 @@ export default class RssReaderWebPart extends BaseClientSideWebPart<IRssReaderWe
 							groupFields: [
 								PropertyPaneTextField("rssUrl", {
 									label: strings.RSSUrlFieldLabel,
+								}),
+								PropertyPaneSlider("maxItemCount", {
+									label: strings.MaxItemCountFieldLabel,
+                  min: 3,
+                  max: 10,
 								}),
 							],
 						},

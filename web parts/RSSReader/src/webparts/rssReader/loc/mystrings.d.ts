@@ -5,6 +5,7 @@ declare interface IRssReaderWebPartStrings {
 	RssReaderTitle: string;
 	Loading: string;
 	ErrorLabel: string;
+	MaxItemCountFieldLabel: string;
 }
 
 declare module 'RssReaderWebPartStrings' {

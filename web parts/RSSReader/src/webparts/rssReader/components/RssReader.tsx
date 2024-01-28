@@ -41,7 +41,8 @@ export default class RssReader extends React.Component<IRssReaderProps, IRssRead
 
     try {
       const feed = await parser.parseURL(`${this.CORS_PROXY}${this.props.rssUrl}`);
-      items = feed.items;
+      // limit the items to the number specified in the web part properties
+      items = feed.items.slice(0, this.props.maxItemCount);
     }
     catch (error) {
       errorMessage = error.message;
