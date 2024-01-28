@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "rss-feed-reader-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/rssFeedReader/RssFeedReaderAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/rssFeedReader/RssFeedReaderAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "RssFeedReaderAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/rssFeedReader/loc/{locale}.js"
+  }
+}
