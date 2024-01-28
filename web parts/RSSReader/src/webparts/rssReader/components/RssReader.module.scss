@@ -1,0 +1,23 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.rssReader {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 1em;
+  font-style: italic;
+}
+
+.error {
+  color: "[theme:errorText, default: #a80000]";
+  color: var(--errorText);
+  font-style: italic;
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "rss-reader-client-side-solution",
+    "id": "596fb11c-c0d3-4993-93fb-80c53dbba20a",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "rss-reader description"
+      },
+      "longDescription": {
+        "default": "rss-reader description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "rss-reader Feature",
+        "description": "The feature that activates elements of the rss-reader solution.",
+        "id": "6eea0d2c-c333-4a04-ba6e-8f0b9e6ec0f9",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/rss-reader.sppkg"
+  }
+}
