@@ -6,10 +6,11 @@ declare interface IRssFeedReaderAdaptiveCardExtensionStrings {
 	PrimaryText: string;
 	PropertyPaneDescription: string;
 	QuickViewButton: string;
+	NextButton: string;
 	RSSUrlFieldLabel: string;
-	SubTitle: string;
 	Title: string;
-  NeedConfigurationMessage: string;
+	NeedConfigurationMessage: string;
+	ViewFullLabel: string;
 }
 
 declare module 'RssFeedReaderAdaptiveCardExtensionStrings' {

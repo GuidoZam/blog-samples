@@ -1,5 +1,9 @@
 import { IPropertyPaneConfiguration, PropertyPaneSlider, PropertyPaneTextField } from '@microsoft/sp-property-pane';
 import * as strings from 'RssFeedReaderAdaptiveCardExtensionStrings';
+import {
+	MAX_RSS_ITEMS_COUNT,
+	MIN_RSS_ITEMS_COUNT,
+} from "./RssFeedReaderAdaptiveCardExtension";
 
 export class RssFeedReaderPropertyPane {
   public getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -15,8 +19,8 @@ export class RssFeedReaderPropertyPane {
 								}),
 								PropertyPaneSlider("maxItemCount", {
 									label: strings.MaxItemCountFieldLabel,
-									min: 3,
-									max: 10,
+									min: MIN_RSS_ITEMS_COUNT,
+									max: MAX_RSS_ITEMS_COUNT,
 								}),
 							],
 						},

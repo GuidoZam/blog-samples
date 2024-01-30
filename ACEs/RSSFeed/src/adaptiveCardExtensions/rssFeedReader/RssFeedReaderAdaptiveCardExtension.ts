@@ -19,6 +19,8 @@ export interface IRssFeedReaderAdaptiveCardExtensionState {
 
 const CARD_VIEW_REGISTRY_ID: string = 'RssFeedReader_CARD_VIEW';
 export const QUICK_VIEW_REGISTRY_ID: string = 'RssFeedReader_QUICK_VIEW';
+export const MIN_RSS_ITEMS_COUNT: number = 3;
+export const MAX_RSS_ITEMS_COUNT: number = 10;
 
 export default class RssFeedReaderAdaptiveCardExtension extends BaseAdaptiveCardExtension<
 	IRssFeedReaderAdaptiveCardExtensionProps,
@@ -53,10 +55,12 @@ export default class RssFeedReaderAdaptiveCardExtension extends BaseAdaptiveCard
   This method load the RSS feed and sets the state with the items and, if necessary, the error message
   */
 	private async loadRssFeed(): Promise<void> {
-    if (!this.properties.rssUrl || this.properties.rssUrl.length === 0) {
-      // If the RSS URL is not set don't load the feed
-      return;
-    }
+		const { rssUrl, maxItemCount } = this.properties;
+    
+    // If the RSS URL is not set don't load the feed
+		if (!rssUrl || rssUrl.length === 0) {
+			return;
+		}
 
 		this.setState({
 			isLoading: true,
@@ -65,27 +69,30 @@ export default class RssFeedReaderAdaptiveCardExtension extends BaseAdaptiveCard
 		let items: any[] = [];
 		let errorMessage: string | undefined = undefined;
 
-    // Instantiate the RSS parser
+		// Instantiate the RSS parser
 		const parser: Parser = new Parser();
 
 		try {
-      // Parse the RSS feed
+			// Parse the RSS feed
 			const feed = await parser.parseURL(
-				`${this.CORS_PROXY}${this.properties.rssUrl}`
+				`${this.CORS_PROXY}${rssUrl}`
 			);
 			// limit the items to the number specified in the web part properties
-			items = feed.items.slice(0, this.properties.maxItemCount);
+			items = feed.items.slice(
+				0,
+				maxItemCount ? maxItemCount : MIN_RSS_ITEMS_COUNT
+			);
 		} catch (error) {
-      // If there is an error, set the error message
+			// If there is an error, set the error message
 			errorMessage = error.message;
 		}
 
-    // Set the state with the items and error message
+		// Set the state with the items and error message
 		this.setState({
 			rssItems: items,
 			isLoading: false,
 			error: errorMessage,
-      index: this.state.index ?? 0
+			index: this.state.index ?? 0,
 		});
 	}
 

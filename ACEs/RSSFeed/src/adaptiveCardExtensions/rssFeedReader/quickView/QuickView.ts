@@ -1,13 +1,17 @@
 import { ISPFxAdaptiveCard, BaseAdaptiveCardQuickView } from '@microsoft/sp-adaptive-card-extension-base';
-import * as strings from 'RssFeedReaderAdaptiveCardExtensionStrings';
 import {
   IRssFeedReaderAdaptiveCardExtensionProps,
   IRssFeedReaderAdaptiveCardExtensionState
 } from '../RssFeedReaderAdaptiveCardExtension';
+import * as strings from 'RssFeedReaderAdaptiveCardExtensionStrings';
 
 export interface IQuickViewData {
-  subTitle: string;
-  title: string;
+	title: string;
+	contentSnippet: string;
+	link: string;
+	creator: string;
+	pubDate?: string;
+	viewFullLabel: string;
 }
 
 export class QuickView extends BaseAdaptiveCardQuickView<
@@ -16,10 +20,16 @@ export class QuickView extends BaseAdaptiveCardQuickView<
   IQuickViewData
 > {
   public get data(): IQuickViewData {
+    const selectedItem = this.state.rssItems[this.state.index!];
+
     return {
-      subTitle: strings.SubTitle,
-      title: strings.Title
-    };
+			title: selectedItem.title,
+			contentSnippet: selectedItem.contentSnippet,
+			link: selectedItem.link,
+			creator: selectedItem.creator,
+			pubDate: selectedItem.pubDate,
+			viewFullLabel: strings.ViewFullLabel
+		};
   }
 
   public get template(): ISPFxAdaptiveCard {
