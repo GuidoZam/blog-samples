@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "19f1ac7c-ff74-47ed-a368-c2ab8285d425",
+  "alias": "RssFeedReaderAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "RSS Feed Reader" },
+    "description": { "default": "RSS Feed Reader description" },
+    "iconImageUrl": "data:image/png;base64,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",
+    "properties": {
+      "title": "RSS Feed Reader"
+    },
+    "cardSize": "Large"
+  }]
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "rss-feed-client-side-solution",
+    "id": "ec38e106-6c5d-4183-acb6-d35aa25aee9d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "rss-feed description"
+      },
+      "longDescription": {
+        "default": "rss-feed description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "rss-feed Feature",
+        "description": "The feature that activates elements of the rss-feed solution.",
+        "id": "a3286ab1-75e7-48c4-b1f6-65776e0e468c",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/rss-feed.sppkg"
+  }
+}
