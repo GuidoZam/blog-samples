@@ -4,7 +4,9 @@
 
 Short summary on functionality and used technologies.
 
-[picture of the solution in action, if possible]
+![cardView](./readme_assets/cardView.png)
+
+![quickView](./readme_assets/quickView.png)
 
 ## Used SharePoint Framework Version
 
