@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mgt-agenda-spfx-client-side-solution",
+    "id": "64a496db-4c4c-424a-9241-91ad455b4644",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mgt-agenda-spfx description"
+      },
+      "longDescription": {
+        "default": "mgt-agenda-spfx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mgt-agenda-spfx Feature",
+        "description": "The feature that activates elements of the mgt-agenda-spfx solution.",
+        "id": "4b4e80e8-bbc7-479a-8669-98835ef19144",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mgt-agenda-spfx.sppkg"
+  }
+}
