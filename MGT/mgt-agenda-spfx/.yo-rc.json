@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "mgt-agenda-spfx",
+    "libraryId": "64a496db-4c4c-424a-9241-91ad455b4644",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "mgt-agenda-spfx",
+    "solutionShortDescription": "mgt-agenda-spfx description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
