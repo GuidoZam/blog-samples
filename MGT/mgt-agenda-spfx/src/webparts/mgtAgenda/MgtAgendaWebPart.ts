@@ -60,10 +60,12 @@ export default class MgtAgendaWebPart extends BaseClientSideWebPart<IMgtAgendaWe
 							groupName: strings.BasicGroupName,
 							groupFields: [
                 PropertyPaneCheckbox('groupByDay', {
-                  text: strings.GroupByDayFieldLabel
+                  text: strings.GroupByDayFieldLabel,
+                  checked: this.properties.groupByDay === true
                 }),
                 PropertyPaneSlider('showMaxDays', {
                   label: strings.ShowMaxDaysFieldLabel,
+                  value: this.properties.showMaxDays,
                   min: 1,
                   max: 30,
                   step: 1,
