@@ -17,7 +17,11 @@ export default class MgtAgenda extends React.Component<IMgtAgendaProps, {}> {
         <div>
           <Agenda 
             groupByDay={this.props.groupByDay === true}
-            days={this.props.showMaxDays}  
+            days={this.props.showMaxDays} 
+            eventClick={(e: CustomEvent<any>) => { 
+              console.log(e.detail);
+              e.preventDefault();
+            }} 
           />
         </div>
       </section>
