@@ -12,8 +12,6 @@ export default class MgtFile extends React.Component<IMgtFileProps, {}> {
       return <div>Please configure the item ID!</div>
     }
 
-    // 01EU4L7SUX7UZQ2VOOUVHZ7LD7KJPN56OC
-
     const itemId = this.props.itemId;
 
     // This is a custom template for the File component
