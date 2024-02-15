@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mgt-file-list-spfx-client-side-solution",
+    "id": "f5cff146-6710-44d2-be73-bd038aa19ff4",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mgt-file-list-spfx description"
+      },
+      "longDescription": {
+        "default": "mgt-file-list-spfx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mgt-file-list-spfx Feature",
+        "description": "The feature that activates elements of the mgt-file-list-spfx solution.",
+        "id": "ab8fb067-5ccd-4812-b88d-3e6e1c898de4",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mgt-file-list-spfx.sppkg"
+  }
+}
