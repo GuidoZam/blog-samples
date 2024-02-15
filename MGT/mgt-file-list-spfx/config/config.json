@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "mgt-file-list-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mgtFileList/MgtFileListWebPart.js",
+          "manifest": "./src/webparts/mgtFileList/MgtFileListWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MgtFileListWebPartStrings": "lib/webparts/mgtFileList/loc/{locale}.js"
+  }
+}
