@@ -101,20 +101,6 @@ export default class MgtLogin extends React.Component<IMgtLoginProps, {}> {
               }}
             />
           </div>
-
-          {/* 
-          userDetails?: IDynamicPerson;
-          showPresence?: boolean;
-          loginView?: LoginViewType;
-          templateContext?: TemplateContext;
-          mediaQuery?: ComponentMediaQuery;
-          loginInitiated?: (e: CustomEvent<undefined>) => void;
-          loginCompleted?: (e: CustomEvent<undefined>) => void;
-          loginFailed?: (e: CustomEvent<undefined>) => void;
-          logoutInitiated?: (e: CustomEvent<undefined>) => void;
-          logoutCompleted?: (e: CustomEvent<undefined>) => void;
-          templateRendered?: (e: CustomEvent<TemplateRenderedData>) => void;
-          */}
         </div>
       </section>
     );
@@ -135,23 +121,27 @@ export default class MgtLogin extends React.Component<IMgtLoginProps, {}> {
         );
       case 'flyout-commands':
         return (
-          <div>
+          <div className={styles.customFlyoutCommands}>
             <IconButton iconProps={{ iconName: 'AddFriend' }} onClick={() => alert('Add Friend')} text='Add Friend' />
             <IconButton iconProps={{ iconName: 'Mail' }} onClick={() => alert('Send Message')} text='Send Message' />
           </div>
         );
       case 'flyout-person-details':
+        console.log(props.dataContext);
         return (
-          <div>
-            <div>
-              <img src={props.dataContext.userDetails?.personImage} alt="User" />
+          <div className={styles.userFlyout}>
+            <div className={styles.personBlockImage}>
+              <img src={props.dataContext.personImage} alt="User" className={styles.userPicture} />
             </div>
-            <div>
+            <div className={styles.personBlockDetails}>
               <div>
-                {props.dataContext.userDetails?.displayName}
+                {props.dataContext.personDetails?.displayName}Test
               </div>
               <div>
-                {props.dataContext.userDetails?.department}
+                {props.dataContext.personDetails?.jobTitle}Test 2
+              </div>
+              <div>
+                {props.dataContext.personDetails?.department}Test 3
               </div>
             </div>
           </div>
