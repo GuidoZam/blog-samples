@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "mgt-people-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mgtPeople/MgtPeopleWebPart.js",
+          "manifest": "./src/webparts/mgtPeople/MgtPeopleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MgtPeopleWebPartStrings": "lib/webparts/mgtPeople/loc/{locale}.js"
+  }
+}

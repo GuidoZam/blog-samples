@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mgt-people-spfx-client-side-solution",
+    "id": "4dca6ece-2f78-4324-a44e-bef92144fc46",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mgt-people-spfx description"
+      },
+      "longDescription": {
+        "default": "mgt-people-spfx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mgt-people-spfx Feature",
+        "description": "The feature that activates elements of the mgt-people-spfx solution.",
+        "id": "bc6ab05d-3ee8-4d75-a902-f7fa72545dda",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mgt-people-spfx.sppkg"
+  }
+}
