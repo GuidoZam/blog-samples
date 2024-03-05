@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "mgt-person-card-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mgtPersonCard/MgtPersonCardWebPart.js",
+          "manifest": "./src/webparts/mgtPersonCard/MgtPersonCardWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MgtPersonCardWebPartStrings": "lib/webparts/mgtPersonCard/loc/{locale}.js"
+  }
+}
