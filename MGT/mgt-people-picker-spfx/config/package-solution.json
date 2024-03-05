@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mgt-people-picker-spfx-client-side-solution",
+    "id": "3fcd1229-9663-471b-a212-f432c33f1125",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mgt-people-picker-spfx description"
+      },
+      "longDescription": {
+        "default": "mgt-people-picker-spfx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mgt-people-picker-spfx Feature",
+        "description": "The feature that activates elements of the mgt-people-picker-spfx solution.",
+        "id": "9e739dee-7f54-4b77-bc4d-aa8c3cecf4bd",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mgt-people-picker-spfx.sppkg"
+  }
+}
