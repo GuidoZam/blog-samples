@@ -59,7 +59,7 @@ If you want to provide links to your social media, blog, and employer name, make
 
 Version|Date|Comments
 -------|----|--------
-|1.0|March 15, 2024|Initial release|
+|1.0|March 16, 2024|Initial release|
 
 ## Prerequisites
 
