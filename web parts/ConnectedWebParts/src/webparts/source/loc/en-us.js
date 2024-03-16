@@ -7,7 +7,7 @@ define([], function() {
     LastName: "Last Name",
     Preferences: "Preferences",
     BadPropertyId: "Bad Property Id",
-    Title: "Source Web Part",
+    Title: "Source web part",
     Color: "Color",
     Date: "Date",
     Like: "Like it?",
