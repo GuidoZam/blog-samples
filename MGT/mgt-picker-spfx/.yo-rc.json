@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "mgt-picker-spfx",
+    "libraryId": "1d17f175-209b-449f-9bc1-c88ebb1be913",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "mgt-picker-spfx",
+    "solutionShortDescription": "mgt-picker-spfx description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
