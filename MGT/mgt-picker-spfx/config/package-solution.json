@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mgt-picker-spfx-client-side-solution",
+    "id": "1d17f175-209b-449f-9bc1-c88ebb1be913",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mgt-picker-spfx description"
+      },
+      "longDescription": {
+        "default": "mgt-picker-spfx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mgt-picker-spfx Feature",
+        "description": "The feature that activates elements of the mgt-picker-spfx solution.",
+        "id": "0e388d7e-770e-4725-bccf-86b97e334c46",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mgt-picker-spfx.sppkg"
+  }
+}
