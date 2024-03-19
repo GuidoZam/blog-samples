@@ -9,36 +9,36 @@ export default class MgtPeople extends React.Component<IMgtPeopleProps, {}> {
     return (
       <section className={styles.mgtPeople}>
         <div className={styles.welcome}>
-          <div>MGT People</div>
+          <div>{strings.Title}</div>
         </div>
         <div>
           <div>
             <h4 className={styles.sectionTitle}>
-              <span>Minimal usage</span>
+              <span>{strings.MinimalUsage}</span>
             </h4>
             <People />
           </div>
           <div>
             <h4 className={styles.sectionTitle}>
-              <span>Show presence</span>
+              <span>{strings.ShowPresence}</span>
             </h4>
             <People showPresence={true} />
           </div>
           <div>
             <h4 className={styles.sectionTitle}>
-              <span>Show max 6 people</span>
+              <span>{strings.ShowMaxPeople}</span>
             </h4>
             <People showMax={this.props.maxPeople} />
           </div>
           <div>
             <h4 className={styles.sectionTitle}>
-              <span>People of specific group</span>
+              <span>{strings.PeopleOfSpecificGroup}</span>
             </h4>
             <People groupId={this.props.groupId} />
           </div>
           <div>
             <h4 className={styles.sectionTitle}>
-              <span>Custom query</span>
+              <span>{strings.CustomQuery}</span>
             </h4>
             {this.props.queries.length > 0 &&
             <People peopleQueries={this.props.queries} />}
