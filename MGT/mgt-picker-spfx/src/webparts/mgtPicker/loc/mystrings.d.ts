@@ -12,6 +12,7 @@ declare interface IMgtPickerWebPartStrings {
 	SelectUser: string
   Events: string;
   SelectEvent: string;
+	Title: string;
 }
 
 declare module 'MgtPickerWebPartStrings' {

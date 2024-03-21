@@ -4,6 +4,12 @@ declare interface IMgtPeopleWebPartStrings {
 	GroupIdFieldLabel: string;
 	MaxPeopleFieldLabel: string;
 	SpecifyQueriesInPropertyPane: string;
+	Title: string;
+	MinimalUsage: string;
+	ShowPresence: string;
+	ShowMaxPeople: string;
+	PeopleOfSpecificGroup: string;
+	CustomQuery: string;
 }
 
 declare module 'MgtPeopleWebPartStrings' {
