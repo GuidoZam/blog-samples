@@ -13,5 +13,6 @@ define([], function() {
     SelectUser: "Select User",
     Events: "Events",
     SelectEvent: "Select Event",
+		Title: "MGT Picker",
 	};
 });

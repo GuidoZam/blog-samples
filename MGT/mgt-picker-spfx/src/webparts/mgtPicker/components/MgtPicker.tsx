@@ -25,7 +25,7 @@ export default class MgtPicker extends React.Component<IMgtPickerProps, IMgtPick
     return (
       <section className={styles.mgtPicker}>
         <div className={styles.welcome}>
-          <h2>MGT Picker</h2>
+          <h2>{strings.Title}</h2>
         </div>
         <div>
           <h4>{strings.Users}</h4>
