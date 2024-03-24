@@ -1,5 +1,9 @@
 declare interface IPnPFieldCollectionDataWebPartStrings {
-  Title: string;
+	Title: string;
+	Manage: string;
+	Header: string;
+	FirstLabel: string;
+	SecondLabel: string;
 }
 
 declare module 'PnPFieldCollectionDataWebPartStrings' {

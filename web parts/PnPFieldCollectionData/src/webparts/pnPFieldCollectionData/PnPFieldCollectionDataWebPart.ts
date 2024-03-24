@@ -14,7 +14,9 @@ export default class PnPFieldCollectionDataWebPart extends BaseClientSideWebPart
   public render(): void {
     const element: React.ReactElement<IPnPFieldCollectionDataProps> = React.createElement(
       PnPFieldCollectionData,
-      {}
+      {
+        context: this.context
+      }
     );
 
     ReactDom.render(element, this.domElement);
