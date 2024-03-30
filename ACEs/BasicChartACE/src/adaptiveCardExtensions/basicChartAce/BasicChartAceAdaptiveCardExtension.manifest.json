@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "94081c2f-db61-47a9-a870-0821aaa0a899",
+  "alias": "BasicChartAceAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "BasicChartACE" },
+    "description": { "default": "BasicChartACE description" },
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAvVJREFUWEfFlz9IG3EUx7/vroqZWh0EG0wmUZTapUMCJZPgEp0iKRQ6pksL7XIJTplEb2mhXbo2LbS4CDo4OEkhGZpBq0siDoVkcEkKgoL1fuX98HdcLrnmgid34+/ee9/P7/3e+/0h+PwMw3ioaVrasqyUpmmPLMuKEdEDdhdCtDVN+21Z1i9N0/Yty9oxTbPpJzT1MzIMIwHgDRFl+9k6/wshvgN4b5pm5X9+ngDFYvHe5eXlOyHEq0GE3bZE9HFkZORtsVj82ytOT4DV1dX56+vrzwAe30bc4Xug6/qLtbW1wy5A90A+n38KYAfA/YDEVZg/ANIbGxs/nHE7MnAz8/07ELchdF1POTNhA/CaX1xc/Aww7V4JPIhEIk9UTdgAhULhw20Lzu+ScWGur6+/ZnsJwK1GRGW/AYKwE0IkuUUVwLdB+9wLIpPJYHx8vOfv09NT7O7uyn+8T5im+Yx4hyOiRhCz4hi5XA4TExN2OF3XMTQ0BCLC8fExSqWS/U8IEaVCoZATQnwKCsAZhzOxsrKCyclJOewGIKKXnIEvRPQ8aAAlHo1GcXR0hKmpKfASuDLwlTNwIISYDxLAKV4ul1Gv15HNZrsAiOiQM9BSp5ofiHQ6jbGxMWxvb6PVanW5uMXZbmZmpicAn6KUz+eFH2G2WVpaQjKZlAVVq9WwtbXVAdFLnP28AOQ+4BdAiTcaDZyfn2N6elqmVkF4ibNIPB7HwsIC2Fe1oZq0ryVwim9ubqLdbsvqnpubkxB7e3tYXl4GFxyvOafdzyeXoF8RusXPzs5k7OHhYRvi6upK9vog4jL9N0Xo2YZe4mp2CmJ2dhaVSsX3zJW/EEK2Yc+NqJ+4EyIWi+Hk5MRP1jts1EbUtRX7FR9Y0eUgt2IeMwzDPowWFxeRSqXQbDbBBafW/LZibn/7MLoBsI/j0dFRJBIJVKvVOxNnzY7jmAdCvZAwQOhXMoYI9VKqiiTUa7mCCPVhoiBCfZo5eza0x6l747ir5/k/7gjPrGir1OkAAAAASUVORK5CYII=",
+    "properties": {
+      "title": "BasicChartACE"
+    },
+    "cardSize": "Large"
+  }]
+}
