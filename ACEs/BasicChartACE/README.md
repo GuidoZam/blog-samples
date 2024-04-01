@@ -12,7 +12,7 @@ This is a basic Adaptive Card Extensions that shows how to use the new LineChart
 
 ## Used SharePoint Framework Version
 
-![version](https://img.shields.io/badge/version-1.19.0_beta_0-green.svg)
+![version](https://img.shields.io/badge/version-1.19.0_beta_0-yellow.svg)
 
 ## Applies to
 
