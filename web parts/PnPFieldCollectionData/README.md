@@ -2,9 +2,13 @@
 
 ## Summary
 
-Short summary on functionality and used technologies.
+Sample to show the usage of the PnP FieldCollectionData control in a SharePoint Framework web part.
 
-[picture of the solution in action, if possible]
+![alt text](src/webparts/pnPFieldCollectionData/assets/InitialControl.png)
+
+![alt text](src/webparts/pnPFieldCollectionData/assets/firstFieldCollection.png)
+
+![alt text](src/webparts/pnPFieldCollectionData/assets/secondFieldCollection.png)
 
 ## Used SharePoint Framework Version
 
@@ -25,14 +29,13 @@ Short summary on functionality and used technologies.
 
 | Solution    | Author(s)                                               |
 | ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
+| PnPFieldCollectionData | [GuidoZam](https://github.com/guidozam) |
 
 ## Version history
 
 | Version | Date             | Comments        |
 | ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
+| 1.0     | April 1, 2024 | Initial release |
 
 ## Disclaimer
 
@@ -67,7 +70,5 @@ This extension illustrates the following concepts:
 ## References
 
 - [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
+- [PnP React Controls](https://pnp.github.io/sp-dev-fx-controls-react/)
 - [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
