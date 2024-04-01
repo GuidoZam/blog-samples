@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-field-collection-data-client-side-solution",
+    "id": "6f28b9b8-2294-494e-b8b1-dd5d418b998b",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-field-collection-data description"
+      },
+      "longDescription": {
+        "default": "pnp-field-collection-data description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-field-collection-data Feature",
+        "description": "The feature that activates elements of the pnp-field-collection-data solution.",
+        "id": "00264b2e-1c3f-4391-bb60-93ab89bfe18f",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-field-collection-data.sppkg"
+  }
+}

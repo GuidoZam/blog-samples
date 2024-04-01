@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "pnp-field-collection-data",
+    "libraryId": "6f28b9b8-2294-494e-b8b1-dd5d418b998b",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "pnp-field-collection-data",
+    "solutionShortDescription": "pnp-field-collection-data description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

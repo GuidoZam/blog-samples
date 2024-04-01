@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "pn-p-field-collection-data-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pnPFieldCollectionData/PnPFieldCollectionDataWebPart.js",
+          "manifest": "./src/webparts/pnPFieldCollectionData/PnPFieldCollectionDataWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PnPFieldCollectionDataWebPartStrings": "lib/webparts/pnPFieldCollectionData/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
