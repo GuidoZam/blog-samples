@@ -5,7 +5,9 @@
 This is a basic Adaptive Card Extensions that shows how to use the new LineChartCardView component to display a simple line chart.
 
 ![Large card with multiple symbols](src/adaptiveCardExtensions/basicChartAce/assets/largeCardMultipleSymbols.png)
+
 ![Large card with a single symbol](src/adaptiveCardExtensions/basicChartAce/assets/largeCardSingleSymbol.png)
+
 ![Medium card with a single symbol](src/adaptiveCardExtensions/basicChartAce/assets/mediumCardSingleSymbol.png)
 
 ## Used SharePoint Framework Version
