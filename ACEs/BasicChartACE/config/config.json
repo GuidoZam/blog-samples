@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "basic-chart-ace-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/basicChartAce/BasicChartAceAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/basicChartAce/BasicChartAceAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "BasicChartAceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/basicChartAce/loc/{locale}.js"
+  }
+}

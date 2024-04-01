@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "basic-chart-ace-client-side-solution",
+    "id": "73c859a2-22b5-4828-a6f7-e81709e6cc71",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "BasicChartACE description"
+      },
+      "longDescription": {
+        "default": "BasicChartACE description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "basic-chart-ace Feature",
+        "description": "The feature that activates elements of the basic-chart-ace solution.",
+        "id": "c2dca144-3d8d-459f-ad50-5c03e56444bc",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/basic-chart-ace.sppkg"
+  }
+}
