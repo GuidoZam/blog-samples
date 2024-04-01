@@ -2,9 +2,11 @@
 
 ## Summary
 
-Short summary on functionality and used technologies.
+This is a basic Adaptive Card Extensions that shows how to use the new LineChartCardView component to display a simple line chart.
 
-[picture of the solution in action, if possible]
+![Large card with multiple symbols](src/adaptiveCardExtensions/basicChartAce/assets/largeCardMultipleSymbols.png)
+![Large card with a single symbol](src/adaptiveCardExtensions/basicChartAce/assets/largeCardSingleSymbol.png)
+![Medium card with a single symbol](src/adaptiveCardExtensions/basicChartAce/assets/mediumCardSingleSymbol.png)
 
 ## Used SharePoint Framework Version
 
@@ -25,13 +27,13 @@ Short summary on functionality and used technologies.
 
 | Solution    | Author(s)                                               |
 | ----------- | ------------------------------------------------------- |
-| folder name | [GuidoZam](https://github.com/guidozam) |
+| BasicChartACE | [GuidoZam](https://github.com/guidozam) |
 
 ## Version history
 
 | Version | Date             | Comments        |
 | ------- | ---------------- | --------------- |
-| 1.0     | March 30, 2024 | Initial release |
+| 1.0     | April 1, 2024 | Initial release |
 
 ## Disclaimer
 
@@ -47,28 +49,15 @@ Short summary on functionality and used technologies.
   - **npm install**
   - **gulp serve**
 
-> Include any additional steps as needed.
-
 ## Features
 
-Description of the extension that expands upon high-level summary above.
+Sample SharePoint Framework Adaptive Card Extension that shows how to use the new LineChartCardView component to display a simple line chart.
 
-This extension illustrates the following concepts:
+This sample illustrates how to use the `cardViewParameters()` method that returns the new  `IDataVisualizationCardViewParameters` and how to instantiate the data series used by the new `LineChartCardView` component.
 
-- topic 1
-- topic 2
-- topic 3
-
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
-
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
-
-In this sample the stock data will be retrieved from the [Alpha Vantage API](https://www.alphavantage.co/documentation/), you can claim your free API key [here](https://www.alphavantage.co/support/#api-key), remember that the free key has a limit of __25 requests per day__.
+>In this sample the stock data will be retrieved from the [Alpha Vantage API](https://www.alphavantage.co/documentation/), you can claim your free API key [here](https://www.alphavantage.co/support/#api-key), remember that the free key has a limit of __25 requests per day__.
 
 ## References
 
 - [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
 - [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
