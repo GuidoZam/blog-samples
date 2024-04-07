@@ -2,23 +2,23 @@
   "@microsoft/generator-sharepoint": {
     "whichFolder": "subdir",
     "solutionName": "ThemeAware",
-    "environment": "spo",
-    "skipFeatureDeployment": true,
-    "isDomainIsolated": false,
     "componentType": "webpart",
     "template": "react",
     "componentName": "ThemeAware",
-    "plusBeta": false,
+    "plusBeta": true,
     "isCreatingSolution": true,
     "nodeVersion": "18.17.1",
     "sdksVersions": {
       "@microsoft/microsoft-graph-client": "3.0.2",
       "@microsoft/teams-js": "2.12.0"
     },
-    "version": "1.18.2",
+    "version": "1.19.0-beta.0",
     "libraryName": "theme-aware",
-    "libraryId": "ba430769-92e5-498e-b975-12112c6545a7",
+    "libraryId": "493b9210-6a5c-4154-82ec-46772a47360b",
+    "environment": "spo",
     "packageManager": "npm",
-    "solutionShortDescription": "ThemeAware description"
+    "solutionShortDescription": "ThemeAware description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
   }
 }

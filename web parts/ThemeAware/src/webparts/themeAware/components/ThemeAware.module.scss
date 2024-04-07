@@ -1,0 +1,20 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.themeAware {
+  overflow: hidden;
+  padding: 1em;
+  margin: 20px;
+  color: var(--bodyText);
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+.subTitle {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
