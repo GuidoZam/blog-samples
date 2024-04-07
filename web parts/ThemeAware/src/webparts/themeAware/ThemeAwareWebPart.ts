@@ -64,6 +64,10 @@ export default class ThemeAwareWebPart extends BaseClientSideWebPart<IThemeAware
         "--bodyBackground",
         semanticColors.bodyBackground || null
       );
+      this.domElement.style.setProperty(
+				"--bodyText",
+				semanticColors.bodyText || null
+			);
 		}
 	}
 

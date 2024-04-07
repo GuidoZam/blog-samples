@@ -8,9 +8,9 @@ export default class ThemeAware extends React.Component<IThemeAwareProps, {}> {
     const { semanticColors }: IReadonlyTheme = this.props.themeVariant!;
 
     return (
-      <div className={styles.themeAware} style={{ color: semanticColors?.bodyText }}>
+      <div className={styles.themeAware} style={{ backgroundColor: semanticColors?.bodyBackground }}>
         <span className={styles.title}>Welcome to SharePoint!</span>
-        <p className={styles.subTitle}>This web part is theme variant aware.</p>
+        <p className={styles.subTitle}>This web part is theme aware.</p>
       </div>
     );
   }
