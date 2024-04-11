@@ -1,0 +1,40 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+    "solution": {
+        "name": "maintain-package-version-client-side-solution",
+        "id": "4bd64dd4-d734-41bb-a599-d0d359da1a75",
+        "version": "1.0.4.0",
+        "includeClientSideAssets": true,
+        "skipFeatureDeployment": true,
+        "isDomainIsolated": false,
+        "developer": {
+            "name": "",
+            "websiteUrl": "",
+            "privacyUrl": "",
+            "termsOfUseUrl": "",
+            "mpnId": "Undefined-1.19.0-beta.0"
+        },
+        "metadata": {
+            "shortDescription": {
+                "default": "maintain-package-version description"
+            },
+            "longDescription": {
+                "default": "maintain-package-version description"
+            },
+            "screenshotPaths": [],
+            "videoUrl": "",
+            "categories": []
+        },
+        "features": [
+            {
+                "title": "maintain-package-version Feature",
+                "description": "The feature that activates elements of the maintain-package-version solution.",
+                "id": "12ad701d-c558-42e7-8670-072a6fd3c99e",
+                "version": "1.0.4.0"
+            }
+        ]
+    },
+    "paths": {
+        "zippedPackage": "solution/maintain-package-version.sppkg"
+    }
+}
