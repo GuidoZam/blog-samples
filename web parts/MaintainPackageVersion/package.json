@@ -1,6 +1,6 @@
 {
 	"name": "maintain-package-version",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"private": true,
 	"engines": {
 		"node": ">=16.13.0 <17.0.0 || >=18.17.1 <19.0.0"
@@ -10,7 +10,7 @@
 		"build": "gulp bundle",
 		"clean": "gulp clean",
 		"test": "gulp test",
-		"package:dev": "gulp build && npm version patch && gulp sync-version && gulp clean && gulp bundle && gulp package-solution"
+		"package": "gulp build && npm version patch && gulp sync-version && gulp clean && gulp bundle && gulp package-solution"
 	},
 	"dependencies": {
 		"tslib": "2.3.1",
