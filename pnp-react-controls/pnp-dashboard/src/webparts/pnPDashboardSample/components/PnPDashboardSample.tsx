@@ -48,7 +48,7 @@ export default class PnPDashboardSample extends React.Component<IPnPDashboardSam
           title: strings.FirstWidget.PrincipalTab,
           content: (
             <Text>
-              Content #1
+              {strings.FirstWidget.PrincipalTabContent}
             </Text>
           ),
         },
@@ -57,7 +57,7 @@ export default class PnPDashboardSample extends React.Component<IPnPDashboardSam
           title: strings.FirstWidget.SecondaryTab,
           content: (
             <Text>
-              Content #2
+              {strings.FirstWidget.SecondaryTabContent}
             </Text>
           ),
         },
@@ -66,7 +66,7 @@ export default class PnPDashboardSample extends React.Component<IPnPDashboardSam
           title: strings.FirstWidget.LastTab,
           content: (
             <Text>
-              Content #3
+              {strings.FirstWidget.LastTabContent}
             </Text>
           ),
         },
@@ -117,6 +117,18 @@ export default class PnPDashboardSample extends React.Component<IPnPDashboardSam
       title: strings.ThirdWidget.Title,
       size: WidgetSize.Double,
       link: this.linkExample,
+      body: [
+        {
+          id: "content",
+          title: "Content",
+          content: (
+            <div>
+              <h2>{strings.ThirdWidget.ContentTitle}</h2>
+              <p>{strings.ThirdWidget.Description}</p>
+            </div>
+          ),
+        }
+      ]
     };
   }
 }

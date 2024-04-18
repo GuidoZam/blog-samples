@@ -3,8 +3,11 @@ declare interface IPnPDashboardSampleWebPartStrings {
 		Title: string;
 		Description: string;
     PrincipalTab: string;
+    PrincipalTabContent: string;
     SecondaryTab: string;
+    SecondaryTabContent: string;
     LastTab: string;
+    LastTabContent: string;
 	};
 	SecondWidget: {
 		Title: string;
@@ -12,6 +15,8 @@ declare interface IPnPDashboardSampleWebPartStrings {
 	};
 	ThirdWidget: {
     Title: string;
+    ContentTitle: string;
+    Description: string;
   }
 }
 
