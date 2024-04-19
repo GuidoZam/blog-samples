@@ -1,0 +1,26 @@
+declare interface IPnPDashboardSampleWebPartStrings {
+	FirstWidget: {
+		Title: string;
+		Description: string;
+    PrincipalTab: string;
+    PrincipalTabContent: string;
+    SecondaryTab: string;
+    SecondaryTabContent: string;
+    LastTab: string;
+    LastTabContent: string;
+	};
+	SecondWidget: {
+		Title: string;
+    ContentTitle: string;
+	};
+	ThirdWidget: {
+    Title: string;
+    ContentTitle: string;
+    Description: string;
+  }
+}
+
+declare module 'PnPDashboardSampleWebPartStrings' {
+  const strings: IPnPDashboardSampleWebPartStrings;
+  export = strings;
+}
