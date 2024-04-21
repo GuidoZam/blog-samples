@@ -3,7 +3,7 @@
   "solution": {
     "name": "theme-aware-client-side-solution",
     "id": "493b9210-6a5c-4154-82ec-46772a47360b",
-    "version": "1.0.2.0",
+    "version": "1.0.6.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

@@ -61,10 +61,6 @@ export default class ThemeAwareWebPart extends BaseClientSideWebPart<IThemeAware
 
 		if (semanticColors) {
       this.domElement.style.setProperty(
-        "--bodyBackground",
-        semanticColors.bodyBackground || null
-      );
-      this.domElement.style.setProperty(
 				"--bodyText",
 				semanticColors.bodyText || null
 			);
