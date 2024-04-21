@@ -1,9 +1,8 @@
 import * as React from 'react';
 import type { IPnPDashboardSampleProps } from './IPnPDashboardSampleProps';
 import * as strings from 'PnPDashboardSampleWebPartStrings';
-import { WidgetSize, Dashboard } from '@pnp/spfx-controls-react/lib/Dashboard';
+import { WidgetSize, IWidget, Dashboard } from '@pnp/spfx-controls-react/lib/Dashboard';
 import { Icon, Text } from '@fluentui/react';
-import { IWidget } from '@pnp/spfx-controls-react/lib/Dashboard';
 
 export default class PnPDashboardSample extends React.Component<IPnPDashboardSampleProps, {}> {
   linkExample = { href: "https://iamguidozam.blog/" };
