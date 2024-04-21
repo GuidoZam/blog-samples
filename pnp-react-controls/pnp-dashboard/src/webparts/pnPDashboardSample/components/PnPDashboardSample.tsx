@@ -83,30 +83,7 @@ export default class PnPDashboardSample extends React.Component<IPnPDashboardSam
         {
           id: "content",
           title: strings.SecondWidget.ContentTitle,
-          content: (
-            <table>
-              <tr>
-                <th>Character</th>
-                <th>Actor</th>
-              </tr>
-              <tr>
-                <td>Neo</td>
-                <td>Keanu Reeves</td>
-              </tr>
-              <tr>
-                <td>Morpheus</td>
-                <td>Laurence Fishburne</td>
-              </tr>
-              <tr>
-                <td>Trinity</td>
-                <td>Carrie-Anne Moss</td>
-              </tr>
-              <tr>
-                <td>Agent Smith</td>
-                <td>Hugo Weaving</td>
-              </tr>
-            </table>
-          ),
+          content: this._getSampleTable()
         }
       ]
     };
@@ -130,5 +107,32 @@ export default class PnPDashboardSample extends React.Component<IPnPDashboardSam
         }
       ]
     };
+  }
+
+  private _getSampleTable(): JSX.Element {
+    return (
+      <table>
+        <tr>
+          <th>Character</th>
+          <th>Actor</th>
+        </tr>
+        <tr>
+          <td>Neo</td>
+          <td>Keanu Reeves</td>
+        </tr>
+        <tr>
+          <td>Morpheus</td>
+          <td>Laurence Fishburne</td>
+        </tr>
+        <tr>
+          <td>Trinity</td>
+          <td>Carrie-Anne Moss</td>
+        </tr>
+        <tr>
+          <td>Agent Smith</td>
+          <td>Hugo Weaving</td>
+        </tr>
+      </table>
+    );
   }
 }
