@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mgt-planner-spfx-client-side-solution",
+    "id": "7ba0c07d-2f2a-4e67-884c-c9e869e2aa25",
+    "version": "1.0.1.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0-beta.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mgt-planner-spfx description"
+      },
+      "longDescription": {
+        "default": "mgt-planner-spfx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mgt-planner-spfx Feature",
+        "description": "The feature that activates elements of the mgt-planner-spfx solution.",
+        "id": "c5dd6644-0b5d-4ca2-ad49-2b604f8bc817",
+        "version": "1.0.0.0"
+      }
+    ],
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Tasks.ReadWrite"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Group.Read.All"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mgt-planner-spfx.sppkg"
+  }
+}
