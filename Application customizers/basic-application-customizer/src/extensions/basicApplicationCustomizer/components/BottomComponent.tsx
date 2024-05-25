@@ -10,7 +10,7 @@ export default class BottomComponent extends React.Component<IBottomComponentPro
 
   public render(): JSX.Element {
     return (
-      <div className={"ms-bgColor-themeDark ms-fontColor-white"}>
+      <div>
         <CommandBar
           items={this.getItems()}
         />
