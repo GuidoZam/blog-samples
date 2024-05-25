@@ -1,10 +1,10 @@
-declare interface IBasicApplicationCustomizerApplicationCustomizerStrings {
+declare interface IBasicApplicationCustomizerStrings {
   TopMessage: string;
   BottomMessage: string;
   DialogMessage: string;
 }
 
-declare module 'BasicApplicationCustomizerApplicationCustomizerStrings' {
-  const strings: IBasicApplicationCustomizerApplicationCustomizerStrings;
+declare module 'BasicApplicationCustomizerStrings' {
+  const strings: IBasicApplicationCustomizerStrings;
   export = strings;
 }

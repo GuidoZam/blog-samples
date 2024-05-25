@@ -8,22 +8,21 @@ import {
 	PlaceholderName,
 } from "@microsoft/sp-application-base";
 
-//import * as strings from 'BasicApplicationCustomizerApplicationCustomizerStrings';
 import TopComponent from "./components/TopComponent";
 import BottomComponent from './components/BottomComponent';
 
-const LOG_SOURCE: string = 'BasicApplicationCustomizerApplicationCustomizer';
+const LOG_SOURCE: string = 'BasicApplicationCustomizer';
 
 /**
  * If your command set uses the ClientSideComponentProperties JSON input,
  * it will be deserialized into the BaseExtension.properties object.
  * You can define an interface to describe it.
  */
-export interface IBasicApplicationCustomizerApplicationCustomizerProperties {
+export interface IBasicApplicationCustomizerProperties {
 }
 
 /** A Custom Action which can be run during execution of a Client Side Application */
-export default class BasicApplicationCustomizerApplicationCustomizer extends BaseApplicationCustomizer<IBasicApplicationCustomizerApplicationCustomizerProperties> {
+export default class BasicApplicationCustomizer extends BaseApplicationCustomizer<IBasicApplicationCustomizerProperties> {
 	private _topPlaceholder: PlaceholderContent | undefined;
 	private _bottomPlaceholder: PlaceholderContent | undefined;
 
@@ -33,15 +32,8 @@ export default class BasicApplicationCustomizerApplicationCustomizer extends Bas
 
 		Log.info(
 			LOG_SOURCE,
-			"Initialized BasicApplicationCustomizerApplicationCustomizer"
+			"Initialized BasicApplicationCustomizer"
 		);
-		console.log("Initialized!");
-
-		// // Added to handle possible changes on the existence of placeholders
-		// this.context.placeholderProvider.changedEvent.add(
-		// 	this,
-		// 	this._renderPlaceHolders
-		// );
 
 		await this._renderPlaceHolders();
 
@@ -57,7 +49,6 @@ export default class BasicApplicationCustomizerApplicationCustomizer extends Bas
 	}
 
 	private async _renderTopPlaceHolder(): Promise<void> {
-		console.log("Rendering top placeholder");
 		console.log(this.context.placeholderProvider.placeholderNames);
 		if (!this._topPlaceholder) {
 			this._topPlaceholder = this.context.placeholderProvider.tryCreateContent(
@@ -67,7 +58,6 @@ export default class BasicApplicationCustomizerApplicationCustomizer extends Bas
 
 			// The extension should not assume that the expected placeholder is available.
 			if (!this._topPlaceholder) {
-				console.error("The expected placeholder (Top) was not found.");
 				return;
 			}
 
@@ -79,8 +69,6 @@ export default class BasicApplicationCustomizerApplicationCustomizer extends Bas
 	}
 
 	private async _renderBottomPlaceHolder(): Promise<void> {
-		console.log("Rendering bottom placeholder");
-
 		// check if the application customizer has already been rendered
 		if (!this._bottomPlaceholder) {
 			// create a DOM element in the top placeholder for the application customizer to render

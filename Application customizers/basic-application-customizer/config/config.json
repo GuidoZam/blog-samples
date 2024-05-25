@@ -5,14 +5,14 @@
     "basic-application-customizer-application-customizer": {
       "components": [
         {
-          "entrypoint": "./lib/extensions/basicApplicationCustomizer/BasicApplicationCustomizerApplicationCustomizer.js",
-          "manifest": "./src/extensions/basicApplicationCustomizer/BasicApplicationCustomizerApplicationCustomizer.manifest.json"
+          "entrypoint": "./lib/extensions/basicApplicationCustomizer/BasicApplicationCustomizer.js",
+          "manifest": "./src/extensions/basicApplicationCustomizer/BasicApplicationCustomizer.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "BasicApplicationCustomizerApplicationCustomizerStrings": "lib/extensions/basicApplicationCustomizer/loc/{locale}.js"
+    "BasicApplicationCustomizerStrings": "lib/extensions/basicApplicationCustomizer/loc/{locale}.js"
   }
 }

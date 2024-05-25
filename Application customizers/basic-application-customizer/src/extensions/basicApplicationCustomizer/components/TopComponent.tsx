@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as strings from 'BasicApplicationCustomizerApplicationCustomizerStrings';
+import * as strings from 'BasicApplicationCustomizerStrings';
 
 export interface ITopComponentProps { }
 
