@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://567mb2.sharepoint.com/sites/MainCommunication/Lists/Sample%20Choices/AllItems.aspx",
+      "customActions": {
+        "4d3c96af-ade8-4a35-bbd0-b804f4a81647": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+          }
+        }
+      }
+    }
+  }
+}

@@ -36,13 +36,11 @@ export default class MgtPicker extends React.Component<IMgtPickerProps, IMgtPick
             keyName="displayName"
             selectionChanged={(e: CustomEvent<any>) => {
               console.log(e);
-            }}
-            >
-          </Picker>
+            }} />
         </div>
         <div>
           <h4>{strings.Events}</h4>
-          <Picker 
+          <Picker
             resource='me/events'
             scopes={['calendars.read']}
             placeholder={strings.SelectEvent}
@@ -50,8 +48,7 @@ export default class MgtPicker extends React.Component<IMgtPickerProps, IMgtPick
             selectionChanged={(e: CustomEvent<any>) => {
               console.log(e);
             }}
-            >
-          </Picker>
+            />
         </div>
         <div>
           <h4>{strings.Tasks}</h4>
@@ -64,8 +61,7 @@ export default class MgtPicker extends React.Component<IMgtPickerProps, IMgtPick
               console.log(e);
               this.setState({ selectedListId: e.detail.id });
             }}
-            >
-          </Picker>
+            />
           {selectedListId &&
           <Picker
             resource={`me/todo/lists/${selectedListId}/tasks`}
@@ -76,8 +72,7 @@ export default class MgtPicker extends React.Component<IMgtPickerProps, IMgtPick
               console.log(e);
               this.setState({ selectedTask: e.detail });
             }}
-          >
-          </Picker>}
+          />}
           {selectedTask && <div>
             <h5>{strings.SelectedTask}</h5>
             <div>
