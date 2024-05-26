@@ -1,6 +1,5 @@
 import * as React from "react";  
 import * as ReactDom from "react-dom";
-import { override } from "@microsoft/decorators";
 import { Log } from '@microsoft/sp-core-library';
 import {
 	BaseApplicationCustomizer,
@@ -26,29 +25,19 @@ export default class BasicApplicationCustomizer extends BaseApplicationCustomize
 	private _topPlaceholder: PlaceholderContent | undefined;
 	private _bottomPlaceholder: PlaceholderContent | undefined;
 
-	@override
-	protected async onInit(): Promise<void> {
-		await super.onInit();
+	protected onInit(): Promise<void> {
+		Log.info(LOG_SOURCE, "Initialized BasicApplicationCustomizer");
 
-		Log.info(
-			LOG_SOURCE,
-			"Initialized BasicApplicationCustomizer"
-		);
+		// Handling the top placeholder
+		this._renderTopPlaceHolder();
 
-		await this._renderPlaceHolders();
+		// Handling the bottom placeholder
+		this._renderBottomPlaceHolder();
 
 		return Promise.resolve();
 	}
 
-	private async _renderPlaceHolders(): Promise<void> {
-		// Handling the top placeholder
-		await this._renderTopPlaceHolder();
-
-		// Handling the bottom placeholder
-		await this._renderBottomPlaceHolder();
-	}
-
-	private async _renderTopPlaceHolder(): Promise<void> {
+	private _renderTopPlaceHolder(): void {
 		console.log(this.context.placeholderProvider.placeholderNames);
 		if (!this._topPlaceholder) {
 			this._topPlaceholder = this.context.placeholderProvider.tryCreateContent(
@@ -68,7 +57,7 @@ export default class BasicApplicationCustomizer extends BaseApplicationCustomize
 		}
 	}
 
-	private async _renderBottomPlaceHolder(): Promise<void> {
+	private _renderBottomPlaceHolder(): void {
 		// check if the application customizer has already been rendered
 		if (!this._bottomPlaceholder) {
 			// create a DOM element in the top placeholder for the application customizer to render
