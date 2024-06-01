@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "drag-n-drop-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/dragNDropPart/DragNDropPartWebPart.js",
+          "manifest": "./src/webparts/dragNDropPart/DragNDropPartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DragNDropPartWebPartStrings": "lib/webparts/dragNDropPart/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
