@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "drag-drop-files-client-side-solution",
+    "id": "5be69b8b-269d-4a7f-8ad4-025e078a9c06",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "drag-drop-files description"
+      },
+      "longDescription": {
+        "default": "drag-drop-files description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "drag-drop-files Feature",
+        "description": "The feature that activates elements of the drag-drop-files solution.",
+        "id": "bf6576d6-9076-4ad5-a58c-45894d41652d",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/drag-drop-files.sppkg"
+  }
+}

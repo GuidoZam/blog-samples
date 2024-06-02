@@ -1,0 +1,21 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.dragNDropPart {
+  overflow: hidden;
+  padding: 1em;
+  color: "#323130";
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rowFileIcon {
+  margin: 6px;
+}
+
+.rowText {
+  margin-left: 10px;
+  padding-top: 5px;
+}
