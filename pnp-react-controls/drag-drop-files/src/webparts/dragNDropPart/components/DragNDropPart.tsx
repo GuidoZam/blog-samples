@@ -30,12 +30,10 @@ export default class DragNDropPart extends React.Component<IDragNDropPartProps, 
             dropEffect="copy"
             enable={true}
             onDrop={(files: File[]) => {
-              for (let i = 0; i < files.length; i++) {
-                // Add the file to the state
-                this.setState({
-                  files: this.state.files.concat(files[i])
-                });
-              }
+              // Add the file/s to the state
+              this.setState({
+                files: this.state.files.concat(files)
+              });
             }}
             iconName="Upload"
             labelMessage={strings.DropMessage}
