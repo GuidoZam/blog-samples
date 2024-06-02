@@ -4,11 +4,17 @@ import * as strings from 'DragNDropPartWebPartStrings';
 import type { IDragNDropPartProps } from './IDragNDropPartProps';
 import { DragDropFiles } from "@pnp/spfx-controls-react/lib/DragDropFiles";
 import { IDragNDropPartState } from './IDragNDropPartState';
-import { IconButton } from '@fluentui/react';
+import { Icon, IconButton } from '@fluentui/react';
+import {
+  getFileTypeIconProps,
+  initializeFileTypeIcons
+} from "@fluentui/react-file-type-icons";
 
 export default class DragNDropPart extends React.Component<IDragNDropPartProps, IDragNDropPartState> {
   constructor(props: IDragNDropPartProps) {
     super(props);
+
+    initializeFileTypeIcons();
 
     this.state = {
       files: []
@@ -53,6 +59,14 @@ export default class DragNDropPart extends React.Component<IDragNDropPartProps, 
                         files: newFiles
                       });
                     }} />
+                  <Icon
+                    {...getFileTypeIconProps({
+                      extension: this._getFileExtension(file),
+                      size: 20,
+                      imageFileType: "png"
+                    })}
+                    className={styles.rowFileIcon}
+                  />
                   <span className={styles.rowText}>{file.name}</span>
                 </div>
               );
@@ -76,5 +90,9 @@ export default class DragNDropPart extends React.Component<IDragNDropPartProps, 
     .catch((error) => {
       console.log(error);
     })
+  }
+
+  private _getFileExtension(file: File): string | undefined {
+    return file.name.split('.').pop();
   }
 }
