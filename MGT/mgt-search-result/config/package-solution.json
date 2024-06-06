@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mgt-search-result-client-side-solution",
+    "id": "70e7e8a7-46fe-4254-8b37-4d5ecb30bfd2",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mgt-search-result description"
+      },
+      "longDescription": {
+        "default": "mgt-search-result description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mgt-search-result Feature",
+        "description": "The feature that activates elements of the mgt-search-result solution.",
+        "id": "fccf2bcb-eac8-4f16-94f1-fe124f021466",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mgt-search-result.sppkg"
+  }
+}

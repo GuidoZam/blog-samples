@@ -1,0 +1,19 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.mgtSearchResult {
+  overflow: hidden;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.searchField {
+  display: 'flex';
+  align-items: 'center';
+}
