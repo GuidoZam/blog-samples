@@ -135,13 +135,13 @@ export default class MgtLogin extends React.Component<IMgtLoginProps, {}> {
             </div>
             <div className={styles.personBlockDetails}>
               <div>
-                {props.dataContext.personDetails?.displayName}Test
+                {props.dataContext.personDetails?.displayName}
               </div>
               <div>
-                {props.dataContext.personDetails?.jobTitle}Test 2
+                {props.dataContext.personDetails?.jobTitle}
               </div>
               <div>
-                {props.dataContext.personDetails?.department}Test 3
+                {props.dataContext.personDetails?.department}
               </div>
             </div>
           </div>
