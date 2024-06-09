@@ -12,8 +12,15 @@ export default class MgtSearchResult extends React.Component<IMgtSearchResultPro
 
     this.state = {
       query: undefined,
-      useWildcard: undefined
+      useWildcard: undefined,
+      maxResultCount: props.maxResultCount,
     };
+  }
+
+  componentDidUpdate(prevProps: Readonly<IMgtSearchResultProps>, prevState: Readonly<IMgtSearchResultState>, snapshot?: any): void {
+    if (prevProps.maxResultCount !== this.props.maxResultCount) {
+      this.setState({ maxResultCount: this.props.maxResultCount });
+    }
   }
 
   public render(): React.ReactElement<IMgtSearchResultProps> {
@@ -24,18 +31,26 @@ export default class MgtSearchResult extends React.Component<IMgtSearchResultPro
         </div>
         <div>
           <div className={styles.searchField}>
-            <Label>{strings.QueryLabel}</Label>
-            <TextField 
-              value={this.state.query} 
-              onChange={(e, newValue) => { this.setState({ query: newValue }) }} 
-              />
+            <div className={styles.labelDiv}>
+              <Label>{strings.QueryLabel}</Label>
+            </div>
+            <div>
+              <TextField 
+                value={this.state.query} 
+                onChange={(e, newValue) => { this.setState({ query: newValue }) }} 
+                />
+            </div>
           </div>
           <div className={styles.searchField}>
-            <Label>{strings.UseWildcardLabel}</Label>
-            <Toggle 
-              checked={this.state.useWildcard} 
-              onChange={(e, checked) => this.setState({ useWildcard: checked })} 
-              />
+            <div className={styles.labelDiv}>
+              <Label>{strings.UseWildcardLabel}</Label>
+            </div>
+            <div>
+              <Toggle 
+                checked={this.state.useWildcard} 
+                onChange={(e, checked) => this.setState({ useWildcard: checked })} 
+                />
+            </div>
           </div>
         </div>
         <div>
@@ -44,7 +59,7 @@ export default class MgtSearchResult extends React.Component<IMgtSearchResultPro
             entityTypes={['driveItem']} 
             fetchThumbnail={true} 
             queryString={this.getQueryString()} 
-            size={3}
+            size={this.state.maxResultCount ?? 3}
             />}
         </div>
       </section>

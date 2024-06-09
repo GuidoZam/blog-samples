@@ -1,8 +1,9 @@
 define([], function() {
   return {
-		PropertyPaneDescription: "Description",
-		BasicGroupName: "Group Name",
+		PropertyPaneDescription: "This is the configuration of the MGT Search Result web part.",
+		SettingsGroupName: "Settings",
 		QueryLabel: "Query",
 		UseWildcardLabel: "Use Wildcard",
+    MaxResultCountLabel: "Max Results",
 	};
 });

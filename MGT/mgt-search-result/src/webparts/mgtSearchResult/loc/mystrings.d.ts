@@ -1,8 +1,9 @@
 declare interface IMgtSearchResultWebPartStrings {
 	PropertyPaneDescription: string;
-	BasicGroupName: string;
+	SettingsGroupName: string;
 	QueryLabel: string;
 	UseWildcardLabel: string;
+	MaxResultCountLabel: string;
 }
 
 declare module 'MgtSearchResultWebPartStrings' {
