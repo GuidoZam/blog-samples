@@ -44,11 +44,10 @@ export default class MgtPeoplePicker extends React.Component<IMgtPeoplePickerPro
           </div>
           <div>
             <h4 className={styles.sectionTitle}>
-              <span>Disable images</span>
+              <span>Default selected users</span>
             </h4>
             <PeoplePicker selectedPeople={[{
-              displayName: "Nestor Wilke",
-              userPrincipalName: "NestorW@567mb2.onmicrosoft.com"
+              displayName: "Nestor Wilke"
             },
             {
               displayName: "Sample User"

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "mgt-search-result-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mgtSearchResult/MgtSearchResultWebPart.js",
+          "manifest": "./src/webparts/mgtSearchResult/MgtSearchResultWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MgtSearchResultWebPartStrings": "lib/webparts/mgtSearchResult/loc/{locale}.js"
+  }
+}
