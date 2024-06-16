@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-map",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "PnPMapSample",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "pnp-map",
+    "libraryId": "d9709c09-4366-4a78-9506-65244e411c41",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-map description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
