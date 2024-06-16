@@ -1,5 +1,11 @@
 declare interface IPnPMapSampleWebPartStrings {
-  Title: string;
+	Title: string;
+	CustomMapTitle: string;
+	LoadingMessage: string;
+  SelectedLocationDiv: string;
+  DisplayName: string;
+  Latitude: string;
+  Longitude: string;
 }
 
 declare module 'PnPMapSampleWebPartStrings' {
