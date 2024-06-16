@@ -111,6 +111,33 @@ export default class PnPMapSample extends React.Component<IPnPMapSampleProps, IP
         </div>
         <div>
           <h4 className={styles.sectionTitle}>
+            <span>Map with search enabled</span>
+          </h4>
+          <Map
+            coordinates={{
+              displayName: "Copenhagen, Denmark",
+              latitude: 55.6712398,
+              longitude: 12.5114238
+            }}
+            enableSearch={true}
+          />
+        </div>
+        <div>
+          <h4 className={styles.sectionTitle}>
+            <span>Map with custom size</span>
+          </h4>
+          <Map
+            coordinates={{
+              displayName: "Porto, Portugal",
+              latitude: 41.1579438,
+              longitude: -8.6291053
+            }}
+            width={"50%"}
+            height={150}
+          />
+        </div>
+        <div>
+          <h4 className={styles.sectionTitle}>
             <span>Map data retrieval</span>
           </h4>
           <Map
