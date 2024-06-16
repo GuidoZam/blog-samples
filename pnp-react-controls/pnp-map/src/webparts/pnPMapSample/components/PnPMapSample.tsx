@@ -19,7 +19,7 @@ export default class PnPMapSample extends React.Component<IPnPMapSampleProps, IP
         </div>
         <div>
           <h4 className={styles.sectionTitle}>
-            <span>Minimal usage Map</span>
+            <span>{strings.Labels.MinimalUsage}</span>
           </h4>
           <Map
             coordinates={{
@@ -31,7 +31,7 @@ export default class PnPMapSample extends React.Component<IPnPMapSampleProps, IP
         </div>
         <div>
           <h4 className={styles.sectionTitle}>
-            <span>Customized map</span>
+            <span>{strings.Labels.Customized}</span>
           </h4>
           <Map
             coordinates={{
@@ -46,7 +46,7 @@ export default class PnPMapSample extends React.Component<IPnPMapSampleProps, IP
         </div>
         <div>
           <h4 className={styles.sectionTitle}>
-            <span>Map with search enabled</span>
+            <span>{strings.Labels.Customized}</span>
           </h4>
           <Map
             coordinates={{
@@ -59,7 +59,7 @@ export default class PnPMapSample extends React.Component<IPnPMapSampleProps, IP
         </div>
         <div>
           <h4 className={styles.sectionTitle}>
-            <span>Map with <b>cycle</b> visualization</span>
+            <span>{strings.Labels.CycleVisualization}</span>
           </h4>
           <Map
             coordinates={{
@@ -72,7 +72,7 @@ export default class PnPMapSample extends React.Component<IPnPMapSampleProps, IP
         </div>
         <div>
           <h4 className={styles.sectionTitle}>
-            <span>Map with <b>transportation</b> visualization</span>
+            <span>{strings.Labels.TransportVisualization}</span>
           </h4>
           <Map
             coordinates={{
@@ -85,7 +85,7 @@ export default class PnPMapSample extends React.Component<IPnPMapSampleProps, IP
         </div>
         <div>
           <h4 className={styles.sectionTitle}>
-            <span>Map with <b>normal</b> visualization</span>
+            <span>{strings.Labels.NormalVisualization}</span>
           </h4>
           <Map
             coordinates={{
@@ -98,7 +98,7 @@ export default class PnPMapSample extends React.Component<IPnPMapSampleProps, IP
         </div>
         <div>
           <h4 className={styles.sectionTitle}>
-            <span>Map with <b>standard</b> visualization</span>
+            <span>{strings.Labels.StandardVisualization}</span>
           </h4>
           <Map
             coordinates={{
@@ -111,7 +111,7 @@ export default class PnPMapSample extends React.Component<IPnPMapSampleProps, IP
         </div>
         <div>
           <h4 className={styles.sectionTitle}>
-            <span>Map with custom size</span>
+            <span>{strings.Labels.CustomSize}</span>
           </h4>
           <Map
             coordinates={{
@@ -125,7 +125,7 @@ export default class PnPMapSample extends React.Component<IPnPMapSampleProps, IP
         </div>
         <div>
           <h4 className={styles.sectionTitle}>
-            <span>Map data retrieval</span>
+            <span>{strings.Labels.DataRetrieval}</span>
           </h4>
           <Map
             coordinates={{
@@ -145,13 +145,13 @@ export default class PnPMapSample extends React.Component<IPnPMapSampleProps, IP
             <div>
               <h4>{strings.SelectedLocationDiv}</h4>
               <div>
-                <span><b>{strings.DisplayName}:</b> {this.state.selectedCoordinate.displayName}</span>
+                <span><b>{strings.Labels.DisplayName}:</b> {this.state.selectedCoordinate.displayName}</span>
               </div>
               <div>
-                <span><b>{strings.Latitude}:</b> {this.state.selectedCoordinate.latitude}</span>
+                <span><b>{strings.Labels.Latitude}:</b> {this.state.selectedCoordinate.latitude}</span>
               </div>
               <div>
-                <span><b>{strings.Longitude}:</b> {this.state.selectedCoordinate.longitude}</span>
+                <span><b>{strings.Labels.Longitude}:</b> {this.state.selectedCoordinate.longitude}</span>
               </div>
             </div>}
           </div>
