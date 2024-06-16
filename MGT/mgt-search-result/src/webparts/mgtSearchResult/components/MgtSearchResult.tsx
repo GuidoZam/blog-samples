@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from './MgtSearchResult.module.scss';
 import type { IMgtSearchResultProps } from './IMgtSearchResultProps';
-import { SearchResults } from '@microsoft/mgt-react';
+import { File, MgtTemplateProps, SearchResults } from '@microsoft/mgt-react';
 import { Label, TextField, Toggle } from '@fluentui/react';
 import * as strings from 'MgtSearchResultWebPartStrings';
 import { IMgtSearchResultState } from './IMgtSearchResultState';
@@ -11,15 +11,19 @@ export default class MgtSearchResult extends React.Component<IMgtSearchResultPro
     super(props);
 
     this.state = {
-      query: undefined,
-      useWildcard: undefined,
+      useCustomTemplate: false,
       maxResultCount: props.maxResultCount,
+      maxAvailablePagination: props.maxAvailablePagination
     };
   }
 
   componentDidUpdate(prevProps: Readonly<IMgtSearchResultProps>, prevState: Readonly<IMgtSearchResultState>, snapshot?: any): void {
     if (prevProps.maxResultCount !== this.props.maxResultCount) {
       this.setState({ maxResultCount: this.props.maxResultCount });
+    }
+
+    if (prevProps.maxAvailablePagination !== this.props.maxAvailablePagination) {
+      this.setState({ maxAvailablePagination: this.props.maxAvailablePagination });
     }
   }
 
@@ -34,7 +38,7 @@ export default class MgtSearchResult extends React.Component<IMgtSearchResultPro
             <div className={styles.labelDiv}>
               <Label>{strings.QueryLabel}</Label>
             </div>
-            <div>
+            <div className={styles.filterControlDiv}>
               <TextField 
                 value={this.state.query} 
                 onChange={(e, newValue) => { this.setState({ query: newValue }) }} 
@@ -45,14 +49,26 @@ export default class MgtSearchResult extends React.Component<IMgtSearchResultPro
             <div className={styles.labelDiv}>
               <Label>{strings.UseWildcardLabel}</Label>
             </div>
-            <div>
+            <div className={styles.filterControlDiv}>
               <Toggle 
                 checked={this.state.useWildcard} 
                 onChange={(e, checked) => this.setState({ useWildcard: checked })} 
                 />
             </div>
           </div>
+          <div className={styles.searchField}>
+            <div className={styles.labelDiv}>
+              <Label>{strings.UseCustomTmeplateLabel}</Label>
+            </div>
+            <div className={styles.filterControlDiv}>
+              <Toggle
+                checked={this.state.useCustomTemplate}
+                onChange={(e, checked) => this.setState({ useCustomTemplate: checked !== undefined ? checked : false })}
+              />
+            </div>
+          </div>
         </div>
+        {!this.state.useCustomTemplate &&
         <div>
           {this.state.query && this.state.query.length > 0 &&
           <SearchResults 
@@ -60,8 +76,22 @@ export default class MgtSearchResult extends React.Component<IMgtSearchResultPro
             fetchThumbnail={true} 
             queryString={this.getQueryString()} 
             size={this.state.maxResultCount ?? 3}
+            pagingMax={this.state.maxAvailablePagination ?? 3}
             />}
-        </div>
+        </div>}
+        {this.state.useCustomTemplate &&
+        <div>
+          {this.state.query && this.state.query.length > 0 &&
+            <SearchResults
+              entityTypes={['driveItem']}
+              fetchThumbnail={true}
+              queryString={this.getQueryString()}
+              size={this.state.maxResultCount ?? 3}
+              pagingMax={this.state.maxAvailablePagination ?? 3}
+            >
+              <this.customResultTemplate template='result-driveItem' />
+            </SearchResults>}
+        </div>}
       </section>
     );
   }
@@ -74,5 +104,18 @@ export default class MgtSearchResult extends React.Component<IMgtSearchResultPro
     }
 
     return query;
+  }
+
+  private customResultTemplate = (props: MgtTemplateProps): JSX.Element => {
+    console.log("Custom result template");
+    if (props.dataContext && props.template === 'result-driveItem') {
+      return (
+        <div>
+          <File fileDetails={props.dataContext.resource} />
+        </div>
+      );
+    }
+
+    return <></>;
   }
 }

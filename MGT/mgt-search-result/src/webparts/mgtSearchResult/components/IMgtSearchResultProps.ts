@@ -1,3 +1,4 @@
 export interface IMgtSearchResultProps {
-  maxResultCount?: number;
+	maxResultCount?: number;
+	maxAvailablePagination?: number;
 }

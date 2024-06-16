@@ -9,7 +9,8 @@ import { Providers, SharePointProvider } from "@microsoft/mgt-spfx";
 import { IPropertyPaneConfiguration, PropertyPaneSlider } from '@microsoft/sp-property-pane';
 
 export interface IMgtSearchResultWebPartProps {
-  maxResultCount?: number;
+	maxResultCount?: number;
+	maxAvailablePagination?: number;
 }
 
 export default class MgtSearchResultWebPart extends BaseClientSideWebPart<IMgtSearchResultWebPartProps> {
@@ -17,6 +18,7 @@ export default class MgtSearchResultWebPart extends BaseClientSideWebPart<IMgtSe
 		const element: React.ReactElement<IMgtSearchResultProps> =
 			React.createElement(MgtSearchResult, {
 				maxResultCount: this.properties.maxResultCount,
+				maxAvailablePagination: this.properties.maxAvailablePagination,
 			});
 
 		ReactDom.render(element, this.domElement);
@@ -52,6 +54,11 @@ export default class MgtSearchResultWebPart extends BaseClientSideWebPart<IMgtSe
 									label: strings.MaxResultCountLabel,
 									min: 3,
 									max: 10,
+								}),
+								PropertyPaneSlider("maxAvailablePagination", {
+									label: strings.MaxAvailablePaginationLabel,
+									min: 3,
+									max: 7,
 								}),
 							],
 						},
