@@ -12,7 +12,7 @@ This is a basic Adaptive Card Extensions that shows how to use the new LineChart
 
 ## Used SharePoint Framework Version
 
-![version](https://img.shields.io/badge/version-1.19.0_beta_0-yellow.svg)
+![version](https://img.shields.io/badge/version-1.19.0-green.svg)
 
 ## Applies to
 
@@ -36,6 +36,7 @@ This is a basic Adaptive Card Extensions that shows how to use the new LineChart
 | Version | Date             | Comments        |
 | ------- | ---------------- | --------------- |
 | 1.0     | April 1, 2024 | Initial release |
+| 1.1     | June 16, 2024 | Updated SPFx version |
 
 ## Disclaimer
 
