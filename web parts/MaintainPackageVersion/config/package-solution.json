@@ -3,7 +3,7 @@
     "solution": {
         "name": "maintain-package-version-client-side-solution",
         "id": "4bd64dd4-d734-41bb-a599-d0d359da1a75",
-        "version": "1.0.4.0",
+        "version": "1.0.5.0",
         "includeClientSideAssets": true,
         "skipFeatureDeployment": true,
         "isDomainIsolated": false,
@@ -30,7 +30,7 @@
                 "title": "maintain-package-version Feature",
                 "description": "The feature that activates elements of the maintain-package-version solution.",
                 "id": "12ad701d-c558-42e7-8670-072a6fd3c99e",
-                "version": "1.0.4.0"
+                "version": "1.0.5.0"
             }
         ]
     },
