@@ -10,9 +10,6 @@ export class BasicChartAcePropertyPane {
 					groups: [
 						{
 							groupFields: [
-								PropertyPaneTextField("apiKey", {
-									label: strings.APIKeyFieldLabel,
-								}),
 								PropertyPaneTextField("symbols", {
 									label: strings.SymbolsFieldLabel,
 								}),
@@ -23,17 +20,29 @@ export class BasicChartAcePropertyPane {
 									step: 5,
 									showValue: true,
 								}),
-                PropertyPaneDropdown("valueToShow", {
-                  label: strings.ValueToShowFieldLabel,
-                  options: [
-                    { key: "1. open", text: strings.Open },
-                    { key: "2. high", text: strings.High },
-                    { key: "3. low", text: strings.Low },
-                    { key: "4. close", text: strings.Close },
-                    { key: "5. volume", text: strings.Volume },
-                  ],
-                })
+								PropertyPaneDropdown("valueToShow", {
+									label: strings.ValueToShowFieldLabel,
+									options: [
+										{ key: "1. open", text: strings.Open },
+										{ key: "2. high", text: strings.High },
+										{ key: "3. low", text: strings.Low },
+										{ key: "4. close", text: strings.Close },
+										{ key: "5. volume", text: strings.Volume },
+									],
+								}),
 							],
+						},
+					],
+				},
+				{
+					header: { description: strings.APIKeyGroupName },
+					groups: [
+						{
+							groupFields: [
+								PropertyPaneTextField("apiKey", {
+									label: strings.APIKeyFieldLabel,
+								})
+							]
 						},
 					],
 				},

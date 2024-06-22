@@ -5,6 +5,7 @@ declare interface IBasicChartAceAdaptiveCardExtensionStrings {
 	Description: string;
 	QuickViewButton: string;
 	APIGroupName: string;
+	APIKeyGroupName: string;
 	APIKeyFieldLabel: string;
 	SymbolsFieldLabel: string;
 	IntervalFieldLabel: string;
@@ -18,6 +19,7 @@ declare interface IBasicChartAceAdaptiveCardExtensionStrings {
 		Title: string;
 		MissingConfiguration: string;
 		RateLimitReached: string;
+		ErrorOccurred: string;
 	};
 }
 

@@ -32,7 +32,14 @@ export class CardView extends BaseComponentsCardView<
 				},
 				header: {
 					componentName: "text",
-					text: this.state.rateLimitReached === true ? strings.ConfigureYourACE.RateLimitReached : strings.ConfigureYourACE.MissingConfiguration,
+					text:
+						this.state.rateLimitReached === true
+							? strings.ConfigureYourACE.RateLimitReached
+							: this.state.hasError
+							? this.state.error && this.state.error.length > 0
+								? `${strings.ConfigureYourACE.ErrorOccurred} ${this.state.error}`
+									: strings.ConfigureYourACE.ErrorOccurred
+							: strings.ConfigureYourACE.MissingConfiguration,
 				},
 				footer: undefined,
 			});
