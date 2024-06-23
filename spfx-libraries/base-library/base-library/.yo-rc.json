@@ -1,0 +1,23 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "base-library",
+    "componentType": "library",
+    "componentName": "BaseLibrary",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "base-library",
+    "libraryId": "8fbcecf1-1fe2-47f4-922e-5adb962cea25",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "base-library description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
