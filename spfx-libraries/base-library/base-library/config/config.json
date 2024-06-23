@@ -6,7 +6,7 @@
       "components": [
         {
           "entrypoint": "./lib/index.js",
-          "manifest": "./src/libraries/baseLibrary/BaseLibraryLibrary.manifest.json"
+          "manifest": "./src/libraries/baseLibrary/BaseLibrary.manifest.json"
         }
       ]
     }

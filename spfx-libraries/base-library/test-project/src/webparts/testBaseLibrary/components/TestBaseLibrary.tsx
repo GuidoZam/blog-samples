@@ -8,9 +8,12 @@ import * as BaseLibrary from 'base-library';
 
 export default class TestBaseLibrary extends React.Component<ITestBaseLibraryProps, {}> {
   public render(): React.ReactElement<ITestBaseLibraryProps> {
-    const baseLibrary = new BaseLibrary.BaseLibraryLibrary();
+    const baseLibrary = new BaseLibrary.BaseLibrary();
 
-    const time = baseLibrary.getCurrentTime();
+    const greeting = baseLibrary.getPirateGreeting();
+    const currentDate = new Date();
+    const dayOfWeek = baseLibrary.getDayOfWeek(currentDate);
+    const isLeapYearMessage = baseLibrary.isLeapYearMessage(currentDate);
 
     return (
       <section className={styles.testBaseLibrary}>
@@ -18,8 +21,13 @@ export default class TestBaseLibrary extends React.Component<ITestBaseLibraryPro
           <div>{strings.Title}</div>
         </div>
         <div>
-          {strings.BaseLibraryResult}<br/>
-          {time}
+          {greeting}
+        </div>
+        <div>
+          {dayOfWeek}
+        </div>
+        <div>
+          {isLeapYearMessage}
         </div>
       </section>
     );

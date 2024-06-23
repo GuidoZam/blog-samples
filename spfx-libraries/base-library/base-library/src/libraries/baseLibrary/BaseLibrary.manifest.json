@@ -1,6 +1,6 @@
 {
   "id": "cffea24e-8618-40e8-8204-a00ff0d103e8",
-  "alias": "BaseLibraryLibrary",
+  "alias": "BaseLibrary",
   "componentType": "Library",
 
   // The "*" signifies that the version should be taken from the package.json

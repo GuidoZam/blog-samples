@@ -3,7 +3,7 @@
   "solution": {
     "name": "test-project-client-side-solution",
     "id": "c477cd3a-8349-4cbc-88eb-89e57df01578",
-    "version": "1.0.1.0",
+    "version": "1.0.8.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

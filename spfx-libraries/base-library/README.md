@@ -4,11 +4,14 @@ This is a sample project that demonstrates how to create a base SPFx library to 
 
 ## base-library
 
-This is the base library project. It contains a simple `TestBaseLibrary` class that has a single method `getCurrentTime()`. This method returns a string that contains the current time.
+This is the base library project. It contains a simple `TestBaseLibrary` class that has multiple sample methods:
+- `getPirateGreeting()`: Returns a pirate greeting.
+- `getDayOfWeek()`: Returns the day of the week.
+- `isLeapYearMessage()`: Returns a message indicating if the current year is a leap year. 
 
 ## test-project
 
-This is the test project that demonstrates how to use the base library in a SPFx web part solution. The web part simply calls the `getCurrentTime()` method from the base library and displays the result.
+This is the test project that demonstrates how to use the base library in a SPFx web part solution. The web part uses the `TestBaseLibrary` class to display the pirate greeting, the day of the week, and if the current year is a leap year.
 
 ## Building and using the projects
 

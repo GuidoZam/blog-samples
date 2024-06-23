@@ -1,1 +1,1 @@
-export { BaseLibraryLibrary } from './libraries/baseLibrary/BaseLibraryLibrary';
+export { BaseLibrary } from './libraries/baseLibrary/BaseLibrary';
