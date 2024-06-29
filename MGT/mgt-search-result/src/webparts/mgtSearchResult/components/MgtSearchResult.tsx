@@ -107,7 +107,6 @@ export default class MgtSearchResult extends React.Component<IMgtSearchResultPro
   }
 
   private customResultTemplate = (props: MgtTemplateProps): JSX.Element => {
-    console.log("Custom result template");
     if (props.dataContext && props.template === 'result-driveItem') {
       return (
         <div>
