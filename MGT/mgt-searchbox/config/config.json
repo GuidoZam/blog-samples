@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "search-box-sample-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/searchBoxSample/SearchBoxSampleWebPart.js",
+          "manifest": "./src/webparts/searchBoxSample/SearchBoxSampleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SearchBoxSampleWebPartStrings": "lib/webparts/searchBoxSample/loc/{locale}.js"
+  }
+}

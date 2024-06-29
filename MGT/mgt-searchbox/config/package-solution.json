@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mgt-searchbox-client-side-solution",
+    "id": "9655548d-8eaf-445b-a890-7cb34c0916c5",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0-beta.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mgt-searchbox description"
+      },
+      "longDescription": {
+        "default": "mgt-searchbox description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mgt-searchbox Feature",
+        "description": "The feature that activates elements of the mgt-searchbox solution.",
+        "id": "27955d79-1c33-4b07-9125-58b7ae164f0c",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mgt-searchbox.sppkg"
+  }
+}

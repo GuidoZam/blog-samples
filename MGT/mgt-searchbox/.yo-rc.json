@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0-beta.0",
+    "libraryName": "mgt-searchbox",
+    "libraryId": "9655548d-8eaf-445b-a890-7cb34c0916c5",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "mgt-searchbox",
+    "solutionShortDescription": "mgt-searchbox description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
