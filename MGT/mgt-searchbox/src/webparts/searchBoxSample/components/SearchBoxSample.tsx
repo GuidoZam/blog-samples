@@ -41,7 +41,9 @@ export default class SearchBoxSample extends React.Component<ISearchBoxSamplePro
               <span>{strings.CustomPlaceholderLabel}</span>
             </h4>
             {/* SearchBox custom placeholder */}
-            <SearchBox placeholder={strings.Placeholder}></SearchBox>
+            <SearchBox
+              placeholder={strings.Placeholder}>
+            </SearchBox>
           </div>
         </div>
         <div className={styles.section}>
@@ -50,7 +52,11 @@ export default class SearchBoxSample extends React.Component<ISearchBoxSamplePro
               <span>{strings.CustomDebounceDelayLabel}</span>
             </h4>
             {/* SearchBox custom debounce delay */}
-            <SearchBox debounceDelay={2000} searchTermChanged={(e) => this.setState({ changedDebounceSearchTerm: e?.detail })}></SearchBox>
+            <SearchBox
+              debounceDelay={2000}
+              searchTermChanged={(e) => 
+                this.setState({ changedDebounceSearchTerm: e?.detail })}>
+            </SearchBox>
             {this.state.changedDebounceSearchTerm && this.state.changedDebounceSearchTerm.length > 0 &&
             <div>
               {strings.ChangedDebounceSearchTermLabel}: {this.state.changedDebounceSearchTerm}
@@ -63,7 +69,10 @@ export default class SearchBoxSample extends React.Component<ISearchBoxSamplePro
               <span>{strings.SearchTermChangedEventLabel}</span>
             </h4>
             {/* Search term changed event */}
-            <SearchBox searchTermChanged={(e) => this.setState({ changedSearchTerm: e?.detail})}></SearchBox>
+            <SearchBox
+              searchTermChanged={(e) => 
+                this.setState({ changedSearchTerm: e?.detail})}>
+            </SearchBox>
             {this.state.changedSearchTerm && this.state.changedSearchTerm.length > 0 &&
             <div>
               {strings.ChangedSearchTermLabel}: {this.state.changedSearchTerm}
