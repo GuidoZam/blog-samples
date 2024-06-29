@@ -1,6 +1,7 @@
 declare interface IMgtSearchResultWebPartStrings {
 	PropertyPaneDescription: string;
 	SettingsGroupName: string;
+	Title: string;
 	QueryLabel: string;
 	UseWildcardLabel: string;
 	UseCustomTmeplateLabel: string;

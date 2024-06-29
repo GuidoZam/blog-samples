@@ -31,7 +31,7 @@ export default class MgtSearchResult extends React.Component<IMgtSearchResultPro
     return (
       <section className={styles.mgtSearchResult}>
         <div className={styles.welcome}>
-          <h1>MGT Search Result</h1>
+          <h1>{strings.Title}</h1>
         </div>
         <div>
           <div className={styles.searchField}>
