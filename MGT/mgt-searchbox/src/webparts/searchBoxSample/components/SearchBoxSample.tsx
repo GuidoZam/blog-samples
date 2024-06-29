@@ -3,8 +3,14 @@ import styles from './SearchBoxSample.module.scss';
 import type { ISearchBoxSampleProps } from './ISearchBoxSampleProps';
 import { SearchBox } from '@microsoft/mgt-react';
 import * as strings from 'SearchBoxSampleWebPartStrings';
+import { ISearchBoxSampleState } from './ISearchBoxSampleState';
 
-export default class SearchBoxSample extends React.Component<ISearchBoxSampleProps, {}> {
+export default class SearchBoxSample extends React.Component<ISearchBoxSampleProps, ISearchBoxSampleState> {
+  constructor(props: ISearchBoxSampleProps) {
+    super(props);
+    this.state = {};
+  }
+
   public render(): React.ReactElement<ISearchBoxSampleProps> {
     return (
       <section className={styles.searchBoxSample}>
@@ -14,7 +20,7 @@ export default class SearchBoxSample extends React.Component<ISearchBoxSamplePro
         <div className={styles.section}>
           <div>
             <h4 className={styles.sectionTitle}>
-              <span>Basic usage</span>
+              <span>{strings.BasicUsageLabel}</span>
             </h4>
             {/* Basic usage of SearchBox */}
             <SearchBox></SearchBox>
@@ -23,7 +29,7 @@ export default class SearchBoxSample extends React.Component<ISearchBoxSamplePro
         <div className={styles.section}>
           <div>
             <h4 className={styles.sectionTitle}>
-              <span>Custom term</span>
+              <span>{strings.CustomTermLabel}</span>
             </h4>
             {/* SearchBox with custom term */}
             <SearchBox searchTerm={"custom term"}></SearchBox>
@@ -32,7 +38,7 @@ export default class SearchBoxSample extends React.Component<ISearchBoxSamplePro
         <div className={styles.section}>
           <div>
             <h4 className={styles.sectionTitle}>
-              <span>Custom placeholder</span>
+              <span>{strings.CustomPlaceholderLabel}</span>
             </h4>
             {/* SearchBox custom placeholder */}
             <SearchBox placeholder={strings.Placeholder}></SearchBox>
@@ -41,19 +47,27 @@ export default class SearchBoxSample extends React.Component<ISearchBoxSamplePro
         <div className={styles.section}>
           <div>
             <h4 className={styles.sectionTitle}>
-              <span>Custom debounce delay</span>
+              <span>{strings.CustomDebounceDelayLabel}</span>
             </h4>
             {/* SearchBox custom debounce delay */}
-            <SearchBox debounceDelay={2000} searchTermChanged={(e) => alert(e.detail)}></SearchBox>
+            <SearchBox debounceDelay={2000} searchTermChanged={(e) => this.setState({ changedDebounceSearchTerm: e?.detail })}></SearchBox>
+            {this.state.changedDebounceSearchTerm && this.state.changedDebounceSearchTerm.length > 0 &&
+            <div>
+              {strings.ChangedDebounceSearchTermLabel}: {this.state.changedDebounceSearchTerm}
+            </div>}
           </div>
         </div>
         <div className={styles.section}>
           <div>
             <h4 className={styles.sectionTitle}>
-              <span>Search term changed event</span>
+              <span>{strings.SearchTermChangedEventLabel}</span>
             </h4>
             {/* Search term changed event */}
-            <SearchBox searchTermChanged={(e) => console.log(e)}></SearchBox>
+            <SearchBox searchTermChanged={(e) => this.setState({ changedSearchTerm: e?.detail})}></SearchBox>
+            {this.state.changedSearchTerm && this.state.changedSearchTerm.length > 0 &&
+            <div>
+              {strings.ChangedSearchTermLabel}: {this.state.changedSearchTerm}
+            </div>}
           </div>
         </div>
       </section>
