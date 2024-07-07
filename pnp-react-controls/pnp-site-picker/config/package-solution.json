@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-site-picker-client-side-solution",
+    "id": "68a6c867-8a98-452f-83a8-94a7484efd4e",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-site-picker description"
+      },
+      "longDescription": {
+        "default": "pnp-site-picker description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-site-picker Feature",
+        "description": "The feature that activates elements of the pnp-site-picker solution.",
+        "id": "d1dbbdd1-7f50-41db-be90-2df1b823e693",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-site-picker.sppkg"
+  }
+}

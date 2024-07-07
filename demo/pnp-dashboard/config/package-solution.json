@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-dashboard-client-side-solution",
+    "id": "4547c36e-79f8-45e1-99df-b1534695c9ed",
+    "version": "1.0.2.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-dashboard description"
+      },
+      "longDescription": {
+        "default": "pnp-dashboard description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-dashboard Feature",
+        "description": "The feature that activates elements of the pnp-dashboard solution.",
+        "id": "2ec7ad39-6b96-4ca9-b5c5-4ce3b8719583",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-dashboard.sppkg"
+  }
+}
