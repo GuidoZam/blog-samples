@@ -40,5 +40,6 @@ define([], function() {
 			ArticleContent:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus nibh eu vestibulum posuere. Quisque ornare risus vel ornare sagittis. Fusce eget iaculis metus. Phasellus eu nunc neque. Praesent interdum erat vitae tristique pellentesque. Nunc posuere ex a ante malesuada, at laoreet sem placerat.",
 		},
+		HidingWidget: "Widget {0} is being hidden!",
 	};
 });

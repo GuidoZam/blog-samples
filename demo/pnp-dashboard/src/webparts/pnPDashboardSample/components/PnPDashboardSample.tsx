@@ -39,7 +39,13 @@ export default class PnPDashboardSample extends React.Component<IPnPDashboardSam
           this._getFourthWidget(),
           this._getFifthWidget(),
           this._getSixthWidget()
-        ]} />
+        ]}
+        allowHidingWidget={true}
+        onWidgetHiding={(widget: IWidget) => {
+          const message = strings.HidingWidget.replace("{0}", widget.title);
+          alert(message);
+        }}
+        />
     );
   }
 

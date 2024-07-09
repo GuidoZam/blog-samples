@@ -33,6 +33,7 @@ declare interface IPnPDashboardSampleWebPartStrings {
 		Header: string;
 		ArticleContent: string;
 	};
+	HidingWidget: string;
 }
 
 declare module 'PnPDashboardSampleWebPartStrings' {
