@@ -4,11 +4,14 @@ define([], function() {
 			Title: "First widget",
 			Description: "This is the first widget",
 			PrincipalTab: "Principal tab",
-			PrincipalTabContent: "Principal tab content",
+			PrincipalTabContent:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla porttitor massa id neque aliquam vestibulum morbi. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Sed cras ornare arcu dui vivamus arcu felis bibendum. Dignissim convallis aenean et tortor at risus viverra. Nulla malesuada pellentesque elit eget gravida cum sociis. Odio tempor orci dapibus ultrices in. Sit amet mattis vulputate enim. Nunc scelerisque viverra mauris in aliquam. Eleifend donec pretium vulputate sapien. Turpis tincidunt id aliquet risus. Diam phasellus vestibulum lorem sed risus ultricies. Vitae elementum curabitur vitae nunc sed velit dignissim sodales.",
 			SecondaryTab: "Secondary tab",
-			SecondaryTabContent: "Secondary tab content",
+			SecondaryTabContent:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce ut. Venenatis cras sed felis eget velit aliquet sagittis.",
 			LastTab: "Last tab",
-			LastTabContent: "Last tab content",
+			LastTabContent:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ornare lectus sit amet est placerat in egestas erat. Faucibus nisl tincidunt eget nullam non. Donec pretium vulputate sapien nec. Dui ut ornare lectus sit.",
 		},
 		SecondWidget: {
 			Title: "Second widget",

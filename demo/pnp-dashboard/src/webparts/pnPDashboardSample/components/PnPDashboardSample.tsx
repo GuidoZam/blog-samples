@@ -118,7 +118,7 @@ export default class PnPDashboardSample extends React.Component<IPnPDashboardSam
   private _getFourthWidget(): IWidget {
     return {
       title: strings.FourthWidget.Title,
-      size: WidgetSize.Single,
+      size: WidgetSize.Box,
       link: this.linkDeloreanIpsum,
       body: [
         {

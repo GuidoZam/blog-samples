@@ -3,7 +3,7 @@
   "solution": {
     "name": "pnp-dashboard-client-side-solution",
     "id": "4547c36e-79f8-45e1-99df-b1534695c9ed",
-    "version": "1.0.2.0",
+    "version": "1.0.4.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
