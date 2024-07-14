@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "mgt-localization-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mgtLocalization/MgtLocalizationWebPart.js",
+          "manifest": "./src/webparts/mgtLocalization/MgtLocalizationWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MgtLocalizationWebPartStrings": "lib/webparts/mgtLocalization/loc/{locale}.js"
+  }
+}
