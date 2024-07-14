@@ -1,6 +1,6 @@
 {
   "name": "pnp-field-collection-data",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": true,
   "engines": {
     "node": ">=18.17.1 <19.0.0"

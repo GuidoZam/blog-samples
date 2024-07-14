@@ -3,7 +3,7 @@
   "solution": {
     "name": "pnp-field-collection-data-client-side-solution",
     "id": "a60628d1-e5b9-40dd-8823-5992e52a48c9",
-    "version": "1.0.4.0",
+    "version": "1.0.5.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

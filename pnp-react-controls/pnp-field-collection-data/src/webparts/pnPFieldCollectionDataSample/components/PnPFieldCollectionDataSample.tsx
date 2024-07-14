@@ -72,7 +72,6 @@ export default class PnPFieldCollectionDataSample extends React.Component<IPnPFi
                 { id: "StringField", title: "String field", type: CustomCollectionFieldType.string, required: true },
                 { id: "NumberField", title: "Number field", type: CustomCollectionFieldType.number },
                 { id: "BooleanField", title: "Boolean field", type: CustomCollectionFieldType.boolean },
-                { id: "DropdownField", title: "Dropdown field", type: CustomCollectionFieldType.dropdown, options: [{ key: "1", text: "One" }, { key: "2", text: "Two" }, { key: "3", text: "Three" }] },
                 { id: "FabricIconField", title: "FabricIcon field", type: CustomCollectionFieldType.fabricIcon },
               ]}
               value={this.state.sampleData}
