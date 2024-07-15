@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-field-collection-data",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "PnP FieldCollectionData Sample",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "pnp-field-collection-data",
+    "libraryId": "a60628d1-e5b9-40dd-8823-5992e52a48c9",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-field-collection-data description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
