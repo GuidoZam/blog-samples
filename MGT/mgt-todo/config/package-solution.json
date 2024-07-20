@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mgt-todo-client-side-solution",
+    "id": "d0fc4c88-515b-4916-8d58-8116201f2ace",
+    "version": "1.0.2.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mgt-todo description"
+      },
+      "longDescription": {
+        "default": "mgt-todo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mgt-todo Feature",
+        "description": "The feature that activates elements of the mgt-todo solution.",
+        "id": "b2051647-ab3d-4b94-992a-face143374b9",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mgt-todo.sppkg"
+  }
+}

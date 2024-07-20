@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "mgt-to-do-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mgtToDo/MgtToDoWebPart.js",
+          "manifest": "./src/webparts/mgtToDo/MgtToDoWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MgtToDoWebPartStrings": "lib/webparts/mgtToDo/loc/{locale}.js"
+  }
+}
