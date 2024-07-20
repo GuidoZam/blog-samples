@@ -20,7 +20,7 @@
     "group": { "default": "Advanced" },
     "title": { "default": "MGT ToDo" },
     "description": { "default": "MGT ToDo description" },
-    "officeFabricIconFontName": "Page",
+    "officeFabricIconFontName": "TaskList",
     "properties": {
       "description": "MGT ToDo"
     }
