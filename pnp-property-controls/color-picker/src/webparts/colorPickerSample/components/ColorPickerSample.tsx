@@ -9,7 +9,6 @@ export default class ColorPickerSample extends React.Component<IColorPickerSampl
       baseValue,
       noAlphaSliderValue,
       fullPickerValue,
-      noPreviewValue,
       iconNameValue,
       asObjectValue,
       onPropertyChangeValue
@@ -36,11 +35,6 @@ export default class ColorPickerSample extends React.Component<IColorPickerSampl
             <div className={styles.colorRectangle}
               style={{
                 backgroundColor: fullPickerValue
-              }}
-            />
-            <div className={styles.colorRectangle}
-              style={{
-                backgroundColor: noPreviewValue
               }}
             />
             <div className={styles.colorRectangle}

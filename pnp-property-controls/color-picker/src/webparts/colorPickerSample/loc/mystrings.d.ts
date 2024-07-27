@@ -1,12 +1,11 @@
 declare interface IColorPickerSampleWebPartStrings {
 	PropertyPaneDescription: string;
-	BasicGroupName: string;
 	BasicSelectColorLabel: string;
 	NoAlphaSliderColorLabel: string;
 	FullPickerColorLabel: string;
 	DisableToggleLabel: string;
 	HideToggleLabel: string;
-	NoPreviewSelectColorLabel: string;
+	ShowPreviewToggleLabel: string;
 	IconNameSelectColorLabel: string;
 	AsObjectValueSelectColorLabel: string;
 	OnPropertyChangeSelectColorLabel: string;

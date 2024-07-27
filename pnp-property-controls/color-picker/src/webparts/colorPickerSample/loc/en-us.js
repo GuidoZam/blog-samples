@@ -1,13 +1,12 @@
 define([], function() {
   return {
-		PropertyPaneDescription: "Description",
-		BasicGroupName: "Group Name",
+		PropertyPaneDescription: "Here you can configure the color picker sample web part.",
 		BasicSelectColorLabel: "Basic",
 		NoAlphaSliderColorLabel: "No alpha slider",
 		FullPickerColorLabel: "Full style",
 		DisableToggleLabel: "Disable color picker",
 		HideToggleLabel: "Hide color picker",
-		NoPreviewSelectColorLabel: "No preview",
+		ShowPreviewToggleLabel: "Show preview",
 		IconNameSelectColorLabel: "Icon name",
 		AsObjectValueSelectColorLabel: "As object value",
 		OnPropertyChangeSelectColorLabel: "On property change",

@@ -21,7 +21,7 @@ export interface IColorPickerSampleWebPartProps {
 	fullPickerValue: string;
 	disabled: boolean;
 	hidden: boolean;
-	noPreviewValue: string;
+	showPreview: boolean;
 	iconNameValue: string;
 	asObjectValue: any;
 	onPropertyChangeValue: string;
@@ -35,7 +35,6 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 				baseValue: this.properties.baseValue,
 				noAlphaSliderValue: this.properties.noAlphaSliderValue,
 				fullPickerValue: this.properties.fullPickerValue,
-				noPreviewValue: this.properties.noPreviewValue,
 				iconNameValue: this.properties.iconNameValue,
 				asObjectValue: this.properties.asObjectValue?.str,
 				onPropertyChangeValue: this.properties.onPropertyChangeValue,
@@ -61,7 +60,6 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 					},
 					groups: [
 						{
-							groupName: strings.BasicGroupName,
 							groupFields: [
 								PropertyFieldColorPicker("baseValue", {
 									label: strings.BasicSelectColorLabel,
@@ -69,6 +67,9 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 									onPropertyChange: this.onPropertyPaneFieldChanged,
 									properties: this.properties,
 									key: "basicUsage",
+								}),
+								PropertyPaneToggle("showPreview", {
+									label: strings.ShowPreviewToggleLabel,
 								}),
 								PropertyPaneToggle("disabled", {
 									label: strings.DisableToggleLabel,
@@ -82,9 +83,10 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 									onPropertyChange: this.onPropertyPaneFieldChanged,
 									properties: this.properties,
 									alphaSliderHidden: true,
-									isHidden: this.properties.hidden,
 									key: "noAlphaSlider",
+									isHidden: this.properties.hidden,
 									disabled: this.properties.disabled,
+									showPreview: this.properties.showPreview,
 								}),
 								PropertyFieldColorPicker("fullPickerValue", {
 									label: strings.FullPickerColorLabel,
@@ -93,16 +95,9 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 									properties: this.properties,
 									disabled: this.properties.disabled,
 									isHidden: this.properties.hidden,
+									showPreview: this.properties.showPreview,
 									style: PropertyFieldColorPickerStyle.Full,
 									key: "fullStyle",
-								}),
-								PropertyFieldColorPicker("noPreviewValue", {
-									label: strings.NoPreviewSelectColorLabel,
-									selectedColor: this.properties.noPreviewValue,
-									onPropertyChange: this.onPropertyPaneFieldChanged,
-									properties: this.properties,
-									showPreview: false,
-									key: "noPreviewUsage",
 								}),
 								PropertyFieldColorPicker("iconNameValue", {
 									label: strings.IconNameSelectColorLabel,
