@@ -20,9 +20,10 @@ export interface IColorPickerSampleWebPartProps {
 	noAlphaSliderValue: string;
 	fullPickerValue: string;
 	disabled: boolean;
+	hidden: boolean;
 	noPreviewValue: string;
 	iconNameValue: string;
-	asObjectValue: string;
+	asObjectValue: any;
 	onPropertyChangeValue: string;
 }
 
@@ -36,7 +37,7 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 				fullPickerValue: this.properties.fullPickerValue,
 				noPreviewValue: this.properties.noPreviewValue,
 				iconNameValue: this.properties.iconNameValue,
-				asObjectValue: this.properties.asObjectValue,
+				asObjectValue: this.properties.asObjectValue?.str,
 				onPropertyChangeValue: this.properties.onPropertyChangeValue,
 			});
 
@@ -69,12 +70,19 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 									properties: this.properties,
 									key: "basicUsage",
 								}),
+								PropertyPaneToggle("disabled", {
+									label: strings.DisableToggleLabel,
+								}),
+								PropertyPaneToggle("hidden", {
+									label: strings.HideToggleLabel,
+								}),
 								PropertyFieldColorPicker("noAlphaSliderValue", {
 									label: strings.NoAlphaSliderColorLabel,
 									selectedColor: this.properties.noAlphaSliderValue,
 									onPropertyChange: this.onPropertyPaneFieldChanged,
 									properties: this.properties,
 									alphaSliderHidden: true,
+									isHidden: this.properties.hidden,
 									key: "noAlphaSlider",
 									disabled: this.properties.disabled,
 								}),
@@ -84,14 +92,9 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 									onPropertyChange: this.onPropertyPaneFieldChanged,
 									properties: this.properties,
 									disabled: this.properties.disabled,
-									isHidden: false,
-									alphaSliderHidden: false,
+									isHidden: this.properties.hidden,
 									style: PropertyFieldColorPickerStyle.Full,
-									iconName: "Precipitation",
-									key: "colorFieldId",
-								}),
-								PropertyPaneToggle("disabled", {
-									label: strings.DisableToggleLabel,
+									key: "fullStyle",
 								}),
 								PropertyFieldColorPicker("noPreviewValue", {
 									label: strings.NoPreviewSelectColorLabel,
@@ -117,7 +120,6 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 										oldValue: any,
 										newValue: any
 									) => {
-										console.log(propertyPath);
 										console.log(oldValue);
 										console.log(newValue);
 										this.onPropertyPaneFieldChanged(
@@ -128,6 +130,20 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 									},
 									properties: this.properties,
 									valueAsObject: true,
+									// An example of the object value returned both for the oldValue
+									// and newValue when using valueAsObject set to true:
+									// {
+									// 	"a": 100,
+									// 	"b": 26,
+									// 	"g": 201,
+									// 	"h": 126,
+									// 	"hex": "06c91a",
+									// 	"r": 6,
+									// 	"s": 97,
+									// 	"str": "#06c91a",
+									// 	"v": 79,
+									// 	"t": 0
+									// }
 									key: "asObjectValue",
 								}),
 								PropertyFieldColorPicker("onPropertyChangeValue", {
@@ -141,7 +157,9 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 										console.log(oldValue);
 										console.log(newValue);
 										// Here you can perform additional operations when the color changes
-										// For example you can prevent the user from selecting a specific color
+										// For example you can prevent the user from selecting a specific color.
+										// This instance does not return an object so the value will be
+										// a string containing the hex value of the color.
 										if (newValue === "#ffffff" || newValue === "#000000") {
 											alert(strings.CannotSelectThisColorErrorMessage);
 											return;

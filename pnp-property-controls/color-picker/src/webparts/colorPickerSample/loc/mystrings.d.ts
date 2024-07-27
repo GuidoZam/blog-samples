@@ -5,6 +5,7 @@ declare interface IColorPickerSampleWebPartStrings {
 	NoAlphaSliderColorLabel: string;
 	FullPickerColorLabel: string;
 	DisableToggleLabel: string;
+	HideToggleLabel: string;
 	NoPreviewSelectColorLabel: string;
 	IconNameSelectColorLabel: string;
 	AsObjectValueSelectColorLabel: string;

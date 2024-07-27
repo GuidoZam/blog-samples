@@ -6,6 +6,7 @@ define([], function() {
 		NoAlphaSliderColorLabel: "No alpha slider",
 		FullPickerColorLabel: "Full style",
 		DisableToggleLabel: "Disable color picker",
+		HideToggleLabel: "Hide color picker",
 		NoPreviewSelectColorLabel: "No preview",
 		IconNameSelectColorLabel: "Icon name",
 		AsObjectValueSelectColorLabel: "As object value",
