@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "scolor-picker-client-side-solution",
+    "id": "5807ac70-dbf9-44b9-b4fe-346c557bf22f",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "scolor-picker description"
+      },
+      "longDescription": {
+        "default": "scolor-picker description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "scolor-picker Feature",
+        "description": "The feature that activates elements of the scolor-picker solution.",
+        "id": "fc327722-824d-412e-86d0-656cbd9f19e5",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/scolor-picker.sppkg"
+  }
+}
