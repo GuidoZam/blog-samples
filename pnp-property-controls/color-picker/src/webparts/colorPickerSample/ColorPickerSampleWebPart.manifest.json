@@ -20,7 +20,7 @@
     "group": { "default": "Advanced" },
     "title": { "default": "Color Picker Sample" },
     "description": { "default": "Color Picker Sample description" },
-    "officeFabricIconFontName": "Page",
+    "officeFabricIconFontName": "Eyedropper",
     "properties": {
       "description": "Color Picker Sample"
     }

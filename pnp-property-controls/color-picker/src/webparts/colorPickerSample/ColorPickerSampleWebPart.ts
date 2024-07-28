@@ -22,6 +22,8 @@ export interface IColorPickerSampleWebPartProps {
 	disabled: boolean;
 	hidden: boolean;
 	showPreview: boolean;
+	showFull: boolean;
+	customizablePickerValue: string;
 	iconNameValue: string;
 	asObjectValue: any;
 	onPropertyChangeValue: string;
@@ -33,6 +35,7 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
     const element: React.ReactElement<IColorPickerSampleProps> =
 			React.createElement(ColorPickerSample, {
 				baseValue: this.properties.baseValue,
+				customizablePickerValue: this.properties.customizablePickerValue,
 				noAlphaSliderValue: this.properties.noAlphaSliderValue,
 				fullPickerValue: this.properties.fullPickerValue,
 				iconNameValue: this.properties.iconNameValue,
@@ -77,6 +80,24 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 								PropertyPaneToggle("hidden", {
 									label: strings.HideToggleLabel,
 								}),
+								PropertyPaneToggle("showFull", {
+									label: strings.FullToggleLabel,
+								}),
+								PropertyFieldColorPicker("customizablePickerValue", {
+									label: strings.CustomizablePickerLabel,
+									selectedColor: this.properties.customizablePickerValue,
+									onPropertyChange: this.onPropertyPaneFieldChanged,
+									properties: this.properties,
+									alphaSliderHidden: true,
+									key: "togglesPicker",
+									isHidden: this.properties.hidden,
+									disabled: this.properties.disabled,
+									showPreview: this.properties.showPreview,
+									style:
+										this.properties.showFull === true
+											? PropertyFieldColorPickerStyle.Full
+											: PropertyFieldColorPickerStyle.Inline,
+								}),
 								PropertyFieldColorPicker("noAlphaSliderValue", {
 									label: strings.NoAlphaSliderColorLabel,
 									selectedColor: this.properties.noAlphaSliderValue,
@@ -84,18 +105,12 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 									properties: this.properties,
 									alphaSliderHidden: true,
 									key: "noAlphaSlider",
-									isHidden: this.properties.hidden,
-									disabled: this.properties.disabled,
-									showPreview: this.properties.showPreview,
 								}),
 								PropertyFieldColorPicker("fullPickerValue", {
 									label: strings.FullPickerColorLabel,
 									selectedColor: this.properties.fullPickerValue,
 									onPropertyChange: this.onPropertyPaneFieldChanged,
 									properties: this.properties,
-									disabled: this.properties.disabled,
-									isHidden: this.properties.hidden,
-									showPreview: this.properties.showPreview,
 									style: PropertyFieldColorPickerStyle.Full,
 									key: "fullStyle",
 								}),

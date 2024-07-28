@@ -6,6 +6,8 @@ declare interface IColorPickerSampleWebPartStrings {
 	DisableToggleLabel: string;
 	HideToggleLabel: string;
 	ShowPreviewToggleLabel: string;
+	FullToggleLabel: string;
+	CustomizablePickerLabel: string;
 	IconNameSelectColorLabel: string;
 	AsObjectValueSelectColorLabel: string;
 	OnPropertyChangeSelectColorLabel: string;
