@@ -88,7 +88,6 @@ export default class ColorPickerSampleWebPart extends BaseClientSideWebPart<ICol
 									selectedColor: this.properties.customizablePickerValue,
 									onPropertyChange: this.onPropertyPaneFieldChanged,
 									properties: this.properties,
-									alphaSliderHidden: true,
 									key: "togglesPicker",
 									isHidden: this.properties.hidden,
 									disabled: this.properties.disabled,
