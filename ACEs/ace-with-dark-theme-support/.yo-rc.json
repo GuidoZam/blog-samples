@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "ace-with-dark-theme-support",
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Generic",
+    "componentName": "ACE with dark theme support",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "ace-with-dark-theme-support",
+    "libraryId": "fb0f7087-b15c-4b8b-a88d-08c392a94649",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "ace-with-dark-theme-support description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

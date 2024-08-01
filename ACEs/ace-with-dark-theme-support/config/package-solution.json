@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "ace-with-dark-theme-support-client-side-solution",
+    "id": "fb0f7087-b15c-4b8b-a88d-08c392a94649",
+    "version": "1.0.1.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "ace-with-dark-theme-support description"
+      },
+      "longDescription": {
+        "default": "ace-with-dark-theme-support description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "ace-with-dark-theme-support Feature",
+        "description": "The feature that activates elements of the ace-with-dark-theme-support solution.",
+        "id": "5d30ddb7-3f61-40f1-8d88-c42e396f1018",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/ace-with-dark-theme-support.sppkg"
+  }
+}
