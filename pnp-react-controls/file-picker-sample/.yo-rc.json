@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "file-picker-sample",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "FilePicker Sample",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "file-picker-sample",
+    "libraryId": "851536f9-a013-4832-8919-c313ce99133d",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "file-picker-sample description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
