@@ -22,7 +22,7 @@ export class QuickView extends BaseAdaptiveCardQuickView<
     const imageUrl = isDarkTheme
 			? require("../assets/darkImage.svg")
 			: require("../assets/lightImage.svg"); 
-console.log(imageUrl);
+
     return {
       subTitle: strings.SubTitle,
       title: strings.Title,

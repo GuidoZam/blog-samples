@@ -1,11 +1,13 @@
 define([], function() {
   return {
-    "PropertyPaneDescription": "Write 1-3 sentences describing the functionality of this component.",
-    "TitleFieldLabel": "Card title",
-    "Title": "Adaptive Card Extension",
-    "SubTitle": "Quick view",
-    "PrimaryText": "SPFx Adaptive Card Extension",
-    "Description": "Create your SPFx Adaptive Card Extension solution!",
-    "QuickViewButton": "Quick view"
-  }
+		CardViewTitle: "Themed ACE",
+		CardViewTitleExtended: "ACE with dark theme support",
+		Title: "Welcome to the Quick View!",
+		SubTitle: "Here you can see an image based on the current theme.",
+		PrimaryText: "This ACE is  aware of the currently set theme.",
+		PrimaryTextExtended:
+			"This ACE is  aware of the currently set theme. It will show a light or dark image based on the current theme.",
+		Description: "Create your SPFx Adaptive Card Extension solution!",
+		QuickViewButton: "Show quick view",
+	};
 });

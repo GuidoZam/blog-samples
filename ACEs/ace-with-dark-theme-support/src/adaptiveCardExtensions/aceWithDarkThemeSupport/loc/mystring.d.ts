@@ -1,11 +1,12 @@
 declare interface IAceWithDarkThemeSupportAdaptiveCardExtensionStrings {
-  PropertyPaneDescription: string;
-  TitleFieldLabel: string;
-  Title: string;
-  SubTitle: string;
-  PrimaryText: string;
-  Description: string;
-  QuickViewButton: string;
+	CardViewTitle: string;
+	CardViewTitleExtended: string;
+	Title: string;
+	SubTitle: string;
+	PrimaryText: string;
+	PrimaryTextExtended: string;
+	Description: string;
+	QuickViewButton: string;
 }
 
 declare module 'AceWithDarkThemeSupportAdaptiveCardExtensionStrings' {

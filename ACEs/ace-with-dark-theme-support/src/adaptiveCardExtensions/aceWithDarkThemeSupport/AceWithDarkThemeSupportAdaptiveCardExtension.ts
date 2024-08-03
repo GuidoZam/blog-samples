@@ -1,11 +1,8 @@
-import type { IPropertyPaneConfiguration } from '@microsoft/sp-property-pane';
 import { BaseAdaptiveCardExtension } from '@microsoft/sp-adaptive-card-extension-base';
 import { CardView } from './cardView/CardView';
 import { QuickView } from './quickView/QuickView';
-import { AceWithDarkThemeSupportPropertyPane } from './AceWithDarkThemeSupportPropertyPane';
 
 export interface IAceWithDarkThemeSupportAdaptiveCardExtensionProps {
-  title: string;
 }
 
 export interface IAceWithDarkThemeSupportAdaptiveCardExtensionState {
@@ -19,7 +16,6 @@ export default class AceWithDarkThemeSupportAdaptiveCardExtension extends BaseAd
   IAceWithDarkThemeSupportAdaptiveCardExtensionProps,
   IAceWithDarkThemeSupportAdaptiveCardExtensionState
 > {
-  private _deferredPropertyPane: AceWithDarkThemeSupportPropertyPane;
 
   public async onInit(): Promise<void> {
     this.state = {
@@ -45,23 +41,7 @@ export default class AceWithDarkThemeSupportAdaptiveCardExtension extends BaseAd
     return Promise.resolve();
   }
 
-  protected loadPropertyPaneResources(): Promise<void> {
-    return import(
-      /* webpackChunkName: 'AceWithDarkThemeSupport-property-pane'*/
-      './AceWithDarkThemeSupportPropertyPane'
-    )
-      .then(
-        (component) => {
-          this._deferredPropertyPane = new component.AceWithDarkThemeSupportPropertyPane();
-        }
-      );
-  }
-
   protected renderCard(): string | undefined {
     return CARD_VIEW_REGISTRY_ID;
-  }
-
-  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
-    return this._deferredPropertyPane?.getPropertyPaneConfiguration();
   }
 }

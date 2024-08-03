@@ -16,11 +16,10 @@
   "preconfiguredEntries": [{
     "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
     "group": { "default": "Dashboard" },
-    "title": { "default": "ACE with dark theme support" },
+    "title": { "default": "Themed ACE" },
     "description": { "default": "ACE with dark theme support description" },
-    "iconImageUrl": "https://res.cdn.office.net/files/fabric-cdn-prod_20231211.002/assets/brand-icons/product-monoline/svg/vivaconnections_32x1.svg",
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAblJREFUWEftlr1rFFEUxX9nZo0oREUstU2pWIlJI6RTiUlhkt2oxcyYKmgp/gViqaQxzowQk8xqisSgdoIWUWwULVMa7ET8AEXdmSu7qETdbgIvxbz2vnvP4Zx3733C8ZFjfCoClQKVAv8pEATNQ/LsssEgsG+T2vSd4JEVupKm46821vxDYGJibtf2nf40RgPwNwn43zI5YuHbl3xqfv7Mp3awQyAM7+415SvAAPAVrElRu5qmp9dAVo6MKQgW+/Bal0DjwA5gVeYPJcnoe01O3tjWyntnUSe4LuNUktRflgPtnh2G2WET94ADmDVr/udzCsNs0MQK6LuHjcRx/XFZ8ChaOGho2uDIL5mfC5uK48brKMqOFWgJrEfGkILz2SzGWeB6GtcvlgUPwzsDJrsPtufvWvog08kkGVsNouwacAFxW0GUvQD6THbi1s3GkzIE2nbmxe5lw453qyP00Pc+Dv+w3n6ZHgBrbQJv25drnn90Zmb0TRkCUTS3v8B/2vG4+1n3yPs9r8drFfmzjj1bgYBjC1w/Qudt6HwQOR/Fv7vF6TLa2LLO1nGZAVQmt/qSVQpUCjhX4CfBpA+eO7RQugAAAABJRU5ErkJggg==",
     "properties": {
-      "title": "ACE with dark theme support"
     },
     "cardSize": "Large"
   }]
