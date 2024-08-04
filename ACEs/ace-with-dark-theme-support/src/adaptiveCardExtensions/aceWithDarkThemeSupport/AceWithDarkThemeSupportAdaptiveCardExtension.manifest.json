@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "b1c3c8bf-0ab0-4a81-8fe6-1ad04d6b786f",
+  "alias": "AceWithDarkThemeSupportAdaptiveCardExten",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "Themed ACE" },
+    "description": { "default": "ACE with dark theme support description" },
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAblJREFUWEftlr1rFFEUxX9nZo0oREUstU2pWIlJI6RTiUlhkt2oxcyYKmgp/gViqaQxzowQk8xqisSgdoIWUWwULVMa7ET8AEXdmSu7qETdbgIvxbz2vnvP4Zx3733C8ZFjfCoClQKVAv8pEATNQ/LsssEgsG+T2vSd4JEVupKm46821vxDYGJibtf2nf40RgPwNwn43zI5YuHbl3xqfv7Mp3awQyAM7+415SvAAPAVrElRu5qmp9dAVo6MKQgW+/Bal0DjwA5gVeYPJcnoe01O3tjWyntnUSe4LuNUktRflgPtnh2G2WET94ADmDVr/udzCsNs0MQK6LuHjcRx/XFZ8ChaOGho2uDIL5mfC5uK48brKMqOFWgJrEfGkILz2SzGWeB6GtcvlgUPwzsDJrsPtufvWvog08kkGVsNouwacAFxW0GUvQD6THbi1s3GkzIE2nbmxe5lw453qyP00Pc+Dv+w3n6ZHgBrbQJv25drnn90Zmb0TRkCUTS3v8B/2vG4+1n3yPs9r8drFfmzjj1bgYBjC1w/Qudt6HwQOR/Fv7vF6TLa2LLO1nGZAVQmt/qSVQpUCjhX4CfBpA+eO7RQugAAAABJRU5ErkJggg==",
+    "properties": {
+    },
+    "cardSize": "Large"
+  }]
+}
