@@ -3,7 +3,7 @@
   "solution": {
     "name": "ace-with-dark-theme-support-client-side-solution",
     "id": "fb0f7087-b15c-4b8b-a88d-08c392a94649",
-    "version": "1.0.3.0",
+    "version": "1.0.7.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
