@@ -9,14 +9,15 @@ import { Providers, customElementHelper } from "@microsoft/mgt-element";
 import { SharePointProvider } from "@microsoft/mgt-sharepoint-provider";
 import { lazyLoadComponent } from "@microsoft/mgt-spfx-utils";
 
-// Asyncronously import the component
-const ReactComponent = React.lazy(() =>
-		import(
-			/* webpackChunkName: 'mgt-react-component' */ "./components/UpdatedBasicMgtSample"
-		));
-
 // Set the disambiguation before initialization
 customElementHelper.withDisambiguation("updated-basic-mgt-sample");
+
+// Asyncronously import the component
+const CustomReactComponent = React.lazy(() =>
+		import(
+			/* webpackChunkName: 'mgt-react-component' */
+			"./components/UpdatedBasicMgtSample"
+		));
 
 export interface IUpdatedBasicMgtSampleWebPartProps {
 }
@@ -24,7 +25,7 @@ export interface IUpdatedBasicMgtSampleWebPartProps {
 export default class UpdatedBasicMgtSampleWebPart extends BaseClientSideWebPart<IUpdatedBasicMgtSampleWebPartProps> {
 	public render(): void {
 		// Lazy load the component
-		const element = lazyLoadComponent(ReactComponent, {
+		const element = lazyLoadComponent(CustomReactComponent, {
 			description: strings.Description,
 		});
 
