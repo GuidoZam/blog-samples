@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "property-date-time-picker-client-side-solution",
+    "id": "5802ffa1-6de5-4385-a636-2777673f7661",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "property-date-time-picker description"
+      },
+      "longDescription": {
+        "default": "property-date-time-picker description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "property-date-time-picker Feature",
+        "description": "The feature that activates elements of the property-date-time-picker solution.",
+        "id": "0fe35f03-e707-496a-b5c6-757c3ba403e4",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/property-date-time-picker.sppkg"
+  }
+}
