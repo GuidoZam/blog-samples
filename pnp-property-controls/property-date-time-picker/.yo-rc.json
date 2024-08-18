@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "property-date-time-picker",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "Date and time picker",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "property-date-time-picker",
+    "libraryId": "5802ffa1-6de5-4385-a636-2777673f7661",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "property-date-time-picker description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
