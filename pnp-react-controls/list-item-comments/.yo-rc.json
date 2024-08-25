@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "list-item-comments",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "ListItem comments",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "list-item-comments",
+    "libraryId": "d527ab4e-c986-4388-abed-418fb0e1db17",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "list-item-comments description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
