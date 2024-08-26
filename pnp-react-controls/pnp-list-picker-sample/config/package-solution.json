@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-list-picker-sample-client-side-solution",
+    "id": "28b226bf-e913-4dd2-ade6-2051b9471a74",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-list-picker-sample description"
+      },
+      "longDescription": {
+        "default": "pnp-list-picker-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-list-picker-sample Feature",
+        "description": "The feature that activates elements of the pnp-list-picker-sample solution.",
+        "id": "c2180d02-292b-4c43-be95-ad6919978575",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-list-picker-sample.sppkg"
+  }
+}
