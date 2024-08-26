@@ -3,12 +3,14 @@ declare interface IPnPSitePickerWebPartStrings {
 	BasicUsage: string;
 	DeferredSearchTime: string;
 	DisableSearch: string;
-	EntitiesAvailable: string;
+	Mode: string;
 	MultiSelectionDisabled: string;
 	OrderByUrl: string;
 	CustomLabels: string;
 	Label: string;
 	Placeholder: string;
+	CurrentSiteCollection: string;
+	AlreadySelectedAndDisabled: string;
 }
 
 declare module 'PnPSitePickerWebPartStrings' {
