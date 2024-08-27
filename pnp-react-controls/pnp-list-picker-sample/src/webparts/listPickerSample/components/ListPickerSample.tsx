@@ -90,6 +90,15 @@ export default class ListPickerSample extends React.Component<IListPickerSampleP
               });
             }} />
           </div>
+          <div>
+            <h4 className={styles.sectionTitle}>
+              <span>{strings.CustomFilter}</span>
+            </h4>
+            <ListPicker
+              context={this.props.context}
+              filter={'Created gt datetime\'2024-07-01T00:00:00Z\''}
+              onSelectionChanged={this.onListSelected} />
+          </div>
         </div>
       </div>
     );

@@ -11,6 +11,7 @@ declare interface IListPickerSampleWebPartStrings {
 	};
 	FilterByContentType: string;
 	RefreshToggle: string;
+	CustomFilter: string;
 }
 
 declare module 'ListPickerSampleWebPartStrings' {

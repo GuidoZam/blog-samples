@@ -1,6 +1,6 @@
 define([], function() {
   return {
-    Title: "List Picker Sample",
+		Title: "List Picker Sample",
 		BasicUsage: "Basic usage",
 		HideHiddenLists: "Don't show hidden lists",
 		OrderById: "Order by ID",
@@ -12,5 +12,6 @@ define([], function() {
 		},
 		FilterByContentType: "Filter by content type",
 		RefreshToggle: "Refresh toggle",
+		CustomFilter: "Custom filter",
 	};
 });
