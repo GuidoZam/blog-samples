@@ -84,11 +84,14 @@ export default class ListPickerSample extends React.Component<IListPickerSampleP
               context={this.props.context}
               refreshToggle={this.state.refreshLists}
               onSelectionChanged={this.onListSelected} />
-            <IconButton iconProps={{ iconName: 'Refresh' }} onClick={() => {
-              this.setState({
-                refreshLists: !this.state.refreshLists
-              });
-            }} />
+            <IconButton
+              iconProps={{ iconName: 'Refresh' }}
+              onClick={() => {
+                this.setState({
+                  refreshLists: !this.state.refreshLists
+                });
+              }}
+            />
           </div>
           <div>
             <h4 className={styles.sectionTitle}>
