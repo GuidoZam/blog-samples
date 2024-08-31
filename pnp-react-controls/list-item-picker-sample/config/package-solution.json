@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "list-item-picker-sample-client-side-solution",
+    "id": "fd7e8ebd-872f-4e0c-bfe0-de64892ce83a",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "list-item-picker-sample description"
+      },
+      "longDescription": {
+        "default": "list-item-picker-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "list-item-picker-sample Feature",
+        "description": "The feature that activates elements of the list-item-picker-sample solution.",
+        "id": "53561d01-c6fb-4041-83ea-63f302baec1b",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/list-item-picker-sample.sppkg"
+  }
+}
