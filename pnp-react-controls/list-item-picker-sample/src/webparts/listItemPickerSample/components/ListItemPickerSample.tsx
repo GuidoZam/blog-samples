@@ -3,7 +3,7 @@ import styles from './ListItemPickerSample.module.scss';
 import type { IListItemPickerSampleProps } from './IListItemPickerSampleProps';
 import { IListItemPickerSampleState } from './IListItemPickerSampleState';
 import * as strings from 'ListItemPickerSampleWebPartStrings';
-import { ListItemPicker } from '@pnp/spfx-controls-react/lib/ListItemPicker';
+import { ListItemPicker } from '@pnp/spfx-controls-react';
 import { ListPicker } from '@pnp/spfx-controls-react';
 
 export default class ListItemPickerSample extends React.Component<IListItemPickerSampleProps, IListItemPickerSampleState> {
