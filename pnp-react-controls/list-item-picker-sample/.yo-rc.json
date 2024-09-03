@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "list-item-picker-sample",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "ListItem Picker Sample",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "list-item-picker-sample",
+    "libraryId": "fd7e8ebd-872f-4e0c-bfe0-de64892ce83a",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "list-item-picker-sample description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

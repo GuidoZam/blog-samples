@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "list-item-picker-sample-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/listItemPickerSample/ListItemPickerSampleWebPart.js",
+          "manifest": "./src/webparts/listItemPickerSample/ListItemPickerSampleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ListItemPickerSampleWebPartStrings": "lib/webparts/listItemPickerSample/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
