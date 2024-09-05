@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "bf3d1c51-b0e2-4248-b5af-0b911885be9b",
+  "alias": "PieChartAceAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "Pie Chart ACE" },
+    "description": { "default": "Pie Chart ACE description" },
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAz1JREFUWEfFl1moTXEUxn/XUKbwIEPhgSikPCCKzPNwM6e8KZEhnogXHsjwQLwYUoQMhVLIkCGUDC+KkqG4ipJCGcq4Pq3/aZ99zx7Ouedkv+zaw1rfmr71/evIvpoDfYFFwDSgP/AWGOb3bAspX9SlvJPjOcAOoGfsu9e1BqCIjwJD3PF7YDdwFzgM/HQAeq1nAvgFeANcAo4DD4EfWekplQGl+RTQBngBLAOuAb+Abu5QdlWCKIC4r2/AFgf+OQlIHMBs4ATQEjgErPDIwv9JAPR+NNACGAssBQb5T3K+xIP6EwcSBTDU09cRWG8Z2O5RR/9JAxBvSjXrLmCCG9hpJdkAKDOFKwBoB5zxjw8AyxPqVw4AOZH9BcBBL6nuK6MgAgCN2BEbs/vAFPvoQ0LNygUQzAwGLgKdgKIABaCDp14lmOuZSOqZSgHIXihxe2A+cDqkaDxwGbgHTAI+pYxOUwDIrMqhEdV0qVkblIHN3nTrgG0Zc9tUAJquY8A8649N5mujAJz3uk8ErtYYgMyPdD8vNboC8Nj5PYu0ou8DFQciCsSkHZF1tQbOAgp4qgC8KsH1WUaaAkC21wJbgT1pyygLhN7HeyJPBvTfCOA6cPN/AegH3DbKfldJCZ6pdqYPnltH9zH2vOPMVo4+KGSu3CaUc3G7+qa7N5NYTtHMAD7mqVu0dAKg0Rtl9RjjhqI2xJJirHFAkvMHwCzXAjn9U1QCCQ0tiDgR1cp5oyacbDx9welYkWhdJjnv6ntdZFJJ5CFDRWPYxRjpBtDLSqC98Cgh7dVyHohIe6c+jGFAdMvVkDo6WvNqOS9JxXrY2XXfAM9RrZwreunN6dFlFOoy08dKqzKMWjUjl58gfMQhhXUcAKgcEgqS2ZrzajsPgkQNvhA4GQRJqdmttvPhwLkkSVYKQFvLwF5P2VdTLosdcSNZncE8Ol1JBUkH6pyhw44kuw4x/660ZaSGkVpa499eMapdbWV6koPuZHegUe6+yAEmVZYn2Qx9sR+QmNT11E87AtRgDPrdn7cy+d3DaVkHkd7+PPfBJC0wOV/l2lGZyXNVdDTLMixRKRqu95Us9mzmP/0GpPNE67kPp38B4Ibq7a6//q0AAAAASUVORK5CYII=",
+    "properties": {
+      "title": "Pie Chart ACE"
+    },
+    "cardSize": "Large"
+  }]
+}

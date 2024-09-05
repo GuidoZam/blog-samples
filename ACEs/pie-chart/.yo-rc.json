@@ -1,0 +1,22 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.20.2",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0-beta.0",
+    "libraryName": "pie-chart",
+    "libraryId": "872a3e4a-c255-4efd-b78e-d9491c58ebc4",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "pie-chart",
+    "solutionShortDescription": "pie-chart description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "DataVisualization"
+  }
+}

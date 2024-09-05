@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pie-chart-client-side-solution",
+    "id": "872a3e4a-c255-4efd-b78e-d9491c58ebc4",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0-beta.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pie-chart description"
+      },
+      "longDescription": {
+        "default": "pie-chart description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pie-chart Feature",
+        "description": "The feature that activates elements of the pie-chart solution.",
+        "id": "7fb02df8-1e02-4c6a-af64-125bb34357e6",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pie-chart.sppkg"
+  }
+}
