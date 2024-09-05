@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "bar-chart-client-side-solution",
+    "id": "981f89dd-4fca-4f16-8127-9c495bb3366d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0-beta.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "bar-chart description"
+      },
+      "longDescription": {
+        "default": "bar-chart description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "bar-chart Feature",
+        "description": "The feature that activates elements of the bar-chart solution.",
+        "id": "66854ed5-f1c1-4f73-a39f-75b9319c7a0a",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/bar-chart.sppkg"
+  }
+}
