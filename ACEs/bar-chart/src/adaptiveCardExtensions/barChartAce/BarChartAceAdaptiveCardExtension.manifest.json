@@ -18,7 +18,7 @@
     "group": { "default": "Dashboard" },
     "title": { "default": "Bar Chart ACE" },
     "description": { "default": "Bar Chart ACE description" },
-    "iconImageUrl": "https://res.cdn.office.net/files/fabric-cdn-prod_20240610.001/assets/brand-icons/product-monoline/svg/vivaconnections_32x1.svg",
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAKJJREFUWEftl0EOgCAMBJdnePEd/v/kN+TiNwwHjGmyAbFYQuoRE5idKk0DjJ9gfD60ABYAO4CVBIoANgCnfD8dQAr4TJrNyPVbhLaBJoCjpXailixplYEhAF6r0zYwLEDtf/35G2AGzAFqS9PNwDQAtJTpJkz3QK+kxSb1FwAN6ABuwA24ATcwjAHWrdjkJiedUtOh+2QDpgCm86nWZNQc4gIXwPIxCFNbiAAAAABJRU5ErkJggg==",
     "properties": {
       "title": "Bar Chart ACE"
     },
