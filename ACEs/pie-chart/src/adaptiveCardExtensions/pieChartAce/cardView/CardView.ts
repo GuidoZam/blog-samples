@@ -12,13 +12,13 @@ import * as strings from "PieChartAceAdaptiveCardExtensionStrings";
 
 // Sample Data
 const seriesData: IPieDataPoint[] = [
-	{ x: "A", y: 35 },
-	{ x: "B", y: 20, color: "#ff9999", showLabel: true },
-  // Strings longer than 3 characters are truncated to 3 characters
-	{ x: "Category C", y: 45 },
-	{ x: "D", y: 30, color: "#ffaaaa", showLabel: true },
-	{ x: "E", y: 55 },
-	{ x: "F", y: 25, color: "#ffcccc", showLabel: true },
+	{ x: "A", y: 35, showLabel: true },
+	{ x: "B", y: 20, color: "#999999" },
+	// Strings longer than 3 characters are truncated to 3 characters
+	{ x: "Category C", y: 45, showLabel: true },
+	{ x: "D", y: 30, color: "#aaaaaa" },
+	{ x: "E", y: 55, showLabel: true },
+	{ x: "F", y: 25, color: "#cccccc" },
 ];
 
 export class CardView extends BaseComponentsCardView<
