@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "58421015-3e35-4db0-9924-85abcc155f46",
+  "alias": "GitHubChartAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "GitHub Chart" },
+    "description": { "default": "GitHub Chart description" },
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAhFJREFUWEft1z9szGEcx/HXU+dPDUZDhyYWCzMpIYa22ohBxCI2JhUjGnOjTI20YWCzSAySDpW7k0gEo0kiloY0YrRQ5Nzjftf2etde29/9qWvEb/w9/97P9+/nCep8kWDAsOCW6EB5SvBONCpnJhDrrWvmX1i5KA7bqeAOrqBrxXgRt+XcbBfEaoABF/AQO9a40S9cDDmPmrnxyjU1APG03eY9Exxbd/PopW5DYdr3ViFqAfr1Ct6gZ4ONP4v6Qt6nfwyg0y5IzBk7GYRlgI3TcFLGtTDjZ6v+XygvW60QVfPE5azYJeoPeW/bcevqPepaYGlCFcDeUik+F7KedgqgR3AvZF3uHACzMo6HGXPthEjrgoXKGIyHrNHOAfBVdCbkvWgXRFoLbBe9X2xSHxUNhuc+rAXRiJ5IC5CcdQr3cVgSD9HZemmZopDV6In0AFGfLj9E0ziEeUwIxkLWt0rqLpfyRDfckPGgPFZwCeOLOqOiJxoCSNpvHLZHwSTOYxvlw58ompIx57fHgqO4GnKmagrbgBHcFb1a0hMNA5T7RZIPJ50QTYgOrpJuwRccCVmzNQCD9uG1qLikJ5oCqJg7ARmyX9FIEpiC3pJm7NYqQCNRXHPDZT3RvAtSRPG67bhKTzQXhK0KkkXrjZWy5HoaWb8pqrgRF/5XxZvigkYa1dZ6mqVUxZv7OK2U2r/0PP8DaZktMDSQlC8AAAAASUVORK5CYII=",
+    "properties": {
+      "title": "GitHub Chart"
+    },
+    "cardSize": "Large"
+  }]
+}
