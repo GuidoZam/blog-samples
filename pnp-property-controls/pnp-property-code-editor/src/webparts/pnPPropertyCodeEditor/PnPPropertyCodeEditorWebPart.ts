@@ -28,12 +28,7 @@ export default class PnPPropertyCodeEditorWebPart extends BaseClientSideWebPart<
   public render(): void {
     const element: React.ReactElement<IPnPPropertyCodeEditorProps> =
 			React.createElement(PnPPropertyCodeEditor, {
-				basicValue: this.properties.basicValue,
-        initialValue: this.properties.initialValue,
-        languageValue: this.properties.languageValue,
-        disabledValue: this.properties.disabledValue,
-        readonlyValue: this.properties.readonlyValue,
-        optionsValue: this.properties.optionsValue,
+				basicValue: this.properties.basicValue
 			});
 
     ReactDom.render(element, this.domElement);

@@ -16,6 +16,7 @@ declare interface IPnPPropertyCodeEditorWebPartStrings {
 	DisabledValueFieldPanelTitle: string;
 	OptionsValueLabel: string;
 	OptionsValueFieldPanelTitle: string;
+	NoValueSpecified: string;
 }
 
 declare module 'PnPPropertyCodeEditorWebPartStrings' {
