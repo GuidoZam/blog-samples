@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-property-code-editor",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "PnP Property Code Editor",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "pnp-property-code-editor",
+    "libraryId": "bf98e7a8-d26c-4cb7-8b13-d9d315a1fcf7",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-property-code-editor description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
