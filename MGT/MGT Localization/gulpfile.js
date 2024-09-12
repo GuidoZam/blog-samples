@@ -13,4 +13,32 @@ build.rig.getTasks = function () {
   return result;
 };
 
+// Additional task to support MGT v.4
+const path = require("path");
+const litFolders = [
+	`node_modules${path.sep}lit${path.sep}`,
+	`node_modules${path.sep}@lit${path.sep}`,
+	`node_modules${path.sep}lit-html${path.sep}`,
+];
+build.configureWebpack.mergeConfig({
+	additionalConfiguration: (generatedConfiguration) => {
+		generatedConfiguration.module.rules.push({
+			test: /\.js$/,
+			include: (resourcePath) =>
+				litFolders.some((litFolder) => resourcePath.includes(litFolder)),
+			use: {
+				loader: "babel-loader",
+				options: {
+					plugins: [
+						"@babel/plugin-transform-optional-chaining",
+						"@babel/plugin-transform-nullish-coalescing-operator",
+						"@babel/plugin-transform-logical-assignment-operators",
+					],
+				},
+			},
+		});
+		return generatedConfiguration;
+	},
+});
+
 build.initialize(require('gulp'));
