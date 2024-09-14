@@ -17,11 +17,11 @@ export default class MgtLocalization extends React.Component<IMgtLocalizationPro
           inputPlaceholderText: "Ahoy! Do the search to find yer mateys",
         },
         "mgt-localization-search-box": {
-          placeholder: "Type yer search here",
-          title: "Search for yer treasure",
+          placeholder: "Search for yer treasure"
         },
         "mgt-localization-planner": {
-          addTaskButtonSubtitle: "Arr! Add a new task matey"
+          addTaskButtonSubtitle: "Arr! Add a new task matey",
+          due: "Settin’ sail "
         }
       },
     };
