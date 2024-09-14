@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "MGT Localization",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "MGT Localization",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "mgt-localization",
+    "libraryId": "32880dfd-3860-4e1b-b6ab-e6269da0d9a3",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "MGT Localization description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
