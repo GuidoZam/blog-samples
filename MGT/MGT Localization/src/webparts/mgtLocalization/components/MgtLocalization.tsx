@@ -2,7 +2,7 @@ import * as React from 'react';
 import styles from './MgtLocalization.module.scss';
 import * as strings from 'MgtLocalizationWebPartStrings'; 
 import type { IMgtLocalizationProps } from './IMgtLocalizationProps';
-import { PeoplePicker } from '@microsoft/mgt-react';
+import { PeoplePicker, SearchBox, Planner } from '@microsoft/mgt-react';
 import { LocalizationHelper } from "@microsoft/mgt-element";
 
 export default class MgtLocalization extends React.Component<IMgtLocalizationProps, {}> {
@@ -16,6 +16,13 @@ export default class MgtLocalization extends React.Component<IMgtLocalizationPro
         "mgt-localization-people-picker": {
           inputPlaceholderText: "Ahoy! Do the search to find yer mateys",
         },
+        "mgt-localization-search-box": {
+          placeholder: "Type yer search here",
+          title: "Search for yer treasure",
+        },
+        "mgt-localization-planner": {
+          addTaskButtonSubtitle: "Arr! Add a new task matey"
+        }
       },
     };
     
@@ -30,6 +37,18 @@ export default class MgtLocalization extends React.Component<IMgtLocalizationPro
               <span>{strings.PeoplePicker}</span>
             </h4>
             <PeoplePicker />
+          </div>
+          <div>
+            <h4 className={styles.sectionTitle}>
+              <span>{strings.SearchBox}</span>
+            </h4>
+            <SearchBox />
+          </div>
+          <div>
+            <h4 className={styles.sectionTitle}>
+              <span>{strings.Planner}</span>
+            </h4>
+            <Planner />
           </div>
         </div>
       </section>

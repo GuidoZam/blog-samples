@@ -1,9 +1,8 @@
 declare interface IMgtLocalizationWebPartStrings {
 	Title: string;
-	Login: string;
-  PersonCard: string;
-  PeoplePicker: string;
-  TaxonomyPicker: string;
+	PeoplePicker: string;
+	SearchBox: string;
+	Planner: string;
 }
 
 declare module 'MgtLocalizationWebPartStrings' {
