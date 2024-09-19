@@ -5,6 +5,7 @@ import { PieChartAcePropertyPane } from './PieChartAcePropertyPane';
 
 export interface IPieChartAceAdaptiveCardExtensionProps {
 	isDonut: boolean;
+  highlightTopThree: boolean;
 }
 
 export interface IPieChartAceAdaptiveCardExtensionState {

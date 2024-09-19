@@ -12,7 +12,10 @@ export class PieChartAcePropertyPane {
 							groupFields: [
 								PropertyPaneToggle("isDonut", {
 									label: strings.IsDonutFieldLabel,
-								})
+								}),
+								PropertyPaneToggle("highlightTopThree", {
+									label: strings.HighlightTopThreeFieldLabel,
+								}),
 							],
 						},
 					],

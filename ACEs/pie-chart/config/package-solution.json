@@ -3,7 +3,7 @@
   "solution": {
     "name": "pie-chart-client-side-solution",
     "id": "872a3e4a-c255-4efd-b78e-d9491c58ebc4",
-    "version": "1.0.0.0",
+    "version": "1.0.1.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
