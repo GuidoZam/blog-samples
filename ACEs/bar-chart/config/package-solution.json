@@ -3,7 +3,7 @@
   "solution": {
     "name": "bar-chart-client-side-solution",
     "id": "981f89dd-4fca-4f16-8127-9c495bb3366d",
-    "version": "1.0.0.0",
+    "version": "1.0.1.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

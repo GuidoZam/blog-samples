@@ -1,15 +1,12 @@
 import {
   BaseComponentsCardView,
   IDataVisualizationCardViewParameters,
-  IExternalLinkCardAction,
-  IQuickViewCardAction,
   IDataPoint,
   BarChartCardView,
 } from '@microsoft/sp-adaptive-card-extension-base';
 import {
   IBarChartAceAdaptiveCardExtensionProps,
   IBarChartAceAdaptiveCardExtensionState,
-  QUICK_VIEW_REGISTRY_ID,
 } from '../BarChartAceAdaptiveCardExtension';
 
 // Sample Data
@@ -64,14 +61,5 @@ export class CardView extends BaseComponentsCardView<
 				],
 			},
 		});
-  }
-
-  public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | undefined {
-    return {
-      type: 'QuickView',
-      parameters: {
-        view: QUICK_VIEW_REGISTRY_ID
-      }
-    };
   }
 }
