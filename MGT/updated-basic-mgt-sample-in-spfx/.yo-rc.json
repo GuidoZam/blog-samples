@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "updated-basic-mgt-sample-in-spfx",
+    "libraryId": "7ac11673-f307-49bb-8928-e99762e5b148",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "updated-basic-mgt-sample-in-spfx",
+    "solutionShortDescription": "updated-basic-mgt-sample-in-spfx description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
