@@ -1,7 +1,3 @@
 export interface IStylingMgtProps {
-  description: string;
-  isDarkTheme: boolean;
-  environmentMessage: string;
-  hasTeamsContext: boolean;
-  userDisplayName: string;
+	themeVariant: any;
 }
