@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "styling-mgt-components",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "Styling MGT",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "styling-mgt-components",
+    "libraryId": "2bd2ebdd-6a5c-4d97-8c85-fa9ddcb581fc",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "styling-mgt-components description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

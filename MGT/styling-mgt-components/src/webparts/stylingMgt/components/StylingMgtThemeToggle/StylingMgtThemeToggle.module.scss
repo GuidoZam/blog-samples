@@ -1,0 +1,8 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.stylingMgtThemeToggle {
+  overflow: hidden;
+  padding: 1em;
+  background-color: var(--fill-color);
+  color: var(--neutral-foreground-rest);
+}
