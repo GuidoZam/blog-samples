@@ -1,0 +1,17 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.stylingMgtCustomizeCSSToken {
+  overflow: hidden;
+  padding: 1em;
+
+  .customPeoplePickerStyles {
+    --people-picker-input-border-color: #7f85f5;
+    --people-picker-input-focus-background: lightgreen;
+    --people-picker-search-icon-color: #7f85f5;
+    --people-picker-input-placeholder-text-color: #7f85f5;
+    --people-picker-input-placeholder-hover-text-color: #7f85f5;
+    --people-picker-input-placeholder-focus-text-color: #7f85f5;
+    --people-picker-selected-option-background-color: orange;
+    --people-picker-remove-selected-close-icon-color: #7f85f5;
+  }
+}
