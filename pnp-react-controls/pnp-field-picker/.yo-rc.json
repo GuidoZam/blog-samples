@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-field-picker",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "PnP Field Picker",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "pnp-field-picker",
+    "libraryId": "4b9b433c-bceb-4b05-854e-209b5e1bc479",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-field-picker description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

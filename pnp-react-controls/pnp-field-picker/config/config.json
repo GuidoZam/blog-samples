@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "pn-p-field-picker-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pnPFieldPicker/PnPFieldPickerWebPart.js",
+          "manifest": "./src/webparts/pnPFieldPicker/PnPFieldPickerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PnPFieldPickerWebPartStrings": "lib/webparts/pnPFieldPicker/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}

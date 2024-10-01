@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-field-picker-client-side-solution",
+    "id": "4b9b433c-bceb-4b05-854e-209b5e1bc479",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-field-picker description"
+      },
+      "longDescription": {
+        "default": "pnp-field-picker description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-field-picker Feature",
+        "description": "The feature that activates elements of the pnp-field-picker solution.",
+        "id": "2bd9c28f-5ec0-42ea-a436-4109ff2f0a18",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-field-picker.sppkg"
+  }
+}
