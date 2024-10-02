@@ -37,7 +37,6 @@ export default class PnPFieldPicker extends React.Component<IPnPFieldPickerProps
             </h4>
             <FieldPicker
               context={context}
-              listId={selectedList}
               onSelectionChanged={this.onFieldPickerChanged}
             />
           </div>
@@ -48,7 +47,7 @@ export default class PnPFieldPicker extends React.Component<IPnPFieldPickerProps
             <FieldPicker
               context={context}
               label={strings.CustomLabel}
-              listId={selectedList}
+              placeholder={strings.CustomStrings.Placeholder}
             />
           </div>
           <div>
@@ -57,19 +56,8 @@ export default class PnPFieldPicker extends React.Component<IPnPFieldPickerProps
             </h4>
             <FieldPicker
               context={context}
-              listId={selectedList}
               multiSelect={false}
               onSelectionChanged={this.onFieldPickerChanged}
-            />
-          </div>
-          <div>
-            <h4 className={styles.sectionTitle}>
-              <span>{strings.OrderBy}</span>
-            </h4>
-            <FieldPicker
-              context={context}
-              listId={selectedList}
-              orderBy={FieldsOrderBy.Title}
             />
           </div>
           <div>
@@ -78,7 +66,6 @@ export default class PnPFieldPicker extends React.Component<IPnPFieldPickerProps
             </h4>
             <FieldPicker
               context={context}
-              listId={selectedList}
               showBlankOption={true}
             />
           </div>
@@ -88,11 +75,63 @@ export default class PnPFieldPicker extends React.Component<IPnPFieldPickerProps
             </h4>
             <FieldPicker
               context={context}
-              listId={selectedList}
               group="Base Columns"
-            // includeHidden={false}
-            // includeReadOnly={false}
-            //onSelectionChanged={this.onFieldPickerChanged}
+            />
+          </div>
+          <div>
+            <h4 className={styles.sectionTitle}>
+              <span>{strings.RemoveHiddenFields}</span>
+            </h4>
+            <FieldPicker
+              context={context}
+              includeHidden={false}
+            />
+          </div>
+          <div>
+            <h4 className={styles.sectionTitle}>
+              <span>{strings.RemoveReadOnlyFields}</span>
+            </h4>
+            <FieldPicker
+              context={context}
+              includeReadOnly={false}
+            />
+          </div>
+          <div>
+            <h4 className={styles.sectionTitle}>
+              <span>{strings.OrderBy}</span>
+            </h4>
+            <FieldPicker
+              context={context}
+              orderBy={FieldsOrderBy.Title}
+            />
+          </div>
+          <div>
+            <h4 className={styles.sectionTitle}>
+              <span>{strings.FilterFields}</span>
+            </h4>
+            <FieldPicker
+              context={context}
+              filter="Title eq 'Birthday'"
+            />
+          </div>
+          <div>
+            <h4 className={styles.sectionTitle}>
+              <span>{strings.AfterFilterFields}</span>
+            </h4>
+            <FieldPicker
+              context={context}
+              filterItems={(fields: ISPField[]) => {
+                return fields.filter(f => f.Title !== undefined && f.Title.indexOf("Date") > -1);
+              }}
+            />
+          </div>
+          <div>
+            <h4 className={styles.sectionTitle}>
+              <span>{strings.SetSelectedFilters}</span>
+            </h4>
+            <FieldPicker
+              context={context}
+              selectedFields={["Title", "Hobbies", "Nickname"]}
             />
           </div>
         </div>
