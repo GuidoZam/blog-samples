@@ -3,7 +3,7 @@
   "solution": {
     "name": "pnp-field-picker-client-side-solution",
     "id": "4b9b433c-bceb-4b05-854e-209b5e1bc479",
-    "version": "1.0.0.0",
+    "version": "1.0.1.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
