@@ -56,6 +56,7 @@ export default class PnPFieldPicker extends React.Component<IPnPFieldPickerProps
             </h4>
             <FieldPicker
               context={context}
+              multiSelect={true}
               onSelectionChanged={this.onFieldPickerChanged}
             />
           </div>
