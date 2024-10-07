@@ -67,6 +67,7 @@ export default class PnPFieldPicker extends React.Component<IPnPFieldPickerProps
             <FieldPicker
               context={context}
               showBlankOption={true}
+              onSelectionChanged={this.onFieldPickerChanged}
             />
           </div>
           <div>
