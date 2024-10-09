@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "react-compound-components-client-side-solution",
+    "id": "bd4a5742-f053-4015-a6d5-bfff7ef69d0a",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "react-compound-components description"
+      },
+      "longDescription": {
+        "default": "react-compound-components description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "react-compound-components Feature",
+        "description": "The feature that activates elements of the react-compound-components solution.",
+        "id": "885cc8f7-e36a-4612-a46b-b80c2239b6b7",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/react-compound-components.sppkg"
+  }
+}

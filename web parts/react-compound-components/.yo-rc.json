@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "react-compound-components",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "Enjoy compoundness",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "react-compound-components",
+    "libraryId": "bd4a5742-f053-4015-a6d5-bfff7ef69d0a",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "react-compound-components description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

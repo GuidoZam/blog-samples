@@ -1,0 +1,23 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.enjoyCompoundness {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 1em 0;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 0 1em 0;
+  }
+}
