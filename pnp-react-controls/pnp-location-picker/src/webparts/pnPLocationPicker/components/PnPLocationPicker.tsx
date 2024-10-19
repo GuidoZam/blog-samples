@@ -10,7 +10,7 @@ export default class PnPLocationPicker extends React.Component<IPnPLocationPicke
 
     return (
       <section className={styles.pnPLocationPicker}>
-        <h3>Welcome to SharePoint Framework!</h3>
+        <h3>{strings.Title}</h3>
         <div>
           <h4 className={styles.sectionTitle}>
             <span>{strings.MinimalConfigurationInstance}</span>

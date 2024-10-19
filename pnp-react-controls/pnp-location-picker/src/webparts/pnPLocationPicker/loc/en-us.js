@@ -1,5 +1,6 @@
 define([], function() {
   return {
+    Title: "PnP LocationPicker Sample",
     MinimalConfigurationInstance: "Minimal configuration",
     DefaultValueInstance: "Default value",
     ErrorMessageInstance: "Error message",

@@ -1,4 +1,5 @@
 declare interface IPnPLocationPickerWebPartStrings {
+  Title: string;
 	MinimalConfigurationInstance: string;
 	DefaultValueInstance: string;
 	ErrorMessageInstance: string;
