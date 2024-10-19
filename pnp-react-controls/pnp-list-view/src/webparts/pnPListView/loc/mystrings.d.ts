@@ -24,6 +24,7 @@ declare interface IPnPListViewWebPartStrings {
 		CreatedBy: string;
 		Version: string;
 	};
+  NoItems: string;
 }
 
 declare module 'PnPListViewWebPartStrings' {

@@ -4,12 +4,22 @@ import type { IPnPListViewProps } from './IPnPListViewProps';
 import { GroupOrder, IGrouping, IViewField, ListView, SelectionMode } from "@pnp/spfx-controls-react/lib/ListView";
 import * as strings from 'PnPListViewWebPartStrings';
 import { Guid } from '@microsoft/sp-core-library';
+import { IPnPListViewState } from './IPnPListViewState';
 
 
-export default class PnPListView extends React.Component<IPnPListViewProps> {
+export default class PnPListView extends React.Component<IPnPListViewProps, IPnPListViewState> {
+
+  constructor(props: IPnPListViewProps) {
+    super(props);
+
+    this.state = {
+      droppedItems: []
+    };
+  }
 
   public render(): React.ReactElement<IPnPListViewProps> {
     const items = this._getItems();
+    const droppedItems = this._getDroppedItems();
 
     const groupByFields: IGrouping[] = [
       {
@@ -63,6 +73,7 @@ export default class PnPListView extends React.Component<IPnPListViewProps> {
             <ListView
               items={items}
               defaultFilter='Jane'
+              // TODO: check if the filtering works
             />
           </div>
           <div>
@@ -70,7 +81,7 @@ export default class PnPListView extends React.Component<IPnPListViewProps> {
               <span>{strings.DragDropFiles}</span>
             </h4>
             <ListView
-              items={items}
+              items={droppedItems}
               dragDropFiles={true}
               onDrop={this._getDropFiles}
             />
@@ -170,9 +181,15 @@ export default class PnPListView extends React.Component<IPnPListViewProps> {
   }
   
   private _getDropFiles = (files: any[]) => {
+    const droppedItems = [...this.state.droppedItems];
+
     for (var i = 0; i < files.length; i++) {
-      console.log(files[i].name);
+      droppedItems.push({ title: files[i].name });
     }
+
+    this.setState({
+      droppedItems: droppedItems
+    });
   }
 
   private _sortItems = (items: any[], columnName: string, descending: boolean): any[] => {
@@ -260,6 +277,25 @@ export default class PnPListView extends React.Component<IPnPListViewProps> {
         highPriority: true
       }
     ];
+  }
+
+  private _getDroppedItems(): any[] {
+    const items = this.state.droppedItems;
+
+    if (items.length === 0) {
+      return [
+        {
+          //key: Guid.newGuid().toString(),
+          title: strings.NoItems,
+          //createdBy: "",
+          //version: 3,
+          //createdDate: new Date(),
+          //highPriority: false
+        }
+      ];
+    }
+    
+    return items;
   }
 
   private _getViewFields(): IViewField[] {
