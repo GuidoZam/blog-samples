@@ -38,7 +38,6 @@ export default class BasicApplicationCustomizer extends BaseApplicationCustomize
 	}
 
 	private _renderTopPlaceHolder(): void {
-		console.log(this.context.placeholderProvider.placeholderNames);
 		if (!this._topPlaceholder) {
 			this._topPlaceholder = this.context.placeholderProvider.tryCreateContent(
 				PlaceholderName.Top,
