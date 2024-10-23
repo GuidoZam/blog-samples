@@ -12,15 +12,9 @@ import BottomComponent from './components/BottomComponent';
 
 const LOG_SOURCE: string = 'BasicApplicationCustomizer';
 
-/**
- * If your command set uses the ClientSideComponentProperties JSON input,
- * it will be deserialized into the BaseExtension.properties object.
- * You can define an interface to describe it.
- */
 export interface IBasicApplicationCustomizerProperties {
 }
 
-/** A Custom Action which can be run during execution of a Client Side Application */
 export default class BasicApplicationCustomizer extends BaseApplicationCustomizer<IBasicApplicationCustomizerProperties> {
 	private _topPlaceholder: PlaceholderContent | undefined;
 	private _bottomPlaceholder: PlaceholderContent | undefined;
@@ -38,19 +32,23 @@ export default class BasicApplicationCustomizer extends BaseApplicationCustomize
 	}
 
 	private _renderTopPlaceHolder(): void {
+		// check if the application customizer has already been rendered
 		if (!this._topPlaceholder) {
 			this._topPlaceholder = this.context.placeholderProvider.tryCreateContent(
 				PlaceholderName.Top,
 				{ onDispose: this._handleDispose }
 			);
 
-			// The extension should not assume that the expected placeholder is available.
+			// if the top placeholder is not available, there is no place in the UI
+			// for the app customizer to render, so quit.
 			if (!this._topPlaceholder) {
 				return;
 			}
 
 			if (this._topPlaceholder.domElement) {
+				// create a DOM element in the top placeholder for the application customizer to render
 				const element = React.createElement(TopComponent, {});
+				// render the UI using a React component
 				ReactDom.render(element, this._topPlaceholder.domElement);
 			}
 		}
@@ -59,26 +57,24 @@ export default class BasicApplicationCustomizer extends BaseApplicationCustomize
 	private _renderBottomPlaceHolder(): void {
 		// check if the application customizer has already been rendered
 		if (!this._bottomPlaceholder) {
-			// create a DOM element in the top placeholder for the application customizer to render
 			this._bottomPlaceholder =
 				this.context.placeholderProvider.tryCreateContent(
 					PlaceholderName.Bottom,
 					{ onDispose: this._handleDispose }
 				);
 		}
-		// if the top placeholder is not available, there is no place in the UI
+		// if the bottom placeholder is not available, there is no place in the UI
 		// for the app customizer to render, so quit.
 		if (!this._bottomPlaceholder) {
 			return;
 		}
 
-		const element: React.ReactElement<{}> = React.createElement(
-			BottomComponent,
-			{}
-		);
-
-		// render the UI using a React component
-		ReactDom.render(element, this._bottomPlaceholder.domElement);
+		if (this._bottomPlaceholder.domElement) {
+			// create a DOM element in the bottom placeholder for the application customizer to render
+			const element = React.createElement(BottomComponent, {});
+			// render the UI using a React component
+			ReactDom.render(element, this._bottomPlaceholder.domElement);
+		}
 	}
 
 	private _handleDispose(): void {
