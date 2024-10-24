@@ -1,0 +1,45 @@
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "weight": "Bolder",
+      "text": "${title}"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "weight": "Bolder",
+              "text": "${subTitle}",
+              "wrap": true
+            },
+            {
+              "type": "Input.ChoiceSet",
+              "choices": [],
+              "choices.data": {
+                "type": "Data.Query",
+                "dataset": "graph.microsoft.com/users"
+              },
+              "id": "people-picker",
+              "isMultiSelect": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Submit",
+      "id": "selectAttendees"
+    }
+  ]
+}

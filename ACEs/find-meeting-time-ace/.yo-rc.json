@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "find-meeting-time-ace",
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Generic",
+    "componentName": "Find Meeting Time",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "find-meeting-time-ace",
+    "libraryId": "34a11d2f-bbcf-4486-b80a-9b79c066d04a",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "find-meeting-time-ace description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

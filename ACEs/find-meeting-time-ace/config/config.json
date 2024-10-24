@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "find-meeting-time-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/findMeetingTime/FindMeetingTimeAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/findMeetingTime/FindMeetingTimeAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "FindMeetingTimeAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/findMeetingTime/loc/{locale}.js"
+  }
+}
