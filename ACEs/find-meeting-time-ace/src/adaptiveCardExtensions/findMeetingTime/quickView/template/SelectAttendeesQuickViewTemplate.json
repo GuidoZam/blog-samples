@@ -27,7 +27,7 @@
                 "type": "Data.Query",
                 "dataset": "graph.microsoft.com/users"
               },
-              "id": "people-picker",
+              "id": "selectedAttendees",
               "isMultiSelect": true
             }
           ]
@@ -39,7 +39,7 @@
     {
       "type": "Action.Submit",
       "title": "Submit",
-      "id": "selectAttendees"
+      "id": "selectAttendeesSubmit"
     }
   ]
 }

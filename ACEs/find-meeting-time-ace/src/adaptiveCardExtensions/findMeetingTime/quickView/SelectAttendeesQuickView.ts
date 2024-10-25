@@ -1,4 +1,4 @@
-import { ISPFxAdaptiveCard, BaseAdaptiveCardQuickView, IActionArguments } from '@microsoft/sp-adaptive-card-extension-base';
+import { ISPFxAdaptiveCard, BaseAdaptiveCardQuickView, IActionArguments, ISubmitActionArguments } from '@microsoft/sp-adaptive-card-extension-base';
 import * as strings from 'FindMeetingTimeAdaptiveCardExtensionStrings';
 import {
   ERROR_QUICK_VIEW_REGISTRY_ID,
@@ -29,9 +29,10 @@ export class SelectAttendeesQuickView extends BaseAdaptiveCardQuickView<
 	}
 
 	public onAction(action: IActionArguments | any): void {
+    console.log(action);
 		if (action.type === "Submit") {
       try {
-        this._selectAttendees(action);
+        this._selectAttendees(<ISubmitActionArguments>action);
         this.quickViewNavigator.push(SELECT_TIME_QUICK_VIEW_REGISTRY_ID);
       } catch (error) {
         this.quickViewNavigator.push(ERROR_QUICK_VIEW_REGISTRY_ID);
@@ -39,8 +40,16 @@ export class SelectAttendeesQuickView extends BaseAdaptiveCardQuickView<
 		}
 	}
 
-  private _selectAttendees(action: IActionArguments): void {
-		// Add your logic here
-		// https://learn.microsoft.com/en-us/graph/api/user-findmeetingtimes?view=graph-rest-1.0&tabs=javascript
+  private _selectAttendees(action: ISubmitActionArguments): void {
+    if (action && action.data) {
+
+      const selectedAttendees = action.data.selectedAttendees;
+
+      console.log(selectedAttendees);
+      // Add your logic here
+      // https://learn.microsoft.com/en-us/graph/api/user-findmeetingtimes?view=graph-rest-1.0&tabs=javascript
+      //const graphClient = this.context.msGraphClientFactory.getClient("3");
+    }
+    
 	}
 }
