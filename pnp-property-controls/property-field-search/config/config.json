@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "property-field-search-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/propertyFieldSearch/PropertyFieldSearchWebPart.js",
+          "manifest": "./src/webparts/propertyFieldSearch/PropertyFieldSearchWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PropertyFieldSearchWebPartStrings": "lib/webparts/propertyFieldSearch/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}
