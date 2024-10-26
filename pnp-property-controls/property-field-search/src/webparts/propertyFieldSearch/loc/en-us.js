@@ -3,7 +3,7 @@ define([], function() {
 		PropertyPaneDescription:
 			"Here you can find different instances of the PropertyFieldSearch control.",
 		MinimalGroupName: "Minimal instance",
-		PreFilledGroupName: "Pre filled instance",
+    PlaceholderGroupName: "Custom placeholder",
 		UnderlinedGroupName: "Underlined instance",
 		WithEventsGroupName: "Instance with events",
 		DescriptionFieldLabel: "Description Field",

@@ -12,6 +12,7 @@ import PnPPropertyFieldSearch from './components/PnPPropertyFieldSearch';
 
 export interface IPropertyFieldSearchWebPartProps {
 	searchValueMinimal: string;
+	searchValuePlaceholder: string;
 	searchValuePreFilled: string;
 	searchValueUnderlined: string;
 	searchValueWithEvents: string;
@@ -50,18 +51,17 @@ export default class PropertyFieldSearchWebPart extends BaseClientSideWebPart<IP
 							groupFields: [
 								PropertyFieldSearch("searchValueMinimal", {
 									key: "searchMinimal",
-									placeholder: strings.PlaceHolder,
 									value: this.properties.searchValueMinimal,
 								}),
 							],
 						},
 						{
-							groupName: strings.PreFilledGroupName,
+							groupName: strings.PlaceholderGroupName,
 							groupFields: [
-								PropertyFieldSearch("searchValuePreFilled", {
-									key: "searchUnderlined",
+								PropertyFieldSearch("searchValuePlaceholder", {
+									key: "searchPlaceholder",
 									placeholder: strings.PlaceHolder,
-									value: "Pre filled value",
+									value: this.properties.searchValuePlaceholder,
 								}),
 							],
 						},
@@ -70,7 +70,6 @@ export default class PropertyFieldSearchWebPart extends BaseClientSideWebPart<IP
 							groupFields: [
 								PropertyFieldSearch("searchValueUnderlined", {
 									key: "searchUnderlined",
-									placeholder: strings.PlaceHolder,
 									value: this.properties.searchValueUnderlined,
 									underlined: true,
 								}),
@@ -81,13 +80,12 @@ export default class PropertyFieldSearchWebPart extends BaseClientSideWebPart<IP
 							groupFields: [
 								PropertyFieldSearch("searchValueWithEvents", {
 									key: "search",
-									placeholder: strings.PlaceHolder,
 									value: this.properties.searchValueWithEvents,
 									onSearch: this._onSearch,
 									onChange: this._onChange,
 									onEscape: this._onEscape,
 									onClear: this._onClear,
-								})
+								}),
 							],
 						},
 					],

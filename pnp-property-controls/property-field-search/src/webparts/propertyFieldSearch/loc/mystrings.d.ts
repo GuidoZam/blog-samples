@@ -1,7 +1,7 @@
 declare interface IPropertyFieldSearchWebPartStrings {
 	PropertyPaneDescription: string;
 	MinimalGroupName: string;
-	PreFilledGroupName: string;
+	PlaceholderGroupName: string;
 	UnderlinedGroupName: string;
 	WithEventsGroupName: string;
 	PlaceHolder: string;
