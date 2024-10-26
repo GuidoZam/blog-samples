@@ -45,6 +45,7 @@ export class SelectAttendeesQuickView extends BaseAdaptiveCardQuickView<
 
       const selectedAttendees = action.data.selectedAttendees;
 
+      // The following should be a comma separated list of Entra IDs
       console.log(selectedAttendees);
       // Add your logic here
       // https://learn.microsoft.com/en-us/graph/api/user-findmeetingtimes?view=graph-rest-1.0&tabs=javascript
