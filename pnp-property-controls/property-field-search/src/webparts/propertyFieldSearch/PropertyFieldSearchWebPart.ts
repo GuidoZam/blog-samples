@@ -82,7 +82,6 @@ export default class PropertyFieldSearchWebPart extends BaseClientSideWebPart<IP
 									key: "search",
 									value: this.properties.searchValueWithEvents,
 									onSearch: this._onSearch,
-									onChange: this._onChange,
 									onEscape: this._onEscape,
 									onClear: this._onClear,
 								}),
@@ -95,20 +94,14 @@ export default class PropertyFieldSearchWebPart extends BaseClientSideWebPart<IP
   }
 
   private _onSearch = (value: string) => {
-    console.log("onSearch called!");
-    this.properties.searchValueWithEvents = value;
-  }
-
-  private _onChange = (value: string) => {
-    console.log("onChange called!");
-    this.properties.searchValueWithEvents = value;
+    console.log("onSearch called!", value);
   }
 
   private _onEscape = (ev: any) => {
-    console.log("onEscape called!");
+    console.log("onEscape called!", ev);
   }
 
   private _onClear = (ev: any) => {
-    console.log("onClear called!");
+    console.log("onClear called!", ev);
   }
 }
