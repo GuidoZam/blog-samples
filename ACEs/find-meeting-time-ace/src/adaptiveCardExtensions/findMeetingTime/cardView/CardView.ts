@@ -1,15 +1,16 @@
 import {
 	BaseComponentsCardView,
 	ComponentsCardViewParameters,
-	BasicCardView,
 	IExternalLinkCardAction,
 	IQuickViewCardAction,
+  SearchCardView,
 } from "@microsoft/sp-adaptive-card-extension-base";
 import * as strings from 'FindMeetingTimeAdaptiveCardExtensionStrings';
 import {
   IFindMeetingTimeAdaptiveCardExtensionProps,
   IFindMeetingTimeAdaptiveCardExtensionState,
-  SELECT_ATTENDEES_QUICK_VIEW_REGISTRY_ID
+  SEARCH_BOX_ID,
+  SELECT_TIME_QUICK_VIEW_REGISTRY_ID
 } from '../FindMeetingTimeAdaptiveCardExtension';
 
 export class CardView extends BaseComponentsCardView<
@@ -18,7 +19,7 @@ export class CardView extends BaseComponentsCardView<
   ComponentsCardViewParameters
 > {
   public get cardViewParameters(): ComponentsCardViewParameters {
-    return BasicCardView({
+    return SearchCardView({
 			cardBar: {
 				componentName: "cardBar",
 				title: this.properties.title,
@@ -27,25 +28,29 @@ export class CardView extends BaseComponentsCardView<
 				componentName: "text",
 				text: strings.PrimaryText,
 			},
-			footer: {
-				componentName: "cardButton",
-				title: strings.QuickViewButton,
-				action: {
-					type: "QuickView",
-					parameters: {
-						view: SELECT_ATTENDEES_QUICK_VIEW_REGISTRY_ID,
+			body: {
+				componentName: "searchBox",
+				placeholder: strings.AttendeeSearchPlaceholder,
+				id: SEARCH_BOX_ID,
+				button: {
+					action: {
+						type: "QuickView",
+						parameters: {
+							view: SELECT_TIME_QUICK_VIEW_REGISTRY_ID,
+						},
 					},
 				},
 			},
+      footer: undefined
+			// footer: {
+			// 	componentName: "searchFooter",
+			// 	title: strings.CardFooterTitle,
+			// 	text: strings.CardFooterText,
+			// },
 		});
   }
 
   public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | undefined {
-    return {
-      type: 'ExternalLink',
-      parameters: {
-        target: 'https://www.bing.com'
-      }
-    };
+    return undefined;
   }
 }

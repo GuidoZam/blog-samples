@@ -1,45 +1,83 @@
 {
-  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "type": "AdaptiveCard",
-  "version": "1.5",
-  "body": [
-    {
-      "type": "TextBlock",
-      "weight": "Bolder",
-      "text": "${title}"
-    },
-    {
-      "type": "ColumnSet",
-      "columns": [
-        {
-          "type": "Column",
-          "items": [
-            {
-              "type": "TextBlock",
-              "weight": "Bolder",
-              "text": "${subTitle}",
-              "wrap": true
-            },
-            {
-              "type": "Input.ChoiceSet",
-              "choices": [],
-              "choices.data": {
-                "type": "Data.Query",
-                "dataset": "graph.microsoft.com/users"
-              },
-              "id": "people-picker",
-              "isMultiSelect": true
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "actions": [
-    {
-      "type": "Action.Submit",
-      "title": "Submit",
-      "id": "selectAttendees"
-    }
-  ]
+	"schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"type": "AdaptiveCard",
+	"version": "1.5",
+	"body": [
+		{
+			"type": "ColumnSet",
+			"columns": [
+				{
+					"type": "Column",
+					"items": [
+						{
+							"type": "TextBlock",
+							"weight": "Bolder",
+							"text": "${title}"
+						},
+						{
+							"type": "TextBlock",
+							"weight": "Bolder",
+							"text": "${subTitle}",
+							"wrap": true
+						}
+					],
+					"width": "stretch"
+				}
+			]
+		},
+		{
+			"type": "Container",
+			"items": [
+				{
+					"type": "TextBlock",
+					"text": "${noMeetingTimeFound}",
+					"wrap": true
+				}
+			],
+			"isVisible": "${empty($root.meetingTimes)}"
+		},
+		{
+			"type": "ColumnSet",
+			"$data": "${meetingTimes}",
+			"isVisible": "${greater(count($root.meetingTimes),0)}",
+			"columns": [
+				{
+					"type": "Column",
+					"width": "5px",
+					"style": "${if(greater(confidence, 80), 'good', if(greater(confidence, 50), 'warning', 'attention'))}"
+				},
+				{
+					"type": "Column",
+					"items": [
+						{
+							"type": "Container",
+							"items": [
+								{
+									"type": "TextBlock",
+									"text": "${formatDateTime(meetingTimeSlot.start.dateTime, 'dd/MM/yyyy')}",
+									"wrap": true,
+									"style": "heading",
+									"size": "Large",
+									"weight": "Bolder"
+								},
+								{
+									"type": "TextBlock",
+									"text": "${formatDateTime(meetingTimeSlot.start.dateTime, 'HH:mm')} - ${formatDateTime(meetingTimeSlot.end.dateTime, 'HH:mm')}",
+									"wrap": true
+								}
+							]
+						}
+					],
+					"width": "stretch"
+				}
+			]
+		}
+	],
+	"actions": [
+		{
+			"type": "Action.Submit",
+			"title": "Submit",
+			"id": "selectAttendeesSubmit"
+		}
+	]
 }

@@ -34,15 +34,19 @@
       }
     ],
     "webApiPermissionRequests": [
-      {
-        "resource": "Microsoft Graph",
-        "scope": "User.Read"
-      },
-      {
+			{
+				"resource": "Microsoft Graph",
+				"scope": "User.Read"
+			},
+			{
 				"resource": "Microsoft Graph",
 				"scope": "People.Read"
+			},
+			{
+				"resource": "Microsoft Graph",
+				"scope": "Calendars.Read.Shared"
 			}
-    ]
+		]
   },
   "paths": {
     "zippedPackage": "solution/find-meeting-time-ace.sppkg"
