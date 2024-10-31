@@ -12,6 +12,7 @@ define([], function() {
 		CardFooterTitle: "How to use",
 		CardFooterText:
 			"To use this card, type the user name in the search box and click on the search button.",
+		NoMeetingTimeFound: "No meeting time found.",
 		Success: {
 			Title: "Meeting scheduled",
 			Description: "The meeting has been scheduled successfully.",

@@ -6,6 +6,7 @@ import { ConfirmQuickView } from './quickView/ConfirmQuickView';
 import { ErrorQuickView } from './quickView/ErrorQuickView';
 import { SelectTimeQuickView } from './quickView/SelectTimeQuickView';
 import { MeetingTimeSuggestion } from './model/MeetingTimeResult';
+import { FindTimeService } from './services/FindTimeService';
 
 export interface IFindMeetingTimeAdaptiveCardExtensionProps {
   title: string;
@@ -15,6 +16,7 @@ export interface IFindMeetingTimeAdaptiveCardExtensionState {
 	username?: string;
   meetingTimes: MeetingTimeSuggestion[];
 	error?: string;
+  userTimeZone: string;
 }
 
 const CARD_VIEW_REGISTRY_ID: string = 'FindMeetingTime_CARD_VIEW';
@@ -30,11 +32,7 @@ export default class FindMeetingTimeAdaptiveCardExtension extends BaseAdaptiveCa
 > {
 	private _deferredPropertyPane: FindMeetingTimePropertyPane;
 
-	public onInit(): Promise<void> {
-		this.state = {
-      meetingTimes: []
-    };
-
+	public async onInit(): Promise<void> {
 		// registers the card view to be shown in a dashboard
 		this.cardNavigator.register(CARD_VIEW_REGISTRY_ID, () => new CardView());
     this.quickViewNavigator.register(
@@ -49,6 +47,15 @@ export default class FindMeetingTimeAdaptiveCardExtension extends BaseAdaptiveCa
 			ERROR_QUICK_VIEW_REGISTRY_ID,
 			() => new ErrorQuickView()
 		);
+
+    const userTimeZone = await this.context.serviceScope
+      .consume(FindTimeService.serviceKey)
+			.getUserTimeZone();
+
+		this.state = {
+			meetingTimes: [],
+      userTimeZone,
+		};
 
 		return Promise.resolve();
 	}

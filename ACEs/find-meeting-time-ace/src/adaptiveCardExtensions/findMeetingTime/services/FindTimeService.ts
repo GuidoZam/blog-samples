@@ -3,42 +3,6 @@ import { MSGraphClientFactory, MSGraphClientV3 } from "@microsoft/sp-http";
 
 import { IFindTimeService } from "./IFindTimeService";
 import { MeetingTimeResult, MeetingTimeSuggestion } from "../model/MeetingTimeResult";
-//import { IPerson } from "../model/IPerson";
-/**
- * type of result returned by the Microsoft Graph /people API
- */
-// interface IGraphPerson {
-// 	id: string;
-// 	displayName: string;
-// 	jobTitle?: string;
-// 	officeLocation?: string;
-// 	imAddress?: string;
-// 	scoredEmailAddresses?: [
-// 		{
-// 			address: string;
-// 			relevanceScore: number;
-// 		}
-// 	];
-// 	phones?: [
-// 		{
-// 			type: string;
-// 			number: string;
-// 		}
-// 	];
-// }
-
-// /**
-//  * type of result returned by the Microsoft Graph /me API
-//  */
-// interface IGraphUser {
-// 	id: string;
-// 	displayName: string;
-// 	jobTitle?: string;
-// 	mail: string;
-// 	officeLocation?: string;
-// 	userPrincipalName: string;
-// 	businessPhones?: string[];
-// }
 
 export class FindTimeService implements IFindTimeService {
 	// Create a ServiceKey to register in the Service Scope
@@ -88,4 +52,35 @@ export class FindTimeService implements IFindTimeService {
 				throw new Error("Error searching for meeting times.");
 			});
 	}
+
+  public async addMeetingToCalendar(meetingTime: MeetingTimeSuggestion): Promise<void> {
+    const graphClient: MSGraphClientV3 = await this._msGraphClientFactory.getClient("3");
+
+    const postBody = {
+			subject: "Test Meeting",
+			start: meetingTime.meetingTimeSlot.start,
+			end: meetingTime.meetingTimeSlot.end,
+			attendees: [
+				{
+					emailAddress: {
+						address:
+							meetingTime.attendeeAvailability[0].attendee.emailAddress.address,
+					},
+					type: "required",
+				},
+			],
+			IsOnlineMeeting: true,
+		};
+console.log(postBody);
+    await graphClient.api("/me/events").post(postBody);
+  }
+
+  public async getUserTimeZone(): Promise<string> {
+    const graphClient: MSGraphClientV3 = await this._msGraphClientFactory.getClient("3");
+
+    // Get user time zone
+    const timeZone = await graphClient.api("/me/mailboxSettings/timeZone").get();
+
+    return timeZone.value;
+  }
 }

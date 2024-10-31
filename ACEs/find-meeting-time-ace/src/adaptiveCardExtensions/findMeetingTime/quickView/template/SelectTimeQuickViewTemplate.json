@@ -4,16 +4,16 @@
 	"version": "1.5",
 	"body": [
 		{
+			"type": "TextBlock",
+			"weight": "Bolder",
+			"text": "${title}"
+		},
+		{
 			"type": "ColumnSet",
 			"columns": [
 				{
 					"type": "Column",
 					"items": [
-						{
-							"type": "TextBlock",
-							"weight": "Bolder",
-							"text": "${title}"
-						},
 						{
 							"type": "TextBlock",
 							"weight": "Bolder",
@@ -44,7 +44,7 @@
 				{
 					"type": "Column",
 					"width": "5px",
-					"style": "${if(greater(confidence, 80), 'good', if(greater(confidence, 50), 'warning', 'attention'))}"
+					"style": "warning"
 				},
 				{
 					"type": "Column",
@@ -54,30 +54,46 @@
 							"items": [
 								{
 									"type": "TextBlock",
-									"text": "${formatDateTime(meetingTimeSlot.start.dateTime, 'dd/MM/yyyy')}",
+									"text": "${convertFromUTC(formatDateTime(meetingTimeSlot.start.dateTime, 'yyyy-MM-ddTHH:mm:ss.sssZ'), '${$root.userTimeZone}', 'dd/MM/yyyy')}",
 									"wrap": true,
-									"style": "heading",
-									"size": "Large",
 									"weight": "Bolder"
 								},
 								{
 									"type": "TextBlock",
-									"text": "${formatDateTime(meetingTimeSlot.start.dateTime, 'HH:mm')} - ${formatDateTime(meetingTimeSlot.end.dateTime, 'HH:mm')}",
+									"text": "${convertFromUTC(formatDateTime(meetingTimeSlot.start.dateTime, 'yyyy-MM-ddTHH:mm:ss.sssZ'), '${$root.userTimeZone}', 'HH:mm')} - ${convertFromUTC(formatDateTime(meetingTimeSlot.end.dateTime, 'yyyy-MM-ddTHH:mm:ss.sssZ'), '${$root.userTimeZone}', 'HH:mm')}",
+									"wrap": true
+								},
+								{
+									"type": "TextBlock",
+									"text": "${$root.userTimeZone}",
 									"wrap": true
 								}
 							]
 						}
 					],
 					"width": "stretch"
+				},
+				{
+					"type": "Column",
+					"items": [
+						{
+							"type": "Image",
+							"url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQpJREFUSEvt1bFKA0EQBuAvhSCYQgQLG99ACFZ21oJa+RSCtT6C1oJPYWUEazsrEXyCpLEQxEJBsNENG9mcq7eHOatMuffP/LP/Pzfb8T0OsY8NPGS+545WcIMznKSADo6xlByuYw3neC0kWMAe7nGb5DwFggFWCws1hQ3HBOnVpiXRqE6OYAubUbrnwpYXcYRrXMWcHwkKa9bCJgha9+Cx4n5tewWAMI3LOQ8KcosgjT3o4jKW3sZLDc2M4O8S9eLSG0s9h6B9iODFe+JB2AR3FU9qPdjBRdG8sIt+U4Jq7dkUTb5EGe1bl2geB5H49HM9v037Ty4cqC/Y/63r6qPftNPf8KNHv9X4AADuYb3ejdaiAAAAAElFTkSuQmCC",
+							"selectAction": {
+								"type": "Action.Submit",
+								"title": "Add to calendar",
+								"id": "addToCalendar",
+								"data": {
+									"itemIndex": "${$index}"
+								}
+							}
+						}
+					],
+					"width": "auto",
+					"verticalContentAlignment": "Center"
 				}
 			]
 		}
 	],
-	"actions": [
-		{
-			"type": "Action.Submit",
-			"title": "Submit",
-			"id": "selectAttendeesSubmit"
-		}
-	]
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
 }

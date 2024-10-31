@@ -9,6 +9,7 @@ declare interface IFindMeetingTimeAdaptiveCardExtensionStrings {
 	AttendeeSearchPlaceholder: string;
 	CardFooterTitle: string;
 	CardFooterText: string;
+	NoMeetingTimeFound: string;
 	Success: {
 		Title: string;
 		Description: string;

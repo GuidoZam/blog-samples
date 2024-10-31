@@ -6,7 +6,8 @@
 		{
 			"type": "TextBlock",
 			"weight": "Bolder",
-			"text": "${title}"
+			"text": "${title}",
+			"horizontalAlignment": "Center"
 		},
 		{
 			"type": "ColumnSet",
@@ -16,7 +17,8 @@
 					"items": [
 						{
 							"type": "Image",
-							"url": "${imageUrl}"
+							"url": "${imageUrl}",
+							"horizontalAlignment": "Center"
 						}
 					]
 				}

@@ -1,4 +1,4 @@
-import { ISPFxAdaptiveCard, BaseAdaptiveCardQuickView, IActionArguments } from '@microsoft/sp-adaptive-card-extension-base';
+import { ISPFxAdaptiveCard, BaseAdaptiveCardQuickView, IActionArguments, ISubmitActionArguments } from '@microsoft/sp-adaptive-card-extension-base';
 import * as strings from 'FindMeetingTimeAdaptiveCardExtensionStrings';
 import {
 	CONFIRM_QUICK_VIEW_REGISTRY_ID,
@@ -13,6 +13,8 @@ export interface IQuickViewData {
 	subTitle: string;
 	title: string;
 	meetingTimes: MeetingTimeSuggestion[];
+	noMeetingTimeFound: string;
+	userTimeZone: string;
 }
 
 export class SelectTimeQuickView extends BaseAdaptiveCardQuickView<
@@ -20,7 +22,6 @@ export class SelectTimeQuickView extends BaseAdaptiveCardQuickView<
 	IFindMeetingTimeAdaptiveCardExtensionState,
 	IQuickViewData
 > {
-
 	private _oldUsername: string;
 
 	public get data(): IQuickViewData {
@@ -29,11 +30,15 @@ export class SelectTimeQuickView extends BaseAdaptiveCardQuickView<
 
 		const { meetingTimes } = this.state;
 
-		return {
+		const data = {
 			subTitle: strings.SelectTimeSubTitle,
 			title: strings.SelectTimeTitle,
-			meetingTimes: meetingTimes
+			meetingTimes: meetingTimes,
+			noMeetingTimeFound: strings.NoMeetingTimeFound,
+			userTimeZone: this.state.userTimeZone,
 		};
+console.log(data);
+		return data;
 	}
 
 	private _findMeetingTimes(): void {
@@ -51,18 +56,20 @@ export class SelectTimeQuickView extends BaseAdaptiveCardQuickView<
 		this._oldUsername = username;
 
 		// Perform the search
-		this.context.serviceScope.consume(FindTimeService.serviceKey).findTime(username)
-		.then((result: any) => {
-			this.setState({
-				meetingTimes: result,
+		this.context.serviceScope
+			.consume(FindTimeService.serviceKey)
+			.findTime(username)
+			.then((result: any) => {
+				this.setState({
+					meetingTimes: result,
+				});
+			})
+			.catch((err) => {
+				console.error(err);
+				this.setState({
+					error: err.message,
+				});
 			});
-		})
-		.catch((err) => {
-			console.error(err);
-			this.setState({
-				error: err.message,
-			});
-		});
 	}
 
 	public get template(): ISPFxAdaptiveCard {
@@ -71,16 +78,30 @@ export class SelectTimeQuickView extends BaseAdaptiveCardQuickView<
 
 	public onAction(action: IActionArguments | any): void {
 		if (action.type === "Submit") {
-			try {
-				this._submit(action);
-				this.quickViewNavigator.push(CONFIRM_QUICK_VIEW_REGISTRY_ID);
-			} catch (error) {
-				this.quickViewNavigator.push(ERROR_QUICK_VIEW_REGISTRY_ID);
+			if (action.id === "addToCalendar") {
+				try {
+					console.log(action);
+					this._addToCalendar(action)
+					.then(() => {
+						this.quickViewNavigator.push(CONFIRM_QUICK_VIEW_REGISTRY_ID);
+					})
+					.catch((err) => {
+						this.quickViewNavigator.push(ERROR_QUICK_VIEW_REGISTRY_ID);
+					});
+				} catch (error) {
+					this.quickViewNavigator.push(ERROR_QUICK_VIEW_REGISTRY_ID);
+				}
 			}
 		}
 	}
 
-	private _submit(action: IActionArguments): void {
-		// TODO: Add the new meeting to the calendar using the Graph API
+	private async _addToCalendar(action: ISubmitActionArguments): Promise<void> {
+		const itemIndex = action.data.itemIndex;
+		const meetingTime = this.state.meetingTimes[itemIndex];
+console.log(meetingTime);
+		// Perform the search
+		await this.context.serviceScope
+			.consume(FindTimeService.serviceKey)
+			.addMeetingToCalendar(meetingTime);
 	}
 }
