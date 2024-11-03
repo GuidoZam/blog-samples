@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "basic-list-view-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/basicListView/BasicListViewCommandSet.js",
+          "manifest": "./src/extensions/basicListView/BasicListViewCommandSet.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "BasicListViewCommandSetStrings": "lib/extensions/basicListView/loc/{locale}.js"
+  }
+}

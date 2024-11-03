@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
+
+  "id": "5d71a646-e469-4f41-b89e-9bae87618e1d",
+  "alias": "BasicListViewCommandSet",
+  "componentType": "Extension",
+  "extensionType": "ListViewCommandSet",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+
+  "items": {
+    "ADD_TO_FAVORITES": {
+      "title": { "default": "Add to favorites", "it-IT": "Aggiungi ai preferiti", "fr-FR": "Ajouter aux favoris" },
+      "iconImageUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiPjxwYXRoIGQ9Ik0xMzcwIDE1MzZsLTEwMy0zMjkgNDA1LTMxMWgtNTAybC0xNDYtNDY3LTEzOCA0NjdIMzg0bDM5NyAzMTEtMTU0IDQ5MyAzOTctMzA2IDI1NiAxOTd2MTYybC0yNTYtMTk3LTY0MCA0OTIgMjQ4LTc5NEwwIDc2OGg3ODRMMTAyNCAwbDI0MCA3NjhoNzg0bC02MzIgNDg2IDg4IDI4MmgtMTM0em00MjItMTI4djI1NmgyNTZ2MTI4aC0yNTZ2MjU2aC0xMjh2LTI1NmgtMjU2di0xMjhoMjU2di0yNTZoMTI4eiIgZmlsbD0iIzAzNzg3YyI+PC9wYXRoPjwvc3ZnPg==",
+      "type": "command"
+    },
+    "LIST_FAVORITES": {
+			"title": { "default": "List favorites", "it-IT": "Elenco preferiti", "fr-FR": "Liste des favoris" },
+			"iconImageUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiPjxwYXRoIGQ9Ik0yMDQ4IDc2OHYxMjhoLTg3OHEtMzYtMTE4LTcyLTIzM3QtNzQtMjM0cS0zNyAxMTgtNzMgMjMzdC03MyAyMzRIMzc2cTEwMiA3OCAyMDIgMTU2dDIwMyAxNTVxLTQwIDEyNC03OCAyNDZ0LTc2IDI0N2wzOTctMzA2djE2MmwtNjQwIDQ5MiAyNDgtNzk0TDAgNzY4aDc4NEwxMDI0IDBsMjQwIDc2OGg3ODR6bS04OTYgMzg0aDg5NnYxMjhoLTg5NnYtMTI4em0wIDM4NGg4OTZ2MTI4aC04OTZ2LTEyOHoiIGZpbGw9IiMwMzc4N2MiPjwvcGF0aD48L3N2Zz4=",
+			"type": "command"
+		}
+  }
+}
