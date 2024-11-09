@@ -37,7 +37,7 @@ export class SelectTimeQuickView extends BaseAdaptiveCardQuickView<
 			noMeetingTimeFound: strings.NoMeetingTimeFound,
 			userTimeZone: this.state.userTimeZone,
 		};
-console.log(data);
+
 		return data;
 	}
 
@@ -59,7 +59,7 @@ console.log(data);
 		this.context.serviceScope
 			.consume(FindTimeService.serviceKey)
 			.findTime(username)
-			.then((result: any) => {
+			.then((result: MeetingTimeSuggestion[]) => {
 				this.setState({
 					meetingTimes: result,
 				});

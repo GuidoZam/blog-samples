@@ -2,37 +2,31 @@
 
 ## Summary
 
-Short summary on functionality and used technologies.
+This Adaptive Card Extension allow users to find a meeting time that works for the specified attendee. The user can type the attendee email and, after that, the meeting slot.
+This is a sample of how to use the Microsoft Graph API to get the availability of a user and show it in an Adaptive Card.
 
-[picture of the solution in action, if possible]
+![Card View](assets/cardView.png)
+
+![Quick View](assets/quickView.png)
+
+![Success Result](assets/resultSuccess.png)
 
 ## Used SharePoint Framework Version
 
 ![version](https://img.shields.io/badge/version-1.20.0-green.svg)
 
-## Applies to
-
-- [SharePoint Framework](https://aka.ms/spfx)
-- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
-
-## Prerequisites
-
-> Any special pre-requisites?
 
 ## Solution
 
 | Solution    | Author(s)                                               |
 | ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
+| find-meeting-time-ace | Guido Zambarda, PiaSys.com [@iamguidozam](https://www.x.com/iamguidozam)
 
 ## Version history
 
 | Version | Date             | Comments        |
 | ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
+| 1.0     | November 09, 2024 | Initial release |
 
 ## Disclaimer
 

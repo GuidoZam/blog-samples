@@ -18,7 +18,7 @@
     "group": { "default": "Dashboard" },
     "title": { "default": "Find Meeting Time" },
     "description": { "default": "Find Meeting Time description" },
-    "iconImageUrl": "https://res.cdn.office.net/files/fabric-cdn-prod_20240610.001/assets/brand-icons/product-monoline/svg/vivaconnections_32x1.svg",
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAATVJREFUOE/d1C0sRWEcx/HPHcFbUWxmQ9MUhaSwKRI2NsFsXoJmIma6pEgSiUKkeAmqZJqLjSk2Y4IbnMfO2e49M4d7KZ50zvM/z3e/5zz/55tTOgaxjm7cpWrp12acYQ77STGHE7TFEw1ojGGFDGA1AvQRz/G3+QDM4xJXaEcvdvCSAazHMI6K1nYkwCR2H5YxhIcMYBN2sYJDfPyuNDCD8WW5BNhaCalo7XWScBEHFUL7sfpnWy7ppTKT/u2h/N+EA/FNef2Nxg73fhNLuEALOitpmy4cYxpbxbYJcvjuoQR5bKPnk9a6iSQxUU7C2shEC7EUEu5epLwZ3Kf1ldXTQWlrCKYJ262LF8xGbtwIz2nBZgHPMR4lCYApzGMSbxhFIQB/OmoiIY/FLnyKhFCFEZzi9h3gJVQO6fx/WwAAAABJRU5ErkJggg==",
     "properties": {
       "title": "Find Meeting Time"
     },
