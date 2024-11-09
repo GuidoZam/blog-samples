@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "51f5a3ca-28fa-4554-9006-d61d8dc13ef5",
+  "alias": "GeolocationAceAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "Geolocation ACE" },
+    "description": { "default": "Geolocation ACE description" },
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAXhJREFUOE+V1LFLVWEYx/GPaODg4uok/QsuhkMOmRk6hNQi2KBDS44KSltQNtSgDkFbEC5RiBCIoKMI/gPhFGIUuTkIEXUeeE8c773vufe+y4HzvL8vz+/3PLw98qcHj/AaQzjCY3yt0QhR7kzgM17hI5Ywhkmc5UR1wHe4wlP8xSD2EP/fdgvsxQecYi2JB7CLnRRDS2Zdh0/wDA9xnPJ7WWR5Dyfddhj3b+A5lpP4d5HdIt6nCLrusBTEpN/gFr7VTThqdZZL7Qw2MYrv3QL70zSrulifF0WO9/GzUvhTbMBFkXN8/5/GDlcQwXdyYpXuYj8HLNfiC9Yrl1pZ7sM2ztPCt+xwBJ/woGEtchnOYRW38askVi2H3SlM47JNh1G+WcAOsFC1XQJzdkOY67Cl7RKYsxvAO9jAOH40TKvJdgnM2W037SbbAayz2w7YZDuAdXbbAaN+zXYAw+5sKlSn2wks7gynB3g+ph3Aw7RLnQJy97biMf4HCoRUFi4gXTgAAAAASUVORK5CYII=",
+    "properties": {},
+    "cardSize": "Large"
+  }]
+}

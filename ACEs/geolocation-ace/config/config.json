@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "geolocation-ace-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/geolocationAce/GeolocationAceAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/geolocationAce/GeolocationAceAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "GeolocationAceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/geolocationAce/loc/{locale}.js"
+  }
+}
