@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "geolocation-ace",
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Generic",
+    "componentName": "Geolocation ACE",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "geolocation-ace",
+    "libraryId": "e652bce4-efca-401e-8eb4-220ed693a27c",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "geolocation-ace description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
