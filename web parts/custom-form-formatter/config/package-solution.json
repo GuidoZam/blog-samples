@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "custom-form-formatter-client-side-solution",
+    "id": "543b3919-7380-4a36-a9aa-69723fa11659",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0-beta.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "custom-form-formatter description"
+      },
+      "longDescription": {
+        "default": "custom-form-formatter description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "custom-form-formatter Feature",
+        "description": "The feature that activates elements of the custom-form-formatter solution.",
+        "id": "2a2ec5a4-d09e-4778-810f-315f4f5b01d6",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/custom-form-formatter.sppkg"
+  }
+}
