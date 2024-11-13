@@ -12,10 +12,11 @@ export default class CustomFormFormatter extends React.Component<ICustomFormForm
     const {
       description,
       environmentMessage,
-      hasTeamsContext,
-      userDisplayName
+      hasTeamsContext
+      // TODO: remove old props and add the new ones to get the listId and contentTypeId
     } = this.props;
 
+    // Easy sample of JSON object to be used as custom formatter
     // const jsonObject = {
     //   headerJSONFormatter: {
     //     elmType: "div",
@@ -61,27 +62,12 @@ export default class CustomFormFormatter extends React.Component<ICustomFormForm
 
     return (
       <section className={`${styles.customFormFormatter} ${hasTeamsContext ? styles.teams : ''}`}>
-        <DefaultButton text='Apply Formatting' onClick={async () => await updateClientFormCustomFormatter("https://567mb2.sharepoint.com/sites/MainCommunication", "c5cf7628-a9ee-4025-973a-79340cc907e1", "0x0100CBE9223BC8641E468B236BD498B3EC300001D1DD8B2C8C1049925A822F84A0D9BE", jsonString)} />
-        <div className={styles.welcome}>
-          <h2>Well done, {escape(userDisplayName)}!</h2>
-          <div>{environmentMessage}</div>
-          <div>Web part property value: <strong>{escape(description)}</strong></div>
-        </div>
         <div>
-          <h3>Welcome to SharePoint Framework!</h3>
+          <h3>Ready to try the form formatter?</h3>
           <p>
-            The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It&#39;s the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
+            Click on the following button to apply the custom formatting to the client-side form for the specified content type.
           </p>
-          <h4>Learn more about SPFx development:</h4>
-          <ul className={styles.links}>
-            <li><a href="https://aka.ms/spfx" target="_blank" rel="noreferrer">SharePoint Framework Overview</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank" rel="noreferrer">Use Microsoft Graph in your solution</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank" rel="noreferrer">Build for Microsoft Teams using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank" rel="noreferrer">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank" rel="noreferrer">Publish SharePoint Framework applications to the marketplace</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank" rel="noreferrer">SharePoint Framework API reference</a></li>
-            <li><a href="https://aka.ms/m365pnp" target="_blank" rel="noreferrer">Microsoft 365 Developer Community</a></li>
-          </ul>
+          <DefaultButton text='Apply Formatting' onClick={async () => await updateClientFormCustomFormatter("https://567mb2.sharepoint.com/sites/MainCommunication", "c5cf7628-a9ee-4025-973a-79340cc907e1", "0x0100CBE9223BC8641E468B236BD498B3EC300001D1DD8B2C8C1049925A822F84A0D9BE", jsonString)} />
         </div>
       </section>
     );
