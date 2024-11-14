@@ -1,73 +1,72 @@
 import * as React from 'react';
 import styles from './CustomFormFormatter.module.scss';
+import * as strings from 'CustomFormFormatterWebPartStrings';
 import type { ICustomFormFormatterProps } from './ICustomFormFormatterProps';
-import { escape } from '@microsoft/sp-lodash-subset';
-//import useApplyFormFormatting from './useApplyFormFormatting';
 import { DefaultButton } from '@fluentui/react';
 import updateClientFormCustomFormatter from './updateClientFormCustomFormatter';
+import { ICustomFormFormatterState } from './ICustomFormFormatterState';
 
-export default class CustomFormFormatter extends React.Component<ICustomFormFormatterProps, {}> {
+export default class CustomFormFormatter extends React.Component<ICustomFormFormatterProps, ICustomFormFormatterState> {
+  constructor(props: ICustomFormFormatterProps) {
+    super(props);
+
+    this.state = {
+      jsonHeaderFormat: this.props.jsonHeaderFormat,
+      jsonBodyFormat: this.props.jsonBodyFormat,
+      jsonFooterFormat: this.props.jsonFooterFormat,
+    };
+  }
+  
+  override componentDidUpdate(prevProps: Readonly<ICustomFormFormatterProps>, prevState: Readonly<ICustomFormFormatterState>, snapshot?: any): void {
+    if (prevProps.jsonHeaderFormat !== this.props.jsonHeaderFormat) {
+      this.setState({ jsonHeaderFormat: this.props.jsonHeaderFormat });
+    }
+    if (prevProps.jsonBodyFormat !== this.props.jsonBodyFormat) {
+      this.setState({ jsonBodyFormat: this.props.jsonBodyFormat });
+    }
+    if (prevProps.jsonFooterFormat !== this.props.jsonFooterFormat) {
+      this.setState({ jsonFooterFormat: this.props.jsonFooterFormat });
+    }
+  }
 
   public render(): React.ReactElement<ICustomFormFormatterProps> {
     const {
-      description,
-      environmentMessage,
-      hasTeamsContext
-      // TODO: remove old props and add the new ones to get the listId and contentTypeId
+      siteUrl,
+      listId,
+      contentTypeId
     } = this.props;
 
-    // Easy sample of JSON object to be used as custom formatter
-    // const jsonObject = {
-    //   headerJSONFormatter: {
-    //     elmType: "div",
-    //     txtContent: "Hey there! It's working! 🎉",
-    //   },
-    //   footerJSONFormatter: "",
-    //   bodyJSONFormatter: "",
-    // };
+    const {
+      jsonHeaderFormat,
+      jsonBodyFormat,
+      jsonFooterFormat
+    } = this.state;
+
+    const customHeader = jsonHeaderFormat ? JSON.parse(jsonHeaderFormat) : "";
+    const customBody = jsonBodyFormat ? JSON.parse(jsonBodyFormat) : "";
+    const customFooter = jsonFooterFormat ? JSON.parse(jsonFooterFormat) : "";
 
     const jsonObject = {
-      headerJSONFormatter: {
-        elmType: "div",
-        style: {
-          border: "1px solid",
-          padding: "10px"
-        },
-        children: [
-          {
-            elmType: "div",
-            txtContent: "Hey there ",
-            attributes: {
-              class: "ms-fontSize-16 ms-fontWeight-semibold"
-            }
-          },
-          {
-            elmType: "div",
-            style: {
-              "border-radius": "50%",
-              "padding": "0 5px"
-            },
-            txtContent: "=substring(replaceAll(@me,'.',' '),0,indexOf(replaceAll(@me,'.',' '),'@'))",
-            attributes: {
-              class: "ms-fontSize-16 ms-fontWeight-semibold"
-            }
-          }
-        ]
-      },
-      footerJSONFormatter: "",
-      bodyJSONFormatter: "",
+      headerJSONFormatter: customHeader,
+      bodyJSONFormatter: customBody,
+      footerJSONFormatter: customFooter,
     }
 
     const jsonString = JSON.stringify(jsonObject);
 
+    const buttonDisabled = !siteUrl || !listId || !contentTypeId || !jsonString;
+
     return (
-      <section className={`${styles.customFormFormatter} ${hasTeamsContext ? styles.teams : ''}`}>
+      <section className={styles.customFormFormatter}>
         <div>
-          <h3>Ready to try the form formatter?</h3>
+          <h3>{strings.Title}</h3>
           <p>
-            Click on the following button to apply the custom formatting to the client-side form for the specified content type.
+            {strings.Description}
           </p>
-          <DefaultButton text='Apply Formatting' onClick={async () => await updateClientFormCustomFormatter("https://567mb2.sharepoint.com/sites/MainCommunication", "c5cf7628-a9ee-4025-973a-79340cc907e1", "0x0100CBE9223BC8641E468B236BD498B3EC300001D1DD8B2C8C1049925A822F84A0D9BE", jsonString)} />
+          <DefaultButton 
+            text={strings.ApplyFormatting}
+            onClick={async () => await updateClientFormCustomFormatter(siteUrl, listId, contentTypeId, jsonString)}
+            disabled={buttonDisabled}/>
         </div>
       </section>
     );

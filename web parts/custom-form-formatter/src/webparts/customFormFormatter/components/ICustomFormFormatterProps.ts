@@ -1,7 +1,8 @@
 export interface ICustomFormFormatterProps {
-  description: string;
-  isDarkTheme: boolean;
-  environmentMessage: string;
-  hasTeamsContext: boolean;
-  userDisplayName: string;
+	siteUrl: string;
+	listId: string;
+	contentTypeId: string;
+	jsonHeaderFormat: string;
+	jsonBodyFormat: string;
+	jsonFooterFormat: string;
 }

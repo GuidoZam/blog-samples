@@ -13,6 +13,7 @@
   },
   "externals": {},
   "localizedResources": {
-    "CustomFormFormatterWebPartStrings": "lib/webparts/customFormFormatter/loc/{locale}.js"
+    "CustomFormFormatterWebPartStrings": "lib/webparts/customFormFormatter/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
   }
 }

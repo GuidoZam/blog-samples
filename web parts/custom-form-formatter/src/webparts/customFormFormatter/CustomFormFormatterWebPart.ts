@@ -6,87 +6,37 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
-import { IReadonlyTheme } from '@microsoft/sp-component-base';
-
+import {
+	PropertyFieldCodeEditor,
+	PropertyFieldCodeEditorLanguages,
+} from "@pnp/spfx-property-controls/lib/PropertyFieldCodeEditor";
 import * as strings from 'CustomFormFormatterWebPartStrings';
 import CustomFormFormatter from './components/CustomFormFormatter';
 import { ICustomFormFormatterProps } from './components/ICustomFormFormatterProps';
 
 export interface ICustomFormFormatterWebPartProps {
-  description: string;
+	siteUrl: string;
+	listId: string;
+	contentTypeId: string;
+	jsonHeaderFormat: string;
+	jsonBodyFormat: string;
+	jsonFooterFormat: string;
 }
 
 export default class CustomFormFormatterWebPart extends BaseClientSideWebPart<ICustomFormFormatterWebPartProps> {
 
-  private _isDarkTheme: boolean = false;
-  private _environmentMessage: string = '';
-
   public render(): void {
-    const element: React.ReactElement<ICustomFormFormatterProps> = React.createElement(
-      CustomFormFormatter,
-      {
-        description: this.properties.description,
-        isDarkTheme: this._isDarkTheme,
-        environmentMessage: this._environmentMessage,
-        hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
-      }
-    );
+    const element: React.ReactElement<ICustomFormFormatterProps> =
+			React.createElement(CustomFormFormatter, {
+				siteUrl: this.properties.siteUrl,
+				listId: this.properties.listId,
+				contentTypeId: this.properties.contentTypeId,
+				jsonHeaderFormat: this.properties.jsonHeaderFormat,
+        jsonBodyFormat: this.properties.jsonBodyFormat,
+        jsonFooterFormat: this.properties.jsonFooterFormat
+			});
 
     ReactDom.render(element, this.domElement);
-  }
-
-  protected onInit(): Promise<void> {
-    return this._getEnvironmentMessage().then(message => {
-      this._environmentMessage = message;
-    });
-  }
-
-
-
-  private _getEnvironmentMessage(): Promise<string> {
-    if (!!this.context.sdks.microsoftTeams) { // running in Teams, office.com or Outlook
-      return this.context.sdks.microsoftTeams.teamsJs.app.getContext()
-        .then(context => {
-          let environmentMessage: string = '';
-          switch (context.app.host.name) {
-            case 'Office': // running in Office
-              environmentMessage = this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentOffice : strings.AppOfficeEnvironment;
-              break;
-            case 'Outlook': // running in Outlook
-              environmentMessage = this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentOutlook : strings.AppOutlookEnvironment;
-              break;
-            case 'Teams': // running in Teams
-            case 'TeamsModern':
-              environmentMessage = this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentTeams : strings.AppTeamsTabEnvironment;
-              break;
-            default:
-              environmentMessage = strings.UnknownEnvironment;
-          }
-
-          return environmentMessage;
-        });
-    }
-
-    return Promise.resolve(this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentSharePoint : strings.AppSharePointEnvironment);
-  }
-
-  protected onThemeChanged(currentTheme: IReadonlyTheme | undefined): void {
-    if (!currentTheme) {
-      return;
-    }
-
-    this._isDarkTheme = !!currentTheme.isInverted;
-    const {
-      semanticColors
-    } = currentTheme;
-
-    if (semanticColors) {
-      this.domElement.style.setProperty('--bodyText', semanticColors.bodyText || null);
-      this.domElement.style.setProperty('--link', semanticColors.link || null);
-      this.domElement.style.setProperty('--linkHovered', semanticColors.linkHovered || null);
-    }
-
   }
 
   protected onDispose(): void {
@@ -99,23 +49,68 @@ export default class CustomFormFormatterWebPart extends BaseClientSideWebPart<IC
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
-      pages: [
-        {
-          header: {
-            description: strings.PropertyPaneDescription
-          },
-          groups: [
-            {
-              groupName: strings.BasicGroupName,
-              groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
-                })
-              ]
-            }
-          ]
-        }
-      ]
-    };
+			pages: [
+				{
+					header: {
+						description: strings.PropertyPaneDescription,
+					},
+					groups: [
+						{
+							groupName: strings.BasicGroupName,
+							groupFields: [
+								PropertyPaneTextField("siteUrl", {
+									label: strings.SiteUrlFieldLabel,
+								}),
+								PropertyPaneTextField("listId", {
+									label: strings.TargetListFieldLabel,
+								}),
+								PropertyPaneTextField("contentTypeId", {
+									label: strings.ContentTypeFieldLabel,
+								}),
+								PropertyFieldCodeEditor("jsonHeaderFormat", {
+									label: strings.JsonHeaderFormatFieldLabel,
+									panelTitle: strings.JsonHeaderFormatFieldLabel,
+									initialValue: this.properties.jsonHeaderFormat,
+									onPropertyChange: this.onPropertyPaneFieldChanged,
+									properties: this.properties,
+									disabled: false,
+									key: "jsonHeaderFormatFieldId",
+									language: PropertyFieldCodeEditorLanguages.JSON,
+									options: {
+										wrap: false,
+									},
+								}),
+								PropertyFieldCodeEditor("jsonBodyFormat", {
+									label: strings.JsonBodyFormatFieldLabel,
+									panelTitle: strings.JsonBodyFormatFieldLabel,
+									initialValue: this.properties.jsonBodyFormat,
+									onPropertyChange: this.onPropertyPaneFieldChanged,
+									properties: this.properties,
+									disabled: false,
+									key: "jsonBodyFormatFieldId",
+									language: PropertyFieldCodeEditorLanguages.JSON,
+									options: {
+										wrap: false,
+									},
+								}),
+								PropertyFieldCodeEditor("jsonFooterFormat", {
+									label: strings.JsonFooterFormatFieldLabel,
+									panelTitle: strings.JsonFooterFormatFieldLabel,
+									initialValue: this.properties.jsonFooterFormat,
+									onPropertyChange: this.onPropertyPaneFieldChanged,
+									properties: this.properties,
+									disabled: false,
+									key: "jsonFooterFormatFieldId",
+									language: PropertyFieldCodeEditorLanguages.JSON,
+									options: {
+										wrap: false,
+									},
+								}),
+							],
+						},
+					],
+				},
+			],
+		};
   }
 }

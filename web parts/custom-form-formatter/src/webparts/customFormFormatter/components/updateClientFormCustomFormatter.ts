@@ -1,3 +1,5 @@
+import * as strings from "CustomFormFormatterWebPartStrings";
+
 export default async function updateClientFormCustomFormatter(
 	siteUrl: string,
 	listId: string,
@@ -5,25 +7,8 @@ export default async function updateClientFormCustomFormatter(
 	customFormatterScript: string
 ) {
 	try {
-		// Step 1: Get the Form Digest Value (CSRF Token)
-		const contextInfoResponse = await fetch(`${siteUrl}/_api/contextinfo`, {
-			method: "POST",
-			headers: {
-				Accept: "application/json",
-				"Content-Type": "application/json",
-			},
-		});
-
-		if (!contextInfoResponse.ok) {
-			throw new Error("Failed to get form digest value.");
-		}
-
-		console.log("contextInfoResponse", contextInfoResponse);
-
-		const contextInfo = await contextInfoResponse.json();
-		console.log("contextInfo", contextInfo);
-		const formDigestValue = contextInfo.FormDigestValue;
-		console.log("formDigestValue", formDigestValue);
+		// Step 1: Get the Form Digest Value
+		const formDigestValue = await _retrieveFormDigest(siteUrl);
 
 		// Step 2: Prepare the request body for updating the content type
 		const requestBody = {
@@ -38,21 +23,39 @@ export default async function updateClientFormCustomFormatter(
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-					"X-RequestDigest": formDigestValue, // Include the form digest value
+					"X-RequestDigest": formDigestValue,
 				},
 				body: JSON.stringify(requestBody),
 			}
 		);
 
-		console.log("patchResponse", patchResponse);
-
 		if (!patchResponse.ok) {
-			throw new Error("Failed to update the content type.");
+			alert(strings.FailedToUpdateContentType);
+			throw new Error(strings.FailedToUpdateContentType);
 		}
 
-		const updatedContentType = await patchResponse.json();
-		console.log("Content type updated successfully:", updatedContentType);
+		alert(strings.SuccessMessage);
 	} catch (error) {
-		console.error("Error updating content type:", error);
+		alert(strings.GenericError);
+		console.error(strings.GenericError, error);
 	}
+}
+
+async function _retrieveFormDigest(siteUrl: string) {
+	const contextInfoResponse = await fetch(`${siteUrl}/_api/contextinfo`, {
+		method: "POST",
+		headers: {
+			Accept: "application/json",
+			"Content-Type": "application/json",
+		},
+	});
+
+	if (!contextInfoResponse.ok) {
+		throw new Error(strings.FailedToRetrieveFormDigest);
+	}
+
+	const contextInfo = await contextInfoResponse.json();
+	const formDigestValue = contextInfo.FormDigestValue;
+
+	return formDigestValue;
 }

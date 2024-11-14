@@ -3,12 +3,17 @@
   // Configure glob patterns for excluding files and folders in the file explorer.
   "files.exclude": {
     "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
     "**/.DS_Store": true,
+    "**/Thumbs.db": true,
     "**/bower_components": true,
     "**/coverage": true,
     "**/jest-output": true,
     "**/lib-amd": true,
-    "src/**/*.scss.ts": true
+    "src/**/*.scss.ts": true,
+    "**/node_modules": true
   },
   "typescript.tsdk": ".\\node_modules\\typescript\\lib"
 }
