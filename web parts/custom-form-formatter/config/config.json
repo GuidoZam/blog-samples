@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "custom-form-formatter-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/customFormFormatter/CustomFormFormatterWebPart.js",
+          "manifest": "./src/webparts/customFormFormatter/CustomFormFormatterWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CustomFormFormatterWebPartStrings": "lib/webparts/customFormFormatter/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}

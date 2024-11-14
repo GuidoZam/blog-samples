@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "custom-form-formatter",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "Custom Form Formatter",
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.20.2",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0-beta.0",
+    "libraryName": "custom-form-formatter",
+    "libraryId": "543b3919-7380-4a36-a9aa-69723fa11659",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "custom-form-formatter description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
