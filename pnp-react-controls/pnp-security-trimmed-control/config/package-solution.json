@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-security-trimmed-control-client-side-solution",
+    "id": "618dced4-35c0-484a-a8d0-5336f15561a2",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-security-trimmed-control description"
+      },
+      "longDescription": {
+        "default": "pnp-security-trimmed-control description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-security-trimmed-control Feature",
+        "description": "The feature that activates elements of the pnp-security-trimmed-control solution.",
+        "id": "44b02696-e41b-4817-b3f2-6510ec8081ca",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-security-trimmed-control.sppkg"
+  }
+}
