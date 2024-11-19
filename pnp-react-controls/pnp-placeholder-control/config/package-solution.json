@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-placeholder-control-client-side-solution",
+    "id": "9e3f0329-e981-492b-838f-7698eaad1bbd",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-placeholder-control description"
+      },
+      "longDescription": {
+        "default": "pnp-placeholder-control description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-placeholder-control Feature",
+        "description": "The feature that activates elements of the pnp-placeholder-control solution.",
+        "id": "4ea282fa-2820-4df6-8a22-5b9f4bef5731",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-placeholder-control.sppkg"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-placeholder-control",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "PnP Placeholder control",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "pnp-placeholder-control",
+    "libraryId": "9e3f0329-e981-492b-838f-7698eaad1bbd",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-placeholder-control description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
