@@ -1,7 +1,12 @@
 declare interface IPnPPlaceholderControlWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
-  ShowPlaceholderFieldLabel: string;
+  SampleToggleFieldLabel: string;
+  Title: string;
+  Description: string;
+  PlaceholderDescription: string;
+  PlaceholderIconText: string;
+  PlaceholderButtonLabel: string;
 }
 
 declare module 'PnPPlaceholderControlWebPartStrings' {

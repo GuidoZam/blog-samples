@@ -13,7 +13,7 @@ import PnPPlaceholderControl from './components/PnPPlaceholderControl';
 import { IPnPPlaceholderControlProps } from './components/IPnPPlaceholderControlProps';
 
 export interface IPnPPlaceholderControlWebPartProps {
-  showPlaceholder: boolean;
+  sampleToggle: boolean;
 }
 
 export default class PnPPlaceholderControlWebPart extends BaseClientSideWebPart<IPnPPlaceholderControlWebPartProps> {
@@ -23,7 +23,7 @@ export default class PnPPlaceholderControlWebPart extends BaseClientSideWebPart<
       PnPPlaceholderControl,
       {
         context: this.context,
-        showPlaceholder: this.properties.showPlaceholder
+        displayMode: this.displayMode,
       }
     );
 
@@ -66,8 +66,8 @@ export default class PnPPlaceholderControlWebPart extends BaseClientSideWebPart<
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneToggle('showPlaceholder', {
-                  label: strings.ShowPlaceholderFieldLabel
+                PropertyPaneToggle('sampleToggle', {
+                  label: strings.SampleToggleFieldLabel
                 })
               ]
             }
