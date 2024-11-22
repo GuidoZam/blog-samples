@@ -18,7 +18,7 @@
     "group": { "default": "Dashboard" },
     "title": { "default": "Line Chart ACE" },
     "description": { "default": "Line Chart ACE description" },
-    "iconImageUrl": "https://res.cdn.office.net/files/fabric-cdn-prod_20240610.001/assets/brand-icons/product-monoline/svg/vivaconnections_32x1.svg",
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAW5JREFUOE/d1c1KAlEUB/D/GSkJaRW0CXyGVtK2sIWBH0G09wUCZwYNgphN0FiZYG2SiJAWuShtVbuW7XqAHqBdFFSm6Zy45s3U8WvcRLO99/4493zcIVUvqkw89eZxbR0ZwXeM+JGqXxYAmhlzVfymufoyooe/Ber6jcfi0jEp/LC3E9kEiB1HWMdQOgUQEmkiYlOgjsBfmA8WhVnhWQIOAU4ODbZjqVT4XkQY0wtRYgS6gvF4cTKZDL2KvMjKd8Oa6xfTtqCmFReZrDMGJfZ3IyfiQD9Moh3gN8bnAB4BeBlYc2Ei3yhAPWfymnY92wJWq25fA8txrbIOxa0RcQLAkyhkP6xebTkpIN4GUxZA7rM8Hs9klsoAU0y72iAFUdSw0iuy9iv7ASgAsk1MbmEyjFu3Ycx/DDKWMsIggINObBCidY8EvVaVF9Lp5efhCXvwn742vfow0Oi1nzFzkksCrkn8AsA85wToOEN09wVwVfBT9RzSdwAAAABJRU5ErkJggg==",
     "properties": {
       "title": "Line Chart ACE"
     },

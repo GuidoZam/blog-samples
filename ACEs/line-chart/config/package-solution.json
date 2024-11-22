@@ -3,7 +3,7 @@
   "solution": {
     "name": "line-chart-client-side-solution",
     "id": "43f26ce5-720a-406d-9864-5a780ff7c881",
-    "version": "1.0.0.0",
+    "version": "1.0.1.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
