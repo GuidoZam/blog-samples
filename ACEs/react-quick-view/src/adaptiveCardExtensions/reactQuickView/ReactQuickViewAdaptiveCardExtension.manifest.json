@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "0e21e661-402d-456a-b3f5-93901b017b7d",
+  "alias": "ReactQuickViewAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "React Quick View" },
+    "description": { "default": "React Quick View description" },
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAihJREFUOE/F0z9oFEEUx/Hvm9kLiKgIWglaRD3/NZbaKFgIVqa4KEQQsREb/4TkwploNH/vzmDsRNBgYUAPtBMjiAiCYKOFmJxyQaxEAqJ2uZ15spfkcsllQ8CA0+2w+9n3mzdPWOUlq+zxH8D0ta1W3I0oiVN7lez1b8uliq9wBuoHmhXGI0RgN/DYqc3EwfVgDYTwXrxeCrN9byMwSF85oEZuoeyPg+fBeEgXRZTlYGHl0OKjWxIWm+46hegQsFZgONRynmz214quUzq9IZBEm8JFYAqVjNDevs6ahmeAAbYAGwVuh1oeioVnoFaFC8DPCHKTE48oFFwVVNUxP/l5wDYm7wGngd918EJoPfDAlYpnI2gu0ULQJe4GgXulosOVP8MgymZRuRN9oKLn5irC6BpRWsMwOMzN7h9LglZ54Q0PrdGm6f7+j6RS1m5PNs3CQW20hkxmn/Py1Hhayrm+d7GgGjMSOj1OvvdLtTGplKVQ8FGR1b22zh3WMCbC+XCw9/nSkY1/YtSOCuwCHXHlRBdD3VMLOt7avckmyj0gZxSKgfEtlTSzK7o2zYjeR/huVE6USxMfgsbkEQ95gWQVBmohA21hqfiytiGV8Qw6Oj951VExsje6Om6g92QlWipla+BohqO843HQfIUdnV8RLqvXPSJy1PnpY+Ryf2rPL2hMHoqew1Lx9eKK6sbHzoA94mWnih6sA1c0MvMvSQWEbbNbb/4V/Asn2T+JteSsHwAAAABJRU5ErkJggg==",
+    "properties": {
+      "title": "React Quick View"
+    },
+    "cardSize": "Large"
+  }]
+}
