@@ -1,0 +1,10 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.container {
+  padding: 20px;
+
+  .message {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+}

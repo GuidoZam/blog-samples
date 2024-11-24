@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "react-quick-view-client-side-solution",
+    "id": "52759e28-7118-4ed3-82c3-2104e50945ee",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "react-quick-view description"
+      },
+      "longDescription": {
+        "default": "react-quick-view description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "react-quick-view Feature",
+        "description": "The feature that activates elements of the react-quick-view solution.",
+        "id": "85aaa860-bb76-431a-bd08-22f097eea2ba",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/react-quick-view.sppkg"
+  }
+}
