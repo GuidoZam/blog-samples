@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "html-quick-view",
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Generic",
+    "componentName": "HTML Quick View",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "html-quick-view",
+    "libraryId": "c3eaa428-badd-4729-8d3b-f69899b886f6",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "html-quick-view description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
