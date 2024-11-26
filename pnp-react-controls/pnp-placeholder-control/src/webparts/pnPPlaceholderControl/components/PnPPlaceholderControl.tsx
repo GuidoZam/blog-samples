@@ -31,7 +31,6 @@ export default class PnPPlaceholderControl extends React.Component<IPnPPlacehold
           <Placeholder iconName='AutoEnhanceOn'
             iconText={strings.PlaceholderIconText}
             description={strings.PlaceholderDescriptionWithoutButton}
-            buttonLabel={strings.PlaceholderButtonLabel}
             hideButton={true}
           />}
       </>

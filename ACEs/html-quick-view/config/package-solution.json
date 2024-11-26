@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "html-quick-view-client-side-solution",
+    "id": "c3eaa428-badd-4729-8d3b-f69899b886f6",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "html-quick-view description"
+      },
+      "longDescription": {
+        "default": "html-quick-view description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "html-quick-view Feature",
+        "description": "The feature that activates elements of the html-quick-view solution.",
+        "id": "f106d80d-e17b-46dd-adef-e082f86266c5",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/html-quick-view.sppkg"
+  }
+}
