@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "media-action-ace",
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Generic",
+    "componentName": "ACE with Media Action",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "media-action-ace",
+    "libraryId": "13312573-a0b8-4f4c-bcfe-5f56a7852e6a",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "media-action-ace description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
