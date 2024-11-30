@@ -18,7 +18,7 @@
     "group": { "default": "Dashboard" },
     "title": { "default": "HTML Quick View" },
     "description": { "default": "HTML Quick View description" },
-    "iconImageUrl": "https://res.cdn.office.net/files/fabric-cdn-prod_20240610.001/assets/brand-icons/product-monoline/svg/vivaconnections_32x1.svg",
+    "officeFabricIconFontName": "FileCode",
     "properties": {
       "title": "HTML Quick View"
     },
