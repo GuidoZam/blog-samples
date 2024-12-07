@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "media-action-ace-client-side-solution",
+    "id": "13312573-a0b8-4f4c-bcfe-5f56a7852e6a",
+    "version": "1.0.1.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "media-action-ace description"
+      },
+      "longDescription": {
+        "default": "media-action-ace description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "media-action-ace Feature",
+        "description": "The feature that activates elements of the media-action-ace solution.",
+        "id": "1745a40b-6959-4abd-8bb9-92bd6b51c0b3",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/media-action-ace.sppkg"
+  }
+}

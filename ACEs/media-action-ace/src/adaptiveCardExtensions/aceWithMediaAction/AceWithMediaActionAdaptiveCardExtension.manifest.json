@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "f4d36696-6373-4f39-93c3-56ae1dbfcaf9",
+  "alias": "AceWithMediaActionAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "ACE with Media Action" },
+    "description": { "default": "ACE with Media Action description" },
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAdlJREFUSEvNlb1rE3EYxz9PXg3aFHQISLCri4OLf4B1aUFTQRDBOSAlVi9ppJtLF02u1PMFN3FSUZNTyKSTaMHFxcHFQXBxbLbeJffI1QTTmvQu1wi95eD43fN5vs/z/T2P0Huu33pzItH1NoDj/W8j3h5w391KVS1rfivgLDIEsInydfiPkkH0LHAoLOQfgCpP1+oLK8MAAyozQBZ4EKQkIkCfgSSAxSBIJICvsuOkbifTzp0gSGSAX8ZSqZUOgkQCjHCaB7Js1grmYP/GAiyuvD6WdmOrKEd3muCPu1S5t9sgYwFGeb7vrmEOnAhgr8s2EUCp1MqmUu45Fc2Lyk/HSb6zrPm2D94nQOVmxb4i8BCYHlCyqWhxrXbxxb4A5XJjTkVeKnyOafxavX7+W7n89qQn3UcCZ0T1UmRAsfg4eSSba6LMdDsyu75e+NVXsLRk5+IJfY/wIzKgWn2V73jxT8Bzs7awvLvRRqV5F7h8cAH/vUR+SYxK4yrIE4UPE2+yYdiniand2wv+6D4cyqbAyI0msDE1NW212+1TveDgScF1k99DX7Q9dvJH7ToXRNIzg8FNs/Al1KgIWt7bNf9blu3Mg4LvGBVBgCjBxwNUbAP0RtjM+wn/BlzWrWpKCkZkAAAAAElFTkSuQmCC",
+    "properties": {
+      "title": "ACE with Media Action"
+    },
+    "cardSize": "Large"
+  }]
+}

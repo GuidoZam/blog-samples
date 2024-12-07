@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "ace-with-media-action-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/aceWithMediaAction/AceWithMediaActionAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/aceWithMediaAction/AceWithMediaActionAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "AceWithMediaActionAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/aceWithMediaAction/loc/{locale}.js"
+  }
+}
