@@ -3,7 +3,7 @@
   "solution": {
     "name": "media-action-ace-client-side-solution",
     "id": "13312573-a0b8-4f4c-bcfe-5f56a7852e6a",
-    "version": "1.0.0.0",
+    "version": "1.0.1.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

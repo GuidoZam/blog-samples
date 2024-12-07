@@ -6,7 +6,7 @@ define([], function() {
 		MediaTypeFieldLabel: "Select the media type to upload",
 		Title: "Adaptive Card Extension",
 		SubTitle: "Quick view",
-		PrimaryText: "Click on the button to begin.",
+		PrimaryText: "Click on the button to select the file to be uploaded.",
 		Description: "Create your SPFx Adaptive Card Extension solution!",
 		SelectFile: "Select file"
 	};
