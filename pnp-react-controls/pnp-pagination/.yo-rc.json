@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-pagination",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "PnP Pagination sample",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "pnp-pagination",
+    "libraryId": "e7144125-7e7b-4d3a-b8b6-a60d347e8c95",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-pagination description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
