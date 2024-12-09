@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styles from './PnPPaginationSample.module.scss';
+import * as strings from 'PnPPaginationSampleWebPartStrings';
 import type { IPnPPaginationSampleProps } from './IPnPPaginationSampleProps';
 import { ISampleItem } from "./ISampleItem";
 import { Pagination } from "@pnp/spfx-controls-react/lib/pagination";
@@ -19,24 +20,55 @@ export default class PnPPaginationSample extends React.Component<IPnPPaginationS
     return (
       <section className={styles.pnPPaginationSample}>
         <div>
-          <h3>Welcome to SharePoint Framework!</h3>
+          <h3>{strings.Title}</h3>
           {this._renderItems()}
+        </div>
+        <div>
+          <h4 className={styles.sectionTitle}>
+            <span>{strings.MinimalConfiguration}</span>
+          </h4>
           <Pagination
             currentPage={this.state.currentPage}
-            totalPages={this._getPageCount()} 
+            totalPages={this._getPageCount()}
+            onChange={(page) => this._getPage(page)} />
+        </div>
+        <div>
+          <h4 className={styles.sectionTitle}>
+            <span>{strings.Limiter}</span>
+          </h4>
+          <Pagination
+            currentPage={this.state.currentPage}
+            totalPages={this._getPageCount()}
             onChange={(page) => this._getPage(page)}
-            limiter={3} // Optional - default value 3
-            hideFirstPageJump // Optional
-            hideLastPageJump // Optional
-            limiterIcon={"Emoji12"} // Optional
-          />
+            limiter={1} />
+        </div>
+        <div>
+          <h4 className={styles.sectionTitle}>
+            <span>{strings.HidePageJump}</span>
+          </h4>
+          <Pagination
+            currentPage={this.state.currentPage}
+            totalPages={this._getPageCount()}
+            onChange={(page) => this._getPage(page)}
+            hideFirstPageJump={true}
+            hideLastPageJump={true} />
+        </div>
+        <div>
+          <h4 className={styles.sectionTitle}>
+            <span>{strings.LimiterIcon}</span>
+          </h4>
+          <Pagination
+            currentPage={this.state.currentPage}
+            totalPages={this._getPageCount()}
+            onChange={(page) => this._getPage(page)}
+            limiterIcon={"CirclePlus"} />
         </div>
       </section>
     );
   }
   
   private _getPage(page: number): void {
-    console.log('Page:', page);
+    // Update the current page
     this.setState({ currentPage: page });
   }
 
@@ -46,18 +78,6 @@ export default class PnPPaginationSample extends React.Component<IPnPPaginationS
 
     // Calculate the total number of pages based on the number of items and the page size
     return Math.ceil(items.length / pageSize);
-  }
-
-  // Method to generate sample data
-  private _getItems(): ISampleItem[] {
-    const items: ISampleItem[] = [];
-    for (let i = 1; i <= 100; i++) {
-      items.push({
-        id: i,
-        name: `Item ${i}`
-      });
-    }
-    return items;
   }
 
   private _renderItems(): JSX.Element {
@@ -76,5 +96,17 @@ export default class PnPPaginationSample extends React.Component<IPnPPaginationS
         ))}
       </ul>
     );
+  }
+
+  // Method to generate sample data
+  private _getItems(): ISampleItem[] {
+    const items: ISampleItem[] = [];
+    for (let i = 1; i <= 100; i++) {
+      items.push({
+        id: i,
+        name: `Item ${i}`
+      });
+    }
+    return items;
   }
 }

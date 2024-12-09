@@ -2,6 +2,11 @@ define([], function() {
   return {
 		PropertyPaneDescription: "Description",
 		BasicGroupName: "Group Name",
-		PageSizeFieldLabel: "Description Field",
+		PageSizeFieldLabel: "Page size field",
+    Title: "PnP Pagination Sample",
+    MinimalConfiguration: "Minimal Configuration",
+    Limiter: "Limiter",
+    HidePageJump: "Hide Page Jump",
+    LimiterIcon: "Limiter Icon",
 	};
 });
