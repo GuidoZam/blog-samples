@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-grid-layout",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "PnP GridLayout sample",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "pnp-grid-layout",
+    "libraryId": "b14feaad-fc0b-4aed-812c-90bd31a71d60",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-grid-layout description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "pn-p-grid-layout-sample-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pnPGridLayoutSample/PnPGridLayoutSampleWebPart.js",
+          "manifest": "./src/webparts/pnPGridLayoutSample/PnPGridLayoutSampleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PnPGridLayoutSampleWebPartStrings": "lib/webparts/pnPGridLayoutSample/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

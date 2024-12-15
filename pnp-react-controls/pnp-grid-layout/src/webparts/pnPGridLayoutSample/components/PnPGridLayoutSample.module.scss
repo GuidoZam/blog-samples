@@ -1,0 +1,42 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.pnPGridLayoutSample {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.gridItem {
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  max-Height: 200px;
+  border-radius: 20px;
+}
+
+.gridItemImage {
+  transform: scale(0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gridItemContent {
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3em; /* Adjust based on your line height */
+  line-height: 1.15em; /* Adjust based on your design */
+  font-size: x-small;
+}
