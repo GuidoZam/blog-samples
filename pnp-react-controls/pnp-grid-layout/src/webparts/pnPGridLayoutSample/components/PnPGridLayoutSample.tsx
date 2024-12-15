@@ -5,7 +5,6 @@ import type { IPnPGridLayoutSampleProps } from './IPnPGridLayoutSampleProps';
 import { GridLayout } from "@pnp/spfx-controls-react/lib/GridLayout";
 import { IPnPGridLayoutSampleState } from './IPnPGridLayoutSampleState';
 import { ISize, Label } from '@fluentui/react';
-//import { DocumentCard, DocumentCardActivity, DocumentCardLocation, DocumentCardPreview, DocumentCardTitle, DocumentCardType, IDocumentCardPreviewProps, ImageFit, ISize } from '@fluentui/react';
 
 export default class PnPGridLayoutSample extends React.Component<IPnPGridLayoutSampleProps, IPnPGridLayoutSampleState> {
   constructor(props: IPnPGridLayoutSampleProps) {
