@@ -1,0 +1,12 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.taskTable {
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+}
+
+.rowOperations {
+  display: "flex";
+  justify-content: "space-between";
+  margin: 10px;
+}

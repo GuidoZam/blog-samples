@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "ApprovalsManagement",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "Approvals Management",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "approvals-management",
+    "libraryId": "4e186d96-9e1f-46d8-8e9a-b47309b9c17a",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "ApprovalsManagement description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

@@ -1,0 +1,29 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.skeletonTable {
+  // overflow: hidden;
+  // padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  // &.teams {
+  //   font-family: $ms-font-family-fallbacks;
+  // }
+}
+
+.header {
+  align-items: "center";
+  display: "grid";
+  margin: 10px;
+  // position: "relative";
+  // gap: "10px";
+  // grid-template-columns: "min-content 80%";
+}
+
+.content {
+  align-items: "center";
+  display: "grid";
+  margin: 10px;
+  // position: "relative";
+  // gap: "10px";
+  // grid-template-columns: "min-content 20% 20% 15% 15%";
+}

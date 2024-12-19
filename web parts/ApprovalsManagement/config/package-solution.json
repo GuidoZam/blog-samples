@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "approvals-management-client-side-solution",
+    "id": "4e186d96-9e1f-46d8-8e9a-b47309b9c17a",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "ApprovalsManagement description"
+      },
+      "longDescription": {
+        "default": "ApprovalsManagement description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "approvals-management Feature",
+        "description": "The feature that activates elements of the approvals-management solution.",
+        "id": "a7aa1ab0-f0a3-4430-a4c2-e59b40e376af",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/approvals-management.sppkg"
+  }
+}
