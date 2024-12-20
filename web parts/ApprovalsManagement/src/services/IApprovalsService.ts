@@ -10,7 +10,7 @@ export interface IApprovalsService {
 	/**
 	 * List all the Approvals tasks
 	 */
-	ListTasks: () => Promise<[value: ApprovalItem[], nextLink?: string]>;
+	ListTasks: (hideCompleted?: boolean) => Promise<[value: ApprovalItem[], nextLink?: string]>;
 
 	/**
 	 * Get a specific Approvals task

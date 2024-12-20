@@ -5,6 +5,7 @@ export interface IApprovalsManagementState {
 	nextLink?: string;
 	error?: string;
 	tasks: ApprovalItem[];
+	hideCompletedTasks?: boolean;
 }
 
 export enum AppStatus {

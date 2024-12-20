@@ -35,7 +35,7 @@ export default class ApprovalsManagementWebPart extends BaseClientSideWebPart<IA
 			ApprovalsService.serviceKey
 		);
 
-    this._approvalsService.UseGraphBetaEndpoint = this.properties.useBetaEndpoint;
+    this._approvalsService.UseGraphBetaEndpoint = this.properties.useBetaEndpoint === true;
   }
 
   protected onThemeChanged(currentTheme: IReadonlyTheme | undefined): void {
@@ -64,23 +64,24 @@ export default class ApprovalsManagementWebPart extends BaseClientSideWebPart<IA
 
   protected getPropertyPaneConfiguration(): any {
     return {
-      pages: [
-        {
-          header: {
-            description: 'Approvals Management'
-          },
-          groups: [
-            {
-              groupName: 'Configuration',
-              groupFields: [
-                PropertyPaneToggle('useBetaEndpoint', {
-                  label: 'Use Beta Endpoint'
-                })
-              ]
-            }
-          ]
-        }
-      ]
-    };
+			pages: [
+				{
+					header: {
+						description: "Approvals Management",
+					},
+					groups: [
+						{
+							groupName: "Configuration",
+							groupFields: [
+								PropertyPaneToggle("useBetaEndpoint", {
+									label: "Use Beta Endpoint",
+									checked: true
+								}),
+							],
+						},
+					],
+				},
+			],
+		};
   }
 }
