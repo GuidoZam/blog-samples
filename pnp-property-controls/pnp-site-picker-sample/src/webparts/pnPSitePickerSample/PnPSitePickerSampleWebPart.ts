@@ -9,8 +9,8 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import * as strings from 'PnPSitePickerSampleWebPartStrings';
 import PnPSitePickerSample from './components/PnPSitePickerSample';
 import { IPnPSitePickerSampleProps } from './components/IPnPSitePickerSampleProps';
-import { PropertyFieldSitePicker } from "@pnp/spfx-property-controls/lib/PropertyFieldSitePicker";
-import { IPropertyFieldSite } from "@pnp/spfx-property-controls/lib/PropertyFieldSitePicker";
+import { PropertyFieldSitePicker } from "@pnp/spfx-property-controls";
+import { IPropertyFieldSite } from "@pnp/spfx-property-controls";
 
 export interface IPnPSitePickerSampleWebPartProps {
 	minimalSitePicker: IPropertyFieldSite[];
@@ -90,17 +90,6 @@ export default class PnPSitePickerSampleWebPart extends BaseClientSideWebPart<IP
 									key: "disabledSitesPicker",
 									disabled: true,
 								}),
-								// PropertyFieldSitePicker("errorSite", {
-								// 	label: strings.ErrorSelectSiteFieldLabel,
-								// 	initialSites: this.properties.errorSite,
-								// 	context: this.context,
-								// 	onPropertyChange: this.onPropertyPaneFieldChanged,
-								// 	properties: this.properties,
-								// 	key: "errorSitesPicker",
-								// 	onGetErrorMessage: (value: IPropertyFieldSite[]) => {
-								// 		return value.length === 0 ? "Please select a site" : "";
-								// 	},
-								// }),
 								PropertyFieldSitePicker("deferredSite", {
 									label: strings.DeferredSelectSiteFieldLabel,
 									initialSites: this.properties.deferredSite,
