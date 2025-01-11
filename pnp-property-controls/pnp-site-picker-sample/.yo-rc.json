@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-site-picker-sample",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "PnP Site Picker Sample",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "pnp-site-picker-sample",
+    "libraryId": "f58952ae-a9bc-47dd-866b-d7ca59aa87b2",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-site-picker-sample description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
