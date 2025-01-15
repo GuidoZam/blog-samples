@@ -138,8 +138,8 @@ export default class PnPListPickerSampleWebPart extends BaseClientSideWebPart<IP
 									properties: this.properties,
 									context: this.context,
 									onGetErrorMessage: (value: string) => {
-										return value === undefined || value.length === 0
-											? "You must select a list"
+										return value === "NO_LIST_SELECTED"
+											? strings.ListSelectionRequired
 											: "";
 									},
 									key: "onErrorlistPicker",
@@ -160,7 +160,7 @@ export default class PnPListPickerSampleWebPart extends BaseClientSideWebPart<IP
 									properties: this.properties,
 									context: this.context,
 									filter: "BaseTemplate eq 100",
-									key: "excludedListPicker",
+									key: "filterListPicker",
 								}),
 								PropertyFieldListPicker("filterByContentTypeList", {
 									label: strings.FilterByContentTypeListPickerFieldLabel,
@@ -169,7 +169,7 @@ export default class PnPListPickerSampleWebPart extends BaseClientSideWebPart<IP
 									properties: this.properties,
 									context: this.context,
 									contentTypeId: "0x0101",
-									key: "excludedListPicker",
+									key: "filterByContentTypeListPicker",
 								}),
 								PropertyFieldListPicker("onListRetrieved", {
 									label: strings.OnListRetrievedListPickerFieldLabel,

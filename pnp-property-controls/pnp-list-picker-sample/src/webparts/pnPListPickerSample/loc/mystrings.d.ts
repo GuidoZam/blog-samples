@@ -24,6 +24,7 @@ declare interface IPnPListPickerSampleWebPartStrings {
 	OnErrorSelectedList: string;
 	DeferredValidationSelectedList: string;
 	NoListSelected: string;
+	ListSelectionRequired: string;
 }
 
 declare module 'PnPListPickerSampleWebPartStrings' {
