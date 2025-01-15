@@ -1,0 +1,31 @@
+define([], function() {
+  return {
+		PropertyPaneDescription: "Description",
+		BasicGroupName: "Group Name",
+		MinimalListPickerFieldLabel: "Minimal List Picker",
+		ListPickerFieldLabel: "List Picker",
+		ListsPickerFieldLabel: "Lists Picker",
+		SelectAllInListPickerFieldLabel: "Select All In List Picker",
+		SelectAllInListLabel: "Select All Lists",
+		OrderByListPickerFieldLabel: "Order By List Picker",
+		DisabledListPickerFieldLabel: "Disabled List Picker",
+		HiddenListPickerFieldLabel: "Hidden List Picker",
+		OnErrorListPickerFieldLabel: "On Error List Picker",
+		ExcludeListPickerFieldLabel: "Exclude List Picker",
+		FilterListPickerFieldLabel: "Filter List Picker",
+		FilterByContentTypeListPickerFieldLabel:
+			"Filter By Content Type List Picker",
+		OnListRetrievedListPickerFieldLabel: "On List Retrieved List Picker",
+		ExtendedListPickerFieldLabel: "Extended List Picker",
+		Title: "List Picker Sample",
+		MinimalSelectedList: "Minimal List Picker",
+		ListSelectedList: "List Picker",
+		ListsSelectedList: "Lists Picker",
+		HiddenSelectedList: "Hidden List Picker",
+		OrderBySelectedList: "Order By List Picker",
+		OnErrorSelectedList: "On Error List Picker",
+		DeferredValidationSelectedList: "Deferred Validation List Picker",
+		NoListSelected: "No list selected",
+		ListSelectionRequired: "You must select a list",
+	};
+});
