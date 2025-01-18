@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "pn-p-upload-file-sample-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pnPUploadFileSample/PnPUploadFileSampleWebPart.js",
+          "manifest": "./src/webparts/pnPUploadFileSample/PnPUploadFileSampleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PnPUploadFileSampleWebPartStrings": "lib/webparts/pnPUploadFileSample/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
