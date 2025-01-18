@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pn-p-upload-file-sample-client-side-solution",
+    "id": "e70be46b-18be-4c0e-9986-b110878175e2",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "PnP Upload File Sample description"
+      },
+      "longDescription": {
+        "default": "PnP Upload File Sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pn-p-upload-file-sample Feature",
+        "description": "The feature that activates elements of the pn-p-upload-file-sample solution.",
+        "id": "0e98c425-a0ce-438d-8444-41db9b77904a",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pn-p-upload-file-sample.sppkg"
+  }
+}
