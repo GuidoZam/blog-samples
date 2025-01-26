@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "pnp-property-column-picker",
+    "libraryId": "1d597e27-275e-4011-b0f0-3a0f4a2921b7",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "pnp-property-column-picker",
+    "solutionShortDescription": "pnp-property-column-picker description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

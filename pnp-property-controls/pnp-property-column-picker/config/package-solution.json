@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-property-column-picker-client-side-solution",
+    "id": "1d597e27-275e-4011-b0f0-3a0f4a2921b7",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-property-column-picker description"
+      },
+      "longDescription": {
+        "default": "pnp-property-column-picker description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-property-column-picker Feature",
+        "description": "The feature that activates elements of the pnp-property-column-picker solution.",
+        "id": "5be02beb-6676-4546-a2b8-f6c6b15092e5",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-property-column-picker.sppkg"
+  }
+}
