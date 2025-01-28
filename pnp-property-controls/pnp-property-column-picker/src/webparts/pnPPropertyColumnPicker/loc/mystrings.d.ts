@@ -1,5 +1,6 @@
 declare interface IPnPPropertyColumnPickerWebPartStrings {
 	Title: string;
+	SingleColumnInstance: string;
 	Column: string;
 	MultiColumn: string;
 	ConfigurationPropertyPaneDescription: string;

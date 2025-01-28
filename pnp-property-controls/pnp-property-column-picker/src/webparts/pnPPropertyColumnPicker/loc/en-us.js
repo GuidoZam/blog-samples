@@ -1,6 +1,7 @@
 define([], function() {
   return {
 		Title: "PnP Property Column Picker",
+    SingleColumnInstance: "Single Column",
 		Column: "Column",
 		MultiColumn: "Multi Column",
 		ConfigurationPropertyPaneDescription:

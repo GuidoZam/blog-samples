@@ -22,6 +22,7 @@ import {
 
 export interface IPnPPropertyColumnPickerWebPartProps {
 	list: string;
+	minimal: string;
 	column: string;
 	multiColumn: string;
 	multiColumnChoiceGroup: string;
@@ -91,14 +92,22 @@ export default class PnPPropertyColumnPickerWebPart extends BaseClientSideWebPar
 						{
 							groupName: strings.ColumnsGroupName,
 							groupFields: [
-								PropertyFieldColumnPicker("column", {
+								PropertyFieldColumnPicker("minimal", {
 									label: strings.MinimalInstance,
+									context: this.context,
+									listId: this.properties.list,
+									onPropertyChange: this.onPropertyPaneFieldChanged.bind(this),
+									properties: this.properties,
+									key: "minimalColumnPickerFieldId",
+								}),
+								PropertyFieldColumnPicker("column", {
+									label: strings.SingleColumnInstance,
 									context: this.context,
 									selectedColumn: this.properties.column,
 									listId: this.properties.list,
 									onPropertyChange: this.onPropertyPaneFieldChanged.bind(this),
 									properties: this.properties,
-									key: "minimalColumnPickerFieldId",
+									key: "singleColumnPickerFieldId",
 								}),
 								PropertyFieldColumnPicker("column", {
 									label: strings.DisabledInstance,
@@ -109,18 +118,6 @@ export default class PnPPropertyColumnPickerWebPart extends BaseClientSideWebPar
 									onPropertyChange: this.onPropertyPaneFieldChanged.bind(this),
 									properties: this.properties,
 									key: "disabledColumnPickerFieldId",
-								}),
-								PropertyFieldColumnPicker("onErrorColumn", {
-									label: strings.OnErrorInstance,
-									context: this.context,
-									selectedColumn: this.properties.onErrorColumn,
-									listId: this.properties.list,
-									onPropertyChange: this.onPropertyPaneFieldChanged.bind(this),
-									properties: this.properties,
-									onGetErrorMessage: (value: string) => {
-										return value === "Title" ? "Title is not allowed" : "";
-									},
-									key: "onErrorColumnPickerFieldId",
 								}),
 								PropertyFieldColumnPicker("orderByColumn", {
 									label: strings.OrderByInstance,
@@ -151,6 +148,19 @@ export default class PnPPropertyColumnPickerWebPart extends BaseClientSideWebPar
 									properties: this.properties,
 									key: "returnPropertyColumnPickerFieldId",
 									columnReturnProperty: IColumnReturnProperty["Internal Name"],
+								}),
+								PropertyFieldColumnPicker("onErrorColumn", {
+									label: strings.OnErrorInstance,
+									context: this.context,
+									selectedColumn: this.properties.onErrorColumn,
+									listId: this.properties.list,
+									onPropertyChange: this.onPropertyPaneFieldChanged.bind(this),
+									properties: this.properties,
+									columnReturnProperty: IColumnReturnProperty["Internal Name"],
+									onGetErrorMessage: (value: string) => {
+										return value === "Title" ? "Title is not allowed" : "";
+									},
+									key: "onErrorColumnPickerFieldId",
 								}),
 								PropertyFieldColumnPicker("multiColumn", {
 									label: strings.MultiColumnInstance,
