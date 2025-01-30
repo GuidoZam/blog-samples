@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "pn-p-property-column-picker-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pnPPropertyColumnPicker/PnPPropertyColumnPickerWebPart.js",
+          "manifest": "./src/webparts/pnPPropertyColumnPicker/PnPPropertyColumnPickerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PnPPropertyColumnPickerWebPartStrings": "lib/webparts/pnPPropertyColumnPicker/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}
