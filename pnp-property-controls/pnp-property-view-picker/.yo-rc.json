@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-property-view-picker",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "PnP Property View Picker",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "pnp-property-view-picker",
+    "libraryId": "40d429dc-a4bf-498c-81c9-83da39868d8a",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-property-view-picker description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

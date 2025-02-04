@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "pn-p-property-view-picker-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pnPPropertyViewPicker/PnPPropertyViewPickerWebPart.js",
+          "manifest": "./src/webparts/pnPPropertyViewPicker/PnPPropertyViewPickerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PnPPropertyViewPickerWebPartStrings": "lib/webparts/pnPPropertyViewPicker/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}
