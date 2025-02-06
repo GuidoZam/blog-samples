@@ -1,16 +1,19 @@
 declare interface IPnPPropertyViewPickerWebPartStrings {
-  PropertyPaneDescription: string;
-  BasicGroupName: string;
-  DescriptionFieldLabel: string;
-  AppLocalEnvironmentSharePoint: string;
-  AppLocalEnvironmentTeams: string;
-  AppLocalEnvironmentOffice: string;
-  AppLocalEnvironmentOutlook: string;
-  AppSharePointEnvironment: string;
-  AppTeamsTabEnvironment: string;
-  AppOfficeEnvironment: string;
-  AppOutlookEnvironment: string;
-  UnknownEnvironment: string;
+	ListPaneDescription: string;
+	ListGroupName: string;
+	ListPickerFieldLabel: string;
+	ViewsPaneDescription: string;
+	ViewGroupName: string;
+	MinimalViewPickerFieldLabel: string;
+	SelectedViewPickerFieldLabel: string;
+	DisabledViewPickerFieldLabel: string;
+	OrderByViewPickerFieldLabel: string;
+	ExcludedViewPickerFieldLabel: string;
+	FilterViewPickerFieldLabel: string;
+	OnViewsRetrievedPickerFieldLabel: string;
+	OnGetErrorMessagePickerFieldLabel: string;
+	Title: string;
+	SelectedView: string;
 }
 
 declare module 'PnPPropertyViewPickerWebPartStrings' {
