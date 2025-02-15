@@ -160,8 +160,8 @@ export default class PnPPropertyViewPickerWebPart extends BaseClientSideWebPart<
 									context: this.context,
 									onGetErrorMessage: (view) => {
 										console.log(view);
-										if (view === "All Items") {
-											return "You cannot select the All Items view";
+										if (view === "NO_VIEW_SELECTED") {
+											return "A view must be selected.";
 										}
 										return "";
 									},
