@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "fast-serve-sample-client-side-solution",
+    "id": "442ecff2-f498-4a22-a84b-8dfd671086f6",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "fast-serve-sample description"
+      },
+      "longDescription": {
+        "default": "fast-serve-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "fast-serve-sample Feature",
+        "description": "The feature that activates elements of the fast-serve-sample solution.",
+        "id": "81746a3b-b440-4c46-966a-2c9e684a634e",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/fast-serve-sample.sppkg"
+  }
+}
