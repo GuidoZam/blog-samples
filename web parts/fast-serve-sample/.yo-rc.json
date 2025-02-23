@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "fast-serve-sample",
+    "libraryId": "442ecff2-f498-4a22-a84b-8dfd671086f6",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "fast-serve-sample",
+    "solutionShortDescription": "fast-serve-sample description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
