@@ -1,0 +1,9 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.mgtThemeToggleSample {
+  overflow: hidden;
+  background-color: var(--fill-color);
+  color: var(--neutral-foreground-rest);
+  font-family: var(--body-font);
+  padding: 20px;
+}
