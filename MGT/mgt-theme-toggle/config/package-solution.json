@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mgt-theme-toggle-sample-in-spfx-client-side-solution",
+    "id": "7ac11673-f307-49bb-3928-e99762e5b148",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mgt-theme-toggle-sample-in-spfx description"
+      },
+      "longDescription": {
+        "default": "mgt-theme-toggle-sample-in-spfx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mgt-theme-toggle-sample-in-spfx Feature",
+        "description": "The feature that activates elements of the mgt-theme-toggle-sample-in-spfx solution.",
+        "id": "e5129fc2-085b-4b86-a9c4-d8496b7009e8",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mgt-theme-toggle-sample-in-spfx.sppkg"
+  }
+}

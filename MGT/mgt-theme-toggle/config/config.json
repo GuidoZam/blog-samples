@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "mgt-theme-toggle-sample-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mgtThemeToggleSample/MgtThemeToggleSampleWebPart.js",
+          "manifest": "./src/webparts/mgtThemeToggleSample/MgtThemeToggleSampleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MgtThemeToggleSampleWebPartStrings": "lib/webparts/mgtThemeToggleSample/loc/{locale}.js"
+  }
+}
