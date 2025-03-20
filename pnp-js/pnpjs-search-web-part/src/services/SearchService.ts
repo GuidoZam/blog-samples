@@ -10,7 +10,7 @@ export default class SearchService implements ISearchService {
 		this._sp = sp;
 	}
 
-	public async search(searchQuery: string): Promise<ISearchResult[]> {
+	public async search(searchQuery: string, rowLimit?: number): Promise<ISearchResult[]> {
 		const query: ISearchQuery = {
 			// SelectProperties: [
 			// 	"editorowsuser",
@@ -37,9 +37,10 @@ export default class SearchService implements ISearchService {
 			// 	"LastModifiedTimeForRetention",
 			// 	"CreatedBy",
 			// ],
-			Querytext: searchQuery
+			Querytext: searchQuery,
+			RowLimit: rowLimit ?? 5,
 		};
-		
+
 		const searchResults = await this._sp.search(query);
 
 		return searchResults.PrimarySearchResults.map(

@@ -60,9 +60,10 @@ export default class SearchWebPartComponent extends React.Component<ISearchWebPa
 
   private _search = async (): Promise<void> => {
     const { query } = this.state;
+    const { rowLimit } = this.props;
 
-    const results = await this._searchService.search(query!);
-console.log(results);
+    const results = await this._searchService.search(query!, rowLimit);
+
     this.setState({ results });
   }
 }

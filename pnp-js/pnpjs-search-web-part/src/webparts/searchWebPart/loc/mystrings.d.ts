@@ -4,6 +4,11 @@ declare interface ISearchWebPartStrings {
 	SearchPlaceholder: string;
 	SearchResults: string;
 	SearchButtonText: string;
+	PropertyPane: {
+		PropertyPaneDescription: string;
+		BasicGroupName: string;
+		RowLimitFieldLabel: string;
+	};
 }
 
 declare module 'SearchWebPartStrings' {

@@ -5,5 +5,10 @@ define([], function() {
     SearchPlaceholder: "Enter your search query here",
 		SearchResults: "Search Results",
 		SearchButtonText: "Search",
+		PropertyPane: {
+			PropertyPaneDescription: "Configuration for the Search Web Part.",
+			BasicGroupName: "Search Settings",
+			RowLimitFieldLabel: "Row Limit",
+		}
 	};
 });
