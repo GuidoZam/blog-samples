@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnpjs-search-web-part-client-side-solution",
+    "id": "2d324f91-5b1b-46ca-8fc6-3c488a9dee56",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnpjs-search-web-part description"
+      },
+      "longDescription": {
+        "default": "pnpjs-search-web-part description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnpjs-search-web-part Feature",
+        "description": "The feature that activates elements of the pnpjs-search-web-part solution.",
+        "id": "acb6fc28-84ed-48f5-a69e-b78d7e2ad26e",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnpjs-search-web-part.sppkg"
+  }
+}
