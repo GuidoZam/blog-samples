@@ -5,9 +5,6 @@
   padding: 1em;
   color: "[theme:bodyText, default: #323130]";
   color: var(--bodyText);
-  &.teams {
-    font-family: $ms-font-family-fallbacks;
-  }
 }
 
 .searchContainer {
@@ -16,4 +13,8 @@
 
 .searchButton {
   margin-left: 10px;
+}
+
+.noResults {
+  margin-top: 20px;
 }

@@ -3,8 +3,13 @@ import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import {
   type IPropertyPaneConfiguration,
-  PropertyPaneSlider
+  PropertyPaneSlider,
+	PropertyPaneToggle
 } from '@microsoft/sp-property-pane';
+import {
+	PropertyFieldSitePicker,
+	IPropertyFieldSite
+} from "@pnp/spfx-property-controls/lib/PropertyFieldSitePicker";
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'SearchWebPartStrings';
@@ -14,6 +19,8 @@ import { spfi, SPFI, SPFx } from '@pnp/sp';
 
 export interface ISearchWebPartWebPartProps {
 	rowLimit: number;
+	sites: IPropertyFieldSite[];
+	showTitle: boolean;
 }
 
 export default class SearchWebPart extends BaseClientSideWebPart<ISearchWebPartWebPartProps> {
@@ -23,7 +30,9 @@ export default class SearchWebPart extends BaseClientSideWebPart<ISearchWebPartW
 		const element: React.ReactElement<ISearchWebPartComponentProps> =
 			React.createElement(SearchWebPartComponent, {
 				sp: this._sp,
-				rowLimit: this.properties.rowLimit
+				rowLimit: this.properties.rowLimit,
+				siteUrl: this.properties.sites?.[0]?.url,
+				showTitle: this.properties.showTitle,
 			});
 
 		ReactDom.render(element, this.domElement);
@@ -53,7 +62,7 @@ export default class SearchWebPart extends BaseClientSideWebPart<ISearchWebPartW
 					},
 					groups: [
 						{
-							groupName: strings.PropertyPane.BasicGroupName,
+							groupName: strings.PropertyPane.SearchSettingsGroupName,
 							groupFields: [
 								PropertyPaneSlider("rowLimit", {
 									label: strings.PropertyPane.RowLimitFieldLabel,
@@ -61,8 +70,25 @@ export default class SearchWebPart extends BaseClientSideWebPart<ISearchWebPartW
 									max: 10,
 									step: 1,
 								}),
+								PropertyFieldSitePicker("sites", {
+									label: strings.PropertyPane.SitePickerFieldLabel,
+									initialSites: this.properties.sites ?? [],
+									context: this.context,
+									multiSelect: false,
+									onPropertyChange: this.onPropertyPaneFieldChanged,
+									properties: this.properties,
+									key: "sitesFieldId",
+								}),
 							],
 						},
+						{
+							groupName: strings.PropertyPane.AppearanceGroupName,
+							groupFields: [
+								PropertyPaneToggle("showTitle", {
+									label: strings.PropertyPane.ShowTitleFieldLabel,
+								}),
+							],
+						}
 					],
 				},
 			],

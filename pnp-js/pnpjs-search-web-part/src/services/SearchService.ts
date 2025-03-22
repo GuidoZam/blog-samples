@@ -10,60 +10,31 @@ export default class SearchService implements ISearchService {
 		this._sp = sp;
 	}
 
-	public async search(searchQuery: string, rowLimit?: number): Promise<ISearchResult[]> {
+	public async search(
+		searchQuery: string,
+		rowLimit?: number,
+		siteUrl?: string
+	): Promise<ISearchResult[]> {
+		if (siteUrl && siteUrl.length > 0) {
+			searchQuery = `{searchQuery} path:{siteUrl}`;
+		}
+
 		const query: ISearchQuery = {
-			// SelectProperties: [
-			// 	"editorowsuser",
-			// 	"authorowsuser",
-			// 	"Filename",
-			// 	"SPSiteURL",
-			// 	"Title",
-			// 	"ParentLink",
-			// 	"ListItemID",
-			// 	"ListID",
-			// 	"contentclass",
-			// 	"IsDocument",
-			// 	"IsContainer",
-			// 	"FileExtension",
-			// 	"SecondaryFileExtension",
-			// 	"OriginalPath",
-			// 	"DefaultEncodingURL",
-			// 	"ServerRedirectedURL",
-			// 	"ServerRedirectedPreviewURL",
-			// 	"LastModifiedTime",
-			// 	"SharedWithUsersOWSUser",
-			// 	"HitHighlightedSummary",
-			// 	"ModifierDates",
-			// 	"LastModifiedTimeForRetention",
-			// 	"CreatedBy",
-			// ],
 			Querytext: searchQuery,
 			RowLimit: rowLimit ?? 5,
 		};
 
 		const searchResults = await this._sp.search(query);
 
+		if (searchResults.TotalRows === 0) {
+			return [];
+		}
+
 		return searchResults.PrimarySearchResults.map(
-			(result: {
-				Title: string;
-				SecondaryFileExtension: string;
-				Path: string;
-				DefaultEncodingURL: string;
-				ParentLink: string;
-				SPSiteURL: string;
-				CreatedBy: string;
-				authorowsuser: string;
-			}) => {
-				console.log(result);
+			(result: { Title: string; OriginalPath: string}) => {
 				return {
 					Title: result.Title,
-					FileExtension: result.SecondaryFileExtension,
-					FileUrl: result.Path,
-					DefaultEncodingUrl: result.DefaultEncodingURL,
-					ParentLink: result.ParentLink,
-					SPSiteURL: result.SPSiteURL,
-					CreatedBy: result.CreatedBy,
-					AuthorOWSUser: result.authorowsuser,
+					OriginalPath: result.OriginalPath
 				};
 			}
 		);

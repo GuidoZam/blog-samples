@@ -3,7 +3,7 @@
   "solution": {
     "name": "pnpjs-search-web-part-client-side-solution",
     "id": "2d324f91-5b1b-46ca-8fc6-3c488a9dee56",
-    "version": "1.0.0.0",
+    "version": "1.0.2.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

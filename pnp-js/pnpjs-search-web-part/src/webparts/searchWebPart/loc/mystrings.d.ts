@@ -4,10 +4,14 @@ declare interface ISearchWebPartStrings {
 	SearchPlaceholder: string;
 	SearchResults: string;
 	SearchButtonText: string;
+	NoResultsFound: string;
 	PropertyPane: {
 		PropertyPaneDescription: string;
-		BasicGroupName: string;
+		SearchSettingsGroupName: string;
 		RowLimitFieldLabel: string;
+		SitePickerFieldLabel: string;
+		AppearanceGroupName: string;
+		ShowTitleFieldLabel: string;
 	};
 }
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as strings from 'SearchWebPartStrings';
-import styles from './SearchWebPart.module.scss';
+import styles from './SearchWebPartComponent.module.scss';
 import type { ISearchWebPartComponentProps } from './ISearchWebPartComponentProps';
 import { ISearchWebPartComponentState } from './ISearchWebPartComponentState';
 import { PrimaryButton, TextField } from '@fluentui/react';
@@ -25,15 +25,16 @@ export default class SearchWebPartComponent extends React.Component<ISearchWebPa
 
   public render(): React.ReactElement<ISearchWebPartComponentProps> {
     const { results, query } = this.state;
+    const { showTitle } = this.props;
 
     return (
       <section className={styles.searchWebPart}>
-        <h2>{strings.Title}</h2>
+        {showTitle && <h2>{strings.Title}</h2>}
         <div className={styles.searchContainer}>
           <TextField
             placeholder={strings.SearchPlaceholder}
             onChange={(_, newValue) => {
-              this.setState({ query: newValue });
+              this.setState({ query: newValue, results: [] });
             }} />
           <PrimaryButton 
             text={strings.SearchButtonText}
@@ -41,7 +42,16 @@ export default class SearchWebPartComponent extends React.Component<ISearchWebPa
             className={styles.searchButton}
             onClick={this._search}/>
         </div>
-        {results.length > 0 && this._renderResults()}
+
+        {results.length > 0 && 
+        this._renderResults()}
+
+        {results.length === 0 && 
+        <div className={styles.noResults}>
+          <i>
+            {strings.NoResultsFound}
+          </i>
+        </div>}
       </section>
     );
   }
@@ -52,7 +62,14 @@ export default class SearchWebPartComponent extends React.Component<ISearchWebPa
     return (
       <ul>
         {results.map((result: ISearchResult, index: number) => (
-          <li key={index}>{result.Title}</li>
+          <li key={index}>
+            <a 
+              href={result.OriginalPath} 
+              target="_blank"
+              rel="noreferrer">
+              {result.Title}
+            </a>
+          </li>
         ))}
       </ul>
     );
@@ -60,9 +77,9 @@ export default class SearchWebPartComponent extends React.Component<ISearchWebPa
 
   private _search = async (): Promise<void> => {
     const { query } = this.state;
-    const { rowLimit } = this.props;
+    const { rowLimit, siteUrl } = this.props;
 
-    const results = await this._searchService.search(query!, rowLimit);
+    const results = await this._searchService.search(query!, rowLimit, siteUrl);
 
     this.setState({ results });
   }
