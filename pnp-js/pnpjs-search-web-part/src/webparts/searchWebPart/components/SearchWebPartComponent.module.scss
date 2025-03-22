@@ -1,0 +1,20 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.searchWebPart {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+}
+
+.searchContainer {
+  display: flex;
+}
+
+.searchButton {
+  margin-left: 10px;
+}
+
+.noResults {
+  margin-top: 20px;
+}

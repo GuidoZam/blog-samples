@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.18.2",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "pnpjs-search-web-part",
+    "libraryId": "2d324f91-5b1b-46ca-8fc6-3c488a9dee56",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "pnpjs-search-web-part",
+    "solutionShortDescription": "pnpjs-search-web-part description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
