@@ -5,8 +5,26 @@ import { DefaultButton } from '@fluentui/react';
 import { Invoice } from './Invoice';
 import { Order } from '../../../models/Order';
 import styles from './PrintPdfDocument.module.scss';
+import { fetchFontAsBase64 } from '../../../fonts/fontUtilities';
+import BarlowFont from '../../../fonts/Barlow-Regular.ttf';
 
-export default class PrintPdfDocument extends React.Component<IPrintPdfDocumentProps> {
+export default class PrintPdfDocument extends React.Component<IPrintPdfDocumentProps, { font: string }> {
+  constructor(props: IPrintPdfDocumentProps) {
+    super(props);
+    this.state = {
+      font: ""
+    };
+  }
+
+  async componentDidMount(): Promise<void> {
+    try {
+      const BarlowFontFromFile = await fetchFontAsBase64(BarlowFont);
+      console.log("Loaded font", BarlowFontFromFile);
+      this.setState({ font: BarlowFontFromFile });
+    } catch (err) {
+      console.error("Error loading font:", err);
+    }
+  }
 
   public render(): React.ReactElement<IPrintPdfDocumentProps> {
     
@@ -15,8 +33,8 @@ export default class PrintPdfDocument extends React.Component<IPrintPdfDocumentP
     return (
       <section className={styles.printPdfDocument}>
         <h2>Hey! Let&apos;s print something!</h2>
-        <PDFDownloadLink document={<Invoice order={order} />} fileName={"resume.pdf"}>
-          <DefaultButton className="px-4">
+        <PDFDownloadLink document={<Invoice order={order} font={this.state.font} />} fileName={"resume.pdf"}>
+          <DefaultButton>
             Download PDF
           </DefaultButton>
         </PDFDownloadLink>

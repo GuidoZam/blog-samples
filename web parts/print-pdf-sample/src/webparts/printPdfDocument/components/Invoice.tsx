@@ -6,7 +6,7 @@ import {
   Text,
   View,
   StyleSheet,
-  //Font
+  Font
 } from "@react-pdf/renderer";
 import { Order } from '../../../models/Order';
 import { OrderDetail } from '../../../models/OrderDetail';
@@ -14,130 +14,188 @@ import { OrderDetail } from '../../../models/OrderDetail';
 //require("../../../fonts/Barlow-Regular.ttf");
 //import BarlowFont from '../../../styles/fonts/Barlow-Regular.ttf';
 //import BarlowFont from '../../../fonts/Barlow-Regular.ttf';
+//import { getFontAsBase64 } from '../../../fonts/fontUtilities';
 
 interface IInvoiceProps {
   order: Order;
+  font: string;
 }
 
-export const Invoice: React.FC<IInvoiceProps> = ({ order }) => {
-  // TODO 1 of 2: Register the font to test a PDF with a custom font
-  // Font.register({
-  //   family: "Barlow",
-  //   fonts: [
-  //     //{ src: require("../../../fonts/Barlow-Regular.ttf") }
-  //     //{ src: "../../../fonts/Barlow-Regular.tff" }
-  //     { src: BarlowFont }
-  //     //{ src: require("../../../fonts/Barlow-Regular.ttf") }
-  //   ],
-  // });
+interface IInvoiceState {
+  isFontLoaded: boolean;
+  error?: string;
+}
 
-  // Define styles for the PDF document
-  const PDFStyles = StyleSheet.create({
-    page: {
-      padding: 30,
-      fontSize: 12,
-      // TODO 2 of 2: Specify the custom font
-      //fontFamily: "Barlow",
-    },
-    title: {
-      fontSize: 18,
-      textAlign: "center",
-      marginBottom: 20,
-    },
-    section: {
-      marginBottom: 15,
-    },
-    table: {
-      display: 'flex',
-      width: "auto",
-      borderStyle: "solid",
-      borderWidth: 1,
-      borderColor: "#ccc",
-      marginBottom: 20,
-    },
-    tableRow: {
-      flexDirection: "row",
-    },
-    tableCellHeader: {
-      borderStyle: "solid",
-      borderWidth: 1,
-      borderColor: "#ccc",
-      padding: 5,
-      fontWeight: "bold",
-      backgroundColor: "#f2f2f2",
-      width: "25%",
-    },
-    tableCell: {
-      borderStyle: "solid",
-      borderWidth: 1,
-      borderColor: "#ccc",
-      padding: 5,
-      width: "25%",
-    },
-    noOrder: {
-      textAlign: "center",
-      fontSize: 14,
-      color: "#888",
-    },
-  });
+export class Invoice extends React.Component<IInvoiceProps, IInvoiceState> {
+  constructor(props: IInvoiceProps) {
+    super(props);
+    this.state = {
+      isFontLoaded: false,
+    };
+  }
 
-  if (!order) {
+  // async componentDidMount(): Promise<void> {
+  //   try {
+  //     //const BarlowFontFromFile = await fetchFontAsBase64(BarlowFont);
+
+  //     Font.register({
+  //       family: "Barlow",
+  //       fonts: [{ src: BarlowFont }],
+  //     });
+
+  //     this.setState({ isFontLoaded: true });
+  //   } catch (err) {
+  //     console.error("Error loading font:", err);
+  //     this.setState({ error: "Failed to load font." });
+  //   }
+  // }
+
+  async componentDidMount(): Promise<void> {
+    try {
+      //const BarlowFontFromFile = await fetchFontAsBase64(BarlowFont);
+      //const BarlowFontFromFile = await getFontAsBase64();
+      const BarlowFontFromFile = this.props.font;
+
+      Font.register({
+        family: "Barlow",
+        fonts: [{ src: BarlowFontFromFile }],
+      });
+
+      this.setState({ isFontLoaded: true });
+    } catch (err) {
+      console.error("Error loading font:", err);
+      this.setState({ error: "Failed to load font." });
+    }
+  }
+
+  render(): JSX.Element {
+    const { order } = this.props;
+    const { isFontLoaded, error } = this.state;
+
+    if (error) {
+      return <Document>
+        <Page>
+          <Text>{error}</Text>
+        </Page>
+      </Document>;
+    }
+
+    if (!isFontLoaded) {
+      return <Document>
+        <Page>
+          <Text>Loading...</Text>
+        </Page>
+      </Document>;
+    }
+    console.log("rendering...");
+
+    // Define styles for the PDF document
+    const PDFStyles = StyleSheet.create({
+      page: {
+        padding: 30,
+        fontSize: 12,
+        fontFamily: "Barlow",
+      },
+      title: {
+        fontSize: 18,
+        textAlign: "center",
+        marginBottom: 20,
+      },
+      section: {
+        marginBottom: 15,
+      },
+      table: {
+        display: 'flex',
+        width: "auto",
+        borderStyle: "solid",
+        borderWidth: 1,
+        borderColor: "#ccc",
+        marginBottom: 20,
+      },
+      tableRow: {
+        flexDirection: "row",
+      },
+      tableCellHeader: {
+        borderStyle: "solid",
+        borderWidth: 1,
+        borderColor: "#ccc",
+        padding: 5,
+        fontWeight: "bold",
+        backgroundColor: "#f2f2f2",
+        width: "25%",
+      },
+      tableCell: {
+        borderStyle: "solid",
+        borderWidth: 1,
+        borderColor: "#ccc",
+        padding: 5,
+        width: "25%",
+      },
+      noOrder: {
+        textAlign: "center",
+        fontSize: 14,
+        color: "#888",
+      },
+    });
+
+    if (!order) {
+      return (
+        <Document>
+          <Page style={PDFStyles.page}>
+            <Text style={PDFStyles.noOrder}>No order data available</Text>
+          </Page>
+        </Document>
+      );
+    }
+
     return (
       <Document>
         <Page style={PDFStyles.page}>
-          <Text style={PDFStyles.noOrder}>No order data available</Text>
+          <Text style={PDFStyles.title}>Invoice</Text>
+
+          {/* General Information Section */}
+          <View style={PDFStyles.section}>
+            <Text>General Information</Text>
+            <Text>Display Name: {order.displayName}</Text>
+            <Text>
+              Final Price:{" "}
+              {order.finalPrice?.toLocaleString("it-IT", {
+                style: "currency",
+                currency: "EUR",
+              })}
+            </Text>
+            <Text>Notes: {order.notes}</Text>
+          </View>
+
+          {/* Order Details Section */}
+          <View style={PDFStyles.section}>
+            <Text>Order Details</Text>
+            <View style={PDFStyles.table}>
+              {/* Table Header */}
+              <View style={PDFStyles.tableRow}>
+                <Text style={PDFStyles.tableCellHeader}>Item Code</Text>
+                <Text style={PDFStyles.tableCellHeader}>Description</Text>
+                <Text style={PDFStyles.tableCellHeader}>Quantity</Text>
+                <Text style={PDFStyles.tableCellHeader}>Unit Price</Text>
+              </View>
+              {/* Table Rows */}
+              {order.orderDetails?.map((detail: OrderDetail, index: number) => (
+                <View style={PDFStyles.tableRow} key={index}>
+                  <Text style={PDFStyles.tableCell}>{detail.itemCode || "-"}</Text>
+                  <Text style={PDFStyles.tableCell}>{detail.itemDescription}</Text>
+                  <Text style={PDFStyles.tableCell}>{detail.quantity}</Text>
+                  <Text style={PDFStyles.tableCell}>
+                    {detail.unitPrice?.toLocaleString("it-IT", {
+                      style: "currency",
+                      currency: "EUR",
+                    })}
+                  </Text>
+                </View>
+              ))}
+            </View>
+          </View>
         </Page>
       </Document>
     );
   }
-
-  return (
-    <Document>
-      <Page style={PDFStyles.page}>
-        <Text style={PDFStyles.title}>Invoice</Text>
-
-        {/* General Information Section */}
-        <View style={PDFStyles.section}>
-          <Text>General Information</Text>
-          <Text>Display Name: {order.displayName}</Text>
-          <Text>
-            Final Price:{" "}
-            {order.finalPrice?.toLocaleString("it-IT", {
-              style: "currency",
-              currency: "EUR",
-            })}
-          </Text>
-          <Text>Notes: {order.notes}</Text>
-        </View>
-
-        {/* Order Details Section */}
-        <View style={PDFStyles.section}>
-          <Text>Order Details</Text>
-          <View style={PDFStyles.table}>
-            {/* Table Header */}
-            <View style={PDFStyles.tableRow}>
-              <Text style={PDFStyles.tableCellHeader}>Item Code</Text>
-              <Text style={PDFStyles.tableCellHeader}>Description</Text>
-              <Text style={PDFStyles.tableCellHeader}>Quantity</Text>
-              <Text style={PDFStyles.tableCellHeader}>Unit Price</Text>
-            </View>
-            {/* Table Rows */}
-            {order.orderDetails?.map((detail: OrderDetail, index: number) => (
-              <View style={PDFStyles.tableRow} key={index}>
-                <Text style={PDFStyles.tableCell}>{detail.itemCode || "-"}</Text>
-                <Text style={PDFStyles.tableCell}>{detail.itemDescription}</Text>
-                <Text style={PDFStyles.tableCell}>{detail.quantity}</Text>
-                <Text style={PDFStyles.tableCell}>
-                  {detail.unitPrice?.toLocaleString("it-IT", {
-                    style: "currency",
-                    currency: "EUR",
-                  })}
-                </Text>
-              </View>
-            ))}
-          </View>
-        </View>
-      </Page>
-    </Document>
-  );
-};
+}
