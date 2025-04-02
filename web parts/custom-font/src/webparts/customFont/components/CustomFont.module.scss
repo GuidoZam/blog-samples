@@ -1,0 +1,13 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+@import '../../../styles/fonts';
+
+.customFont {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+
+  .content {
+    font-family: 'Oxygen';
+  }
+}

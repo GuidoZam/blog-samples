@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "custom-font",
+    "libraryId": "24d74f3e-3376-4684-a2a3-a06fbd3ac963",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "custom-font",
+    "solutionShortDescription": "custom-font description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
