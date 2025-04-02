@@ -10,11 +10,6 @@ import {
 } from "@react-pdf/renderer";
 import { Order } from '../../../models/Order';
 import { OrderDetail } from '../../../models/OrderDetail';
-//import BarlowFont from require("../../../fonts/Barlow-Regular.ttf");
-//require("../../../fonts/Barlow-Regular.ttf");
-//import BarlowFont from '../../../styles/fonts/Barlow-Regular.ttf';
-//import BarlowFont from '../../../fonts/Barlow-Regular.ttf';
-//import { getFontAsBase64 } from '../../../fonts/fontUtilities';
 
 interface IInvoiceProps {
   order: Order;
@@ -29,31 +24,10 @@ interface IInvoiceState {
 export class Invoice extends React.Component<IInvoiceProps, IInvoiceState> {
   constructor(props: IInvoiceProps) {
     super(props);
-    this.state = {
-      isFontLoaded: false,
-    };
   }
-
-  // async componentDidMount(): Promise<void> {
-  //   try {
-  //     //const BarlowFontFromFile = await fetchFontAsBase64(BarlowFont);
-
-  //     Font.register({
-  //       family: "Barlow",
-  //       fonts: [{ src: BarlowFont }],
-  //     });
-
-  //     this.setState({ isFontLoaded: true });
-  //   } catch (err) {
-  //     console.error("Error loading font:", err);
-  //     this.setState({ error: "Failed to load font." });
-  //   }
-  // }
 
   async componentDidMount(): Promise<void> {
     try {
-      //const BarlowFontFromFile = await fetchFontAsBase64(BarlowFont);
-      //const BarlowFontFromFile = await getFontAsBase64();
       const BarlowFontFromFile = this.props.font;
 
       Font.register({
@@ -61,7 +35,6 @@ export class Invoice extends React.Component<IInvoiceProps, IInvoiceState> {
         fonts: [{ src: BarlowFontFromFile }],
       });
 
-      this.setState({ isFontLoaded: true });
     } catch (err) {
       console.error("Error loading font:", err);
       this.setState({ error: "Failed to load font." });
@@ -69,7 +42,7 @@ export class Invoice extends React.Component<IInvoiceProps, IInvoiceState> {
   }
 
   render(): JSX.Element {
-    const { order } = this.props;
+    const { order, font } = this.props;
     const { isFontLoaded, error } = this.state;
 
     if (error) {
@@ -80,14 +53,13 @@ export class Invoice extends React.Component<IInvoiceProps, IInvoiceState> {
       </Document>;
     }
 
-    if (!isFontLoaded) {
+    if (!isFontLoaded || !font || font.length === 0) {
       return <Document>
         <Page>
           <Text>Loading...</Text>
         </Page>
       </Document>;
     }
-    console.log("rendering...");
 
     // Define styles for the PDF document
     const PDFStyles = StyleSheet.create({
