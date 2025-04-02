@@ -17,7 +17,6 @@ interface IInvoiceProps {
 }
 
 interface IInvoiceState {
-  isFontLoaded: boolean;
   error?: string;
 }
 
@@ -43,7 +42,7 @@ export class Invoice extends React.Component<IInvoiceProps, IInvoiceState> {
 
   render(): JSX.Element {
     const { order, font } = this.props;
-    const { isFontLoaded, error } = this.state;
+    const { error } = this.state;
 
     if (error) {
       return <Document>
@@ -53,7 +52,7 @@ export class Invoice extends React.Component<IInvoiceProps, IInvoiceState> {
       </Document>;
     }
 
-    if (!isFontLoaded || !font || font.length === 0) {
+    if (!font || font.length === 0) {
       return <Document>
         <Page>
           <Text>Loading...</Text>
