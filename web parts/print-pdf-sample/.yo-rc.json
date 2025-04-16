@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "print-pdf-document",
+    "libraryId": "95b51d7f-0423-4d02-ad68-3e940b1f6dc3",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "print-pdf-document",
+    "solutionShortDescription": "print-pdf-document description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

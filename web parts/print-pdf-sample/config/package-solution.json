@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "print-pdf-document-client-side-solution",
+    "id": "95b51d7f-0423-4d02-ad68-3e940b1f6dc3",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "print-pdf-document description"
+      },
+      "longDescription": {
+        "default": "print-pdf-document description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "print-pdf-document Feature",
+        "description": "The feature that activates elements of the print-pdf-document solution.",
+        "id": "604aeefb-3e62-419d-a08c-9ca4dd281c43",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/print-pdf-document.sppkg"
+  }
+}

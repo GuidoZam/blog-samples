@@ -1,0 +1,10 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+@import '../../../styles/fonts';
+
+.printPdfDocument {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  font-family: 'Barlow';
+}
