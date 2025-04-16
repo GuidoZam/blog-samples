@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "so-flexible-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/soFlexible/SoFlexibleWebPart.js",
+          "manifest": "./src/webparts/soFlexible/SoFlexibleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SoFlexibleWebPartStrings": "lib/webparts/soFlexible/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sp-flexible-layout-support-client-side-solution",
+    "id": "aafaba63-d053-4cad-839e-2fdea26aceae",
+    "version": "1.0.8.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.0-rc.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "sp-flexible-layout-support description"
+      },
+      "longDescription": {
+        "default": "sp-flexible-layout-support description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "sp-flexible-layout-support Feature",
+        "description": "The feature that activates elements of the sp-flexible-layout-support solution.",
+        "id": "d078a3cc-1dd9-40df-811f-8fca22093895",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/sp-flexible-layout-support.sppkg"
+  }
+}
