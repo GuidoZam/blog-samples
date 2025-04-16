@@ -27,7 +27,6 @@
   }],
 
   "flexibleLayoutSizing": {
-		"supportsDynamicResizing": true,
 		"defaultColumnWidth": 18,
 		"defaultRowHeight": 12
 	}

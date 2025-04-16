@@ -1,6 +1,6 @@
 {
 	"name": "sp-flexible-layout-support",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"private": true,
 	"engines": {
 		"node": ">=22.14.0 < 23.0.0"

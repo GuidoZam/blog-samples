@@ -3,7 +3,7 @@
   "solution": {
     "name": "sp-flexible-layout-support-client-side-solution",
     "id": "aafaba63-d053-4cad-839e-2fdea26aceae",
-    "version": "1.0.8.0",
+    "version": "1.0.9.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
