@@ -9,7 +9,13 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import {
 	PropertyFieldGrid
 } from "@pnp/spfx-property-controls/lib/propertyFields/propertyFieldGrid";
-import { DocumentBulletListRegular } from '@fluentui/react-icons';
+import { 
+	DocumentBulletListRegular,
+	DocumentPdfRegular,
+	DocumentTextLinkFilled,
+	DocumentGlobeRegular,
+	DocumentTextToolboxRegular
+} from '@fluentui/react-icons';
 import { IItem } from "@pnp/spfx-property-controls/lib/propertyFields/propertyFieldGrid/grid/IItem";
 
 import * as strings from 'PropertyGridSampleWebPartStrings';
@@ -93,10 +99,10 @@ export default class PropertyGridSampleWebPart extends BaseClientSideWebPart<IPr
 									defaultSelectedItems: this.properties.items,
 									maxHeight: 500,
 									className: "gridClass",
-									styles: { padding: 10 },
+									styles: { padding: 2 },
 									isVisible: this.properties.showGrid ?? true,
-									column1Label: "File",
-									column2Label: "Location",
+									column1Label: "Title", // Column1 will be the title of the IItem
+									column2Label: "Content", // Column2 will be the description of the IItem
 									onSelected: (item: IItem[]) => {
 										console.log(item);
 									},
@@ -110,30 +116,37 @@ export default class PropertyGridSampleWebPart extends BaseClientSideWebPart<IPr
 	}
 
 	private _getItems(): IItem[] {
+    // Generate a sample set of items to be displayed in the grid
 		const gridItems: IItem[] = [
 			{
-				key: "1",
-				icon: React.createElement(DocumentBulletListRegular),
-				title: "File 1",
-				description: "This is the first document",
+				key: "test01",
+				icon: React.createElement(DocumentTextLinkFilled),
+				title: "Test 1",
+				description: "Test document 01",
 			},
 			{
-				key: "2",
-				icon: React.createElement(DocumentBulletListRegular),
-				title: "File 2",
-				description: "This is the 2 document",
+				key: "test02",
+				icon: React.createElement(DocumentGlobeRegular),
+				title: "Test 2",
+				description: "This is just a test document 02",
 			},
 			{
-				key: "3",
-				icon: React.createElement(DocumentBulletListRegular),
-				title: "File 3",
-				description: "This is the 3 document",
+				key: "test03",
+				icon: React.createElement(DocumentTextToolboxRegular),
+				title: "Test 3",
+				description: "Test document 03",
 			},
 			{
-				key: "4",
+				key: "test04",
+				icon: React.createElement(DocumentPdfRegular),
+				title: "Test 4",
+				description: "Test document 04",
+			},
+			{
+				key: "test05",
 				icon: React.createElement(DocumentBulletListRegular),
-				title: "File 4",
-				description: "This is the 4 document",
+				title: "Test with long title 5",
+				description: "This is yet another test document 05",
 			},
 		];
 
