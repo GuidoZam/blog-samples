@@ -39,7 +39,6 @@ export default class PropertyGridSampleWebPart extends BaseClientSideWebPart<IPr
 	}
 
   protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {
-    console.log("onPropertyPaneFieldChanged", propertyPath, oldValue, newValue);
     if (propertyPath === "enableMultiSelection" && newValue === false) {
       
       this.properties.items = [];
@@ -98,7 +97,6 @@ export default class PropertyGridSampleWebPart extends BaseClientSideWebPart<IPr
 									key: "gridFieldId",
 									defaultSelectedItems: this.properties.items,
 									maxHeight: 500,
-									className: "gridClass",
 									styles: { padding: 2 },
 									isVisible: this.properties.showGrid ?? true,
 									column1Label: "Title", // Column1 will be the title of the IItem
