@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "property-grid-sample-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/propertyGridSample/PropertyGridSampleWebPart.js",
+          "manifest": "./src/webparts/propertyGridSample/PropertyGridSampleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PropertyGridSampleWebPartStrings": "lib/webparts/propertyGridSample/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}

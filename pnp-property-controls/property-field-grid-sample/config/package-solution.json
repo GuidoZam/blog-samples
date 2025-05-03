@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "property-field-grid-sample-client-side-solution",
+    "id": "9216e322-723c-4a6a-be16-fc3a64466dcd",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "property-field-grid-sample description"
+      },
+      "longDescription": {
+        "default": "property-field-grid-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "property-field-grid-sample Feature",
+        "description": "The feature that activates elements of the property-field-grid-sample solution.",
+        "id": "9d7be9aa-2970-4aba-8277-5227d5874185",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/property-field-grid-sample.sppkg"
+  }
+}
