@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-calendar-sample-client-side-solution",
+    "id": "25065728-c1c0-4318-b30f-b556d5d7b1f1",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.0-rc.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-calendar-sample description"
+      },
+      "longDescription": {
+        "default": "pnp-calendar-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-calendar-sample Feature",
+        "description": "The feature that activates elements of the pnp-calendar-sample solution.",
+        "id": "2b7c7394-c3ce-4b1d-beb1-377108f1a6e8",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-calendar-sample.sppkg"
+  }
+}
