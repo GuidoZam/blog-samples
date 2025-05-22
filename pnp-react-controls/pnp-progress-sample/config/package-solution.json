@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-progress-sample-client-side-solution",
+    "id": "7c0f5ada-b318-4f4e-8d00-4b54b20e5075",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-progress-sample description"
+      },
+      "longDescription": {
+        "default": "pnp-progress-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-progress-sample Feature",
+        "description": "The feature that activates elements of the pnp-progress-sample solution.",
+        "id": "98df43e0-30b3-44ad-8cc6-1d6afa076e30",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-progress-sample.sppkg"
+  }
+}
