@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-progress-sample",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "PnP Progress sample",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.14.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "pnp-progress-sample",
+    "libraryId": "7c0f5ada-b318-4f4e-8d00-4b54b20e5075",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-progress-sample description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
