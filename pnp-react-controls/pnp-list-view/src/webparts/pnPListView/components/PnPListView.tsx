@@ -179,7 +179,6 @@ export default class PnPListView extends React.Component<IPnPListViewProps, IPnP
   }
 
   private _sortItems = (items: SampleItem[], columnName: string, descending: boolean): any[] => {
-    console.log("Sorting items by column:", columnName, "Descending:", descending);
     // Create a shallow copy before sorting to avoid mutating the original array
     return items.slice().sort((a, b) => {
       if (a.highPriority && !b.highPriority) {
