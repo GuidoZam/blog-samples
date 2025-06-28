@@ -1,0 +1,60 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.PnPListView {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+// This style if for the section title and displays a text and a line after it
+.sectionTitle {
+  width:100%;
+  text-align:left;
+  border-bottom: 1px solid #383838;
+  line-height:0.1em;
+  margin:10px 0 20px;
+}
+
+.sectionTitle span {
+  background:#fff;
+  padding:0 10px;
+}
+
+.tableRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .tableCell {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    border-bottom: 1px solid #383838;
+    width: 100%;
+  }
+
+  .smallTableCell {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    border-bottom: 1px solid #383838;
+    width: 5%;
+  }
+}
+
+.highPriority {
+  background-color: #ff0000;
+  color: white;
+}
+
+.highPriorityText {
+  color: #ff0000;
+}

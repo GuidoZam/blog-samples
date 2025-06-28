@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-list-view",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "PnP ListView",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "pnp-list-view",
+    "libraryId": "f251d0b0-685c-4bca-9419-3678f6b7d164",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-list-view description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
