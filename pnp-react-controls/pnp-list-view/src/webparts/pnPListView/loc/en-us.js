@@ -24,7 +24,9 @@ define([], function() {
 			Title: "Title",
 			CreatedBy: "Created by",
 			Version: "Version",
+			CreatedDate: "Created date",
+			NoDate: "-"
 		},
-		NoItems: "No items added yet!",
+		NoItems: "No item added yet!",
 	};
 });

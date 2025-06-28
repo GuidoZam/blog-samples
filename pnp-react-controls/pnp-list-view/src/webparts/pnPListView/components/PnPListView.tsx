@@ -1,10 +1,11 @@
 import * as React from 'react';
 import styles from './PnPListView.module.scss';
 import type { IPnPListViewProps } from './IPnPListViewProps';
-import { GroupOrder, IGrouping, IViewField, ListView, SelectionMode } from "@pnp/spfx-controls-react/lib/ListView";
+import { GroupOrder, IGrouping, IViewField, ListView, SelectionMode } from "@pnp/spfx-controls-react";
 import * as strings from 'PnPListViewWebPartStrings';
 import { Guid } from '@microsoft/sp-core-library';
 import { IPnPListViewState } from './IPnPListViewState';
+import SampleItem from '../../../models/sampleItem';
 
 
 export default class PnPListView extends React.Component<IPnPListViewProps, IPnPListViewState> {
@@ -64,6 +65,7 @@ export default class PnPListView extends React.Component<IPnPListViewProps, IPnP
               items={items}
               showFilter={true}
               filterPlaceHolder={strings.FilterPlaceHolder}
+              viewFields={this._getViewFields()}
             />
           </div>
           <div>
@@ -72,8 +74,9 @@ export default class PnPListView extends React.Component<IPnPListViewProps, IPnP
             </h4>
             <ListView
               items={items}
-              defaultFilter='Jane'
-              // TODO: check if the filtering works
+              defaultFilter='joan'
+              viewFields={this._getViewFields()}
+              showFilter={true}
             />
           </div>
           <div>
@@ -91,7 +94,7 @@ export default class PnPListView extends React.Component<IPnPListViewProps, IPnP
               <span>{strings.StickyHeader}</span>
             </h4>
             <ListView
-              items={items}
+              items={this._getMoreItems()}
               stickyHeader={true}
             />
           </div>
@@ -130,7 +133,7 @@ export default class PnPListView extends React.Component<IPnPListViewProps, IPnP
             </h4>
             <ListView
               items={items}
-              viewFields={this._getViewFields()}
+              viewFields={this._getAdditionalViewFields()}
               sortItems={this._sortItems}
             />
           </div>
@@ -142,7 +145,6 @@ export default class PnPListView extends React.Component<IPnPListViewProps, IPnP
               items={items}
               viewFields={[]}
               onRenderRow={(props) => {
-                console.log(props);
                 return (
                   <div className={`${styles.tableRow} ${props.item.highPriority ? styles.highPriority : ''}`}>
                     {/* If the item has highPriority set to true show an exclamation mark, otherwise add an empty div */}
@@ -155,35 +157,19 @@ export default class PnPListView extends React.Component<IPnPListViewProps, IPnP
               }}
             />
           </div>
-          {/* <ListView
-            items={items}
-            viewFields={viewFields}
-            iconFieldName="FileRef"
-            compact={true}
-            selectionMode={SelectionMode.multiple}
-            selection={this._getSelection}
-            showFilter={true}
-            defaultFilter="John"
-            filterPlaceHolder="Search..."
-            groupByFields={groupByFields}
-            dragDropFiles={true}
-            onDrop={this._getDropFiles}
-            stickyHeader={true}
-            className={styles.listWrapper}
-            listClassName={styles.list} /> */}
         </div>
       </section>
     );
   }
 
-  private _getSelection(items: any[]) {
+  private _getSelection(items: any[]): void {
     console.log('Selected items:', items);
   }
   
-  private _getDropFiles = (files: any[]) => {
+  private _getDropFiles = (files: any[]): void => {
     const droppedItems = [...this.state.droppedItems];
 
-    for (var i = 0; i < files.length; i++) {
+    for (let i = 0; i < files.length; i++) {
       droppedItems.push({ title: files[i].name });
     }
 
@@ -192,91 +178,58 @@ export default class PnPListView extends React.Component<IPnPListViewProps, IPnP
     });
   }
 
-  private _sortItems = (items: any[], columnName: string, descending: boolean): any[] => {
-    return items.sort((a, b) => {
+  private _sortItems = (items: SampleItem[], columnName: string, descending: boolean): any[] => {
+    console.log("Sorting items by column:", columnName, "Descending:", descending);
+    // Create a shallow copy before sorting to avoid mutating the original array
+    return items.slice().sort((a, b) => {
       if (a.highPriority && !b.highPriority) {
         return -1;
       }
       if (!a.highPriority && b.highPriority) {
         return 1;
       }
-      if (a[columnName] < b[columnName]) {
+      const aValue = (a as any)[columnName];
+      const bValue = (b as any)[columnName];
+      if (aValue < bValue) {
         return descending ? 1 : -1;
       }
-      if (a[columnName] > b[columnName]) {
+      if (aValue > bValue) {
         return descending ? -1 : 1;
       }
       return 0;
     });
   }
 
-  private _getItems(): any[] {
-    return [
-      {
+  // Generates a list of sample items for demonstration purposes
+  private _getItems(): SampleItem[] {
+    const createdByOptions = ["John Doe", "Jim Doe", "Jane Doe", "Joan Doe"];
+    const itemCount = 5;
+    const items: SampleItem[] = [];
+    for (let i = 0; i < itemCount; i++) {
+      const createdBy = createdByOptions[Math.floor(Math.random() * createdByOptions.length)];
+      const version = Math.floor(Math.random() * 6) + 1; // version between 1 and 6
+      const highPriority = Math.random() < 0.5; // 50% chance
+      // random Date
+      const createdDate = new Date(Date.now() - Math.floor(Math.random() * 10000000000)); // up to 115 days ago
+      items.push({
         key: Guid.newGuid().toString(),
-        title: "Document 1",
-        createdBy: "John Doe",
-        version: 3,
-        //createdDate: new Date(),
-        highPriority: false
-      },
-      {
-        key: Guid.newGuid().toString(),
-        title: "Document 2",
-        createdBy: "Jim Doe",
-        version: 1,
-        //createdDate: new Date(),
-        highPriority: true
-      },
-      {
-        key: Guid.newGuid().toString(),
-        title: "Document 3",
-        createdBy: "Jane Doe",
-        version: 6,
-        //createdDate: new Date(),
-        highPriority: true
-      },
-      {
-        key: Guid.newGuid().toString(),
-        title: "Document 4",
-        createdBy: "Jane Doe",
-        version:3,
-        //createdDate: new Date(),
-        highPriority: true
-      },
-      {
-        key: Guid.newGuid().toString(),
-        title: "Document 5",
-        createdBy: "Joan Doe",
-        version: 2,
-        //createdDate: new Date(),
-        highPriority: false
-      },
-      {
-        key: Guid.newGuid().toString(),
-        title: "Document 6",
-        createdBy: "Jim Doe",
-        version: 1,
-        //createdDate: new Date(),
-        highPriority: false
-      },
-      {
-        key: Guid.newGuid().toString(),
-        title: "Document 7",
-        createdBy: "Jane Doe",
-        version: 4,
-        //createdDate: new Date(),
-        highPriority: false
-      },
-      {
-        key: Guid.newGuid().toString(),
-        title: "Document 8",
-        createdBy: "Joan Doe",
-        version: 3,
-        //createdDate: new Date(),
-        highPriority: true
-      }
-    ];
+        title: `Document ${i + 1}`,
+        createdBy,
+        version,
+        created: createdDate.toLocaleDateString(),
+        highPriority
+      });
+    }
+    return items;
+  }
+
+  private _getMoreItems(): SampleItem[] {
+    const items: SampleItem[] = [];
+    for (let i = 0; i < 3; i++) {
+      items.push(...this._getItems());
+    }
+
+    return items;
   }
 
   private _getDroppedItems(): any[] {
@@ -285,12 +238,7 @@ export default class PnPListView extends React.Component<IPnPListViewProps, IPnP
     if (items.length === 0) {
       return [
         {
-          //key: Guid.newGuid().toString(),
           title: strings.NoItems,
-          //createdBy: "",
-          //version: 3,
-          //createdDate: new Date(),
-          //highPriority: false
         }
       ];
     }
@@ -303,8 +251,8 @@ export default class PnPListView extends React.Component<IPnPListViewProps, IPnP
       {
         name: 'title',
         displayName: strings.Fields.Title,
-        maxWidth: 80,
-        minWidth: 50,
+        maxWidth: 150,
+        minWidth: 100,
         sorting: true
       },
       {
@@ -321,16 +269,36 @@ export default class PnPListView extends React.Component<IPnPListViewProps, IPnP
         minWidth: 80,
         sorting: true
       },
-      // {
-      //   name: 'createdDate',
-      //   displayName: 'Created Date',
-      //   maxWidth: 100,
-      //   minWidth: 100,
-      //   sorting: true,
-      //   render: (item: any) => {
-      //     return <span>{item.createdDate.toLocaleDateString()}</span>;
-      //   }
-      // }
+      {
+        name: 'created',
+        displayName: strings.Fields.CreatedDate,
+        maxWidth: 100,
+        minWidth: 100,
+        sorting: true,
+        render: (item: any) => {
+          if (!item || !item.created) {
+            return <span>{strings.Fields.NoDate}</span>;
+          }
+
+          return <span>{item.created}</span>;
+        }
+      }
     ];
+  }
+
+  private _getAdditionalViewFields(): IViewField[] {
+    const fields = this._getViewFields();
+    // Insert highPriority as the first field
+    fields.unshift({
+      name: '',
+      displayName: "",
+      maxWidth: 50,
+      minWidth: 50,
+      sorting: true,
+      render: (item: any) => {
+        return <span className={styles.highPriorityText}>{(item.highPriority) ? "!" : ""}</span>
+      }
+    });
+    return fields;
   }
 }
