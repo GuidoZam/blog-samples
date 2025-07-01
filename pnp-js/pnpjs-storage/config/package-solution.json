@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnpjs-storage-sample-client-side-solution",
+    "id": "b9890fc8-7c52-495b-9d9c-0c297fa0bc27",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.0-rc.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnpjs-storage-sample description"
+      },
+      "longDescription": {
+        "default": "pnpjs-storage-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnpjs-storage-sample Feature",
+        "description": "The feature that activates elements of the pnpjs-storage-sample solution.",
+        "id": "c6bb2856-520a-409e-bdd8-1b3e68d37e9e",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnpjs-storage-sample.sppkg"
+  }
+}
