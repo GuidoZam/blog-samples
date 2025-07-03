@@ -10,6 +10,9 @@
   }
 }
 
-.welcome {
-  text-align: center;
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 150px;
 }

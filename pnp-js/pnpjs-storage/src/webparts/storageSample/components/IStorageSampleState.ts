@@ -1,3 +1,8 @@
 export interface IStorageSampleState {
-  insertedValue: string;
+  insertedValue?: string;
+  retrievedValue?: string;
+  expirationMinutes?: number;
+  notification?: string;
+  notificationType?: any;
+  storageType?: 'local' | 'session';
 }
