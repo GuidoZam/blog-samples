@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "20.11.0",
+    "sdksVersions": {},
+    "version": "1.21.0-rc.0",
+    "libraryName": "pnpjs-storage-sample",
+    "libraryId": "b9890fc8-7c52-495b-9d9c-0c297fa0bc27",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "pnpjs-storage-sample",
+    "solutionShortDescription": "pnpjs-storage-sample description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

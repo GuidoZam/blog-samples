@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "storage-sample-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/storageSample/StorageSampleWebPart.js",
+          "manifest": "./src/webparts/storageSample/StorageSampleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "StorageSampleWebPartStrings": "lib/webparts/storageSample/loc/{locale}.js"
+  }
+}
