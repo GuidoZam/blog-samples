@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hello-functional-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/helloFunctional/HelloFunctionalWebPart.js",
+          "manifest": "./src/webparts/helloFunctional/HelloFunctionalWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HelloFunctionalWebPartStrings": "lib/webparts/helloFunctional/loc/{locale}.js"
+  }
+}

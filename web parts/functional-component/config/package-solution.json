@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "functional-component-client-side-solution",
+    "id": "2323274a-1b4b-4cc7-a860-ef9d5df4d459",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "functional-component description"
+      },
+      "longDescription": {
+        "default": "functional-component description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "functional-component Feature",
+        "description": "The feature that activates elements of the functional-component solution.",
+        "id": "0eeb9e95-f75d-4f9d-b57d-749ef352420d",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/functional-component.sppkg"
+  }
+}
