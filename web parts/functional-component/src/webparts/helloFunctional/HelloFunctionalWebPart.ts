@@ -6,6 +6,7 @@ import HelloFunctional from './components/HelloFunctional';
 import HelloClass from './components/HelloClass';
 import { IHelloFunctionalProps } from './components/IHelloFunctionalProps';
 import { IHelloClassProps } from './components/IHelloClassProps';
+import * as strings from 'HelloFunctionalWebPartStrings';
 
 export interface IHelloFunctionalWebPartProps {
   useClassComponent: boolean;
@@ -34,16 +35,16 @@ export default class HelloFunctionalWebPart extends BaseClientSideWebPart<IHello
       pages: [
         {
           header: {
-            description: 'Component Switcher'
+            description: strings.PropertyPaneDescription
           },
           groups: [
             {
               groupName: 'Settings',
               groupFields: [
                 PropertyPaneToggle('useClassComponent', {
-                  label: 'Use class component',
-                  onText: 'Class',
-                  offText: 'Functional'
+                  label: strings.ToggleLabel,
+                  onText: strings.ToggleOnText,
+                  offText: strings.ToggleOffText
                 })
               ]
             }

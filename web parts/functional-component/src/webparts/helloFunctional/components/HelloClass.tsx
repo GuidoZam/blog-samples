@@ -29,7 +29,7 @@ export default class HelloClass extends React.Component<IHelloClassProps, HelloC
           <p>
             {strings.ClassMessage}
           </p>
-          <div>Counter: {this.state.count}</div>
+          <div>{strings.Counter}: {this.state.count}</div>
           <button className={styles.counterButton} onClick={this.handleIncrement}>
             {strings.Increment}
           </button>

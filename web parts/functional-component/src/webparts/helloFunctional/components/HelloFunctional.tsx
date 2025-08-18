@@ -14,7 +14,7 @@ const HelloFunctional: React.FC<IHelloFunctionalProps> = (props) => {
           {strings.FunctionalMessage}
         </div>
         <div style={{ marginTop: '1em' }}>
-          <div>Counter: {count}</div>
+          <div>{strings.Counter}: {count}</div>
           <button className={styles.counterButton} onClick={() => setCount(count + 1)}>
             {strings.Increment}
           </button>
