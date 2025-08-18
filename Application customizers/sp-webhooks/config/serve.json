@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://567mb2.sharepoint.com/sites/Test-PnP-Reusable-React-Controls/SitePages/CollabHome.aspx",
+      "customActions": {
+        "63a8ed47-ca75-4561-802f-9fccb20c5676": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    },
+    "notification": {
+      "pageUrl": "https://567mb2.sharepoint.com/sites/Test-PnP-Reusable-React-Controls/SitePages/CollabHome.aspx",
+      "customActions": {
+        "63a8ed47-ca75-4561-802f-9fccb20c5676": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    }
+  }
+}
