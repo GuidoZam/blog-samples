@@ -1,0 +1,26 @@
+.toastOverlay {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  min-width: 320px;
+  max-width: 400px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  background: #323130;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0.98;
+}
+
+.fadeOut {
+  opacity: 0 !important;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}

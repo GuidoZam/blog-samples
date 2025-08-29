@@ -13,10 +13,9 @@ import "@pnp/sp/lists";
 import "@pnp/sp/items";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-// import { Toast } from "./Toast";
+import { Toast } from "./components/Toast";
 import { INotifyChangeArgs } from "./INotifyChangeArgs";
 import * as strings from 'NotificationApplicationCustomizerStrings';
-import Sample from './components/sample';
 
 const LOG_SOURCE: string = 'NotificationApplicationCustomizer';
 
@@ -109,18 +108,15 @@ export default class NotificationApplicationCustomizer extends BaseApplicationCu
 				}
 
 				if (this._notificationPlaceholder.domElement) {
-					this._notificationPlaceholder.domElement.innerHTML = "";
-					this._reactContainer = document.createElement("div");
-					this._notificationPlaceholder.domElement.appendChild(
-						this._reactContainer
-					);
-
 					const componentElement: React.ReactElement = React.createElement(
-						Sample,
+						Toast,
 						{ message: `Latest item: ${item.Title}` }
 					);
 
-					ReactDOM.render(componentElement, this._reactContainer);
+					ReactDOM.render(
+						componentElement,
+						this._notificationPlaceholder.domElement
+					);
 				}
 			}
 		} catch (err) {
