@@ -40,7 +40,6 @@ export class Toast extends React.Component<IToastProps, IToastState> {
 
     return (
       <div
-        id="findMe"
         className={
           fading
             ? `${styles.toastOverlay} ${styles.fadeOut}`
