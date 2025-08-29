@@ -24,7 +24,9 @@
 		"@pnp/graph": "^4.15.0",
 		"@pnp/logging": "^4.15.0",
 		"@pnp/queryable": "^4.15.0",
-		"@pnp/sp": "^4.15.0"
+		"@pnp/sp": "^4.15.0",
+		"react": "17.0.1",
+		"react-dom": "17.0.1"
 	},
 	"devDependencies": {
 		"@microsoft/rush-stack-compiler-5.3": "0.1.0",

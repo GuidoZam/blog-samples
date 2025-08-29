@@ -1,6 +1,7 @@
 import * as React from "react";
 
-export interface ISampleProps { 
+export interface ISampleProps {
+  message?: string;
 }
 
 export default class Sample extends React.Component<ISampleProps> {
@@ -8,10 +9,16 @@ export default class Sample extends React.Component<ISampleProps> {
     super(props);
   }
 
-  public render(): JSX.Element {
+  public render(): React.ReactElement {
+    const { message } = this.props;
+
+    if (!message || message.trim().length === 0) {
+      return <div></div>;
+    }
+
     return (
       <div className={"ms-bgColor-themeDark ms-fontColor-white"}>
-        Test
+        {message}
       </div>
     );
   }

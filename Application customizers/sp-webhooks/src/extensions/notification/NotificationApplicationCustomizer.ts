@@ -33,7 +33,8 @@ export interface INotificationApplicationCustomizerProperties {
 /** A Custom Action which can be run during execution of a Client Side Application */
 export default class NotificationApplicationCustomizer extends BaseApplicationCustomizer<INotificationApplicationCustomizerProperties> {
 	private _notificationPlaceholder: PlaceholderContent | undefined;
-  
+	private _reactContainer?: HTMLDivElement;
+
 	public onInit(): Promise<void> {
 		Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
@@ -72,12 +73,13 @@ export default class NotificationApplicationCustomizer extends BaseApplicationCu
 		});
 	}
 
-	private async _notifyChange(changeEvent?: INotifyChangeArgs): Promise<void> {
+	_notifyChange = async (changeEvent?: INotifyChangeArgs): Promise<void> => {
 		console.log("List has changed!");
 		console.log(changeEvent);
 
 		// Get the listId from the subscription event or use the hardcoded one
 		const listId = "44c29d1b-e53d-42cb-9369-1a566db4373e";
+
 		const sp = spfi().using(SPFx(this.context));
 		try {
 			// Get the latest item (ordered by Modified desc)
@@ -94,32 +96,47 @@ export default class NotificationApplicationCustomizer extends BaseApplicationCu
 			const item = itemResult[0];
 			console.log("Latest item:", item);
 
-			// check if the application customizer has already been rendered
 			if (!this._notificationPlaceholder) {
 				this._notificationPlaceholder =
 					this.context.placeholderProvider.tryCreateContent(
-						PlaceholderName.Top
+						PlaceholderName.Top,
+						{ onDispose: this._onDispose }
 					);
 
-				// if the top placeholder is not available, there is no place in the UI
-				// for the app customizer to render, so quit.
 				if (!this._notificationPlaceholder) {
+					Log.warn(LOG_SOURCE, "Top placeholder not available.");
 					return;
 				}
 
 				if (this._notificationPlaceholder.domElement) {
-					// create a DOM element in the top placeholder for the application customizer to render
-					// const element = React.createElement(Toast, 
-          //   { message: "test", onDismiss: () => { /* handle dismiss */ } });
-          
-          // TODO: not working, needs to be fixed
-          const element = React.createElement(Sample, { });
-					// render the UI using a React component
-					ReactDOM.render(element, this._notificationPlaceholder.domElement);
+					this._notificationPlaceholder.domElement.innerHTML = "";
+					this._reactContainer = document.createElement("div");
+					this._notificationPlaceholder.domElement.appendChild(
+						this._reactContainer
+					);
+
+					const componentElement: React.ReactElement = React.createElement(
+						Sample,
+						{ message: `Latest item: ${item.Title}` }
+					);
+
+					ReactDOM.render(componentElement, this._reactContainer);
 				}
 			}
 		} catch (err) {
 			console.error("Error fetching latest item:", err);
 		}
 	}
+
+	private _onDispose = (): void => {
+		if (this._reactContainer) {
+			try {
+				ReactDOM.unmountComponentAtNode(this._reactContainer);
+			} catch {
+				/* noop */
+			}
+			this._reactContainer = undefined;
+		}
+		Log.info(LOG_SOURCE, "Disposed Top placeholder content.");
+	};
 }
