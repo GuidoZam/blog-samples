@@ -1,8 +1,7 @@
 define([], function() {
   return {
-    "Title": "NotificationApplicationCustomizer",
-    "NoPropertiesProvided": "(No properties were provided.)",
-    "HelloFrom": "Hello from NotificationApplicationCustomizer:",
-    "LatestItem": "Latest item"
-  }
+		Title: "NotificationApplicationCustomizer",
+		NoPropertiesProvided: "(No properties were provided.)",
+		MessagePrefix: "Hey! Item updated!",
+	};
 });

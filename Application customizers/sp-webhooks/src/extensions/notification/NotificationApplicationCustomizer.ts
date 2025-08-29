@@ -1,7 +1,7 @@
 import {
-  BaseApplicationCustomizer,
-  PlaceholderContent,
-  PlaceholderName
+	BaseApplicationCustomizer,
+	PlaceholderContent,
+	PlaceholderName
 } from '@microsoft/sp-application-base';
 import { ListSubscriptionFactory } from "@microsoft/sp-list-subscription";
 import { Guid } from "@microsoft/sp-core-library";
@@ -32,7 +32,7 @@ export default class NotificationApplicationCustomizer extends BaseApplicationCu
 	private _notificationPlaceholder: PlaceholderContent | undefined;
 	private _reactContainer?: HTMLDivElement;
 
-	public onInit(): Promise<void> {
+	public async onInit(): Promise<void> {
 		console.log(`Initialized ${strings.Title}`);
 
 		this.createListSubscription().catch((error) => {
@@ -46,9 +46,9 @@ export default class NotificationApplicationCustomizer extends BaseApplicationCu
 
 	private async createListSubscription(): Promise<void> {
 		this._listSubscriptionFactory = new ListSubscriptionFactory(this);
-		
+
 		console.debug(`${LOG_SOURCE} Creating list subscription...`);
-		
+
 		await this._listSubscriptionFactory.createSubscription({
 			listId: Guid.parse("44c29d1b-e53d-42cb-9369-1a566db4373e"), //this.properties.listId),
 			callbacks: {
@@ -63,7 +63,9 @@ export default class NotificationApplicationCustomizer extends BaseApplicationCu
 		});
 	}
 
-	_notifyChange = async (changeEvent?: INotifyChangeArgs): Promise<void> => {
+	private _notifyChange = async (
+		changeEvent?: INotifyChangeArgs
+	): Promise<void> => {
 		console.debug(`${LOG_SOURCE} List has changed!`);
 		console.debug(changeEvent);
 
@@ -98,10 +100,14 @@ export default class NotificationApplicationCustomizer extends BaseApplicationCu
 					return;
 				}
 			}
+
 			if (this._notificationPlaceholder.domElement) {
 				const componentElement: React.ReactElement = React.createElement(
 					Toast,
-					{ message: `${strings.LatestItem}: ${item.Title}`, key: Date.now() }
+					{
+						message: `${item.Title}`,
+						key: Date.now()
+					}
 				);
 
 				ReactDOM.render(
@@ -112,7 +118,7 @@ export default class NotificationApplicationCustomizer extends BaseApplicationCu
 		} catch (err) {
 			console.error(`${LOG_SOURCE} Error fetching latest item:`, err);
 		}
-	}
+	};
 
 	private _onDispose = (): void => {
 		if (this._reactContainer) {

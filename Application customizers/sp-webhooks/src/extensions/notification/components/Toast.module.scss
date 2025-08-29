@@ -1,3 +1,5 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
 .toastOverlay {
   position: fixed;
   bottom: 32px;
@@ -8,15 +10,15 @@
   padding: 16px 24px;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-  background: #323130;
-  color: #fff;
+  background: var(--neutralLighter, #323130);
+  color: var(--bodyText, #fff);
   font-size: 16px;
   font-weight: 500;
-  display: flex;
   align-items: center;
   gap: 12px;
   transition: opacity 0.3s, transform 0.3s;
   opacity: 0.98;
+  border: 1px solid var(--themePrimary, #0078d4);
 }
 
 .fadeOut {

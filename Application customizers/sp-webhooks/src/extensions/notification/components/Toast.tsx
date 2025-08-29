@@ -1,6 +1,7 @@
 
 import * as React from "react";
 import styles from "./Toast.module.scss";
+import * as strings from 'NotificationApplicationCustomizerStrings';
 
 export interface IToastProps {
   message: string;
@@ -46,7 +47,8 @@ export class Toast extends React.Component<IToastProps, IToastState> {
             : styles.toastOverlay
         }
       >
-        {message}
+        <div>{`${strings.MessagePrefix}`}</div>
+        <div>{message}</div>
       </div>
     );
   }
