@@ -2,9 +2,11 @@
 import * as React from "react";
 import styles from "./Toast.module.scss";
 import * as strings from 'NotificationApplicationCustomizerStrings';
+import { ISiteUserInfo } from "@pnp/sp/site-users";
 
 export interface IToastProps {
   message: string;
+  editor?: ISiteUserInfo;
 }
 
 interface IToastState {
@@ -32,7 +34,7 @@ export class Toast extends React.Component<IToastProps, IToastState> {
   }
 
   public render(): React.ReactElement {
-    const { message } = this.props;
+    const { message, editor } = this.props;
     const { fading } = this.state;
 
     if (!message || message.trim().length === 0) {
@@ -47,8 +49,9 @@ export class Toast extends React.Component<IToastProps, IToastState> {
             : styles.toastOverlay
         }
       >
-        <div>{`${strings.MessagePrefix}`}</div>
-        <div>{message}</div>
+        <div>{strings.MessagePrefix}</div>
+        <div>{strings.ItemTitle} <b>{message}</b></div>
+        {editor && <div>{strings.EditedBy} <b>{editor.Title}</b></div>}
       </div>
     );
   }
