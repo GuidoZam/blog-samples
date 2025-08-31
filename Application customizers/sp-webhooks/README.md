@@ -73,7 +73,7 @@ Add-PnPApplicationCustomizer -Title "Notification Customizer" -ClientSideCompone
 
 | Solution    | Author(s)                                               |
 | ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
+| sp-webhook-notification | Guido Zambarda [Bluesky](https://bsky.app/profile/guidozam.bsky.social) - [X](https://x.com/iamguidozam) |
 
 ## Version history
 
