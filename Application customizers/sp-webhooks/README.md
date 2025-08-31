@@ -1,10 +1,62 @@
-# sp-webhooks
+# Notification Application Customizer with Webhooks
 
-## Summary
+This project demonstrates a SharePoint Framework (SPFx) Application Customizer that uses webhooks to display notifications when a SharePoint list changes. It leverages PnPjs, React, and the SPFx List Subscription API.
 
-Short summary on functionality and used technologies.
+## Solution in action
 
-[picture of the solution in action, if possible]
+### Light theme
+![Light theme sample](<assets/Light theme.gif>)
+
+### Dark theme
+![Dark theme sample](<assets/Dark theme.gif>)
+
+### Alternative light theme
+![Alternative light theme sample](<assets/Alternative light theme.gif>)
+
+## Features
+
+- Subscribes to SharePoint list changes using webhooks
+- Displays notifications in a custom Toast component at the bottom of the page
+- Handles theme changes for better visibility in both light and dark modes
+- Fetches and displays the latest item and its editor when a change occurs
+
+## Prerequisites
+
+- [PnP PowerShell](https://pnp.github.io/powershell/) installed.
+- Entra App Registration with appropriate permissions. Can be created using [this guide](https://pnp.github.io/powershell/articles/registerapplication.html).
+- Permissions to perform management operation on the SPO site in order to configure the application customizer.
+
+## Configuration
+
+### 1. Deploy the Application Customizer
+
+Deploy the solution package to your SharePoint App Catalog and add the app to your site.
+
+### 2. Configure the Application Customizer Properties
+
+You can configure the Application Customizer properties (such as the `listId`) using PnP PowerShell.
+To connect to your SharePoint site use the following command:
+
+```powershell
+Connect-PnPOnline -Url "https://<YOUR-TENANT>.sharepoint.com/sites/yoursite" -ClientId "<YOUR-ENTRA-APP-REG-ID> -Interactive
+```
+
+Once connected, you can add the Application Customizer with the required properties:
+
+```powershell
+Add-PnPApplicationCustomizer -Title "Notification Customizer" -ClientSideComponentId "<YOUR-COMPONENT-GUID>" -ClientSideComponentProperties "{`"listId`":`"<YOUR-LIST-GUID>`"}" 
+```
+
+> Replace:
+>- '<YOUR-TENANT>' with your tenant name.
+>- `<YOUR-COMPONENT-GUID>` with the ClientSideComponentId of your Application Customizer (from the manifest).
+>- `<YOUR-LIST-GUID>` with the GUID of the SharePoint list to monitor.
+
+## How it Works
+
+1. The Application Customizer subscribes to list changes using the List Subscription API.
+2. When a change is detected, it fetches the latest item and the user who modified it.
+3. A Toast notification is rendered at the top of the page, styled for visibility in both light and dark themes.
 
 ## Used SharePoint Framework Version
 
@@ -17,10 +69,6 @@ Short summary on functionality and used technologies.
 
 > Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
 
-## Prerequisites
-
-> Any special pre-requisites?
-
 ## Solution
 
 | Solution    | Author(s)                                               |
@@ -31,8 +79,7 @@ Short summary on functionality and used technologies.
 
 | Version | Date             | Comments        |
 | ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
+| 1.0     | August 30, 2025 | Initial release |
 
 ## Disclaimer
 
@@ -44,30 +91,15 @@ Short summary on functionality and used technologies.
 
 - Clone this repository
 - Ensure that you are at the solution folder
+- Ensure the `./config/serve.json` file is configured to point to your SharePoint site.
 - in the command-line run:
-  - **npm install**
-  - **gulp serve**
+  - `npm install`
+  - `gulp serve`
 
 > Include any additional steps as needed.
-
-## Features
-
-Description of the extension that expands upon high-level summary above.
-
-This extension illustrates the following concepts:
-
-- topic 1
-- topic 2
-- topic 3
-
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
-
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
 
 ## References
 
 - [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
 - [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
+- [PnP PowerShell](https://pnp.github.io/powershell/) 
