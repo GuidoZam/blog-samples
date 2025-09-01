@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.17.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "spfx-logging",
+    "libraryId": "bf74441b-2428-4ccf-9de2-99cf692c1fba",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-logging",
+    "solutionShortDescription": "spfx-logging description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
