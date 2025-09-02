@@ -94,10 +94,9 @@ Add-PnPApplicationCustomizer -Title "Notification Customizer" -ClientSideCompone
   - `npm install`
   - `gulp serve`
 
-> Include any additional steps as needed.
-
 ## References
 
 - [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
 - [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
-- [PnP PowerShell](https://pnp.github.io/powershell/) 
+- [PnP PowerShell](https://pnp.github.io/powershell/)
+- [Getting started with Application Customizer](https://learn.microsoft.com/en-gb/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension)
