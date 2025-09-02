@@ -69,11 +69,9 @@ Add-PnPApplicationCustomizer -Title "Notification Customizer" -ClientSideCompone
 
 > Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
 
-## Solution
+## Contributors
 
-| Solution    | Author(s)                                               |
-| ----------- | ------------------------------------------------------- |
-| sp-webhook-notification | Guido Zambarda [Bluesky](https://bsky.app/profile/guidozam.bsky.social) - [X](https://x.com/iamguidozam) |
+* [Guido Zambarda](https://github.com/guidozam)
 
 ## Version history
 
