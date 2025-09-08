@@ -4,6 +4,7 @@ import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import LoggingSample from './components/LoggingSample';
 import { ILoggingSampleProps } from './components/ILoggingSampleProps';
+import { Log } from '@microsoft/sp-core-library';
 
 export interface ILoggingSampleWebPartProps {
   description: string;
@@ -12,6 +13,12 @@ export interface ILoggingSampleWebPartProps {
 export default class LoggingSampleWebPart extends BaseClientSideWebPart<ILoggingSampleWebPartProps> {
 
   public render(): void {
+
+    Log.verbose("LoggingSample", "This is a verbose message.", this.context.serviceScope);
+		Log.info("LoggingSample", "WebPart Initialized!");
+		Log.warn("LoggingSample", "This is a warning message");
+		Log.error("LoggingSample", new Error("This is an error message"));
+
     const element: React.ReactElement<ILoggingSampleProps> = React.createElement(
       LoggingSample,
       {}
