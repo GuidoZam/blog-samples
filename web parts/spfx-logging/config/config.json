@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "logging-sample-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/loggingSample/LoggingSampleWebPart.js",
+          "manifest": "./src/webparts/loggingSample/LoggingSampleWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "LoggingSampleWebPartStrings": "lib/webparts/loggingSample/loc/{locale}.js"
+  }
+}
