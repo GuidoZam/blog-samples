@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "image-helper-sample-client-side-solution",
+    "id": "36656b5e-f4a1-4232-97d9-a2f6692ee87d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "image-helper-sample description"
+      },
+      "longDescription": {
+        "default": "image-helper-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "image-helper-sample Feature",
+        "description": "The feature that activates elements of the image-helper-sample solution.",
+        "id": "ab616a7a-f5c1-436a-932a-ca42f2da3b22",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/image-helper-sample.sppkg"
+  }
+}

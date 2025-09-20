@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.17.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "image-helper-sample",
+    "libraryId": "36656b5e-f4a1-4232-97d9-a2f6692ee87d",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "image-helper-sample",
+    "solutionShortDescription": "image-helper-sample description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
