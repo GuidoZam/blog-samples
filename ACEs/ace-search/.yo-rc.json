@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.17.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "ace-search",
+    "libraryId": "9a9cef2b-5f55-4bd0-a47d-f7ad28d54e8a",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "ace-search",
+    "solutionShortDescription": "ace-search description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Search"
+  }
+}
