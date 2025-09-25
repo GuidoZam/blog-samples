@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "basic-field-customizer-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/basicFieldCustomizer/BasicFieldCustomizerFieldCustomizer.js",
+          "manifest": "./src/extensions/basicFieldCustomizer/BasicFieldCustomizerFieldCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "BasicFieldCustomizerFieldCustomizerStrings": "lib/extensions/basicFieldCustomizer/loc/{locale}.js"
+  }
+}
