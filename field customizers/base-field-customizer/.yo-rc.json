@@ -1,0 +1,22 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "base-field-customizer",
+    "componentType": "extension",
+    "extensionType": "FieldCustomizer",
+    "template": "react",
+    "componentName": "Basic Field Customizer",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.17.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "base-field-customizer",
+    "libraryId": "77bb93f1-13be-4176-8ba9-c08ac3792c8e",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "base-field-customizer description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
