@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-1-22-preview-client-side-solution",
+    "id": "ea64b8f7-dc96-45dc-80c2-8dd91440d997",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.0-beta.3"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-1-22-preview description"
+      },
+      "longDescription": {
+        "default": "spfx-1-22-preview description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-1-22-preview Feature",
+        "description": "The feature that activates elements of the spfx-1-22-preview solution.",
+        "id": "8cb6feab-53f0-48dd-8fc6-f9f1a6878025",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-1-22-preview.sppkg"
+  }
+}
