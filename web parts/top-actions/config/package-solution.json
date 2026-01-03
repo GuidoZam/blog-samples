@@ -1,40 +1,40 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
-  "solution": {
-    "name": "web-part-top-actions-client-side-solution",
-    "id": "423635f4-ecfe-49e4-aa0e-1984805685a2",
-    "version": "1.0.0.0",
-    "includeClientSideAssets": true,
-    "skipFeatureDeployment": true,
-    "isDomainIsolated": false,
-    "developer": {
-      "name": "",
-      "websiteUrl": "",
-      "privacyUrl": "",
-      "termsOfUseUrl": "",
-      "mpnId": "Undefined-1.22.0-beta.3"
-    },
-    "metadata": {
-      "shortDescription": {
-        "default": "web-part-top-actions description"
-      },
-      "longDescription": {
-        "default": "web-part-top-actions description"
-      },
-      "screenshotPaths": [],
-      "videoUrl": "",
-      "categories": []
-    },
-    "features": [
-      {
-        "title": "web-part-top-actions Feature",
-        "description": "The feature that activates elements of the web-part-top-actions solution.",
-        "id": "07c2a3e0-ff9b-47af-a773-f7b7e45fee06",
-        "version": "1.0.0.0"
-      }
-    ]
-  },
-  "paths": {
-    "zippedPackage": "solution/web-part-top-actions.sppkg"
-  }
+	"$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+	"solution": {
+		"name": "web-part-top-actions-client-side-solution",
+		"id": "423635f4-ecfe-49e4-aa0e-1984805685a2",
+		"version": "1.0.2.0",
+		"includeClientSideAssets": true,
+		"skipFeatureDeployment": true,
+		"isDomainIsolated": false,
+		"developer": {
+			"name": "",
+			"websiteUrl": "",
+			"privacyUrl": "",
+			"termsOfUseUrl": "",
+			"mpnId": "Undefined-1.22.1"
+		},
+		"metadata": {
+			"shortDescription": {
+				"default": "web-part-top-actions description"
+			},
+			"longDescription": {
+				"default": "web-part-top-actions description"
+			},
+			"screenshotPaths": [],
+			"videoUrl": "",
+			"categories": []
+		},
+		"features": [
+			{
+				"title": "web-part-top-actions Feature",
+				"description": "The feature that activates elements of the web-part-top-actions solution.",
+				"id": "07c2a3e0-ff9b-47af-a773-f7b7e45fee06",
+				"version": "1.0.0.0"
+			}
+		]
+	},
+	"paths": {
+		"zippedPackage": "solution/web-part-top-actions.sppkg"
+	}
 }

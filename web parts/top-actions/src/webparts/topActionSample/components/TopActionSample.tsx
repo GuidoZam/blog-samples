@@ -1,19 +1,48 @@
 import * as React from 'react';
 import styles from './TopActionSample.module.scss';
 import type { ITopActionSampleProps } from './ITopActionSampleProps';
+import { LoggingEnum } from './LoggingEnum';
+import * as strings from 'TopActionSampleWebPartStrings';
 
 export default class TopActionSample extends React.Component<ITopActionSampleProps> {
+  constructor(props: ITopActionSampleProps) {
+    super(props);
+    
+    this.log('TopActionSample component constructed.', LoggingEnum.Verbose);
+    this.log(`Initial like state: ${this.props.like}`, LoggingEnum.Verbose);
+  }
+
   public render(): React.ReactElement<ITopActionSampleProps> {
+    this.log('TopActionSample component rendered.', LoggingEnum.Verbose);
+
+    this.log('Sample warning message.', LoggingEnum.Warning);
+    this.log('Sample error message.', LoggingEnum.Error);
 
     return (
       <section className={styles.topActionSample}>
-        <div className={styles.welcome}>
-          <h2>Top Action Sample Web Part</h2>
-        </div>
+        <h2>{strings.Title}</h2>
         <div>
-          <p>This web part demonstrates how to use the Top Actions extensibility API to add custom actions to the top action bar.</p>
+          <p>{strings.Description}</p>
         </div>
       </section>
     );
+  }
+
+  private log(message: string, level: LoggingEnum): void {
+    if (this.props.logging === level) {
+      switch (level) {
+        case LoggingEnum.Off:
+          break;
+        case LoggingEnum.Warning:
+          console.warn(message);
+          break;
+        case LoggingEnum.Error:
+          console.error(message);
+          break;
+        case LoggingEnum.Verbose:
+          console.log(message);
+          break;
+      }
+    }
   }
 }

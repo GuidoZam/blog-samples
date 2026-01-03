@@ -1,16 +1,15 @@
 declare interface ITopActionSampleWebPartStrings {
-  PropertyPaneDescription: string;
-  BasicGroupName: string;
-  DescriptionFieldLabel: string;
-  AppLocalEnvironmentSharePoint: string;
-  AppLocalEnvironmentTeams: string;
-  AppLocalEnvironmentOffice: string;
-  AppLocalEnvironmentOutlook: string;
-  AppSharePointEnvironment: string;
-  AppTeamsTabEnvironment: string;
-  AppOfficeEnvironment: string;
-  AppOutlookEnvironment: string;
-  UnknownEnvironment: string;
+  Title: string;
+  Description: string;
+	TopActions: {
+		ButtonTitle: string;
+		ButtonText: string;
+    DropdownTitle: string;
+    DropdownOptionOff: string;
+    DropdownOptionWarning: string;
+    DropdownOptionError: string;
+    DropdownOptionVerbose: string;
+	};
 }
 
 declare module 'TopActionSampleWebPartStrings' {

@@ -3,7 +3,7 @@ import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
-//import * as strings from 'TopActionSampleWebPartStrings';
+import * as strings from 'TopActionSampleWebPartStrings';
 import TopActionSample from './components/TopActionSample';
 import { ITopActionSampleProps } from './components/ITopActionSampleProps';
 
@@ -11,15 +11,20 @@ import {
   ITopActions,
   TopActionsFieldType
 } from '@microsoft/sp-top-actions';
+import { LoggingEnum } from './components/LoggingEnum';
 
 export interface ITopActionSampleWebPartProps {
-  description: string;
+	like: boolean;
+	logging: LoggingEnum;
 }
 
 export default class TopActionSampleWebPart extends BaseClientSideWebPart<ITopActionSampleWebPartProps> {
 	public render(): void {
 		const element: React.ReactElement<ITopActionSampleProps> =
-			React.createElement(TopActionSample, {});
+			React.createElement(TopActionSample, {
+        like: this.properties.like,
+        logging: this.properties.logging
+      });
 
 		ReactDom.render(element, this.domElement);
 	}
@@ -32,31 +37,43 @@ export default class TopActionSampleWebPart extends BaseClientSideWebPart<ITopAc
 		return Version.parse("1.0");
 	}
 
-	public getTopActionsConfiguration(): ITopActions | undefined {
+	public getTopActionsConfiguration = (): ITopActions | undefined => {
+    // Create variable to hold properties
+    const properties = this.properties;
+
 		return {
 			topActions: [
 				{
 					type: TopActionsFieldType.Button,
-					title: "Button",
+					title: strings.TopActions.ButtonTitle,
 					targetProperty: "button",
 					properties: {
-						text: "Button",
-						icon: "SharePointLogo",
+						text: strings.TopActions.ButtonText,
+						icon: properties.like === true ? "LikeSolid" : "Like",
 					},
 				},
 				{
 					type: TopActionsFieldType.Dropdown,
-					title: "Dropdown",
+					title: strings.TopActions.DropdownTitle,
 					targetProperty: "dropdown",
 					properties: {
 						options: [
 							{
-								key: "1",
-								text: "Option 1", // TODO; update localization
+								key: LoggingEnum.Off,
+								text: strings.TopActions.DropdownOptionOff,
+                checked: true
 							},
 							{
-								key: "2",
-								text: "Option 2",
+								key: LoggingEnum.Warning,
+								text: strings.TopActions.DropdownOptionWarning,
+							},
+							{
+								key: LoggingEnum.Error,
+								text: strings.TopActions.DropdownOptionError,
+							},
+							{
+								key: LoggingEnum.Verbose,
+								text: strings.TopActions.DropdownOptionVerbose,
 							},
 						],
 					},
@@ -64,6 +81,14 @@ export default class TopActionSampleWebPart extends BaseClientSideWebPart<ITopAc
 			],
 			onExecute(actionName, updatedValue) {
 				console.log("onExecute", actionName, updatedValue);
+				switch (actionName) {
+					case "button":
+						properties.like = !properties.like;
+						break;
+					case "dropdown":
+						properties.logging = updatedValue as LoggingEnum;
+						break;
+				}
 			},
 		};
 	}
