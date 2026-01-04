@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.17.0",
+    "sdksVersions": {},
+    "version": "1.22.1",
+    "libraryName": "top-actions-dev-preview",
+    "libraryId": "9b7dc19b-a4a8-4780-b6e5-d1279e0bf815",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "top-actions-dev-preview",
+    "solutionShortDescription": "top-actions-dev-preview description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

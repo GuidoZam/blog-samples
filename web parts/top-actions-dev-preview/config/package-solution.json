@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "top-actions-dev-preview-client-side-solution",
+    "id": "9b7dc19b-a4a8-4780-b6e5-d1279e0bf815",
+    "version": "1.0.9.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "top-actions-dev-preview description"
+      },
+      "longDescription": {
+        "default": "top-actions-dev-preview description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "top-actions-dev-preview Feature",
+        "description": "The feature that activates elements of the top-actions-dev-preview solution.",
+        "id": "8c3b1e54-4494-4b83-8e64-a5bb721c5c35",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/top-actions-dev-preview.sppkg"
+  }
+}
