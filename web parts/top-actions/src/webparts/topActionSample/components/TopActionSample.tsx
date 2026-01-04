@@ -29,18 +29,21 @@ export default class TopActionSample extends React.Component<ITopActionSamplePro
   }
 
   private log(message: string, level: LoggingEnum): void {
-    if (this.props.logging === level) {
+    const shouldLog = this.props.logging === level || 
+                      (this.props.logging === LoggingEnum.Verbose && level !== LoggingEnum.Off);
+    
+    if (shouldLog) {
       switch (level) {
         case LoggingEnum.Off:
           break;
-        case LoggingEnum.Warning:
-          console.warn(message);
+        case LoggingEnum.Warning || LoggingEnum.Verbose:
+          console.warn(`🔎 ${message}`);
           break;
-        case LoggingEnum.Error:
-          console.error(message);
+        case LoggingEnum.Error || LoggingEnum.Verbose:
+          console.error(`🔎 ${message}`);
           break;
         case LoggingEnum.Verbose:
-          console.log(message);
+          console.log(`🔎 ${message}`);
           break;
       }
     }

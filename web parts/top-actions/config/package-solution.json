@@ -3,7 +3,7 @@
 	"solution": {
 		"name": "web-part-top-actions-client-side-solution",
 		"id": "423635f4-ecfe-49e4-aa0e-1984805685a2",
-		"version": "1.0.2.0",
+		"version": "1.0.7.0",
 		"includeClientSideAssets": true,
 		"skipFeatureDeployment": true,
 		"isDomainIsolated": false,
