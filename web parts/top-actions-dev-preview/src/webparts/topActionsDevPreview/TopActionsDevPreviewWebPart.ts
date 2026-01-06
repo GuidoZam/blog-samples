@@ -8,7 +8,7 @@ import * as strings from 'TopActionsDevPreviewWebPartStrings';
 import TopActionsDevPreview from './components/TopActionsDevPreview';
 import { ITopActionsDevPreviewProps } from './components/ITopActionsDevPreviewProps';
 
-import { ITopActions, ITopActionsComboboxProps, ITopActionsToggleProps, TopActionsFieldType } from "@microsoft/sp-top-actions";
+import { ITopActions, ITopActionsToggleProps, TopActionsFieldType } from "@microsoft/sp-top-actions";
 import { LoggingEnum } from './components/LoggingEnum';
 
 export interface ITopActionsDevPreviewWebPartProps {
@@ -130,30 +130,30 @@ export default class TopActionsDevPreviewWebPart extends BaseClientSideWebPart<I
 				// 		// autoComplete: "on"
 				// 	},
 				// },
-				{
-					type: TopActionsFieldType.Split,
-					title: strings.TopActions.SplitTitle,
-					targetProperty: "split",
-					properties: {
-						// Insert properties from ITopActionsSplitButtonProps here
-          text: strings.TopActions.SplitText,
-          ariaLabel: strings.TopActions.SplitButtonAriaLabel,
-          options: [
-              {
-              key: "share",
-              text: strings.TopActions.SplitShare,
-              },
-              {
-              key: "email",
-              text: strings.TopActions.SplitEmail,
-              },
-              {
-              key: "copy",
-              text: strings.TopActions.SplitCopy,
-              },
-            ]
-					},
-				}
+				// {
+				// 	type: TopActionsFieldType.Split,
+				// 	title: strings.TopActions.SplitTitle,
+				// 	targetProperty: "split",
+				// 	properties: {
+				// 		// Insert properties from ITopActionsSplitButtonProps here
+        //   text: strings.TopActions.SplitText,
+        //   ariaLabel: strings.TopActions.SplitButtonAriaLabel,
+        //   options: [
+        //       {
+        //       key: "share",
+        //       text: strings.TopActions.SplitShare,
+        //       },
+        //       {
+        //       key: "email",
+        //       text: strings.TopActions.SplitEmail,
+        //       },
+        //       {
+        //       key: "copy",
+        //       text: strings.TopActions.SplitCopy,
+        //       },
+        //     ]
+				// 	},
+				// }
 			],
 			onExecute(actionName, updatedValue) {
 				console.log(
