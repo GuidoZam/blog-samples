@@ -1,5 +1,9 @@
 # top-actions-dev-preview
 
+> ⚠️ This sample uses alpha top actions APIs that are subject to change. Do not use in production environments. ⚠️
+
+> ⚠️ **MISSING**: as per last tests with SPFx 1.22.1 the alpha top actions are not rendered at runtime. ⚠️
+
 ## Summary
 
 Short summary on functionality and used technologies.
