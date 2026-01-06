@@ -180,22 +180,17 @@ Crash --> [*]
 
 > Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
 
-## Prerequisites
-
-> Any special pre-requisites?
-
 ## Solution
 
 | Solution    | Author(s)                                               |
 | ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
+| mermaid-diagram | (GuidoZam)[https://github.com/GuidoZam] |
 
 ## Version history
 
 | Version | Date             | Comments        |
 | ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
+| 1.0     | January 06, 2026 | Initial release |
 
 ## Disclaimer
 
@@ -210,9 +205,7 @@ Crash --> [*]
 - in the command-line run:
   - `npm install -g @rushstack/heft`
   - `npm install`
-  - `heft start`
-
-> Include any additional steps as needed.
+  - `npm run start`
 
 Other build commands can be listed using `heft --help`.
 
@@ -242,18 +235,11 @@ This web part illustrates the following development concepts:
 - Async/await patterns for rendering operations
 - Error boundary implementation for graceful error handling
 
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
-
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
-
 ## References
 
 - [Getting started with SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
 - [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/sharepoint/dev/spfx/publish-to-marketplace-overview)
 - [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
 - [Heft Documentation](https://heft.rushstack.io/)
 - [Mermaid.js Documentation](https://mermaid.js.org/) - Official documentation for Mermaid diagramming syntax
 - [PnP SPFx Property Controls](https://pnp.github.io/sp-dev-fx-property-controls/) - Property panel controls used in this web part
-- [Mermaid Live Editor](https://mermaid.live/) - Online editor to test and create Mermaid diagrams
