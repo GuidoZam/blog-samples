@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.17.0",
+    "sdksVersions": {},
+    "version": "1.22.1",
+    "libraryName": "mermaid-diagram",
+    "libraryId": "336d514b-0be7-4d95-b4a7-7a1b28bc8106",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "mermaid-diagram",
+    "solutionShortDescription": "mermaid-diagram description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

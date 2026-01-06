@@ -1,0 +1,75 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.mermaidDiagram {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.diagramContainer {
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid "[theme:neutralLight, default: #edebe9]";
+  border-radius: 4px;
+  background-color: "[theme:white, default: #ffffff]";
+  background-color: var(--white);
+  overflow: auto;
+}
+
+.diagramContainerNoBorder {
+  margin-top: 1em;
+  padding: 1em;
+  overflow: auto;
+}
+
+.diagram {
+  text-align: center;
+  
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.error {
+  color: "[theme:errorText, default: #a80000]";
+  color: var(--errorText);
+  padding: 1em;
+  text-align: center;
+  font-style: italic;
+}
+
+.noMermaidDiagram {
+  color: "[theme:neutralSecondary, default: #605e5c]";
+  color: var(--neutralSecondary);
+  padding: 1em;
+  text-align: center;
+  font-style: italic;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
