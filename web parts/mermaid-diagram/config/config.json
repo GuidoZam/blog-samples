@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "mermaid-diagram-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mermaidDiagram/MermaidDiagramWebPart.js",
+          "manifest": "./src/webparts/mermaidDiagram/MermaidDiagramWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MermaidDiagramWebPartStrings": "lib/webparts/mermaidDiagram/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}
