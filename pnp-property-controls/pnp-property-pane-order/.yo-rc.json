@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.17.0",
+    "sdksVersions": {},
+    "version": "1.22.1",
+    "libraryName": "pnp-property-pane-order",
+    "libraryId": "cbf6fdcd-e72c-45e0-a153-d5e2d66c1f05",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "pnp-property-pane-order",
+    "solutionShortDescription": "pnp-property-pane-order description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
