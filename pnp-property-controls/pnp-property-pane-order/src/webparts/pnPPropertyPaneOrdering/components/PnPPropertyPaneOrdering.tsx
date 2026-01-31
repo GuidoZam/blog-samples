@@ -5,7 +5,7 @@ import { escape } from '@microsoft/sp-lodash-subset';
 
 export default class PnPPropertyPaneOrdering extends React.Component<IPnPPropertyPaneOrderingProps> {
   
-  private renderCharacterList = (characters: Array<{text: string, iconName: string}>, title: string) => {
+  private renderCharacterList = (characters: Array<{text: string, icon: string}>, title: string) => {
     if (!characters || characters.length === 0) {
       return null;
     }

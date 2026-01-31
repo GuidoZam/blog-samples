@@ -13,7 +13,7 @@ import PnPPropertyPaneOrdering from './components/PnPPropertyPaneOrdering';
 import { IPnPPropertyPaneOrderingProps } from './components/IPnPPropertyPaneOrderingProps';
 
 export interface IPnPPropertyPaneOrderingWebPartProps {
-	orderedMarioCharacters: Array<{ text: string; iconName: string }>;
+	orderedMarioCharacters: Array<{ text: string; icon: string }>;
 	// Minimal
 	minimalOrder: Array<any>;
 	// Disabled
@@ -35,12 +35,12 @@ export default class PnPPropertyPaneOrderingWebPart extends BaseClientSideWebPar
   public render(): void {
     // Initialize default Mario characters for all instances
     const defaultMarioCharacters = [
-        {"text": "Mario", "iconName": "Contact"},
-        {"text": "Luigi", "iconName": "ContactCard"},
-        {"text": "Princess Peach", "iconName": "Crown"},
-        {"text": "Bowser", "iconName": "DragonRoaring"},
-        {"text": "Yoshi", "iconName": "Dinosaur"},
-        {"text": "Toad", "iconName": "MushroomIcon"}
+        {"text": "Mario", "icon": "🍄"},
+        {"text": "Luigi", "icon": "👑"},
+        {"text": "Princess Peach", "icon": "👸"},
+        {"text": "Bowser", "icon": "🐲"},
+        {"text": "Yoshi", "icon": "🦕"},
+        {"text": "Toad", "icon": "🍄"}
       ];
 
     // Initialize all PropertyFieldOrder instances if not set
@@ -200,25 +200,13 @@ export default class PnPPropertyPaneOrderingWebPart extends BaseClientSideWebPar
     };
   }
 
-  private renderMarioCharacter = (item: {text: string, iconName: string}, index: number): JSX.Element => {
-    // Map character names to emoji icons as a reliable fallback
-    const emojiMap: {[key: string]: string} = {
-      'Mario': '🍄',
-      'Luigi': '👑', 
-      'Princess Peach': '👸',
-      'Bowser': '🐲',
-      'Yoshi': '🦕',
-      'Toad': '🍄'
-    };
-    
-    const emoji = emojiMap[item.text] || '⭐';
-    
+  private renderMarioCharacter = (item: {text: string, icon: string}, index: number): JSX.Element => {
     return React.createElement('span', {
       style: { display: 'flex', alignItems: 'center' }
     },
       React.createElement('span', {
         style: { marginRight: '8px', fontSize: '16px' }
-      }, emoji),
+      }, item.icon),
       item.text
     );
   }
