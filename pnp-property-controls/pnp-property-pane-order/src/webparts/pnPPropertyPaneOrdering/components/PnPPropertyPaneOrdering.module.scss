@@ -1,0 +1,106 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.pnPPropertyPaneOrdering {
+  overflow: hidden;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  
+  .welcome {
+    margin-bottom: 2rem;
+    text-align: center;
+    
+    h2 {
+      margin: 0 0 1rem 0;
+      font-size: 24px;
+      font-weight: 600;
+      color: #0078d4;
+    }
+    
+    p {
+      margin: 0.5rem 0;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+  
+  .instanceSection {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border-left: 4px solid #0078d4;
+    
+    h4 {
+      margin: 0 0 1rem 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #323130;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .characterList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .characterItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    strong {
+      font-size: 14px;
+      color: #323130;
+    }
+  }
+
+  .racePosition {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    flex-shrink: 0;
+  }
+  
+  // Medal positions styling
+  .characterItem:nth-child(1) .racePosition {
+    background: linear-gradient(135deg, #ffd700, #ffed4e); // Gold
+    box-shadow: 0 2px 6px rgba(255, 215, 0, 0.3);
+  }
+  
+  .characterItem:nth-child(2) .racePosition {
+    background: linear-gradient(135deg, #c0c0c0, #e8e8e8); // Silver
+    box-shadow: 0 2px 6px rgba(192, 192, 192, 0.3);
+  }
+  
+  .characterItem:nth-child(3) .racePosition {
+    background: linear-gradient(135deg, #cd7f32, #deb887); // Bronze
+    box-shadow: 0 2px 6px rgba(205, 127, 50, 0.3);
+  }
+  
+  .characterItem:nth-child(n+4) .racePosition {
+    background: linear-gradient(135deg, #6c757d, #868e96); // Regular
+    box-shadow: 0 2px 6px rgba(108, 117, 125, 0.3);
+  }
+}

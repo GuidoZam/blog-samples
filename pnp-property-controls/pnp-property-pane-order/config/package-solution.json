@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-property-pane-order-client-side-solution",
+    "id": "cbf6fdcd-e72c-45e0-a153-d5e2d66c1f05",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-property-pane-order description"
+      },
+      "longDescription": {
+        "default": "pnp-property-pane-order description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-property-pane-order Feature",
+        "description": "The feature that activates elements of the pnp-property-pane-order solution.",
+        "id": "89351ad2-4476-45c5-a18d-4ac492944cba",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-property-pane-order.sppkg"
+  }
+}

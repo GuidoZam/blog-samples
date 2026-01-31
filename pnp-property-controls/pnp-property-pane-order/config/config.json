@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "pn-p-property-pane-ordering-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pnPPropertyPaneOrdering/PnPPropertyPaneOrderingWebPart.js",
+          "manifest": "./src/webparts/pnPPropertyPaneOrdering/PnPPropertyPaneOrderingWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PnPPropertyPaneOrderingWebPartStrings": "lib/webparts/pnPPropertyPaneOrdering/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}
