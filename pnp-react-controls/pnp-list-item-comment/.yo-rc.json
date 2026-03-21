@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.17.0",
+    "sdksVersions": {},
+    "version": "1.22.1",
+    "libraryName": "pnp-list-item-comment",
+    "libraryId": "349ffc26-236a-48c2-aa59-d56395ea2443",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "pnp-list-item-comment",
+    "solutionShortDescription": "pnp-list-item-comment description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

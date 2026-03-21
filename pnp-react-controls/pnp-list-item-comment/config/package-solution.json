@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-list-item-comment-client-side-solution",
+    "id": "349ffc26-236a-48c2-aa59-d56395ea2443",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-list-item-comment description"
+      },
+      "longDescription": {
+        "default": "pnp-list-item-comment description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-list-item-comment Feature",
+        "description": "The feature that activates elements of the pnp-list-item-comment solution.",
+        "id": "148937c7-0e20-4288-bf86-064ad01e9258",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-list-item-comment.sppkg"
+  }
+}
