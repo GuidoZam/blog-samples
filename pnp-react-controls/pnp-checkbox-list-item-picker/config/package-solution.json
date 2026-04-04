@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-checkbox-list-item-picker-client-side-solution",
+    "id": "1652c3f8-eea7-4d6f-a872-c628d739a212",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-checkbox-list-item-picker description"
+      },
+      "longDescription": {
+        "default": "pnp-checkbox-list-item-picker description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-checkbox-list-item-picker Feature",
+        "description": "The feature that activates elements of the pnp-checkbox-list-item-picker solution.",
+        "id": "ceb407e3-f853-4451-a357-fd57fdc688d3",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-checkbox-list-item-picker.sppkg"
+  }
+}
