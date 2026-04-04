@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.17.0",
+    "sdksVersions": {},
+    "version": "1.22.1",
+    "libraryName": "pnp-checkbox-list-item-picker",
+    "libraryId": "1652c3f8-eea7-4d6f-a872-c628d739a212",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "pnp-checkbox-list-item-picker",
+    "solutionShortDescription": "pnp-checkbox-list-item-picker description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

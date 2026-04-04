@@ -1,0 +1,95 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.checkboxListItemPickerSample {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.section {
+  margin: 2em 0;
+  
+  h3 {
+    color: "[theme:themePrimary, default: #0078d4]";
+    color: var(--themePrimary);
+    border-bottom: 2px solid "[theme:themePrimary, default: #0078d4]";
+    border-bottom-color: var(--themePrimary);
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+  }
+}
+
+.example {
+  margin: 2em 0;
+  padding: 1.5em;
+  background-color: "[theme:neutralLighterAlt, default: #faf9f8]";
+  background-color: var(--neutralLighterAlt);
+  border-radius: 4px;
+  border-left: 4px solid "[theme:themePrimary, default: #0078d4]";
+  border-left-color: var(--themePrimary);
+  
+  p {
+    margin: 0.5em 0 1em 0;
+    font-style: italic;
+    color: "[theme:neutralDark, default: #201f1e]";
+    color: var(--neutralDark);
+  }
+}
+
+.selectedItems {
+  margin-top: 1em;
+  padding: 0.75em;
+  background-color: "[theme:themeLighterAlt, default: #eff6fc]";
+  background-color: var(--themeLighterAlt);
+  border: 1px solid "[theme:themeLighter, default: #c7e0f4]";
+  border-color: var(--themeLighter);
+  border-radius: 4px;
+  font-size: 0.9em;
+  
+  strong {
+    color: "[theme:themeDark, default: #005a9e]";
+    color: var(--themeDark);
+  }
+}
+
+.documentation {
+  margin-top: 3em;
+  padding: 1.5em;
+  background-color: "[theme:neutralLighter, default: #f3f2f1]";
+  background-color: var(--neutralLighter);
+  border-radius: 4px;
+  
+  h4 {
+    color: "[theme:themePrimary, default: #0078d4]";
+    color: var(--themePrimary);
+    margin-top: 0;
+  }
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
