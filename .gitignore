@@ -397,3 +397,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 .DS_Store
+agents/Rubber duck/env/.env.dev
+agents/Rubber duck/env/.env.prod
