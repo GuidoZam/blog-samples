@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
+
+  "id": "56bf1905-205c-4fdc-a506-66670cf9ce69",
+  "alias": "CommandSetGroupingSampleCommandSet",
+  "componentType": "Extension",
+  "extensionType": "ListViewCommandSet",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+
+  "items": {
+    "HARDWARE_GROUP": {
+      "title": { "default": "Hardware Management" },
+      "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2048 2048'%3E%3Cpath d='M1920 640q27 0 45 19t19 45v1152q0 26-19 45t-45 19H128q-26 0-45-19t-19-45V384q0-26 19-45t45-19h768l256 320h768z' fill='%23333333'%3E%3C/path%3E%3C/svg%3E",
+      "type": "group"
+    },
+    "SOFTWARE_GROUP": {
+      "title": { "default": "Software Management" },
+      "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2048 2048'%3E%3Cpath d='M128 384h768l256 256h640l-256-256H896L640 128H128Q75 128 37 165T0 256v1408q0 53 37 91t91 38h1664q53 0 91-38t37-91V640H832L576 384H128zm1664 384v896H256l256-896h1280z' fill='%23333333'%3E%3C/path%3E%3C/svg%3E",
+      "type": "group"
+    },
+    "SUPPORT_SUBGROUP": {
+      "title": { "default": "User Support" },
+      "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2048 2048'%3E%3Cpath d='M960 1920q-26 0-45-19t-19-45v-128H128q-27 0-45-19t-19-45V640q0-26 19-45t45-19h768V448q0-26 19-45t45-19h896q27 0 45 19t19 45v1024q0 27-19 45t-45 19h-768v128q0 26-19 45t-45 19H960z' fill='%23333333'%3E%3C/path%3E%3C/svg%3E",
+      "type": "group",
+      "group": "SOFTWARE_GROUP"
+    },
+    "INSTALL_HARDWARE": {
+      "title": { "default": "Install Hardware" },
+      "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2048 2048'%3E%3Cpath d='M1024 0q141 0 272 37t240 104 207 160 160 208 103 239 38 272q0 141-37 272t-104 240-160 207-208 160-239 103-272 38q-141 0-272-37t-240-104-207-160-160-208-103-239-38-272q0-141 37-272t104-240 160-207 208-160T752 37t272-37zm128 576H896v384H512v256h384v384h256v-384h384V960h-384V576z' fill='%2300BCF2'%3E%3C/path%3E%3C/svg%3E",
+      "type": "command",
+      "group": "HARDWARE_GROUP"
+    },
+    "RETIRE_HARDWARE": {
+      "title": { "default": "Retire Hardware" },
+      "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2048 2048'%3E%3Cpath d='M768 256h512v-128H768v128zm-256 0V64q0-27 19-45t45-19h768q27 0 45 19t19 45v192h384v128H128V256h384zM256 512h1536v1408q0 53-37 91t-91 37H384q-53 0-91-37t-37-91V512zm128 128v1280q0 27 19 45t45 19h1152q27 0 45-19t19-45V640H384zm256 256h128v896H640V896zm384 0h128v896h-128V896zm384 0h128v896h-128V896z' fill='%23FF4B4B'%3E%3C/path%3E%3C/svg%3E",
+      "type": "command",
+      "group": "HARDWARE_GROUP"
+    },
+    "REPAIR_REQUEST": {
+      "title": { "default": "Request Repair" },
+      "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2048 2048'%3E%3Cpath d='M1408 896l640-640v549l-402 402-238-311zm-128 128l311 238-402 402H640l640-640zM896 256l128-128 896 896-128 128L896 256zM128 1792l640-640 896 896-128 128-549 0-402-402-457 18z' fill='%23FFA500'%3E%3C/path%3E%3C/svg%3E",
+      "type": "command",
+      "group": "HARDWARE_GROUP"
+    },
+    "INSTALL_SOFTWARE": {
+      "title": { "default": "Install Software" },
+      "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2048 2048'%3E%3Cpath d='M1408 0l640 640-640 640V896q-159 13-289 78t-230 166-168 228-104 275q-4 20-8 40t-7 40q-59-167-88-345t-12-357q22-239 127-447t279-362T1408 128V0z' fill='%2300BCF2'%3E%3C/path%3E%3C/svg%3E",
+      "type": "command",
+      "group": "SOFTWARE_GROUP"
+    },
+    "UPDATE_SOFTWARE": {
+      "title": { "default": "Update Software" },
+      "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2048 2048'%3E%3Cpath d='M1664 192l192 192-192 192-192-192 192-192zm-128 320l192 192-960 960H576v-192l960-960zm-960 1088v128H128V128h768v128H256v1344h320z' fill='%23107C10'%3E%3C/path%3E%3C/svg%3E",
+      "type": "command",
+      "group": "SOFTWARE_GROUP"
+    },
+    "CREATE_TICKET": {
+      "title": { "default": "Create Support Ticket" },
+      "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2048 2048'%3E%3Cpath d='M1792 384H256q-53 0-99 20t-82 55-55 81-20 100v896q0 53 20 99t55 82 81 55 100 20h1536q53 0 99-20t82-55 55-81 20-100V640q0-53-20-99t-55-82-81-55-100-20zm128 256v896q0 27-19 45t-45 19H192q-27 0-45-19t-19-45V640q0-27 19-45t45-19h1664q27 0 45 19t19 45z' fill='%23FFB900'%3E%3C/path%3E%3C/svg%3E",
+      "type": "command",
+      "group": "SUPPORT_SUBGROUP"
+    },
+    "REMOTE_ASSIST": {
+      "title": { "default": "Remote Assistance" },
+      "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2048 2048'%3E%3Cpath d='M1024 512q106 0 199 40t163 109 110 163 40 200q0 106-40 199t-109 163-163 110-200 40q-106 0-199-40t-163-109-110-163-40-200q0-106 40-199t109-163 163-110 200-40zm0 896q80 0 149-30t122-82 83-123 30-149q0-80-30-149t-82-122-123-83-149-30q-80 0-149 30t-122 82-83 123-30 149q0 80 30 149t82 122 123 83 149 30z' fill='%236264A7'%3E%3C/path%3E%3C/svg%3E",
+      "type": "command",
+      "group": "SUPPORT_SUBGROUP"
+    }
+  }
+}
