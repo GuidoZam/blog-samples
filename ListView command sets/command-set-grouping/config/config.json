@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "command-set-grouping-sample-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/commandSetGroupingSample/CommandSetGroupingSampleCommandSet.js",
+          "manifest": "./src/extensions/commandSetGroupingSample/CommandSetGroupingSampleCommandSet.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CommandSetGroupingSampleCommandSetStrings": "lib/extensions/commandSetGroupingSample/loc/{locale}.js"
+  }
+}
