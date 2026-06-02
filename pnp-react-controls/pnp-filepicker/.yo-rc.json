@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.17.0",
+    "sdksVersions": {},
+    "version": "1.23.0-rc.0",
+    "libraryName": "pnp-filepicker",
+    "libraryId": "cafa343b-8eef-41f0-a46e-a3e53038664a",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "pnp-filepicker",
+    "solutionShortDescription": "pnp-filepicker description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

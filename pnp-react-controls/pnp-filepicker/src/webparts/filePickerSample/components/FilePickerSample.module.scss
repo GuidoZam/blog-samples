@@ -1,0 +1,186 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.filePickerSample {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: "[theme:themePrimary, default: #0078d4]";
+  color: var(--themePrimary);
+  border-bottom: 2px solid "[theme:themePrimary, default: #0078d4]";
+  border-bottom: 2px solid var(--themePrimary);
+  padding-bottom: 8px;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  color: "[theme:neutralPrimary, default: #323130]";
+  color: var(--neutralPrimary);
+}
+
+.exampleSection {
+  margin-bottom: 40px;
+  padding: 24px;
+  background-color: "[theme:white, default: #ffffff]";
+  background-color: var(--white);
+  border: 1px solid "[theme:neutralLight, default: #edebe9]";
+  border: 1px solid var(--neutralLight);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+}
+
+.exampleTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: "[theme:themePrimary, default: #0078d4]";
+  color: var(--themePrimary);
+  display: flex;
+  align-items: center;
+}
+
+.exampleDescription {
+  font-size: 14px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  color: "[theme:neutralSecondary, default: #605e5c]";
+  color: var(--neutralSecondary);
+  font-style: italic;
+}
+
+.pickerContainer {
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: "[theme:neutralLighterAlt, default: #faf9f8]";
+  background-color: var(--neutralLighterAlt);
+  border-radius: 4px;
+}
+
+.infoMessage {
+  margin-top: 12px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.noFileMessage {
+  margin-top: 16px;
+}
+
+.selectedFileSection {
+  padding: 20px;
+  background-color: "[theme:neutralLighterAlt, default: #faf9f8]";
+  background-color: var(--neutralLighterAlt);
+  border: 1px solid "[theme:neutralQuaternaryAlt, default: #dadada]";
+  border: 1px solid var(--neutralQuaternaryAlt);
+  border-radius: 4px;
+  margin-top: 16px;
+  animation: slideIn 0.3s ease;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: "[theme:themeDark, default: #005a9e]";
+  color: var(--themeDark);
+}
+
+.fileInfo {
+  margin-bottom: 16px;
+}
+
+.fileInfoRow {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid "[theme:neutralLight, default: #edebe9]";
+  border-bottom: 1px solid var(--neutralLight);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.fileInfoLabel {
+  font-weight: 600;
+  min-width: 100px;
+  color: "[theme:neutralPrimary, default: #323130]";
+  color: var(--neutralPrimary);
+}
+
+.fileInfoValue {
+  flex: 1;
+  word-break: break-word;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+}
+
+.fileInfoLink {
+  flex: 1;
+  word-break: break-all;
+  color: "[theme:link, default:#03787c]";
+  color: var(--link);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: "[theme:linkHovered, default: #014446]";
+    color: var(--linkHovered);
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.toggleContainer {
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: "[theme:neutralLighterAlt, default: #faf9f8]";
+  background-color: var(--neutralLighterAlt);
+  border-radius: 4px;
+}
+
+.toggleStack {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: "[theme:white, default: #ffffff]";
+  background-color: var(--white);
+  border: 1px solid "[theme:neutralQuaternaryAlt, default: #dadada]";
+  border: 1px solid var(--neutralQuaternaryAlt);
+  border-radius: 4px;
+}

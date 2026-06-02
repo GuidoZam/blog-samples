@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-filepicker-client-side-solution",
+    "id": "cafa343b-8eef-41f0-a46e-a3e53038664a",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.23.0-rc.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-filepicker description"
+      },
+      "longDescription": {
+        "default": "pnp-filepicker description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-filepicker Feature",
+        "description": "The feature that activates elements of the pnp-filepicker solution.",
+        "id": "3a879a57-c63a-44ab-97c0-96a9d45bc357",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-filepicker.sppkg"
+  }
+}
