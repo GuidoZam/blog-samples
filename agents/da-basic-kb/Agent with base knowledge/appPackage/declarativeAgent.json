@@ -1,0 +1,23 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.7/schema.json",
+    "version": "v1.7",
+    "name": "MCS licensing${{APP_NAME_SUFFIX}}",
+    "description": "Declarative agent to answer questions about MCS licensing. It can only access the content in the provided SharePoint site.",
+    "instructions": "$[file('instruction.txt')]",
+    "capabilities": [
+        {
+            "name": "OneDriveAndSharePoint",
+            "items_by_url": [
+                {
+                    "url": "https://<tenant>.sharepoint.com/sites/<site>"
+                }
+            ]
+        }
+    ],
+    "conversation_starters": [
+        {
+            "title": "Get licensing info",
+            "text": "What are the licensing options for Microsoft Copilot Studio?"
+        }
+    ]
+}
