@@ -241,21 +241,9 @@ export default class FilePickerSample extends React.Component<IFilePickerSampleP
                   inlineLabel
                 />
                 <Toggle
-                  label={strings.HideWebSearchTab}
-                  checked={this.state.hideWebSearchTab}
-                  onChange={(_, checked) => this.setState({ hideWebSearchTab: !!checked })}
-                  inlineLabel
-                />
-                <Toggle
                   label={strings.HideStockImages}
                   checked={this.state.hideStockImages}
                   onChange={(_, checked) => this.setState({ hideStockImages: !!checked })}
-                  inlineLabel
-                />
-                <Toggle
-                  label={strings.HideOrganisationalAssetTab}
-                  checked={this.state.hideOrganisationalAssetTab}
-                  onChange={(_, checked) => this.setState({ hideOrganisationalAssetTab: !!checked })}
                   inlineLabel
                 />
                 <Toggle
@@ -297,9 +285,7 @@ export default class FilePickerSample extends React.Component<IFilePickerSampleP
                 onSave={(files) => this.setState({ example10File: files?.[0] })}
                 context={this.props.context as any}
                 hideRecentTab={this.state.hideRecentTab}
-                hideWebSearchTab={this.state.hideWebSearchTab}
                 hideStockImages={this.state.hideStockImages}
-                hideOrganisationalAssetTab={this.state.hideOrganisationalAssetTab}
                 hideOneDriveTab={this.state.hideOneDriveTab}
                 hideSiteFilesTab={this.state.hideSiteFilesTab}
                 hideLocalUploadTab={this.state.hideLocalUploadTab}
