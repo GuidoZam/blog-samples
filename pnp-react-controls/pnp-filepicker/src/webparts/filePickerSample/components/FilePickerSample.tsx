@@ -212,20 +212,6 @@ export default class FilePickerSample extends React.Component<IFilePickerSampleP
             {this._renderFileInfo(this.state.example8File, () => this.setState({ example8File: undefined }))}
           </div>
 
-          {/* Example 9: Check If File Exists */}
-          {this._renderExample(
-            strings.Example9Title,
-            <FilePicker
-              label={strings.CheckFileExistsLabel}
-              buttonLabel={strings.FilePickerButtonLabel}
-              checkIfFileExists={true}
-              onSave={(files) => this.setState({ example9File: files?.[0] })}
-              context={this.props.context as any}
-            />,
-            this.state.example9File,
-            () => this.setState({ example9File: undefined })
-          )}
-
           {/* Example 10: Tab Visibility Control */}
           <div className={styles.exampleSection}>
             <h2 className={styles.exampleTitle}>{strings.Example10Title}</h2>
