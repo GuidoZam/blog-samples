@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.19.0",
+    "sdksVersions": {},
+    "version": "1.24.0-beta.2",
+    "libraryName": "hello-world-app",
+    "libraryId": "ce21faba-5dd8-4fd4-8f6a-2f8ee98823b7",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "hello-world-app",
+    "solutionShortDescription": "hello-world-app description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "copilotComponent"
+  }
+}
