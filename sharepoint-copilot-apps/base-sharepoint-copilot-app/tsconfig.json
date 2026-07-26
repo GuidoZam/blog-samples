@@ -1,5 +1,8 @@
 {
   "extends": "./node_modules/@microsoft/spfx-web-build-rig/profiles/default/tsconfig-base.json",
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0"
+  },
   "watchOptions": {
     // Prevent the TypeScript watch program from re-triggering incremental builds
     // when the copilot-agent task regenerates its outputs (temp/copilot staging
