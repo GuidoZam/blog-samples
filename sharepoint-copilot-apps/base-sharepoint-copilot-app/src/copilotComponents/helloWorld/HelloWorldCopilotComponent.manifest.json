@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-component-manifest.schema.json",
+  "id": "d0e597a3-4df8-4a8c-97a7-e7c79e2e04c1",
+  "alias": "HelloWorldCopilotComponent",
+  "componentType": "CopilotComponent",
+  "copilotType": "Ux",
+  "version": "*",
+  "manifestVersion": 2,
+
+  "capabilities": {
+    "availableDisplayModes": ["inline", "fullscreen"]
+  },
+
+  "tools": [
+    {
+      "name": "HelloWorldTool",
+      "description": {
+        "default": "HelloWorld description"
+      },
+      "propertiesSchema": {
+        "id": "$../../../lib/copilotComponents/helloWorld/HelloWorldCopilotComponentProperties.js:default;"
+      }
+    }
+  ]
+}
