@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.19.0",
+    "sdksVersions": {},
+    "version": "1.24.0-beta.2",
+    "libraryName": "sharepoint-copilot-app-with-params",
+    "libraryId": "58b39d6c-d5db-477f-9542-0765dd9c9a5c",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "sharepoint-copilot-app-with-params",
+    "solutionShortDescription": "sharepoint-copilot-app-with-params description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "copilotComponent"
+  }
+}

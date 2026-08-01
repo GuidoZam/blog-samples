@@ -1,0 +1,16 @@
+{
+  "$schema": "../node_modules/@microsoft/spfx-heft-plugins/lib-commonjs/plugins/copilotAgentPlugin/copilot-agent.schema.json",
+  "agents": [
+    {
+      "name": {
+        "default": "FormSample Agent"
+      },
+      "description": {
+        "default": "FormSample description"
+      },
+      "components": [
+        "cc4a9501-d3ac-477e-be46-6ee5e0638fa0"
+      ]
+    }
+  ]
+}
