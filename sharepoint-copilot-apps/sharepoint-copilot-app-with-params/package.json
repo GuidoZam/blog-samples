@@ -1,6 +1,6 @@
 {
 	"name": "sharepoint-copilot-app-with-params",
-	"version": "0.0.1",
+	"version": "1.0.2",
 	"private": true,
 	"engines": {
 		"node": ">=22.14.0 < 23.0.0"

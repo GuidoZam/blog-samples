@@ -3,7 +3,7 @@
   "solution": {
     "name": "sharepoint-copilot-app-with-params-client-side-solution",
     "id": "58b39d6c-d5db-477f-9542-0765dd9c9a5c",
-    "version": "1.0.0.0",
+    "version": "1.0.2.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
