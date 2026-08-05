@@ -1,0 +1,9 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json",
+  "schema_version": "v2.4",
+  "namespace": "formSample",
+  "name_for_human": "FormSample Agent",
+  "description_for_human": "Agent that collects user information through a form.",
+  "description_for_model": "This agent is designed to collect user information through a form and send it as a follow-up message.",
+  "contact_email": "publisher@contoso.com"
+}

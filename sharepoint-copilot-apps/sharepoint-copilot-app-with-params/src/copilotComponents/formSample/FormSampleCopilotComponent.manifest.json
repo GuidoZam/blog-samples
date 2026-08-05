@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-component-manifest.schema.json",
+  "id": "cc4a9501-d3ac-477e-be46-6ee5e0638fa0",
+  "alias": "FormSampleCopilotComponent",
+  "componentType": "CopilotComponent",
+  "copilotType": "Ux",
+  "version": "*",
+  "manifestVersion": 2,
+
+  "capabilities": {
+    "availableDisplayModes": ["inline", "fullscreen"]
+  },
+
+  "tools": [
+    {
+      "name": "FormSampleTool",
+      "description": {
+        "default": "FormSample description"
+      },
+      "propertiesSchema": {
+        "id": "$../../../lib/copilotComponents/formSample/FormSampleCopilotComponentProperties.js:default;"
+      }
+    }
+  ]
+}

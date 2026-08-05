@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.7/schema.json",
+  "version": "v1.7",
+  "name": "FormSample Agent",
+  "description": "This agent is designed to collect user information through a form and send it as a follow-up message.",
+  "instructions": "$[file('instruction.txt')]",
+  "conversation_starters": [
+    {
+      "title": "Get started",
+      "text": "What can you do?"
+    },
+    {
+			"title": "Insert user information",
+			"text": "Insert a new user named <FULL NAME>"
+		}
+  ],
+  "actions": [
+    {
+      "id": "formSampleAction",
+      "file": "ai-plugin.json"
+    }
+  ]
+}

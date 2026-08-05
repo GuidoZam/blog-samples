@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sharepoint-copilot-app-with-params-client-side-solution",
+    "id": "58b39d6c-d5db-477f-9542-0765dd9c9a5c",
+    "version": "1.0.2.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.24.0-beta.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "sharepoint-copilot-app-with-params description"
+      },
+      "longDescription": {
+        "default": "sharepoint-copilot-app-with-params description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "sharepoint-copilot-app-with-params Feature",
+        "description": "The feature that activates elements of the sharepoint-copilot-app-with-params solution.",
+        "id": "5d1f6b74-982e-4bdc-bce4-5f22c1ca92e2",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/sharepoint-copilot-app-with-params.sppkg"
+  }
+}
