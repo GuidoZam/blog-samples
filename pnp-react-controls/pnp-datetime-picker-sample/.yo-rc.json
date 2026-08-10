@@ -1,0 +1,23 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-datetime-picker-sample",
+    "environment": "spo",
+    "skipFeatureDeployment": false,
+    "isDomainIsolated": false,
+    "useGulp": false,
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "DateTimePicker",
+    "componentDescription": "Sample demonstrating the PnP DateTimePicker control",
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.19.0",
+    "sdksVersions": {},
+    "version": "1.24.0-beta.2",
+    "libraryName": "pnp-datetime-picker-sample",
+    "libraryId": "ee5d9f49-2c31-4e7e-a86f-0cdc14b44bf2",
+    "packageManager": "npm",
+    "solutionShortDescription": "pnp-datetime-picker-sample description"
+  }
+}

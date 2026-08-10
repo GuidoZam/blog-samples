@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-datetime-picker-sample-client-side-solution",
+    "id": "ee5d9f49-2c31-4e7e-a86f-0cdc14b44bf2",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.24.0-beta.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-datetime-picker-sample description"
+      },
+      "longDescription": {
+        "default": "pnp-datetime-picker-sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-datetime-picker-sample Feature",
+        "description": "The feature that activates elements of the pnp-datetime-picker-sample solution.",
+        "id": "f9c7c6fc-381b-4a65-9124-8ec86ec36fcf",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-datetime-picker-sample.sppkg"
+  }
+}
