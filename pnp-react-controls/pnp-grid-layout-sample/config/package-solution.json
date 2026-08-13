@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-grid-layout-sample-client-side-solution",
+    "id": "c6a488b1-13f6-4855-b83c-5c19ccfa008c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "PnP Grid Layout Sample description"
+      },
+      "longDescription": {
+        "default": "PnP Grid Layout Sample description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-grid-layout-sample Feature",
+        "description": "The feature that activates elements of the pnp-grid-layout-sample solution.",
+        "id": "28930775-5e0c-4ba8-9b62-024c3d4a1a72",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-grid-layout-sample.sppkg"
+  }
+}
