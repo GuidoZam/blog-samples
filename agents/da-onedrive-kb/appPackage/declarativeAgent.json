@@ -1,0 +1,17 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.8/schema.json",
+    "version": "v1.8",
+    "name": "Acronyms agent${{APP_NAME_SUFFIX}}",
+    "description": "Declarative agent used to help users finding information about Microsoft acronyms and abbreviations.",
+    "instructions": "$[file('instruction.txt')]",
+    "capabilities": [
+        {
+            "name": "OneDriveAndSharePoint",
+            "items_by_url": [
+                {
+                    "url": "https://<tenant>-my.sharepoint.com/personal/<escaped username>/Documents/Acronyms%20sample%20files"
+                }
+            ]
+        }
+    ]
+}
