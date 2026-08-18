@@ -1,0 +1,1 @@
+{"version":3,"file":"IViewPickerState.js","sourceRoot":"","sources":["../../../../src/webparts/viewPicker/components/IViewPickerState.ts"],"names":[],"mappings":"","sourcesContent":["export interface IViewPickerState {\n  selectedView: string | string[] | undefined;\n  selectedViews: string[];\n  orderBy: string;\n  listId: string;\n}"]}

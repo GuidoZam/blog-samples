@@ -1,0 +1,71 @@
+.viewPicker {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+}
+.viewPicker .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.viewPicker .title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: "[theme:themePrimary, default: #0078d4]";
+  color: var(--themePrimary);
+}
+.viewPicker .description {
+  font-size: 14px;
+  margin-bottom: 2em;
+  line-height: 1.6;
+}
+.viewPicker .warning {
+  padding: 1.5em;
+  margin-bottom: 2em;
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  color: #856404;
+}
+.viewPicker .warning p {
+  margin: 0.5em 0;
+}
+.viewPicker .section {
+  margin-bottom: 3em;
+  padding: 1.5em;
+  background-color: "[theme:neutralLighterAlt, default: #faf9f8]";
+  background-color: var(--neutralLighterAlt);
+  border-radius: 4px;
+  border-left: 4px solid "[theme:themePrimary, default: #0078d4]";
+  border-left-color: var(--themePrimary);
+}
+.viewPicker .sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: "[theme:themeDark, default: #005a9e]";
+  color: var(--themeDark);
+}
+.viewPicker .sectionDescription {
+  font-size: 13px;
+  margin-bottom: 1em;
+  color: "[theme:neutralSecondary, default: #605e5c]";
+  color: var(--neutralSecondary);
+  line-height: 1.5;
+}
+.viewPicker .selectedValue {
+  margin-top: 1em;
+  padding: 1em;
+  background-color: "[theme:white, default: #ffffff]";
+  background-color: var(--white);
+  border: 1px solid "[theme:neutralLight, default: #edebe9]";
+  border-color: var(--neutralLight);
+  border-radius: 2px;
+}
+.viewPicker .selectedValue span {
+  font-weight: 500;
+  color: "[theme:themePrimary, default: #0078d4]";
+  color: var(--themePrimary);
+}
+/*# sourceMappingURL=ViewPicker.module.scss.css.map */
