@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-view-picker-sample",
+    "componentType": "webpart",
+    "framework": "react",
+    "componentName": "ViewPicker",
+    "componentDescription": "Sample demonstrating ViewPicker control from PnP reusable React controls",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.13.1",
+    "libraryName": "pnp-view-picker-sample",
+    "libraryId": "ce2aff5d-febc-4949-9ecb-f29ebc6287de",
+    "packageManager": "npm",
+    "isDomainIsolated": false
+  }
+}
