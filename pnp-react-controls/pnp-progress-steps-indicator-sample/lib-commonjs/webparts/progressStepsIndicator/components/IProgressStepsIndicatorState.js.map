@@ -1,0 +1,1 @@
+{"version":3,"file":"IProgressStepsIndicatorState.js","sourceRoot":"","sources":["../../../../src/webparts/progressStepsIndicator/components/IProgressStepsIndicatorState.ts"],"names":[],"mappings":"","sourcesContent":["export interface IProgressStepsIndicatorState {\n  currentStep1: number;\n  currentStep2: number;\n  currentStep3: number;\n}\n"]}

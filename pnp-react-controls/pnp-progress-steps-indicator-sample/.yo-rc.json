@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-progress-steps-indicator-sample",
+    "componentType": "webpart",
+    "framework": "react",
+    "componentName": "ProgressStepsIndicator",
+    "componentDescription": "Sample demonstrating ProgressStepsIndicator control from PnP reusable React controls",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.13.1",
+    "libraryName": "pnp-progress-steps-indicator-sample",
+    "libraryId": "1c882649-d252-4dfd-84fc-987921d62bda",
+    "packageManager": "npm",
+    "isDomainIsolated": false
+  }
+}
