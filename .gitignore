@@ -399,3 +399,6 @@ FodyWeavers.xsd
 .DS_Store
 agents/Rubber duck/env/.env.dev
 agents/Rubber duck/env/.env.prod
+
+jest-output/
+lib-commonjs/

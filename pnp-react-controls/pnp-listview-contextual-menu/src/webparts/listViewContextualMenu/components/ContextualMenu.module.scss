@@ -1,0 +1,17 @@
+.ecb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ecbbutton {
+    width: 30px;
+    height: 30px;
+    color: "[theme:themePrimary, default: #0078d4]";
+    color: var(--themePrimary);
+
+    &:hover {
+      background-color: "[theme:neutralLighter, default: #f3f2f1]";
+      background-color: var(--neutralLighter);
+    }
+  }
+}

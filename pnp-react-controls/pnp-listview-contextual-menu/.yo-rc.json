@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "pnp-listview-contextual-menu-sample",
+    "componentType": "webpart",
+    "framework": "react",
+    "componentName": "ListViewContextualMenu",
+    "componentDescription": "Sample demonstrating ListView with contextual menu from PnP reusable React controls",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.13.1",
+    "libraryName": "pnp-listview-contextual-menu-sample",
+    "libraryId": "7dff8ca6-f185-4a9f-b01c-725e4074d862",
+    "packageManager": "npm",
+    "isDomainIsolated": false
+  }
+}

@@ -1,0 +1,105 @@
+.listViewContextualMenu {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: "[theme:themePrimary, default: #0078d4]";
+    color: var(--themePrimary);
+  }
+
+  .description {
+    font-size: 14px;
+    margin-bottom: 2em;
+    line-height: 1.6;
+  }
+
+  .section {
+    margin-bottom: 3em;
+    padding: 1.5em;
+    background-color: "[theme:neutralLighterAlt, default: #faf9f8]";
+    background-color: var(--neutralLighterAlt);
+    border-radius: 4px;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: "[theme:themeDark, default: #005a9e]";
+    color: var(--themeDark);
+  }
+
+  .sectionDescription {
+    font-size: 13px;
+    margin-bottom: 1em;
+    color: "[theme:neutralSecondary, default: #605e5c]";
+    color: var(--neutralSecondary);
+    line-height: 1.5;
+  }
+
+  // Status badges
+  .statusCompleted {
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .statusInProgress {
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-color: #cce5ff;
+    color: #004085;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .statusPending {
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-color: #fff3cd;
+    color: #856404;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  // Priority badges
+  .priorityHigh {
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .priorityMedium {
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-color: #fff3cd;
+    color: #856404;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .priorityLow {
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-color: #d1ecf1;
+    color: #0c5460;
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
