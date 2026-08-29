@@ -1,0 +1,39 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.8/schema.json",
+    "version": "v1.8",
+    "name": "Product release tracker${{APP_NAME_SUFFIX}}",
+    "description": "Declarative agent used to search Microsoft's sites for information.",
+    "instructions": "$[file('instruction.txt')]",
+    "capabilities": [
+        {
+            "name": "WebSearch",
+            "sites": [
+                {
+                "url": "https://learn.microsoft.com"
+                },
+                {
+                "url": "https://techcommunity.microsoft.com"
+                },
+                {
+                "url": "https://azure.microsoft.com"
+                },
+                {
+                "url": "https://www.microsoft.com"
+                }
+            ]
+        }
+    ],
+    "conversation_starters": [{
+            "title": "What's new in Microsoft 365 Copilot this month?",
+            "text": "Find any recent changes to Microsoft 365 Copilot and its capabilities."
+        },
+        {
+            "title": "Has declarative agent manifest v1.8 introduced anything new?",
+            "text": "Find any recent changes to the declarative agent manifest v1.8."
+        },
+        {
+            "title": "Find recent changes to Microsoft 365 Agents Toolkit.",
+            "text": "Find any recent changes to Microsoft 365 Agents Toolkit."
+        }
+    ]
+}
