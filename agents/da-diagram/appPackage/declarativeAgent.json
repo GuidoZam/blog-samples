@@ -1,0 +1,18 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.8/schema.json",
+    "version": "v1.8",
+    "name": "Diagram agent${{APP_NAME_SUFFIX}}",
+    "description": "Declarative agent used to generate diagrams from text prompts.",
+    "instructions": "$[file('instruction.txt')]",
+    "capabilities": [
+        {
+            "name": "GraphicArt"
+        }
+    ],
+    "conversation_starters": [
+        {
+            "title": "Flow chart for writing an article",
+            "text": "Create an image of a flow chart to represent the steps of writing an article for a newspaper."
+        }
+    ]
+}
