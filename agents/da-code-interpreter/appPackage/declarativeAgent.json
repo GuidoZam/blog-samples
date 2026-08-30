@@ -1,0 +1,18 @@
+{
+	"$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.8/schema.json",
+	"version": "v1.8",
+	"name": "Data analyst agent${{APP_NAME_SUFFIX}}",
+	"description": "Declarative agent which helps analyze datasets and generate insights.",
+	"instructions": "$[file('instruction.txt')]",
+	"capabilities": [
+		{
+			"name": "CodeInterpreter"
+		}
+	],
+	"conversation_starters": [
+		{
+			"title": "Analyze my dataset",
+			"text": "Analyze Sales_Data and identify the five products driving the most revenue and gross profit."
+		}
+	]
+}
