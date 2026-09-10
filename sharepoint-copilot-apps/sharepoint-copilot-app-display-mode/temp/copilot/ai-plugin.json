@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json",
+  "schema_version": "v2.4",
+  "namespace": "displayModeDemo",
+  "name_for_human": "DisplayModeDemo Agent",
+  "description_for_human": "Renders a Copilot component that demonstrates the inline and fullscreen display modes.",
+  "description_for_model": "Renders a Copilot component that demonstrates the inline and fullscreen display modes. Call this tool whenever the user wants to see, test, or learn about the display mode demo.",
+  "contact_email": "publisher@contoso.com",
+  "functions": [
+    {
+      "name": "DisplayModeDemoTool",
+      "description": "Renders the display mode demo card and lets the user expand it to fullscreen.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "A message to display."
+          }
+        },
+        "required": [
+          "message"
+        ]
+      }
+    }
+  ],
+  "runtimes": [
+    {
+      "type": "RemoteMCPServer",
+      "auth": {
+        "type": "None"
+      },
+      "spec": {
+        "url": "{{TENANT_MCP_URL}}",
+        "mcp_tool_description": {
+          "tools": [
+            {
+              "name": "DisplayModeDemoTool",
+              "description": "Renders the display mode demo card and lets the user expand it to fullscreen.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string",
+                    "description": "A message to display."
+                  }
+                },
+                "required": [
+                  "message"
+                ],
+                "additionalProperties": false,
+                "$schema": "http://json-schema.org/draft-07/schema#"
+              },
+              "annotations": {
+                "readOnlyHint": true,
+                "destructiveHint": false
+              },
+              "_meta": {
+                "openai/outputTemplate": "ui://spfx/component.html",
+                "openai/widgetAccessible": true,
+                "ui/csp": {
+                  "frameDomains": [
+                    "{{TENANT_ORIGIN}}"
+                  ],
+                  "resourceDomains": [
+                    "{{TENANT_ORIGIN}}"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "run_for_functions": [
+        "DisplayModeDemoTool"
+      ]
+    }
+  ]
+}

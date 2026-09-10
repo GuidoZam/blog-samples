@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "display-mode-copilot-app-client-side-solution",
+    "id": "ea4a5bd2-3a4d-4f49-914f-5e19c767d1ae",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.24.0-beta.3"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "display-mode-copilot-app description"
+      },
+      "longDescription": {
+        "default": "display-mode-copilot-app description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "display-mode-copilot-app Feature",
+        "description": "The feature that activates elements of the display-mode-copilot-app solution.",
+        "id": "02265e23-344d-4168-aa9d-d9ab48a2b885",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/display-mode-copilot-app.sppkg"
+  }
+}

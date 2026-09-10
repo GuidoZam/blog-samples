@@ -1,0 +1,62 @@
+{
+  "id": "fc5c4ae1-c7f7-47ce-ab2e-4636b2d313d3",
+  "alias": "DisplayModeDemoCopilotComponent",
+  "componentType": "CopilotComponent",
+  "copilotType": "Ux",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+  "capabilities": {
+    "availableDisplayModes": [
+      "inline",
+      "fullscreen"
+    ]
+  },
+  "tools": [
+    {
+      "name": "DisplayModeDemoTool",
+      "description": {
+        "default": "Renders the display mode demo card and lets the user expand it to fullscreen."
+      },
+      "propertiesSchema": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "A message to display."
+          }
+        },
+        "required": [
+          "message"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ],
+  "loaderConfig": {
+    "internalModuleBaseUrls": [
+      "https://localhost:4321/dist/"
+    ],
+    "entryModuleId": "display-mode-demo-copilot-component",
+    "scriptResources": {
+      "display-mode-demo-copilot-component": {
+        "type": "path",
+        "path": "display-mode-demo-copilot-component.js"
+      },
+      "@microsoft/sp-copilot-component": {
+        "type": "component",
+        "id": "e1793060-eada-4fcd-9f1c-cd6f0ccd2b96",
+        "version": "1.24.0"
+      },
+      "@microsoft/sp-lodash-subset": {
+        "type": "component",
+        "id": "73e1dc6c-8441-42cc-ad47-4bd3659f8a3a",
+        "version": "1.24.0"
+      },
+      "DisplayModeDemoCopilotComponentStrings": {
+        "type": "path",
+        "path": "DisplayModeDemoCopilotComponentStrings_en-us.js"
+      }
+    }
+  }
+}

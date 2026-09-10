@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.8/schema.json",
+  "version": "v1.8",
+  "name": "DisplayModeDemo Agent",
+  "description": "Shows a SharePoint Copilot component that switches between the inline and fullscreen display modes.",
+  "instructions": "$[file('instruction.txt')]",
+  "conversation_starters": [
+    {
+      "title": "Show the display mode demo",
+      "text": "Call DisplayModeDemoTool with the message 'Hello from the display mode demo'"
+    }
+  ],
+  "actions": [
+    {
+      "id": "displayModeDemoAction",
+      "file": "ai-plugin.json"
+    }
+  ]
+}

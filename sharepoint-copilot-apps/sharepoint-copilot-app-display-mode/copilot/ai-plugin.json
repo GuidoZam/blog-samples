@@ -1,0 +1,9 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json",
+  "schema_version": "v2.4",
+  "namespace": "displayModeDemo",
+  "name_for_human": "DisplayModeDemo Agent",
+  "description_for_human": "Renders a Copilot component that demonstrates the inline and fullscreen display modes.",
+  "description_for_model": "Renders a Copilot component that demonstrates the inline and fullscreen display modes. Call this tool whenever the user wants to see, test, or learn about the display mode demo.",
+  "contact_email": "publisher@contoso.com"
+}
