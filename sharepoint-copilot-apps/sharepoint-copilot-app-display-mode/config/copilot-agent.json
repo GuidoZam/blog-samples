@@ -1,0 +1,16 @@
+{
+  "$schema": "../node_modules/@microsoft/spfx-heft-plugins/lib-commonjs/plugins/copilotAgentPlugin/copilot-agent.schema.json",
+  "agents": [
+    {
+      "name": {
+        "default": "DisplayModeDemo Agent"
+      },
+      "description": {
+        "default": "Demonstrates the inline and fullscreen Copilot display modes."
+      },
+      "components": [
+        "fc5c4ae1-c7f7-47ce-ab2e-4636b2d313d3"
+      ]
+    }
+  ]
+}

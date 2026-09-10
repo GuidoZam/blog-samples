@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-component-manifest.schema.json",
+  "id": "fc5c4ae1-c7f7-47ce-ab2e-4636b2d313d3",
+  "alias": "DisplayModeDemoCopilotComponent",
+  "componentType": "CopilotComponent",
+  "copilotType": "Ux",
+  "version": "*",
+  "manifestVersion": 2,
+
+  "capabilities": {
+    "availableDisplayModes": ["inline", "fullscreen"]
+  },
+
+  "tools": [
+    {
+      "name": "DisplayModeDemoTool",
+      "description": {
+        "default": "Renders the display mode demo card and lets the user expand it to fullscreen."
+      },
+      "propertiesSchema": {
+        "id": "$../../../lib/copilotComponents/displayModeDemo/DisplayModeDemoCopilotComponentProperties.js:default;"
+      }
+    }
+  ]
+}
