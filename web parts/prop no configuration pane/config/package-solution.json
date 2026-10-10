@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "no-property-pane-webpart-client-side-solution",
+    "id": "826e547a-dc7f-41e8-b668-bea2d775cf07",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.23.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "no-property-pane-webpart description"
+      },
+      "longDescription": {
+        "default": "no-property-pane-webpart description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "no-property-pane-webpart Feature",
+        "description": "The feature that activates elements of the no-property-pane-webpart solution.",
+        "id": "80b43438-9d2e-4870-b29f-e28db23121d5",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/no-property-pane-webpart.sppkg"
+  }
+}

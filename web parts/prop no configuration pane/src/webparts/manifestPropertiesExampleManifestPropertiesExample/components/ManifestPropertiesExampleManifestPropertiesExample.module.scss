@@ -1,0 +1,117 @@
+.manifestPropertiesExampleManifestPropertiesExample {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  border-radius: 4px;
+}
+
+.welcome {
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 1px solid #e1dfdd;
+  margin-bottom: 1em;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.content {
+  padding: 1em;
+
+  h1 {
+    font-size: 1.8em;
+    margin: 0.5em 0;
+    color: "[theme:themePrimary, default: #0078d4]";
+    color: var(--themePrimary);
+  }
+
+  h2 {
+    font-size: 1.3em;
+    margin: 0.3em 0 1em 0;
+    color: "[theme:neutralSecondary, default: #605e5c]";
+    color: var(--neutralSecondary);
+  }
+
+  p {
+    margin: 0.5em 0;
+    line-height: 1.6;
+  }
+
+  code {
+    background-color: #f3f2f1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
+
+.propertiesSection {
+  margin: 2em 0;
+  padding: 1em;
+  background-color: #f3f2f1;
+  border-radius: 4px;
+
+  h3 {
+    margin-top: 0;
+    color: "[theme:themePrimary, default: #0078d4]";
+    color: var(--themePrimary);
+  }
+}
+
+.properties {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+
+  li {
+    padding: 0.5em 0;
+    border-bottom: 1px solid #e1dfdd;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    strong {
+      color: "[theme:themeDark, default: #005a9e]";
+      color: var(--themeDark);
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.info {
+  margin: 2em 0 1em 0;
+  padding: 1em;
+  background-color: #fff4ce;
+  border-left: 4px solid #ffb900;
+  border-radius: 4px;
+
+  p {
+    margin: 0.5em 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
